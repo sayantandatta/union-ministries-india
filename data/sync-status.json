@@ -1,9 +1,7 @@
 {
  "ok": true,
  "messages": [],
- "review": [
-  "The website for Science and Technology (Dept of Biotechnology) doesn't open ([Errno -2] Name or service not known): https://www.dbtindia.gov.in. Fix it in data/ministries-meta.json."
- ],
+ "review": [],
  "wikipediaRevision": 1380051637,
- "at": "2026-10-16T14:23:17+00:00"
+ "at": "2026-10-16T14:24:18+00:00"
 }
