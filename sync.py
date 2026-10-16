@@ -879,7 +879,15 @@ def check_url(url):
 def check_links(meta):
     """Check every ministry website. Returns (results, review_notes)."""
     from concurrent.futures import ThreadPoolExecutor
-    jobs = [(m["id"], m["n"], m["links"]["web"]) for m in meta if not m.get("retired") and (m.get("links") or {}).get("web")]
+    jobs = []
+    for m in meta:
+        L = m.get("links") or {}
+        if m.get("retired"):
+            continue
+        if L.get("web"):
+            jobs.append((m["id"], m["n"], L["web"]))
+        for lab, u in L.get("altWeb") or []:
+            jobs.append((m["id"], "%s (%s)" % (m["n"], lab), u))
     with ThreadPoolExecutor(8) as ex:
         res = list(ex.map(lambda j: dict(check_url(j[2]), id=j[0], ministry=j[1]), jobs))
     notes = []

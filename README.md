@@ -1,64 +1,98 @@
 # Union Ministries of India
 
-A one-page guide to every Central Government ministry: who runs it, what it does, its website and X account, and a calling card for each minister (date and place of birth, official residence, official email, social accounts and declared assets).
+A one-page guide to every Central Government ministry: who runs it, what it does, its budget, website, email and X account, and a calling card for each minister.
 
-It works the same way as the English Actors Register: GitHub keeps the data up to date on a schedule and hosts the page for free, and each visitor's browser keeps a saved copy.
+**Live site:** https://sayantandatta.github.io/union-ministries-india/
 
-## What's in the folder
+---
+
+## What updates by itself
+
+GitHub runs `sync.py` every day at **02:45 India time**. You don't need to do anything.
+
+| What | How often | Where it comes from |
+|---|---|---|
+| Ministers and who holds which ministry | Daily | Wikipedia (*Third Modi ministry*) |
+| New, renamed or closed ministries | Daily (confirmed on the next run) | Wikipedia |
+| Ministers' birth details, social accounts, photos | Daily | Wikidata and Wikimedia Commons |
+| Ministry websites still working | Every Sunday | Each website |
+
+Every change is listed under **Recent changes** on the site with its date.
+
+## What you update by hand
+
+| What | When | File |
+|---|---|---|
+| Ministry budgets | Every February, after the Union Budget | `data/budget.json` |
+| Ministers' residence, email, declared wealth | When a new minister joins, or after an election | `data/profiles.json` |
+| A ministry's description, website, email, X account | When a new ministry is added, or a link changes | `data/ministries-meta.json` |
+
+To edit a file: open it on GitHub, click the **pencil** icon, make the change, click **Commit changes**. The site updates by itself a few minutes later.
+
+## When GitHub opens an issue
+
+If something needs your attention, the daily run opens an issue called **"Ministers update needs a look"** in this repository (later notes are added to it as comments). Turn on notifications for the repository so you see it.
+
+It will tell you what happened. The usual cases:
+
+- **A new ministry was added.** Open `data/ministries-meta.json`, find it (it has `"auto": true`), fix its sector (`"s"`), description (`"d"`), website and email, then delete the `"auto": true` line.
+- **Too many changes at once** (a big reshuffle). Nothing was changed. Check Wikipedia, then run the update with **force** ticked (see below).
+- **Wikipedia couldn't be read.** Nothing was changed; the site keeps the last good data. Usually it fixes itself the next day.
+- **A website doesn't open.** Fix the address in `data/ministries-meta.json`.
+- **The budget is out of date** (reminder every Monday from February). Update `data/budget.json`.
+
+Close the issue when you're done.
+
+## How to…
+
+**Run an update now**
+Go to **Actions → Sync ministers and publish → Run workflow → Run workflow**.
+
+**Apply a big reshuffle**
+Same as above, but tick **force** before pressing the green button.
+
+**Check all websites now**
+Same as above, but tick **check_links**. Results are saved in `data/link-check.json`.
+
+**Fix a wrong minister or portfolio**
+Edit `data/council.json`, and change `"lock": false` to `"lock": true` so the daily run doesn't undo your fix. Set it back to `false` once Wikipedia is right.
+
+**Fix a wrong fact on a minister's card**
+Edit that minister's entry in `data/profiles.json`. Anything there wins over Wikidata.
+
+**Update the budget (each February)**
+Open the Budget's summary by ministry at https://www.indiabudget.gov.in/doc/eb/allsbe.pdf. In `data/budget.json`, change `"year"` (e.g. `"2027-28"`), `"presented"`, `"total"`, and each ministry's figure (total of revenue and capital, in Rs crore).
+
+## Good to know
+
+- **Ministry websites.** Some ministries have no single website, only one per department. In that case the main department's site is shown with its name (e.g. "Dept of Telecommunications"), and the other departments' sites are listed next to it.
+- **Ministry emails.** None of the ministries publishes a general enquiry inbox, so the email shown is usually the Secretary's office (sometimes the Minister's office). The label under the email says which. Entries marked `"emailChecked": false` came from a directory rather than a government page; check them when you can.
+- **Ministers' residences** come from parliament records and can lag a move.
+- **Declared wealth** is the total from each minister's latest election affidavit, as published by ADR / MyNeta.
+- **Photos** come from Wikimedia Commons and are credited on each calling card.
+
+## Files
 
 | File | What it is |
 |---|---|
-| `index.html` | The page. It also carries a built-in copy of the data, so it opens instantly. |
-| `sync.py` | Checks for changes and rebuilds the data. Needs Python 3.8 or later, nothing to install. |
-| `data/ministries-meta.json` | Each ministry's name, description, sector, website and X accounts. Edit by hand. |
-| `data/council.json` | Who holds which ministry. Updated automatically from Wikipedia. |
-| `data/profiles.json` | Calling-card details checked by hand: residence, email, declared assets, birth details, social accounts. These always win over Wikidata. |
-| `data/changes.json` | The "Recent changes" list on the page. New entries are added automatically. |
-| `data/site.json` | Created by `sync.py`: everything the page needs, in one file. |
-| `photos/` | Created by `sync.py`: one 240 px photo per minister from Wikimedia Commons. |
+| `index.html` | The page. |
+| `sync.py` | The update script GitHub runs. |
+| `data/ministries-meta.json` | Each ministry: name, description, sector, websites, email, X account. |
+| `data/council.json` | Who holds which ministry (updated automatically). |
+| `data/profiles.json` | Calling-card details checked by hand. |
+| `data/budget.json` | Budget figures per ministry. |
+| `data/changes.json` | The "Recent changes" list. |
+| `data/site.json` | Everything the page shows, built by `sync.py`. Don't edit. |
+| `data/wikipedia-portfolios.json` | What the last run read from Wikipedia. Don't edit. |
+| `data/link-check.json` | Results of the last website check. Don't edit. |
+| `photos/` | Minister photos. Don't edit. |
 
-## How the updates work
+## In visitors' browsers
 
-Every day at 02:45 India time (and whenever you upload a change or press **Run workflow**), GitHub runs `sync.py`, which:
+The page opens instantly from a copy saved in the browser, then switches to newer data if there is any. Data and photos are saved in the browser, so repeat visits are fast and work offline. The line under the title shows when the data was last updated.
 
-1. Reads the current ministers' tables on Wikipedia's *Third Modi ministry* article and compares them with `data/council.json`. Any change (a resignation, a new minister, a portfolio moving, an additional charge) is applied and added to the "Recent changes" list with the date.
-2. Refreshes each minister's date and place of birth, social accounts and photo from Wikidata and Wikimedia Commons, downloading only photos that have changed.
-3. Rebuilds `data/site.json` and the built-in copy inside `index.html`, saves them to the repository and republishes the site.
+## One-time setup (already done)
 
-**Safety checks.** If Wikipedia's tables can't be read cleanly (for example the article is restructured), or more than 40 changes appear at once, nothing is changed: the site keeps its last good data and an issue titled "Ministers update needs a look" is opened in the repository. The same issue is used for anything that's been applied but deserves a look, such as a newly added ministry; later notes are added to it as comments. After a big reshuffle you've checked, open **Actions → Sync ministers and publish → Run workflow**, tick **force**, and run it.
-
-**New, renamed and removed ministries.** The list of ministries isn't fixed: every run compares Wikipedia's portfolio column with `data/ministries-meta.json`.
-
-- *New ministry.* A portfolio held by a Cabinet minister or a Minister of State (Independent Charge) that matches no known ministry is noted on the first run and added on the next run, at least 3 hours later (so a passing edit on Wikipedia doesn't reach the site). Its description, website and X account are taken from its Wikipedia article and Wikidata where they exist; its sector shows as "Other" until you set one. It appears in Recent changes, and the review issue asks you to check it and then delete `"auto": true`.
-- *Renamed ministry.* If a ministry disappears and a new name appears the same day, held by the same minister, it's treated as a rename: the page, links and history carry over under the new name, and the old name is kept in `formerNames`.
-- *Merged or wound-up ministry.* A ministry missing from the tables stays on the site with its last known ministers for a day. If it's still missing on the next day's run, it's marked `"retired"` and taken off the site. Delete that line to bring it back.
-- *Big restructures.* If more than 6 ministries look new or gone at once, nothing is changed until you run the workflow with **force** ticked.
-
-Every run also saves `data/wikipedia-portfolios.json`, listing each portfolio name read from Wikipedia and the ministry it was matched to, so you can see exactly what the check saw.
-
-**Correcting something by hand.** Edit `data/council.json` and set `"lock": true` near the top so the daily check doesn't overwrite your edit. Set it back to `false` once Wikipedia is right. To fix a calling-card detail, edit that minister's entry in `data/profiles.json`; to let Wikidata supply a field instead, delete it there.
-
-**Ministry budgets.** Each ministry shows its annual outlay from the Union Budget (Budget Estimates, revenue plus capital, from the Expenditure Budget's summary by ministry), its share of total spending and its rank. The figures live in `data/budget.json` and change once a year: after the Budget on 1 February, update the year, total and each ministry's figure from `indiabudget.gov.in/doc/eb/allsbe.pdf`. Until you do, the review issue gets a reminder every Monday. A new ministry shows "Not yet shown separately in the Union Budget" until it has a figure.
-
-**What isn't automatic.** Official residence, official email and declared assets aren't published in any machine-readable source, so they live in `data/profiles.json`. Assets only change at elections; when a minister is new or re-elected, add their totals from their MyNeta page (myneta.info).
-
-## In the visitor's browser
-
-The page shows its built-in copy (or the copy saved in that browser, if newer) straight away, then fetches `data/site.json` and switches to it if it's newer. The newest copy is saved in the browser (IndexedDB), and minister photos are saved too (Cache Storage), so repeat visits are instant and still work offline. The line under the title says when the data was last updated.
-
-## Hosting it on GitHub Pages
-
-1. Create a new **public** repository, for example `union-ministries-india`.
-2. Upload everything in this folder, including the hidden `.github` folder. If it won't drag in, create `.github/workflows/sync-and-publish.yml` by hand with **Add file → Create new file** and paste its contents.
-3. Open **Settings → Pages** and set **Source** to **GitHub Actions**.
-4. Open **Settings → Secrets and variables → Actions → Variables** and add `UMI_USER_AGENT` with a value like `UnionMinistriesIndia/1.0 (https://yourname.github.io/union-ministries-india; you@example.com)`. Wikimedia asks scripts to identify themselves.
-5. The upload starts the first run (see the **Actions** tab); it takes a few minutes and downloads the photos. The site is then live at `https://<your-username>.github.io/union-ministries-india/`.
-
-If you use your own domain, add an Actions variable `UMI_SITE_URL` with the full address ending in `/`.
-
-## Running it yourself
-
-```
-UMI_USER_AGENT="UnionMinistriesIndia/1.0 (https://your.site; you@your.site)" python3 sync.py
-python3 sync.py --offline    # rebuild from the files in data/ without going online
-```
+1. Public repository with these files, including the `.github` folder.
+2. **Settings → Pages → Source:** GitHub Actions.
+3. **Settings → Secrets and variables → Actions → Variables:** `UMI_USER_AGENT` = `UnionMinistriesIndia/1.0 (https://sayantandatta.github.io/union-ministries-india; your email)`.

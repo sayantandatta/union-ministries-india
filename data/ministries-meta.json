@@ -8,7 +8,22 @@
    "dept": false,
    "links": {
     "web": "https://agriwelfare.gov.in",
-    "x": "AgriGoI"
+    "x": "AgriGoI",
+    "webl": "Dept of Agriculture & Farmers Welfare",
+    "altWeb": [
+     [
+      "Agricultural Research & Education (DARE)",
+      "https://dare.gov.in"
+     ]
+    ],
+    "email": "secy-agri@gov.in",
+    "emailLabel": "Office of the Secretary (Agriculture & Farmers Welfare)",
+    "emailSource": [
+     "https://en.wikipedia.org/wiki/Ministry_of_Agriculture_and_Farmers%27_Welfare",
+     "https://www.sarkaritel.com/?p=385567",
+     "https://igod.gov.in/organization/FM4zv3QBGZk0jujBKgGW"
+    ],
+    "emailChecked": false
    },
    "match": [
     "agricultur"
@@ -22,7 +37,14 @@
    "dept": false,
    "links": {
     "web": "https://ayush.gov.in",
-    "x": "moayush"
+    "x": "moayush",
+    "email": "secy-ayush@nic.in",
+    "emailLabel": "Office of the Secretary",
+    "emailSource": [
+     "https://www.indiacustomercare.com/ministry-ayush-contact-no",
+     "https://igod.gov.in/organization/Rc4zv3QBGZk0jujBKgGW"
+    ],
+    "emailChecked": false
    },
    "match": [
     "\\bayush\\b"
@@ -43,6 +65,23 @@
       "Dept of Pharmaceuticals",
       "Pharmadept"
      ]
+    ],
+    "webl": "Dept of Chemicals & Petrochemicals",
+    "altWeb": [
+     [
+      "Dept of Fertilizers",
+      "https://fert.gov.in"
+     ],
+     [
+      "Dept of Pharmaceuticals",
+      "https://pharmaceuticals.gov.in"
+     ]
+    ],
+    "email": "sec.cpc@nic.in",
+    "emailLabel": "Office of the Secretary (Chemicals & Petrochemicals)",
+    "emailSource": [
+     "https://chemicals.gov.in/who-who",
+     "https://www.india.gov.in/category/infrastructure-industries/ministry/ministry-of-chemicals-and-fertilizers-1531939292993000"
     ]
    },
    "match": [
@@ -57,8 +96,14 @@
    "d": "Regulates and develops air transport: airports, airlines and air safety through the DGCA, and regional air connectivity under the UDAN scheme.",
    "dept": false,
    "links": {
-    "web": "https://civilaviation.gov.in",
-    "x": "MoCA_GoI"
+    "web": "https://www.civilaviation.gov.in",
+    "x": "MoCA_GoI",
+    "email": "secy.moca@nic.in",
+    "emailLabel": "Office of the Secretary",
+    "emailSource": [
+     "https://www.civilaviation.gov.in/vigilance/whos-who",
+     "https://www.civilaviation.gov.in/contact_us"
+    ]
    },
    "match": [
     "civil aviation"
@@ -72,7 +117,13 @@
    "dept": false,
    "links": {
     "web": "https://coal.gov.in",
-    "x": "CoalMinistry"
+    "x": "CoalMinistry",
+    "email": "secy.moc@nic.in",
+    "emailLabel": "Office of the Secretary",
+    "emailSource": [
+     "https://coal.gov.in/about-us/whos-who",
+     "https://www.india.gov.in/category/infrastructure-industries/ministry/ministry-of-coal-1531939292920093"
+    ]
    },
    "match": [
     "\\bcoal\\b"
@@ -85,14 +136,28 @@
    "d": "Runs foreign trade policy and trade negotiations through the Department of Commerce, and industrial policy, investment promotion and Startup India through DPIIT.",
    "dept": false,
    "links": {
-    "web": "https://commerce.gov.in",
+    "web": "https://www.commerce.gov.in",
     "x": "CimGOI",
     "alt": [
      [
       "DPIIT",
       "DPIITGoI"
      ]
-    ]
+    ],
+    "webl": "Dept of Commerce",
+    "altWeb": [
+     [
+      "DPIIT",
+      "https://dpiit.gov.in"
+     ]
+    ],
+    "email": "csoffice@nic.in",
+    "emailLabel": "Office of the Commerce Secretary",
+    "emailSource": [
+     "https://www.india.gov.in/category/business-self-employed/ministry/ministry-of-commerce-and-industry-1531939292902169",
+     "https://www.sarkaritel.com/?p=388024"
+    ],
+    "emailChecked": false
    },
    "match": [
     "commerce"
@@ -113,7 +178,21 @@
       "India Post",
       "IndiaPostOffice"
      ]
-    ]
+    ],
+    "webl": "Dept of Telecommunications",
+    "altWeb": [
+     [
+      "Dept of Posts",
+      "https://www.indiapost.gov.in"
+     ]
+    ],
+    "email": "secy-dot@nic.in",
+    "emailLabel": "Office of the Secretary (Telecom)",
+    "emailSource": [
+     "https://www.sarkaritel.com/?p=385567",
+     "https://igod.gov.in/organization/R9e83XQBYNG-XPnvjOsx"
+    ],
+    "emailChecked": false
    },
    "match": [
     "\\bcommunications\\b"
@@ -126,7 +205,7 @@
    "d": "Protects consumer rights and product standards (BIS, consumer commissions) and manages food-grain procurement, storage and the public distribution system, including free grain under PM Garib Kalyan Anna Yojana.",
    "dept": false,
    "links": {
-    "web": "https://consumeraffairs.nic.in",
+    "web": "https://doca.gov.in",
     "x": "jagograhakjago",
     "xl": "Dept of Consumer Affairs",
     "alt": [
@@ -134,6 +213,18 @@
       "Dept of Food & Public Distribution",
       "fooddeptgoi"
      ]
+    ],
+    "webl": "Dept of Consumer Affairs",
+    "altWeb": [
+     [
+      "Dept of Food & Public Distribution",
+      "https://dfpd.gov.in"
+     ]
+    ],
+    "email": "secy-ca@nic.in",
+    "emailLabel": "Office of the Secretary (Consumer Affairs)",
+    "emailSource": [
+     "https://www.india.gov.in/category/justice-law-grievances/ministry/department-of-consumer-affairs"
     ]
    },
    "match": [
@@ -148,8 +239,13 @@
    "d": "Created in 2021 to strengthen the cooperative movement. It administers multi-state cooperative societies, is computerising primary agricultural credit societies and promotes cooperative-led growth.",
    "dept": false,
    "links": {
-    "web": "https://cooperation.gov.in",
-    "x": "MinOfCooperatn"
+    "web": "https://www.cooperation.gov.in",
+    "x": "MinOfCooperatn",
+    "email": "secy-coop@gov.in",
+    "emailLabel": "Office of the Secretary",
+    "emailSource": [
+     "https://www.india.gov.in/category/infrastructure-industries/ministry/ministry-of-cooperation-1531939293168789"
+    ]
    },
    "match": [
     "\\bco-?operation\\b"
@@ -163,7 +259,14 @@
    "dept": false,
    "links": {
     "web": "https://www.mca.gov.in",
-    "x": "MCA21India"
+    "x": "MCA21India",
+    "email": "secy.mca@nic.in",
+    "emailLabel": "Office of the Secretary",
+    "emailSource": [
+     "https://www.indiacustomercare.com/ministry-corporate-affairs-contact-no",
+     "https://www.sarkaritel.com/?p=385567"
+    ],
+    "emailChecked": false
    },
    "match": [
     "corporate affairs"
@@ -177,7 +280,12 @@
    "dept": false,
    "links": {
     "web": "https://www.indiaculture.gov.in",
-    "x": "MinOfCultureGoI"
+    "x": "MinOfCultureGoI",
+    "email": "secy-culture@nic.in",
+    "emailLabel": "Office of the Secretary",
+    "emailSource": [
+     "https://www.indiaculture.gov.in/contact-list-directory"
+    ]
    },
    "match": [
     "\\bculture\\b"
@@ -191,7 +299,12 @@
    "dept": false,
    "links": {
     "web": "https://www.mod.gov.in",
-    "x": "DefenceMinIndia"
+    "x": "DefenceMinIndia",
+    "email": "defsecy@nic.in",
+    "emailLabel": "Office of the Defence Secretary",
+    "emailSource": [
+     "https://www.india.gov.in/category/defence-foreign-affairs/ministry/department-of-defence"
+    ]
    },
    "match": [
     "\\bdefen[cs]e\\b"
@@ -205,7 +318,12 @@
    "dept": false,
    "links": {
     "web": "https://mdoner.gov.in",
-    "x": "MDoNER_India"
+    "x": "MDoNER_India",
+    "email": "secydoner@nic.in",
+    "emailLabel": "Office of the Secretary",
+    "emailSource": [
+     "https://www.india.gov.in/category/governance-planning/ministry/ministry-of-development-of-north-eastern-region-1531939293018768"
+    ]
    },
    "match": [
     "north[- ]eastern region",
@@ -220,7 +338,13 @@
    "dept": false,
    "links": {
     "web": "https://moes.gov.in",
-    "x": "moesgoi"
+    "x": "moesgoi",
+    "email": "secretary@moes.gov.in",
+    "emailLabel": "Office of the Secretary",
+    "emailSource": [
+     "https://www.india.gov.in/category/science-it-communication/ministry/ministry-of-earth-sciences-1531939293132912",
+     "https://mausam.imd.gov.in/imd_latest/contents/secretory_moes.php"
+    ]
    },
    "match": [
     "earth sciences"
@@ -234,7 +358,14 @@
    "dept": false,
    "links": {
     "web": "https://www.education.gov.in",
-    "x": "EduMinOfIndia"
+    "x": "EduMinOfIndia",
+    "email": "secy.dhe@nic.in",
+    "emailLabel": "Office of the Secretary (Higher Education)",
+    "emailSource": [
+     "https://www.india.gov.in/category/education-learning/ministry/ministry-of-education-1531939293108617",
+     "https://www.sarkaritel.com/?p=385567"
+    ],
+    "emailChecked": false
    },
    "match": [
     "^(minister of |ministry of )?education\\b",
@@ -250,7 +381,13 @@
    "dept": false,
    "links": {
     "web": "https://www.meity.gov.in",
-    "x": "GoI_MeitY"
+    "x": "GoI_MeitY",
+    "email": "secretary@meity.gov.in",
+    "emailLabel": "Office of the Secretary",
+    "emailSource": [
+     "https://www.sarkaritel.com/?p=388240"
+    ],
+    "emailChecked": false
    },
    "match": [
     "electronics and information technology"
@@ -264,7 +401,13 @@
    "dept": false,
    "links": {
     "web": "https://moef.gov.in",
-    "x": "moefcc"
+    "x": "moefcc",
+    "email": "secy-moef@nic.in",
+    "emailLabel": "Office of the Secretary",
+    "emailSource": [
+     "https://icfre.gov.in/board-of-governers",
+     "https://www.sarkaritel.com/?p=385567"
+    ]
    },
    "match": [
     "environment"
@@ -278,7 +421,13 @@
    "dept": false,
    "links": {
     "web": "https://www.mea.gov.in",
-    "x": "MEAIndia"
+    "x": "MEAIndia",
+    "email": "jsxp@mea.gov.in",
+    "emailLabel": "Official Spokesperson's office (XP Division)",
+    "emailSource": [
+     "https://www.mea.gov.in/contact",
+     "https://www.india.gov.in/category/defence-foreign-affairs/ministry/ministry-of-external-affairs-1531939293145215"
+    ]
    },
    "match": [
     "external affairs"
@@ -292,7 +441,13 @@
    "dept": false,
    "links": {
     "web": "https://finmin.gov.in",
-    "x": "FinMinIndia"
+    "x": "FinMinIndia",
+    "email": "fmo@nic.in",
+    "emailLabel": "Minister's office (Finance Minister)",
+    "emailSource": [
+     "https://financialservices.gov.in/ministry-directory",
+     "https://igod.gov.in/organization/Ic4zv3QBGZk0jujBKgGW"
+    ]
    },
    "match": [
     "\\bfinance\\b"
@@ -313,6 +468,20 @@
       "Dept of Fisheries",
       "FisheriesGoI"
      ]
+    ],
+    "webl": "Dept of Animal Husbandry & Dairying",
+    "altWeb": [
+     [
+      "Dept of Fisheries",
+      "https://dof.gov.in"
+     ]
+    ],
+    "email": "secyahd@nic.in",
+    "emailLabel": "Office of the Secretary (Animal Husbandry and Dairying)",
+    "emailSource": [
+     "https://igod.gov.in/organization/SM4zv3QBGZk0jujBKgGW",
+     "https://igod.gov.in/organization/SI7dxHQBnHZIjqMuV49J",
+     "https://dahd.gov.in/sites/default/files/2024-04/Citizens-Charter-2023-24.pdf"
     ]
    },
    "match": [
@@ -328,7 +497,13 @@
    "dept": false,
    "links": {
     "web": "https://www.mofpi.gov.in",
-    "x": "MOFPI_GOI"
+    "x": "MOFPI_GOI",
+    "email": "support-fpi@nic.in",
+    "emailLabel": "General enquiries (Contact Us page)",
+    "emailSource": [
+     "https://www.mofpi.gov.in/en/contact-us",
+     "https://igod.gov.in/organization/Is4zv3QBGZk0jujBKgGW"
+    ]
    },
    "match": [
     "food processing"
@@ -342,7 +517,13 @@
    "dept": false,
    "links": {
     "web": "https://www.mohfw.gov.in",
-    "x": "MoHFW_INDIA"
+    "x": "MoHFW_INDIA",
+    "email": "secyhfw@nic.in",
+    "emailLabel": "Office of the Secretary (Health and Family Welfare)",
+    "emailSource": [
+     "https://clinicalestablishments.mohfw.gov.in/sites/default/files/2025-06/mohfw_directory.pdf",
+     "https://igod.gov.in/organization/WNe83XQBYNG-XPnvjOsx"
+    ]
    },
    "match": [
     "health and family welfare"
@@ -356,7 +537,12 @@
    "dept": false,
    "links": {
     "web": "https://heavyindustries.gov.in",
-    "x": "MHI_GoI"
+    "x": "MHI_GoI",
+    "email": "ea.dhi@nic.in",
+    "emailLabel": "Ministry contact (as listed on igod)",
+    "emailSource": [
+     "https://igod.gov.in/organization/JM4zv3QBGZk0jujBKgGW"
+    ]
    },
    "match": [
     "heavy industries"
@@ -370,7 +556,13 @@
    "dept": false,
    "links": {
     "web": "https://www.mha.gov.in",
-    "x": "HMOIndia"
+    "x": "HMOIndia",
+    "email": "hshso@nic.in",
+    "emailLabel": "Office of the Union Home Secretary",
+    "emailSource": [
+     "https://igod.gov.in/organization/Jc4zv3QBGZk0jujBKgGW",
+     "https://www.mha.gov.in/sites/default/files/TelephoneDirectory_13102026.pdf"
+    ]
    },
    "match": [
     "home affairs"
@@ -384,7 +576,12 @@
    "dept": false,
    "links": {
     "web": "https://mohua.gov.in",
-    "x": "MoHUA_India"
+    "x": "MoHUA_India",
+    "email": "secyurban@nic.in",
+    "emailLabel": "Office of the Secretary",
+    "emailSource": [
+     "https://igod.gov.in/organization/Js4zv3QBGZk0jujBKgGW"
+    ]
    },
    "match": [
     "housing and urban"
@@ -398,7 +595,13 @@
    "dept": false,
    "links": {
     "web": "https://mib.gov.in",
-    "x": "MIB_India"
+    "x": "MIB_India",
+    "email": "secy.inb@nic.in",
+    "emailLabel": "Office of the Secretary",
+    "emailSource": [
+     "https://mib.gov.in/en/ministry/directory",
+     "https://igod.gov.in/organization/KM4zv3QBGZk0jujBKgGW"
+    ]
    },
    "match": [
     "information and broadcasting"
@@ -413,7 +616,20 @@
    "links": {
     "web": "https://jalshakti-dowr.gov.in",
     "x": "MoJSDoWRRDGR",
-    "xl": "Dept of Water Resources"
+    "xl": "Dept of Water Resources",
+    "webl": "Dept of Water Resources",
+    "altWeb": [
+     [
+      "Dept of Drinking Water & Sanitation",
+      "https://jalshakti-ddws.gov.in"
+     ]
+    ],
+    "email": "secy-mowr@nic.in",
+    "emailLabel": "Office of the Secretary (Dept of Water Resources, RD & GR)",
+    "emailSource": [
+     "https://igod.gov.in/organization/eqNfInUBxrox_NfiSIBI",
+     "https://igod.gov.in/index.php/organization/Zde83XQBYNG-XPnvjOsx"
+    ]
    },
    "match": [
     "jal shakti"
@@ -427,7 +643,12 @@
    "dept": false,
    "links": {
     "web": "https://labour.gov.in",
-    "x": "LabourMinistry"
+    "x": "LabourMinistry",
+    "email": "secy-labour@nic.in",
+    "emailLabel": "Office of the Secretary",
+    "emailSource": [
+     "https://igod.gov.in/organization/Kc4zv3QBGZk0jujBKgGW"
+    ]
    },
    "match": [
     "\\blabou?r\\b"
@@ -441,7 +662,12 @@
    "dept": false,
    "links": {
     "web": "https://lawmin.gov.in",
-    "xs": "Ministry of Law and Justice India"
+    "xs": "Ministry of Law and Justice India",
+    "email": "mljoffice@gov.in",
+    "emailLabel": "Minister's office",
+    "emailSource": [
+     "https://igod.gov.in/organization/Ks4zv3QBGZk0jujBKgGW"
+    ]
    },
    "match": [
     "law and justice"
@@ -455,7 +681,12 @@
    "dept": false,
    "links": {
     "web": "https://msme.gov.in",
-    "x": "minmsme"
+    "x": "minmsme",
+    "email": "secretary-msme@nic.in",
+    "emailLabel": "Office of the Secretary",
+    "emailSource": [
+     "https://igod.gov.in/organization/aNJDHHUBGGphvn7wU-S7"
+    ]
    },
    "match": [
     "micro,? small and medium",
@@ -470,7 +701,12 @@
    "dept": false,
    "links": {
     "web": "https://mines.gov.in",
-    "x": "minesminindia"
+    "x": "minesminindia",
+    "email": "secy-mines@nic.in",
+    "emailLabel": "Office of the Secretary",
+    "emailSource": [
+     "https://igod.gov.in/organization/K84zv3QBGZk0jujBKgGW"
+    ]
    },
    "match": [
     "\\bmines\\b"
@@ -484,7 +720,12 @@
    "dept": false,
    "links": {
     "web": "https://www.minorityaffairs.gov.in",
-    "x": "MOMAIndia"
+    "x": "MOMAIndia",
+    "email": "secy-mma@nic.in",
+    "emailLabel": "Office of the Secretary",
+    "emailSource": [
+     "https://igod.gov.in/organization/LM4zv3QBGZk0jujBKgGW"
+    ]
    },
    "match": [
     "minority affairs"
@@ -498,7 +739,12 @@
    "dept": false,
    "links": {
     "web": "https://mnre.gov.in",
-    "x": "mnreindia"
+    "x": "mnreindia",
+    "email": "secy-mnre@nic.in",
+    "emailLabel": "Office of the Secretary",
+    "emailSource": [
+     "https://igod.gov.in/organization/Lc4zv3QBGZk0jujBKgGW"
+    ]
    },
    "match": [
     "new and renewable"
@@ -512,7 +758,12 @@
    "dept": false,
    "links": {
     "web": "https://panchayat.gov.in",
-    "x": "mopr_goi"
+    "x": "mopr_goi",
+    "email": "secy-mopr@nic.in",
+    "emailLabel": "Office of the Secretary",
+    "emailSource": [
+     "https://igod.gov.in/organization/Ls4zv3QBGZk0jujBKgGW"
+    ]
    },
    "match": [
     "panchayati raj"
@@ -526,7 +777,13 @@
    "dept": false,
    "links": {
     "web": "https://mpa.gov.in",
-    "xs": "Ministry of Parliamentary Affairs India"
+    "xs": "Ministry of Parliamentary Affairs India",
+    "email": "secympa@nic.in",
+    "emailLabel": "Office of the Secretary",
+    "emailSource": [
+     "https://www.mpa.gov.in/sites/default/files/Citizen%20Charter%20January%202022.pdf",
+     "https://igod.gov.in/organization/L84zv3QBGZk0jujBKgGW"
+    ]
    },
    "match": [
     "parliamentary affairs"
@@ -539,7 +796,7 @@
    "d": "Manages the civil services: recruitment, training and cadre management (DoPT), administrative reforms and public grievances (DARPG), and central government pensions.",
    "dept": false,
    "links": {
-    "web": "https://dopt.gov.in",
+    "web": "https://persmin.gov.in",
     "x": "DoPTGoI",
     "xl": "DoPT",
     "alt": [
@@ -547,6 +804,13 @@
       "DARPG",
       "DARPG_GoI"
      ]
+    ],
+    "email": "mos-pp@nic.in",
+    "emailLabel": "Minister of State's office (Personnel, PG & Pensions)",
+    "emailSource": [
+     "https://igod.gov.in/organization/MM4zv3QBGZk0jujBKgGW",
+     "https://persmin.gov.in/",
+     "https://dopt.gov.in/contactus"
     ]
    },
    "match": [
@@ -561,7 +825,12 @@
    "dept": false,
    "links": {
     "web": "https://mopng.gov.in",
-    "x": "PetroleumMin"
+    "x": "PetroleumMin",
+    "email": "sec.png@nic.in",
+    "emailLabel": "Office of the Secretary",
+    "emailSource": [
+     "https://igod.gov.in/organization/Mc4zv3QBGZk0jujBKgGW"
+    ]
    },
    "match": [
     "petroleum"
@@ -576,7 +845,14 @@
    "links": {
     "web": "https://www.niti.gov.in",
     "x": "NITIAayog",
-    "xl": "NITI Aayog"
+    "xl": "NITI Aayog",
+    "webl": "NITI Aayog",
+    "email": "niti@gov.in",
+    "emailLabel": "General enquiries (NITI Aayog)",
+    "emailSource": [
+     "https://www.india.gov.in/category/governance-planning/ministry/ministry-of-planning-1531939293287843",
+     "https://en.wikipedia.org/wiki/Ministry_of_Planning_(India)"
+    ]
    },
    "match": [
     "\\bplanning\\b"
@@ -590,7 +866,12 @@
    "dept": false,
    "links": {
     "web": "https://powermin.gov.in",
-    "x": "MinOfPower"
+    "x": "MinOfPower",
+    "email": "secy-power@nic.in",
+    "emailLabel": "Office of the Secretary",
+    "emailSource": [
+     "https://igod.gov.in/organization/Ms4zv3QBGZk0jujBKgGW"
+    ]
    },
    "match": [
     "\\bpower\\b"
@@ -604,7 +885,14 @@
    "dept": false,
    "links": {
     "web": "https://indianrailways.gov.in",
-    "x": "RailMinIndia"
+    "x": "RailMinIndia",
+    "email": "secyrb@rb.railnet.gov.in",
+    "emailLabel": "Office of the Secretary, Railway Board",
+    "emailSource": [
+     "https://igod.gov.in/organization/M84zv3QBGZk0jujBKgGW",
+     "https://www.sarkaritel.com/?p=388542"
+    ],
+    "emailChecked": false
    },
    "match": [
     "\\brailways?\\b"
@@ -618,7 +906,14 @@
    "dept": false,
    "links": {
     "web": "https://morth.gov.in",
-    "x": "MORTHIndia"
+    "x": "MORTHIndia",
+    "email": "secy-road@nic.in",
+    "emailLabel": "Office of the Secretary",
+    "emailSource": [
+     "https://www.sarkaritel.com/ministry-of-road-transport-and-highways-morth/",
+     "https://morth.gov.in/en/node/9495"
+    ],
+    "emailChecked": false
    },
    "match": [
     "road transport"
@@ -632,7 +927,12 @@
    "dept": false,
    "links": {
     "web": "https://rural.gov.in",
-    "x": "MoRD_GoI"
+    "x": "MoRD_GoI",
+    "email": "secyrd@nic.in",
+    "emailLabel": "Office of the Secretary (Rural Development)",
+    "emailSource": [
+     "https://igod.gov.in/organization/NM4zv3QBGZk0jujBKgGW"
+    ]
    },
    "match": [
     "rural development"
@@ -647,7 +947,24 @@
    "links": {
     "web": "https://dst.gov.in",
     "x": "IndiaDST",
-    "xl": "Dept of Science & Technology"
+    "xl": "Dept of Science & Technology",
+    "webl": "Dept of Science & Technology",
+    "altWeb": [
+     [
+      "Dept of Biotechnology",
+      "https://dbtindia.gov.in"
+     ],
+     [
+      "DSIR",
+      "https://www.dsir.gov.in"
+     ]
+    ],
+    "email": "dstsec@nic.in",
+    "emailLabel": "Office of the Secretary, DST",
+    "emailSource": [
+     "https://igod.gov.in/organization/Nc4zv3QBGZk0jujBKgGW",
+     "https://igod.gov.in/organization/b9e83XQBYNG-XPnvjOsx"
+    ]
    },
    "match": [
     "science and technology"
@@ -661,7 +978,13 @@
    "dept": false,
    "links": {
     "web": "https://shipmin.gov.in",
-    "x": "shipmin_india"
+    "x": "shipmin_india",
+    "email": "jscord-psw@gov.in",
+    "emailLabel": "General contact (Joint Secretary, Coordination)",
+    "emailSource": [
+     "https://igod.gov.in/organization/Rs4zv3QBGZk0jujBKgGW",
+     "https://www.shipmin.gov.in/en/node/53"
+    ]
    },
    "match": [
     "\\bports\\b",
@@ -676,7 +999,12 @@
    "dept": false,
    "links": {
     "web": "https://www.msde.gov.in",
-    "x": "MSDESkillIndia"
+    "x": "MSDESkillIndia",
+    "email": "secy-msde@nic.in",
+    "emailLabel": "Office of the Secretary",
+    "emailSource": [
+     "https://igod.gov.in/organization/R84zv3QBGZk0jujBKgGW"
+    ]
    },
    "match": [
     "skill development"
@@ -690,7 +1018,20 @@
    "dept": false,
    "links": {
     "web": "https://socialjustice.gov.in",
-    "x": "MSJEGOI"
+    "x": "MSJEGOI",
+    "webl": "Dept of Social Justice & Empowerment",
+    "altWeb": [
+     [
+      "Dept of Empowerment of Persons with Disabilities",
+      "https://depwd.gov.in"
+     ]
+    ],
+    "email": "secywel@nic.in",
+    "emailLabel": "Office of the Secretary (Dept. of Social Justice & Empowerment)",
+    "emailSource": [
+     "https://igod.gov.in/organization/nxKd9XkBmn7FjzzhzCSZ",
+     "https://igod.gov.in/organization/cte83XQBYNG-XPnvjOsx"
+    ]
    },
    "match": [
     "social justice"
@@ -703,8 +1044,13 @@
    "d": "Produces official statistics such as GDP, the Consumer Price Index and the Periodic Labour Force Survey, and monitors central schemes and large infrastructure projects.",
    "dept": false,
    "links": {
-    "web": "https://mospi.gov.in",
-    "x": "GoIStats"
+    "web": "https://www.mospi.gov.in",
+    "x": "GoIStats",
+    "email": "secretary@mospi.gov.in",
+    "emailLabel": "Office of the Secretary",
+    "emailSource": [
+     "https://igod.gov.in/organization/Oc4zv3QBGZk0jujBKgGW"
+    ]
    },
    "match": [
     "statistics"
@@ -718,7 +1064,15 @@
    "dept": false,
    "links": {
     "web": "https://steel.gov.in",
-    "x": "SteelMinIndia"
+    "x": "SteelMinIndia",
+    "email": "secy-steel@nic.in",
+    "emailLabel": "Office of the Secretary",
+    "emailSource": [
+     "https://steel.gov.in/en/contact-us",
+     "https://www.sarkaritel.com/?p=388310",
+     "https://igod.gov.in/organization/Os4zv3QBGZk0jujBKgGW"
+    ],
+    "emailChecked": false
    },
    "match": [
     "\\bsteel\\b"
@@ -732,7 +1086,12 @@
    "dept": false,
    "links": {
     "web": "https://texmin.gov.in",
-    "x": "TexMinIndia"
+    "x": "TexMinIndia",
+    "email": "secy-textiles@nic.in",
+    "emailLabel": "Office of the Secretary",
+    "emailSource": [
+     "https://igod.gov.in/organization/O84zv3QBGZk0jujBKgGW"
+    ]
    },
    "match": [
     "textiles"
@@ -752,6 +1111,11 @@
       "Incredible India",
       "incredibleindia"
      ]
+    ],
+    "email": "sectour@nic.in",
+    "emailLabel": "Office of the Secretary",
+    "emailSource": [
+     "https://igod.gov.in/organization/PM4zv3QBGZk0jujBKgGW"
     ]
    },
    "match": [
@@ -766,7 +1130,12 @@
    "dept": false,
    "links": {
     "web": "https://tribal.gov.in",
-    "x": "TribalAffairsIn"
+    "x": "TribalAffairsIn",
+    "email": "secy-tribal@nic.in",
+    "emailLabel": "Office of the Secretary",
+    "emailSource": [
+     "https://igod.gov.in/organization/Pc4zv3QBGZk0jujBKgGW"
+    ]
    },
    "match": [
     "tribal affairs"
@@ -780,7 +1149,13 @@
    "dept": false,
    "links": {
     "web": "https://wcd.gov.in",
-    "x": "MinistryWCD"
+    "x": "MinistryWCD",
+    "email": "secy.wcd@nic.in",
+    "emailLabel": "Office of the Secretary",
+    "emailSource": [
+     "https://igod.gov.in/organization/P84zv3QBGZk0jujBKgGW",
+     "https://wcd.gov.in/contact-us"
+    ]
    },
    "match": [
     "women and child"
@@ -800,6 +1175,11 @@
       "Dept of Sports",
       "IndiaSports"
      ]
+    ],
+    "email": "secy-ya@nic.in",
+    "emailLabel": "Office of the Secretary (Youth Affairs)",
+    "emailSource": [
+     "https://igod.gov.in/organization/QM4zv3QBGZk0jujBKgGW"
     ]
    },
    "match": [
@@ -815,7 +1195,12 @@
    "dept": true,
    "links": {
     "web": "https://dae.gov.in",
-    "x": "DAEIndia"
+    "x": "DAEIndia",
+    "email": "chairman@dae.gov.in",
+    "emailLabel": "Office of the Secretary, DAE / Chairman, Atomic Energy Commission",
+    "emailSource": [
+     "https://igod.gov.in/organization/Qc4zv3QBGZk0jujBKgGW"
+    ]
    },
    "match": [
     "atomic energy"
@@ -830,7 +1215,14 @@
    "links": {
     "web": "https://www.isro.gov.in",
     "x": "isro",
-    "xl": "ISRO"
+    "xl": "ISRO",
+    "email": "chairman@isro.gov.in",
+    "emailLabel": "Office of the Secretary, DOS / Chairman, ISRO",
+    "emailSource": [
+     "https://igod.gov.in/organization/Qs4zv3QBGZk0jujBKgGW",
+     "https://www.dos.gov.in/",
+     "https://www.isro.gov.in/media_isro/pdf/RTI/Contact_Details_DOS2026.pdf"
+    ]
    },
    "match": [
     "department of space",
@@ -838,5 +1230,5 @@
    ]
   }
  ],
- "_help": "Static facts about each ministry. 'match' holds regular expressions that sync.py uses to recognise the ministry in Wikipedia's portfolio column (lower-case, '&' read as 'and'). 'links.xs' means no confirmed X account: the page links to an X search for that text instead."
+ "_help": "Static facts about each ministry. links.web is the official website (links.webl names the department when the site covers only one), links.altWeb lists other departments' sites, links.email is the official contact address shown on the page (emailChecked false means it came from a directory rather than a government page). 'match' holds the patterns sync.py uses to recognise the ministry on Wikipedia. 'links.xs' means no confirmed X account."
 }
