@@ -1060,7 +1060,6 @@ def main():
     if old_site and {k: v for k, v in old_site.items() if k != "generated"} == {k: v for k, v in site.items() if k != "generated"}:
         site["generated"] = old_site["generated"]          # nothing changed: keep the date so browsers don't re-download
     save("site.json", site)
-    save("sync-status.json", dict(status, at=datetime.now(timezone.utc).replace(microsecond=0).isoformat()))
     write_page(site)
     log("Done: %d ministries, %d ministers, %d photos. %s" % (len(site["ministries"]), len(site["people"]),
         sum(1 for p in site["people"].values() if p.get("photo")), "OK" if status["ok"] else "Needs a look: " + " | ".join(status["messages"])))
@@ -1079,6 +1078,7 @@ def main():
     if by and by < expected and not a.offline and now_ist.weekday() == 0:      # a reminder on Mondays until it's done
         status.setdefault("review", []).append(
             "The Union Budget %s has been presented, but data/budget.json still shows %s. Update it from the Expenditure Budget's summary by ministry (indiabudget.gov.in/doc/eb/allsbe.pdf)." % (expected, by))
+    save("sync-status.json", dict(status, at=datetime.now(timezone.utc).replace(microsecond=0).isoformat()))
     review = status.get("review") or []
     if not status["ok"] or review:
         parts = []
