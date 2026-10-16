@@ -351,8 +351,8 @@ def match_ministries(text, meta, unknown=None):
         for m in found:
             if m["id"] not in hits:
                 hits.append(m["id"])
-        if not found and unknown is not None and not re.search(NOT_A_MINISTRY, part):
-            unknown.append(original)
+        if not found and unknown is not None and pw and not re.search(NOT_A_MINISTRY, part):
+            unknown.append(original)          # pieces with no real words ("and") are joins, not ministries
     return hits
 
 
