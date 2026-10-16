@@ -1,5 +1,5 @@
 {
- "at": "2026-10-16T14:05:38+00:00",
+ "at": "2026-10-16T14:20:49+00:00",
  "results": [
   {
    "url": "https://agriwelfare.gov.in",
@@ -9,6 +9,15 @@
    "error": "HTTP 403",
    "id": "agriculture",
    "ministry": "Agriculture and Farmers Welfare"
+  },
+  {
+   "url": "https://dare.gov.in",
+   "status": null,
+   "final": null,
+   "title": null,
+   "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)",
+   "id": "agriculture",
+   "ministry": "Agriculture and Farmers Welfare (Agricultural Research & Education (DARE))"
   },
   {
    "url": "https://ayush.gov.in",
@@ -29,9 +38,27 @@
    "ministry": "Chemicals and Fertilizers"
   },
   {
-   "url": "https://civilaviation.gov.in",
+   "url": "https://fert.gov.in",
+   "status": null,
+   "final": null,
+   "title": null,
+   "error": "timed out",
+   "id": "chemicals",
+   "ministry": "Chemicals and Fertilizers (Dept of Fertilizers)"
+  },
+  {
+   "url": "https://pharmaceuticals.gov.in",
+   "status": null,
+   "final": null,
+   "title": null,
+   "error": "[Errno -2] Name or service not known",
+   "id": "chemicals",
+   "ministry": "Chemicals and Fertilizers (Dept of Pharmaceuticals)"
+  },
+  {
+   "url": "https://www.civilaviation.gov.in",
    "status": 200,
-   "final": "https://www.civilaviation.gov.in/",
+   "final": "https://www.civilaviation.gov.in",
    "title": "Welcome! | Ministry of Civil Aviation",
    "error": null,
    "id": "civil-aviation",
@@ -47,13 +74,22 @@
    "ministry": "Coal"
   },
   {
-   "url": "https://commerce.gov.in",
+   "url": "https://www.commerce.gov.in",
    "status": 200,
-   "final": "https://www.commerce.gov.in/",
+   "final": "https://www.commerce.gov.in",
    "title": "DOC",
    "error": null,
    "id": "commerce",
    "ministry": "Commerce and Industry"
+  },
+  {
+   "url": "https://dpiit.gov.in",
+   "status": 200,
+   "final": "https://www.dpiit.gov.in/",
+   "title": null,
+   "error": null,
+   "id": "commerce",
+   "ministry": "Commerce and Industry (DPIIT)"
   },
   {
    "url": "https://dot.gov.in",
@@ -65,16 +101,34 @@
    "ministry": "Communications"
   },
   {
-   "url": "https://consumeraffairs.nic.in",
+   "url": "https://www.indiapost.gov.in",
+   "status": 200,
+   "final": "https://www.indiapost.gov.in",
+   "title": "India Post",
+   "error": null,
+   "id": "communications",
+   "ministry": "Communications (Dept of Posts)"
+  },
+  {
+   "url": "https://doca.gov.in",
    "status": null,
    "final": null,
    "title": null,
-   "error": "timed out",
+   "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)",
    "id": "consumer-affairs",
    "ministry": "Consumer Affairs, Food and Public Distribution"
   },
   {
-   "url": "https://cooperation.gov.in",
+   "url": "https://dfpd.gov.in",
+   "status": 200,
+   "final": "https://dfpd.gov.in",
+   "title": "Official Website of Department of Food and Public Distribution, Ministry of Consumer Affairs, Food and Public Distribution, Government of India",
+   "error": null,
+   "id": "consumer-affairs",
+   "ministry": "Consumer Affairs, Food and Public Distribution (Dept of Food & Public Distribution)"
+  },
+  {
+   "url": "https://www.cooperation.gov.in",
    "status": null,
    "final": null,
    "title": null,
@@ -182,6 +236,15 @@
    "ministry": "Fisheries, Animal Husbandry and Dairying"
   },
   {
+   "url": "https://dof.gov.in",
+   "status": 200,
+   "final": "https://www.dof.gov.in/",
+   "title": null,
+   "error": null,
+   "id": "fisheries",
+   "ministry": "Fisheries, Animal Husbandry and Dairying (Dept of Fisheries)"
+  },
+  {
    "url": "https://www.mofpi.gov.in",
    "status": 200,
    "final": "https://www.mofpi.gov.in",
@@ -243,6 +306,15 @@
    "error": null,
    "id": "jal-shakti",
    "ministry": "Jal Shakti"
+  },
+  {
+   "url": "https://jalshakti-ddws.gov.in",
+   "status": 200,
+   "final": "https://www.jalshakti-ddws.gov.in/",
+   "title": "Home",
+   "error": null,
+   "id": "jal-shakti",
+   "ministry": "Jal Shakti (Dept of Drinking Water & Sanitation)"
   },
   {
    "url": "https://labour.gov.in",
@@ -317,11 +389,11 @@
    "ministry": "Parliamentary Affairs"
   },
   {
-   "url": "https://dopt.gov.in",
+   "url": "https://persmin.gov.in",
    "status": null,
    "final": null,
    "title": null,
-   "error": "[Errno 104] Connection reset by peer",
+   "error": "timed out",
    "id": "personnel",
    "ministry": "Personnel, Public Grievances and Pensions"
   },
@@ -389,6 +461,24 @@
    "ministry": "Science and Technology"
   },
   {
+   "url": "https://dbtindia.gov.in",
+   "status": null,
+   "final": null,
+   "title": null,
+   "error": "[Errno -2] Name or service not known",
+   "id": "science-technology",
+   "ministry": "Science and Technology (Dept of Biotechnology)"
+  },
+  {
+   "url": "https://www.dsir.gov.in",
+   "status": 200,
+   "final": "https://www.dsir.gov.in",
+   "title": null,
+   "error": null,
+   "id": "science-technology",
+   "ministry": "Science and Technology (DSIR)"
+  },
+  {
    "url": "https://shipmin.gov.in",
    "status": 200,
    "final": "https://shipmin.gov.in",
@@ -416,9 +506,18 @@
    "ministry": "Social Justice and Empowerment"
   },
   {
-   "url": "https://mospi.gov.in",
+   "url": "https://depwd.gov.in",
    "status": 200,
-   "final": "https://mospi.gov.in",
+   "final": "https://depwd.gov.in",
+   "title": "दिव्यांगजन सशक्तिकरण विभाग | भारत",
+   "error": null,
+   "id": "social-justice",
+   "ministry": "Social Justice and Empowerment (Dept of Empowerment of Persons with Disabilities)"
+  },
+  {
+   "url": "https://www.mospi.gov.in",
+   "status": 200,
+   "final": "https://www.mospi.gov.in",
    "title": "Ministry of Statistics and Program Implementation | Government Of India",
    "error": null,
    "id": "statistics",
