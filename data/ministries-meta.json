@@ -1,0 +1,842 @@
+{
+ "ministries": [
+  {
+   "id": "agriculture",
+   "n": "Agriculture and Farmers Welfare",
+   "s": "Agriculture & Rural",
+   "d": "Frames national policy on crops, farm inputs, credit and crop insurance, and runs farmer-income schemes such as PM-KISAN and PM Fasal Bima Yojana. Its Department of Agricultural Research and Education oversees ICAR.",
+   "dept": false,
+   "links": {
+    "web": "https://agriwelfare.gov.in",
+    "x": "AgriGoI"
+   },
+   "match": [
+    "agricultur"
+   ]
+  },
+  {
+   "id": "ayush",
+   "n": "AYUSH",
+   "s": "Social Welfare",
+   "d": "Promotes and regulates the traditional systems of medicine: Ayurveda, Yoga & Naturopathy, Unani, Siddha, Sowa-Rigpa and Homoeopathy. It covers their education, research, drug standards and the National AYUSH Mission.",
+   "dept": false,
+   "links": {
+    "web": "https://ayush.gov.in",
+    "x": "moayush"
+   },
+   "match": [
+    "\\bayush\\b"
+   ]
+  },
+  {
+   "id": "chemicals",
+   "n": "Chemicals and Fertilizers",
+   "s": "Economy & Industry",
+   "d": "Covers chemicals and petrochemicals, fertilizers and pharmaceuticals through three departments. It secures fertilizer supply and subsidy for farmers and runs the Jan Aushadhi network of low-cost generic medicine stores.",
+   "dept": false,
+   "links": {
+    "web": "https://chemicals.gov.in",
+    "x": "dcpcindia",
+    "xl": "Dept of Chemicals & Petrochemicals",
+    "alt": [
+     [
+      "Dept of Pharmaceuticals",
+      "Pharmadept"
+     ]
+    ]
+   },
+   "match": [
+    "chemicals",
+    "fertili[sz]ers"
+   ]
+  },
+  {
+   "id": "civil-aviation",
+   "n": "Civil Aviation",
+   "s": "Infrastructure & Transport",
+   "d": "Regulates and develops air transport: airports, airlines and air safety through the DGCA, and regional air connectivity under the UDAN scheme.",
+   "dept": false,
+   "links": {
+    "web": "https://civilaviation.gov.in",
+    "x": "MoCA_GoI"
+   },
+   "match": [
+    "civil aviation"
+   ]
+  },
+  {
+   "id": "coal",
+   "n": "Coal",
+   "s": "Energy & Environment",
+   "d": "Sets policy for exploring, allocating and mining coal and lignite, including commercial coal-block auctions, and oversees Coal India Ltd and NLC India.",
+   "dept": false,
+   "links": {
+    "web": "https://coal.gov.in",
+    "x": "CoalMinistry"
+   },
+   "match": [
+    "\\bcoal\\b"
+   ]
+  },
+  {
+   "id": "commerce",
+   "n": "Commerce and Industry",
+   "s": "Economy & Industry",
+   "d": "Runs foreign trade policy and trade negotiations through the Department of Commerce, and industrial policy, investment promotion and Startup India through DPIIT.",
+   "dept": false,
+   "links": {
+    "web": "https://commerce.gov.in",
+    "x": "CimGOI",
+    "alt": [
+     [
+      "DPIIT",
+      "DPIITGoI"
+     ]
+    ]
+   },
+   "match": [
+    "commerce"
+   ]
+  },
+  {
+   "id": "communications",
+   "n": "Communications",
+   "s": "Science & Digital",
+   "d": "Oversees telecommunications, spectrum and broadband through the Department of Telecommunications, and India Post through the Department of Posts.",
+   "dept": false,
+   "links": {
+    "web": "https://dot.gov.in",
+    "x": "DoT_India",
+    "xl": "Dept of Telecommunications",
+    "alt": [
+     [
+      "India Post",
+      "IndiaPostOffice"
+     ]
+    ]
+   },
+   "match": [
+    "\\bcommunications\\b"
+   ]
+  },
+  {
+   "id": "consumer-affairs",
+   "n": "Consumer Affairs, Food and Public Distribution",
+   "s": "Agriculture & Rural",
+   "d": "Protects consumer rights and product standards (BIS, consumer commissions) and manages food-grain procurement, storage and the public distribution system, including free grain under PM Garib Kalyan Anna Yojana.",
+   "dept": false,
+   "links": {
+    "web": "https://consumeraffairs.nic.in",
+    "x": "jagograhakjago",
+    "xl": "Dept of Consumer Affairs",
+    "alt": [
+     [
+      "Dept of Food & Public Distribution",
+      "fooddeptgoi"
+     ]
+    ]
+   },
+   "match": [
+    "consumer affairs",
+    "public distribution"
+   ]
+  },
+  {
+   "id": "cooperation",
+   "n": "Co-operation",
+   "s": "Agriculture & Rural",
+   "d": "Created in 2021 to strengthen the cooperative movement. It administers multi-state cooperative societies, is computerising primary agricultural credit societies and promotes cooperative-led growth.",
+   "dept": false,
+   "links": {
+    "web": "https://cooperation.gov.in",
+    "x": "MinOfCooperatn"
+   },
+   "match": [
+    "\\bco-?operation\\b"
+   ]
+  },
+  {
+   "id": "corporate-affairs",
+   "n": "Corporate Affairs",
+   "s": "Economy & Industry",
+   "d": "Administers the Companies Act, the LLP Act and the Insolvency and Bankruptcy Code, regulating company registration, governance and filings through the Registrars of Companies.",
+   "dept": false,
+   "links": {
+    "web": "https://www.mca.gov.in",
+    "x": "MCA21India"
+   },
+   "match": [
+    "corporate affairs"
+   ]
+  },
+  {
+   "id": "culture",
+   "n": "Culture",
+   "s": "Culture & Media",
+   "d": "Preserves India's tangible and intangible heritage and promotes the arts through the Archaeological Survey of India, national museums, academies, libraries and archives.",
+   "dept": false,
+   "links": {
+    "web": "https://www.indiaculture.gov.in",
+    "x": "MinOfCultureGoI"
+   },
+   "match": [
+    "\\bculture\\b"
+   ]
+  },
+  {
+   "id": "defence",
+   "n": "Defence",
+   "s": "Security & Diplomacy",
+   "d": "Responsible for national defence and the armed forces: the Army, Navy and Air Force, defence production and exports, research through DRDO, and the welfare of ex-servicemen.",
+   "dept": false,
+   "links": {
+    "web": "https://www.mod.gov.in",
+    "x": "DefenceMinIndia"
+   },
+   "match": [
+    "\\bdefen[cs]e\\b"
+   ]
+  },
+  {
+   "id": "doner",
+   "n": "Development of North Eastern Region",
+   "s": "Governance",
+   "d": "Coordinates development of the eight north-eastern states, funding infrastructure and livelihood projects and working with the North Eastern Council.",
+   "dept": false,
+   "links": {
+    "web": "https://mdoner.gov.in",
+    "x": "MDoNER_India"
+   },
+   "match": [
+    "north[- ]eastern region",
+    "\\bdoner\\b"
+   ]
+  },
+  {
+   "id": "earth-sciences",
+   "n": "Earth Sciences",
+   "s": "Science & Digital",
+   "d": "Provides weather, climate, ocean and earthquake services through IMD, INCOIS and the National Centre for Seismology, and runs polar and deep-ocean research.",
+   "dept": false,
+   "links": {
+    "web": "https://moes.gov.in",
+    "x": "moesgoi"
+   },
+   "match": [
+    "earth sciences"
+   ]
+  },
+  {
+   "id": "education",
+   "n": "Education",
+   "s": "Social Welfare",
+   "d": "Shapes national education policy (NEP 2020) through the Departments of School Education & Literacy and Higher Education, overseeing bodies such as UGC, NCERT, the IITs and central universities.",
+   "dept": false,
+   "links": {
+    "web": "https://www.education.gov.in",
+    "x": "EduMinOfIndia"
+   },
+   "match": [
+    "^(minister of |ministry of )?education\\b",
+    "\\bministry of education\\b",
+    "\\bminister of education\\b"
+   ]
+  },
+  {
+   "id": "meity",
+   "n": "Electronics and Information Technology",
+   "s": "Science & Digital",
+   "d": "Drives Digital India: electronics and semiconductor manufacturing, IT and IT-enabled services, cybersecurity through CERT-In, Aadhaar through UIDAI, and data-protection rules.",
+   "dept": false,
+   "links": {
+    "web": "https://www.meity.gov.in",
+    "x": "GoI_MeitY"
+   },
+   "match": [
+    "electronics and information technology"
+   ]
+  },
+  {
+   "id": "environment",
+   "n": "Environment, Forest and Climate Change",
+   "s": "Energy & Environment",
+   "d": "Plans and enforces environmental and forest conservation, wildlife protection and pollution control, and leads India's climate-change commitments.",
+   "dept": false,
+   "links": {
+    "web": "https://moef.gov.in",
+    "x": "moefcc"
+   },
+   "match": [
+    "environment"
+   ]
+  },
+  {
+   "id": "external-affairs",
+   "n": "External Affairs",
+   "s": "Security & Diplomacy",
+   "d": "Conducts India's foreign relations and diplomacy, runs embassies and missions abroad, and provides passport, visa and consular services.",
+   "dept": false,
+   "links": {
+    "web": "https://www.mea.gov.in",
+    "x": "MEAIndia"
+   },
+   "match": [
+    "external affairs"
+   ]
+  },
+  {
+   "id": "finance",
+   "n": "Finance",
+   "s": "Economy & Industry",
+   "d": "Manages the economy and public finances: the Union Budget, direct and indirect taxes, expenditure, banking and financial services, and public-sector enterprises through DIPAM and DPE.",
+   "dept": false,
+   "links": {
+    "web": "https://finmin.gov.in",
+    "x": "FinMinIndia"
+   },
+   "match": [
+    "\\bfinance\\b"
+   ]
+  },
+  {
+   "id": "fisheries",
+   "n": "Fisheries, Animal Husbandry and Dairying",
+   "s": "Agriculture & Rural",
+   "d": "Develops fisheries, livestock and dairy through separate departments, including animal-health programmes, the National Gokul Mission and PM Matsya Sampada Yojana.",
+   "dept": false,
+   "links": {
+    "web": "https://dahd.gov.in",
+    "x": "Dept_of_AHD",
+    "xl": "Dept of Animal Husbandry & Dairying",
+    "alt": [
+     [
+      "Dept of Fisheries",
+      "FisheriesGoI"
+     ]
+    ]
+   },
+   "match": [
+    "fisheries",
+    "animal husbandry"
+   ]
+  },
+  {
+   "id": "food-processing",
+   "n": "Food Processing Industries",
+   "s": "Agriculture & Rural",
+   "d": "Promotes the food-processing industry with mega food parks, cold chains and the PM Formalisation of Micro Food Processing Enterprises scheme, to cut wastage and raise farm incomes.",
+   "dept": false,
+   "links": {
+    "web": "https://www.mofpi.gov.in",
+    "x": "MOFPI_GOI"
+   },
+   "match": [
+    "food processing"
+   ]
+  },
+  {
+   "id": "health",
+   "n": "Health and Family Welfare",
+   "s": "Social Welfare",
+   "d": "Runs national health policy and programmes: Ayushman Bharat, disease control, immunisation, medical education and AIIMS, and health research through ICMR.",
+   "dept": false,
+   "links": {
+    "web": "https://www.mohfw.gov.in",
+    "x": "MoHFW_INDIA"
+   },
+   "match": [
+    "health and family welfare"
+   ]
+  },
+  {
+   "id": "heavy-industries",
+   "n": "Heavy Industries",
+   "s": "Economy & Industry",
+   "d": "Oversees the capital-goods and automotive industries and heavy-engineering public-sector units, and runs electric-mobility programmes such as PM E-DRIVE and the auto PLI scheme.",
+   "dept": false,
+   "links": {
+    "web": "https://heavyindustries.gov.in",
+    "x": "MHI_GoI"
+   },
+   "match": [
+    "heavy industries"
+   ]
+  },
+  {
+   "id": "home",
+   "n": "Home Affairs",
+   "s": "Security & Diplomacy",
+   "d": "Handles internal security, border management, the central armed police forces, disaster management, centre-state relations and the administration of Union Territories.",
+   "dept": false,
+   "links": {
+    "web": "https://www.mha.gov.in",
+    "x": "HMOIndia"
+   },
+   "match": [
+    "home affairs"
+   ]
+  },
+  {
+   "id": "housing",
+   "n": "Housing and Urban Affairs",
+   "s": "Infrastructure & Transport",
+   "d": "Sets urban development policy and runs the Smart Cities Mission, AMRUT, Swachh Bharat (Urban), PMAY-Urban housing and metro rail projects.",
+   "dept": false,
+   "links": {
+    "web": "https://mohua.gov.in",
+    "x": "MoHUA_India"
+   },
+   "match": [
+    "housing and urban"
+   ]
+  },
+  {
+   "id": "information-broadcasting",
+   "n": "Information and Broadcasting",
+   "s": "Culture & Media",
+   "d": "Regulates broadcasting, films and the press, and runs public-service media: Prasar Bharati (Doordarshan and All India Radio) and the Press Information Bureau.",
+   "dept": false,
+   "links": {
+    "web": "https://mib.gov.in",
+    "x": "MIB_India"
+   },
+   "match": [
+    "information and broadcasting"
+   ]
+  },
+  {
+   "id": "jal-shakti",
+   "n": "Jal Shakti",
+   "s": "Energy & Environment",
+   "d": "Manages India's water resources through two departments: river development and water conservation, and drinking water and sanitation, including the Jal Jeevan Mission and Swachh Bharat (Grameen).",
+   "dept": false,
+   "links": {
+    "web": "https://jalshakti-dowr.gov.in",
+    "x": "MoJSDoWRRDGR",
+    "xl": "Dept of Water Resources"
+   },
+   "match": [
+    "jal shakti"
+   ]
+  },
+  {
+   "id": "labour",
+   "n": "Labour and Employment",
+   "s": "Social Welfare",
+   "d": "Frames labour law, including the four labour codes, provides social security through EPFO and ESIC, and runs employment schemes and the e-Shram registry of unorganised workers.",
+   "dept": false,
+   "links": {
+    "web": "https://labour.gov.in",
+    "x": "LabourMinistry"
+   },
+   "match": [
+    "\\blabou?r\\b"
+   ]
+  },
+  {
+   "id": "law",
+   "n": "Law and Justice",
+   "s": "Governance",
+   "d": "Advises the government on legal matters (Department of Legal Affairs), drafts central legislation (Legislative Department) and supports judicial infrastructure and access to justice (Department of Justice).",
+   "dept": false,
+   "links": {
+    "web": "https://lawmin.gov.in",
+    "xs": "Ministry of Law and Justice India"
+   },
+   "match": [
+    "law and justice"
+   ]
+  },
+  {
+   "id": "msme",
+   "n": "Micro, Small and Medium Enterprises",
+   "s": "Economy & Industry",
+   "d": "Supports small businesses through credit guarantees, the Udyam registration portal and the PMEGP employment programme, and promotes khadi and village industries through KVIC.",
+   "dept": false,
+   "links": {
+    "web": "https://msme.gov.in",
+    "x": "minmsme"
+   },
+   "match": [
+    "micro,? small and medium",
+    "\\bmsme\\b"
+   ]
+  },
+  {
+   "id": "mines",
+   "n": "Mines",
+   "s": "Energy & Environment",
+   "d": "Regulates exploration and mining of minerals other than coal, oil and gas, including critical minerals, through the Geological Survey of India and mineral-block auctions.",
+   "dept": false,
+   "links": {
+    "web": "https://mines.gov.in",
+    "x": "minesminindia"
+   },
+   "match": [
+    "\\bmines\\b"
+   ]
+  },
+  {
+   "id": "minority-affairs",
+   "n": "Minority Affairs",
+   "s": "Social Welfare",
+   "d": "Runs education, skilling and economic schemes for the six notified minority communities and oversees the administration of waqf properties.",
+   "dept": false,
+   "links": {
+    "web": "https://www.minorityaffairs.gov.in",
+    "x": "MOMAIndia"
+   },
+   "match": [
+    "minority affairs"
+   ]
+  },
+  {
+   "id": "mnre",
+   "n": "New and Renewable Energy",
+   "s": "Energy & Environment",
+   "d": "Leads solar, wind, green hydrogen and bioenergy development, including PM Surya Ghar rooftop solar and India's 500 GW non-fossil capacity target.",
+   "dept": false,
+   "links": {
+    "web": "https://mnre.gov.in",
+    "x": "mnreindia"
+   },
+   "match": [
+    "new and renewable"
+   ]
+  },
+  {
+   "id": "panchayati-raj",
+   "n": "Panchayati Raj",
+   "s": "Agriculture & Rural",
+   "d": "Strengthens rural local self-government through gram panchayats, funding capacity building and e-governance, and runs the SVAMITVA scheme for rural property cards.",
+   "dept": false,
+   "links": {
+    "web": "https://panchayat.gov.in",
+    "x": "mopr_goi"
+   },
+   "match": [
+    "panchayati raj"
+   ]
+  },
+  {
+   "id": "parliamentary-affairs",
+   "n": "Parliamentary Affairs",
+   "s": "Governance",
+   "d": "Manages the government's business in Parliament: scheduling sessions, coordinating bills and floor strategy, and liaising with parties across both Houses.",
+   "dept": false,
+   "links": {
+    "web": "https://mpa.gov.in",
+    "xs": "Ministry of Parliamentary Affairs India"
+   },
+   "match": [
+    "parliamentary affairs"
+   ]
+  },
+  {
+   "id": "personnel",
+   "n": "Personnel, Public Grievances and Pensions",
+   "s": "Governance",
+   "d": "Manages the civil services: recruitment, training and cadre management (DoPT), administrative reforms and public grievances (DARPG), and central government pensions.",
+   "dept": false,
+   "links": {
+    "web": "https://dopt.gov.in",
+    "x": "DoPTGoI",
+    "xl": "DoPT",
+    "alt": [
+     [
+      "DARPG",
+      "DARPG_GoI"
+     ]
+    ]
+   },
+   "match": [
+    "personnel,? public grievances"
+   ]
+  },
+  {
+   "id": "petroleum",
+   "n": "Petroleum and Natural Gas",
+   "s": "Energy & Environment",
+   "d": "Oversees exploration, production, refining, distribution and marketing of oil and natural gas, and runs clean-cooking programmes such as PM Ujjwala Yojana.",
+   "dept": false,
+   "links": {
+    "web": "https://mopng.gov.in",
+    "x": "PetroleumMin"
+   },
+   "match": [
+    "petroleum"
+   ]
+  },
+  {
+   "id": "planning",
+   "n": "Planning",
+   "s": "Governance",
+   "d": "Works with NITI Aayog, the government's policy think tank, on long-term development strategy, programme monitoring and evaluation.",
+   "dept": false,
+   "links": {
+    "web": "https://www.niti.gov.in",
+    "x": "NITIAayog",
+    "xl": "NITI Aayog"
+   },
+   "match": [
+    "\\bplanning\\b"
+   ]
+  },
+  {
+   "id": "power",
+   "n": "Power",
+   "s": "Energy & Environment",
+   "d": "Sets policy for electricity generation, transmission and distribution, grid reliability and energy efficiency, and funds distribution reforms and smart metering.",
+   "dept": false,
+   "links": {
+    "web": "https://powermin.gov.in",
+    "x": "MinOfPower"
+   },
+   "match": [
+    "\\bpower\\b"
+   ]
+  },
+  {
+   "id": "railways",
+   "n": "Railways",
+   "s": "Infrastructure & Transport",
+   "d": "Runs Indian Railways, one of the world's largest rail networks: passenger and freight services, station redevelopment, Vande Bharat trains and the dedicated freight corridors.",
+   "dept": false,
+   "links": {
+    "web": "https://indianrailways.gov.in",
+    "x": "RailMinIndia"
+   },
+   "match": [
+    "\\brailways?\\b"
+   ]
+  },
+  {
+   "id": "road-transport",
+   "n": "Road Transport and Highways",
+   "s": "Infrastructure & Transport",
+   "d": "Builds and maintains national highways through NHAI and NHIDCL, and frames motor-vehicle law and road-safety policy.",
+   "dept": false,
+   "links": {
+    "web": "https://morth.gov.in",
+    "x": "MORTHIndia"
+   },
+   "match": [
+    "road transport"
+   ]
+  },
+  {
+   "id": "rural-development",
+   "n": "Rural Development",
+   "s": "Agriculture & Rural",
+   "d": "Runs rural employment and poverty-reduction programmes: the MGNREGA job guarantee, PMAY-Gramin housing, PMGSY rural roads and the DAY-NRLM livelihoods mission.",
+   "dept": false,
+   "links": {
+    "web": "https://rural.gov.in",
+    "x": "MoRD_GoI"
+   },
+   "match": [
+    "rural development"
+   ]
+  },
+  {
+   "id": "science-technology",
+   "n": "Science and Technology",
+   "s": "Science & Digital",
+   "d": "Funds scientific research and innovation through the Department of Science and Technology, biotechnology through DBT, and industrial research through DSIR and CSIR.",
+   "dept": false,
+   "links": {
+    "web": "https://dst.gov.in",
+    "x": "IndiaDST",
+    "xl": "Dept of Science & Technology"
+   },
+   "match": [
+    "science and technology"
+   ]
+  },
+  {
+   "id": "ports-shipping",
+   "n": "Ports, Shipping and Waterways",
+   "s": "Infrastructure & Transport",
+   "d": "Develops major ports, merchant shipping, shipbuilding and inland waterways, and runs the Sagarmala port-led development programme.",
+   "dept": false,
+   "links": {
+    "web": "https://shipmin.gov.in",
+    "x": "shipmin_india"
+   },
+   "match": [
+    "\\bports\\b",
+    "\\bshipping\\b"
+   ]
+  },
+  {
+   "id": "skill-development",
+   "n": "Skill Development and Entrepreneurship",
+   "s": "Social Welfare",
+   "d": "Coordinates skilling nationwide through the Skill India Mission, ITIs and apprenticeships, and promotes entrepreneurship.",
+   "dept": false,
+   "links": {
+    "web": "https://www.msde.gov.in",
+    "x": "MSDESkillIndia"
+   },
+   "match": [
+    "skill development"
+   ]
+  },
+  {
+   "id": "social-justice",
+   "n": "Social Justice and Empowerment",
+   "s": "Social Welfare",
+   "d": "Works for Scheduled Castes, Other Backward Classes, senior citizens, persons with disabilities and transgender persons through scholarships, welfare schemes and rights legislation.",
+   "dept": false,
+   "links": {
+    "web": "https://socialjustice.gov.in",
+    "x": "MSJEGOI"
+   },
+   "match": [
+    "social justice"
+   ]
+  },
+  {
+   "id": "statistics",
+   "n": "Statistics and Programme Implementation",
+   "s": "Governance",
+   "d": "Produces official statistics such as GDP, the Consumer Price Index and the Periodic Labour Force Survey, and monitors central schemes and large infrastructure projects.",
+   "dept": false,
+   "links": {
+    "web": "https://mospi.gov.in",
+    "x": "GoIStats"
+   },
+   "match": [
+    "statistics"
+   ]
+  },
+  {
+   "id": "steel",
+   "n": "Steel",
+   "s": "Economy & Industry",
+   "d": "Plans growth of the steel sector, oversees SAIL, RINL and other steel public-sector units, and promotes domestic capacity and specialty steel.",
+   "dept": false,
+   "links": {
+    "web": "https://steel.gov.in",
+    "x": "SteelMinIndia"
+   },
+   "match": [
+    "\\bsteel\\b"
+   ]
+  },
+  {
+   "id": "textiles",
+   "n": "Textiles",
+   "s": "Economy & Industry",
+   "d": "Supports textiles from fibre to fashion: handlooms, handicrafts, silk, jute and technical textiles, including the PM MITRA mega textile parks.",
+   "dept": false,
+   "links": {
+    "web": "https://texmin.gov.in",
+    "x": "TexMinIndia"
+   },
+   "match": [
+    "textiles"
+   ]
+  },
+  {
+   "id": "tourism",
+   "n": "Tourism",
+   "s": "Culture & Media",
+   "d": "Promotes India as a destination through Incredible India, develops tourist circuits under Swadesh Darshan and sets hospitality standards.",
+   "dept": false,
+   "links": {
+    "web": "https://tourism.gov.in",
+    "x": "tourismgoi",
+    "alt": [
+     [
+      "Incredible India",
+      "incredibleindia"
+     ]
+    ]
+   },
+   "match": [
+    "\\btourism\\b"
+   ]
+  },
+  {
+   "id": "tribal-affairs",
+   "n": "Tribal Affairs",
+   "s": "Social Welfare",
+   "d": "Leads welfare and development of Scheduled Tribes, including Eklavya Model Residential Schools, scholarships, forest-rights implementation and PM-JANMAN.",
+   "dept": false,
+   "links": {
+    "web": "https://tribal.gov.in",
+    "x": "TribalAffairsIn"
+   },
+   "match": [
+    "tribal affairs"
+   ]
+  },
+  {
+   "id": "women-child",
+   "n": "Women and Child Development",
+   "s": "Social Welfare",
+   "d": "Works for the development of women and children: anganwadi services, nutrition under Poshan Abhiyaan, child protection and schemes such as Beti Bachao Beti Padhao.",
+   "dept": false,
+   "links": {
+    "web": "https://wcd.gov.in",
+    "x": "MinistryWCD"
+   },
+   "match": [
+    "women and child"
+   ]
+  },
+  {
+   "id": "youth-sports",
+   "n": "Youth Affairs and Sports",
+   "s": "Culture & Media",
+   "d": "Runs youth programmes such as NSS and MY Bharat, and develops sport through Khelo India and athlete support from the Sports Authority of India.",
+   "dept": false,
+   "links": {
+    "web": "https://yas.gov.in",
+    "x": "YASMinistry",
+    "alt": [
+     [
+      "Dept of Sports",
+      "IndiaSports"
+     ]
+    ]
+   },
+   "match": [
+    "youth affairs",
+    "\\bsports\\b"
+   ]
+  },
+  {
+   "id": "atomic-energy",
+   "n": "Department of Atomic Energy",
+   "s": "Science & Digital",
+   "d": "A department directly under the Prime Minister. It runs India's nuclear power and research programme, including BARC, nuclear fuel and reactor development.",
+   "dept": true,
+   "links": {
+    "web": "https://dae.gov.in",
+    "x": "DAEIndia"
+   },
+   "match": [
+    "atomic energy"
+   ]
+  },
+  {
+   "id": "space",
+   "n": "Department of Space",
+   "s": "Science & Digital",
+   "d": "A department directly under the Prime Minister. It runs the space programme through ISRO: launch vehicles, satellites and missions such as Chandrayaan and Gaganyaan.",
+   "dept": true,
+   "links": {
+    "web": "https://www.isro.gov.in",
+    "x": "isro",
+    "xl": "ISRO"
+   },
+   "match": [
+    "department of space",
+    "\\bspace\\b"
+   ]
+  }
+ ],
+ "_help": "Static facts about each ministry. 'match' holds regular expressions that sync.py uses to recognise the ministry in Wikipedia's portfolio column (lower-case, '&' read as 'and'). 'links.xs' means no confirmed X account: the page links to an X search for that text instead."
+}

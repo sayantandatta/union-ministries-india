@@ -1,0 +1,663 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Union Ministries of India</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Every Central Government ministry of India with its Cabinet Minister and Ministers of State, what the ministry does, its website and X account, and a calling card for each minister. Updated daily.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Martel:wght@600;800;900&family=Hind:wght@400;500;600;700&display=swap">
+<style>
+
+/* Layout: a civil-service register — masthead with rank counts, a snap carousel of ministry cards,
+   a two-column dossier for the selected ministry, then the full directory as a ruled ledger. */
+:root{
+  --paper:#F4F6FA; --sheet:#FFFFFF; --ink:#111833; --muted:#586079; --line:#D9DEE9;
+  --chakra:#1E2C8C; --chakra-soft:#E6E9F7; --green:#0F7A57; --green-soft:#E1F2EA;
+  --mos:#6A5A2E; --mos-soft:#F3EEDF; --focus:#3B5BFF; --band-ink:#FFFFFF; --shade:rgba(17,24,51,.08); --scrim:rgba(10,14,30,.55);
+  --display:"Martel", "Noto Serif", Georgia, serif;
+  --body:"Hind", "Segoe UI", system-ui, sans-serif;
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
+  --paper:#0C1022; --sheet:#141A33; --ink:#E6E9F4; --muted:#9AA2BC; --line:#29304E;
+  --chakra:#9BACFF; --chakra-soft:#1E2650; --green:#5BCB9F; --green-soft:#12322A;
+  --mos:#D8C38A; --mos-soft:#2E2817; --focus:#9BACFF; --band-ink:#0C1022; --shade:rgba(0,0,0,.35); --scrim:rgba(0,0,0,.7); color-scheme:dark }}
+:root[data-theme="dark"]{
+  --paper:#0C1022; --sheet:#141A33; --ink:#E6E9F4; --muted:#9AA2BC; --line:#29304E;
+  --chakra:#9BACFF; --chakra-soft:#1E2650; --green:#5BCB9F; --green-soft:#12322A;
+  --mos:#D8C38A; --mos-soft:#2E2817; --focus:#9BACFF; --band-ink:#0C1022; --shade:rgba(0,0,0,.35); --scrim:rgba(0,0,0,.7); color-scheme:dark }
+
+*{box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.55;
+  padding-left:max(16px, env(safe-area-inset-left, 0px));padding-right:max(16px, env(safe-area-inset-right, 0px))}
+.wrap{max-width:1180px;margin:0 auto;padding-block:28px 56px;display:flex;flex-direction:column;gap:40px}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0;line-height:1.2}
+a{color:var(--chakra)}
+button{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--focus);outline-offset:2px;border-radius:4px}
+.eyebrow{font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:600}
+
+/* Masthead */
+.mast{display:grid;grid-template-columns:auto 1fr;gap:18px;align-items:center;border-bottom:1px solid var(--line);padding-bottom:24px}
+.mast svg{width:64px;height:64px;color:var(--chakra)}
+.mast h1{font-size:clamp(1.9rem,4.6vw,3rem);font-weight:900;letter-spacing:-.01em}
+.mast p{margin:6px 0 0;color:var(--muted);max-width:62ch}
+.counts{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:10px 28px;margin-top:4px}
+.count{display:flex;align-items:baseline;gap:8px}
+.count b{font-family:var(--display);font-size:1.6rem;font-variant-numeric:tabular-nums}
+.count span{color:var(--muted);font-size:.9rem}
+
+/* Notice */
+.notice{background:var(--sheet);border:1px solid var(--line);border-radius:10px;padding:14px 18px;display:grid;gap:6px}
+.notice ul{margin:0;padding-left:18px;color:var(--muted);font-size:.93rem}
+.notice strong{color:var(--ink)}
+
+/* Controls */
+.controls{display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between}
+.search{flex:1 1 260px;max-width:380px;position:relative}
+.search input{width:100%;padding:10px 14px;border:1px solid var(--line);border-radius:8px;background:var(--sheet);color:var(--ink);font:inherit}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{border:1px solid var(--line);background:var(--sheet);border-radius:999px;padding:4px 12px;font-size:.85rem;cursor:pointer;color:var(--muted)}
+.chip[aria-pressed="true"]{background:var(--chakra);border-color:var(--chakra);color:var(--sheet)}
+
+/* Carousel */
+.carousel{display:grid;gap:12px}
+.car-head{display:flex;justify-content:space-between;align-items:end;gap:12px}
+.car-head h2{font-size:1.4rem}
+.car-nav{display:flex;align-items:center;gap:8px}
+.car-nav span{font-variant-numeric:tabular-nums;color:var(--muted);font-size:.9rem;min-width:64px;text-align:right}
+.navbtn{width:40px;height:40px;border-radius:50%;border:1px solid var(--line);background:var(--sheet);cursor:pointer;display:grid;place-items:center}
+.navbtn:hover{border-color:var(--chakra);color:var(--chakra)}
+.navbtn svg{width:18px;height:18px}
+.track{display:grid;grid-auto-flow:column;grid-auto-columns:clamp(220px,24%,260px);gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;
+  padding:4px 2px 16px;scrollbar-width:thin;overscroll-behavior-x:contain}
+.card{scroll-snap-align:start;background:var(--sheet);border:1px solid var(--line);border-radius:12px;padding:16px;text-align:left;cursor:pointer;
+  display:flex;flex-direction:column;gap:12px;min-height:200px;transition:border-color .15s, box-shadow .15s, transform .15s}
+.card:hover{border-color:var(--chakra);transform:translateY(-2px);box-shadow:0 6px 18px var(--shade)}
+.card[aria-current="true"]{border-color:var(--chakra);box-shadow:0 0 0 2px var(--chakra)}
+.card .sector{font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.card h3{font-size:1.02rem;font-weight:800;flex:1}
+.card .who{display:flex;align-items:center;gap:10px;border-top:1px solid var(--line);padding-top:10px}
+.card .who .nm{font-size:.86rem;line-height:1.3;min-width:0}
+.card .who .nm small{display:block;color:var(--muted);font-size:.75rem}
+.stack{display:flex;margin-left:auto}
+.stack .av{margin-left:-8px;border:2px solid var(--sheet)}
+.empty{color:var(--muted);padding:24px;text-align:center;border:1px dashed var(--line);border-radius:12px}
+
+/* Avatars */
+.av{--s:40px;width:var(--s);height:var(--s);border-radius:50%;flex:none;display:grid;place-items:center;overflow:hidden;
+  font-weight:700;font-size:calc(var(--s)*.36);letter-spacing:.02em;background:var(--chakra-soft);color:var(--chakra);position:relative}
+.av.r-IC{background:var(--green-soft);color:var(--green)}
+.av.r-MoS{background:var(--mos-soft);color:var(--mos)}
+.av img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 20%}
+.av.sm{--s:28px}.av.lg{--s:96px}.av.md{--s:56px}
+
+/* Dossier */
+.dossier{background:var(--sheet);border:1px solid var(--line);border-radius:14px;padding:clamp(18px,3vw,32px);
+  display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:clamp(20px,4vw,48px);scroll-margin-top:16px}
+.d-main{display:flex;flex-direction:column;gap:14px;min-width:0}
+.d-main h2{font-size:clamp(1.5rem,3.2vw,2.2rem);font-weight:900}
+.d-desc{font-size:1.05rem;max-width:62ch;margin:0}
+.links{display:flex;flex-wrap:wrap;gap:10px;margin-top:4px}
+.lnk{display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border:1px solid var(--line);border-radius:8px;text-decoration:none;color:var(--ink);font-weight:500;font-size:.92rem;max-width:100%}
+.lnk:hover{border-color:var(--chakra);color:var(--chakra)}
+.lnk svg{width:16px;height:16px;flex:none}
+.lnk span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.d-note{font-size:.88rem;color:var(--muted);border-left:3px solid var(--line);padding-left:12px;margin:0}
+.d-side{display:flex;flex-direction:column;gap:18px;min-width:0}
+.lead{display:grid;grid-template-columns:auto minmax(0,1fr);gap:16px;align-items:center}
+.lead h3{font-size:1.3rem;font-weight:800}
+.rank{display:inline-block;font-size:.72rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:2px 8px;border-radius:4px;background:var(--chakra-soft);color:var(--chakra)}
+.rank.r-IC{background:var(--green-soft);color:var(--green)}
+.rank.r-MoS{background:var(--mos-soft);color:var(--mos)}
+.plink{background:none;border:0;padding:0;color:var(--chakra);text-decoration:underline;text-underline-offset:3px;cursor:pointer;font-size:.9rem;text-align:left}
+.mos-list{display:grid;gap:10px;margin:0;padding:0;list-style:none}
+.mos-list li{display:grid;grid-template-columns:auto minmax(0,1fr);gap:12px;align-items:center;padding:10px 0;border-top:1px solid var(--line)}
+.mos-list .nm{font-weight:600;line-height:1.3}
+.vacant{color:var(--muted);font-size:.9rem;border-top:1px solid var(--line);padding-top:10px;margin:0}
+
+/* Directory */
+.dir h2{font-size:1.4rem;margin-bottom:12px}
+.ledger{border-top:2px solid var(--ink)}
+.row{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr) minmax(0,1.4fr);gap:16px;padding:12px 0;border-bottom:1px solid var(--line);align-items:start}
+.row.head{font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:600;padding:8px 0}
+.row .mn{background:none;border:0;padding:0;text-align:left;font-family:var(--display);font-weight:800;font-size:.98rem;cursor:pointer;color:var(--ink)}
+.row .mn:hover{color:var(--chakra)}
+.people{display:flex;flex-wrap:wrap;gap:6px 12px}
+.person{display:inline-flex;align-items:center;gap:6px;background:none;border:0;padding:0;cursor:pointer;font-size:.92rem;color:var(--ink);text-align:left}
+.person:hover span{color:var(--chakra);text-decoration:underline}
+.none{color:var(--muted);font-size:.9rem}
+
+/* Popup */
+dialog{border:0;border-radius:14px;padding:0;background:var(--sheet);color:var(--ink);width:min(520px,calc(100vw - 32px));max-height:min(80vh,680px);box-shadow:0 20px 60px var(--shade)}
+dialog::backdrop{background:var(--scrim)}
+.dlg{display:flex;flex-direction:column;max-height:inherit}
+.dlg-head{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:14px;align-items:center;padding:20px 20px 14px;border-bottom:1px solid var(--line)}
+.dlg-head h3{font-size:1.25rem}
+.close{width:36px;height:36px;border-radius:50%;border:1px solid var(--line);background:var(--sheet);cursor:pointer;font-size:1.2rem;line-height:1}
+.dlg-body{overflow-y:auto;padding:8px 20px 20px}
+.dlg-body ol{list-style:none;margin:0;padding:0}
+.dlg-body li{border-bottom:1px solid var(--line)}
+.dlg-body li button{display:flex;justify-content:space-between;gap:12px;width:100%;background:none;border:0;padding:12px 0;text-align:left;cursor:pointer;align-items:center}
+.dlg-body li button:hover .t{color:var(--chakra)}
+.dlg-body .t{font-weight:600}
+.dlg-body .extra{padding:12px 0;color:var(--muted);font-size:.92rem}
+
+footer{color:var(--muted);font-size:.85rem;border-top:1px solid var(--line);padding-top:18px;display:grid;gap:6px}
+
+@media (max-width:820px){
+  .dossier{grid-template-columns:1fr}
+  .row{grid-template-columns:1fr;gap:6px}
+  .row.head{display:none}
+  .row .lbl{display:block}
+}
+.lbl{display:none;font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:600}
+@media (max-width:480px){ .track{grid-auto-columns:78%} .mast{grid-template-columns:1fr} .mast svg{width:48px;height:48px} }
+@media (prefers-reduced-motion:reduce){ *{transition:none!important;scroll-behavior:auto!important} }
+
+:root{color-scheme:light}
+html{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+body{margin:0}
+[hidden]{display:none!important}
+img{max-width:100%}
+
+/* Data status line */
+.status{display:flex;flex-wrap:wrap;gap:6px 14px;align-items:center;font-size:.85rem;color:var(--muted)}
+.status .dot{width:8px;height:8px;border-radius:50%;background:var(--green);display:inline-block;margin-right:6px}
+.status.warn .dot{background:var(--mos)}
+.notice li time{font-variant-numeric:tabular-nums;color:var(--ink);font-weight:600;margin-right:6px}
+
+/* Minister names are buttons that open the calling card */
+.mname{background:none;border:0;padding:0;font:inherit;color:inherit;cursor:pointer;text-align:left}
+.mname:hover{color:var(--chakra);text-decoration:underline;text-underline-offset:3px}
+.lead .avbtn,.mos-list .avbtn{background:none;border:0;padding:0;cursor:pointer;border-radius:50%}
+
+/* Calling card */
+#card{width:min(640px,calc(100vw - 32px));max-height:min(88vh,860px)}
+.cc{display:flex;flex-direction:column;max-height:inherit}
+.cc-band{position:relative;background:var(--chakra);color:var(--band-ink);padding:22px 22px 20px;display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:18px;align-items:center;overflow:hidden}
+.cc-band svg.wm{position:absolute;right:-40px;top:-40px;width:200px;height:200px;opacity:.12;color:var(--band-ink);pointer-events:none}
+.cc-band .av{--s:104px;border:3px solid var(--band-ink);border-radius:14px;background:var(--chakra-soft)}
+.cc-band .av img{border-radius:11px}
+.cc-band h3{font-size:clamp(1.3rem,4vw,1.7rem);font-weight:900;color:var(--band-ink)}
+.cc-band .cc-rank{font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;font-weight:600;opacity:.9}
+.cc-band .cc-seat{font-size:.92rem;opacity:.9;margin-top:4px}
+.cc-band .close{background:transparent;color:var(--band-ink);border-color:color-mix(in srgb,var(--band-ink) 40%,transparent);align-self:start;position:relative}
+.cc-body{overflow-y:auto;padding:6px 22px 22px;display:grid;gap:18px}
+.facts{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:0 24px;margin:0}
+.fact{padding:12px 0;border-bottom:1px solid var(--line);min-width:0}
+.fact.wide{grid-column:1/-1}
+.fact dt{font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:600;margin-bottom:2px}
+.fact dd{margin:0;font-weight:500;overflow-wrap:anywhere}
+.fact dd small{display:block;color:var(--muted);font-weight:400;font-size:.82rem}
+.fact .na{color:var(--muted);font-weight:400}
+.fact .wealth{font-family:var(--display);font-weight:800;font-size:1.25rem;font-variant-numeric:tabular-nums}
+.copy{margin-left:8px;font-size:.75rem;border:1px solid var(--line);background:var(--sheet);border-radius:6px;padding:1px 8px;cursor:pointer;color:var(--muted);vertical-align:middle}
+.socials{display:flex;flex-wrap:wrap;gap:8px}
+.socials a{display:inline-flex;align-items:center;gap:6px;padding:5px 10px;border:1px solid var(--line);border-radius:999px;text-decoration:none;color:var(--ink);font-size:.86rem;max-width:100%}
+.socials a:hover{border-color:var(--chakra);color:var(--chakra)}
+.socials svg{width:14px;height:14px;flex:none}
+.socials span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.cc-sec h4{font-family:var(--body);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:600;margin:0 0 4px}
+.cc-sec ol{list-style:none;margin:0;padding:0}
+.cc-sec li{border-bottom:1px solid var(--line)}
+.cc-sec li button{display:flex;justify-content:space-between;gap:12px;width:100%;background:none;border:0;padding:10px 0;text-align:left;cursor:pointer;align-items:center}
+.cc-sec li button:hover .t{color:var(--chakra)}
+.cc-sec .t{font-weight:600}
+.cc-foot{font-size:.8rem;color:var(--muted);display:grid;gap:4px}
+.cc-foot a{color:var(--muted)}
+@media (max-width:520px){ .facts{grid-template-columns:1fr} .cc-band{grid-template-columns:auto minmax(0,1fr);} .cc-band .close{position:absolute;top:12px;right:12px} .cc-band .av{--s:80px} }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="mast">
+    <svg viewBox="0 0 100 100" aria-hidden="true" class="chakra"></svg>
+    <div>
+      <div class="eyebrow">भारत सरकार · Government of India · Union Council of Ministers</div>
+      <h1>Union Ministries of India</h1>
+      <p>Every Central Government ministry, who runs it, and what it is responsible for. Pick a ministry from the carousel to see its ministers, website and X account. Select any minister to open their calling card.</p>
+    </div>
+    <div class="counts" id="counts"></div>
+    <div class="status" id="status" style="grid-column:1/-1"><span><span class="dot"></span><span id="statusText">Loading…</span></span></div>
+  </header>
+
+  <section class="notice" aria-label="Recent changes">
+    <div class="eyebrow" id="changesTitle">Recent changes</div>
+    <ul id="changes"></ul>
+  </section>
+
+  <section class="carousel" aria-label="Ministries carousel">
+    <div class="controls">
+      <div class="search"><label class="eyebrow" for="q" style="display:block;margin-bottom:4px">Find a ministry or minister</label>
+        <input id="q" type="search" placeholder="e.g. Railways, Sitharaman, energy" autocomplete="off"></div>
+      <div class="chips" id="chips" role="group" aria-label="Filter by sector"></div>
+    </div>
+    <div class="car-head">
+      <h2 id="carTitle">All ministries</h2>
+      <div class="car-nav">
+        <span id="pos" aria-live="polite"></span>
+        <button class="navbtn" id="prev" aria-label="Previous ministries"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 6l-6 6 6 6"/></svg></button>
+        <button class="navbtn" id="next" aria-label="Next ministries"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6l6 6-6 6"/></svg></button>
+      </div>
+    </div>
+    <div class="track" id="track" tabindex="0" aria-label="Ministries, scroll sideways"></div>
+  </section>
+
+  <section class="dossier" id="dossier" aria-live="polite"></section>
+
+  <section class="dir">
+    <h2>Full directory</h2>
+    <div class="ledger" id="ledger"></div>
+  </section>
+
+  <noscript><section class="dir"><h2>All ministries</h2><!--STATIC--><ul>
+<li><strong>Agriculture and Farmers Welfare</strong>: Frames national policy on crops, farm inputs, credit and crop insurance, and runs farmer-income schemes such as PM-KISAN and PM Fasal Bima Yojana. Its Department of Agricultural Research and Education oversees ICAR.. Minister in charge: Shivraj Singh Chouhan. Ministers of State: Ram Nath Thakur, Bhagirath Choudhary.</li>
+<li><strong>AYUSH</strong>: Promotes and regulates the traditional systems of medicine: Ayurveda, Yoga &amp; Naturopathy, Unani, Siddha, Sowa-Rigpa and Homoeopathy. It covers their education, research, drug standards and the National AYUSH Mission.. Minister in charge: Prataprao Jadhav. Ministers of State: None.</li>
+<li><strong>Chemicals and Fertilizers</strong>: Covers chemicals and petrochemicals, fertilizers and pharmaceuticals through three departments. It secures fertilizer supply and subsidy for farmers and runs the Jan Aushadhi network of low-cost generic medicine stores.. Minister in charge: J. P. Nadda. Ministers of State: Anupriya Patel.</li>
+<li><strong>Civil Aviation</strong>: Regulates and develops air transport: airports, airlines and air safety through the DGCA, and regional air connectivity under the UDAN scheme.. Minister in charge: K. Ram Mohan Naidu. Ministers of State: Murlidhar Mohol.</li>
+<li><strong>Coal</strong>: Sets policy for exploring, allocating and mining coal and lignite, including commercial coal-block auctions, and oversees Coal India Ltd and NLC India.. Minister in charge: G. Kishan Reddy. Ministers of State: Satish Chandra Dubey.</li>
+<li><strong>Commerce and Industry</strong>: Runs foreign trade policy and trade negotiations through the Department of Commerce, and industrial policy, investment promotion and Startup India through DPIIT.. Minister in charge: Piyush Goyal. Ministers of State: Jitin Prasada.</li>
+<li><strong>Communications</strong>: Oversees telecommunications, spectrum and broadband through the Department of Telecommunications, and India Post through the Department of Posts.. Minister in charge: Jyotiraditya Scindia. Ministers of State: Pemmasani Chandra Sekhar.</li>
+<li><strong>Consumer Affairs, Food and Public Distribution</strong>: Protects consumer rights and product standards (BIS, consumer commissions) and manages food-grain procurement, storage and the public distribution system, including free grain under PM Garib Kalyan Anna Yojana.. Minister in charge: Pralhad Joshi. Ministers of State: B. L. Verma, Nimuben Bambhaniya.</li>
+<li><strong>Co-operation</strong>: Created in 2021 to strengthen the cooperative movement. It administers multi-state cooperative societies, is computerising primary agricultural credit societies and promotes cooperative-led growth.. Minister in charge: Amit Shah. Ministers of State: Krishan Pal Gurjar, Murlidhar Mohol.</li>
+<li><strong>Corporate Affairs</strong>: Administers the Companies Act, the LLP Act and the Insolvency and Bankruptcy Code, regulating company registration, governance and filings through the Registrars of Companies.. Minister in charge: Nirmala Sitharaman. Ministers of State: Harsh Malhotra.</li>
+<li><strong>Culture</strong>: Preserves India&#x27;s tangible and intangible heritage and promotes the arts through the Archaeological Survey of India, national museums, academies, libraries and archives.. Minister in charge: Gajendra Singh Shekhawat. Ministers of State: Rao Inderjit Singh.</li>
+<li><strong>Defence</strong>: Responsible for national defence and the armed forces: the Army, Navy and Air Force, defence production and exports, research through DRDO, and the welfare of ex-servicemen.. Minister in charge: Rajnath Singh. Ministers of State: Sanjay Seth.</li>
+<li><strong>Development of North Eastern Region</strong>: Coordinates development of the eight north-eastern states, funding infrastructure and livelihood projects and working with the North Eastern Council.. Minister in charge: Jyotiraditya Scindia. Ministers of State: Sukanta Majumdar.</li>
+<li><strong>Earth Sciences</strong>: Provides weather, climate, ocean and earthquake services through IMD, INCOIS and the National Centre for Seismology, and runs polar and deep-ocean research.. Minister in charge: Dr Jitendra Singh. Ministers of State: None.</li>
+<li><strong>Education</strong>: Shapes national education policy (NEP 2020) through the Departments of School Education &amp; Literacy and Higher Education, overseeing bodies such as UGC, NCERT, the IITs and central universities.. Minister in charge: Pralhad Joshi. Ministers of State: Jayant Chaudhary, Sukanta Majumdar.</li>
+<li><strong>Electronics and Information Technology</strong>: Drives Digital India: electronics and semiconductor manufacturing, IT and IT-enabled services, cybersecurity through CERT-In, Aadhaar through UIDAI, and data-protection rules.. Minister in charge: Ashwini Vaishnaw. Ministers of State: Jitin Prasada.</li>
+<li><strong>Environment, Forest and Climate Change</strong>: Plans and enforces environmental and forest conservation, wildlife protection and pollution control, and leads India&#x27;s climate-change commitments.. Minister in charge: Bhupender Yadav. Ministers of State: Kirti Vardhan Singh.</li>
+<li><strong>External Affairs</strong>: Conducts India&#x27;s foreign relations and diplomacy, runs embassies and missions abroad, and provides passport, visa and consular services.. Minister in charge: S. Jaishankar. Ministers of State: Kirti Vardhan Singh, Pabitra Margherita.</li>
+<li><strong>Finance</strong>: Manages the economy and public finances: the Union Budget, direct and indirect taxes, expenditure, banking and financial services, and public-sector enterprises through DIPAM and DPE.. Minister in charge: Nirmala Sitharaman. Ministers of State: Pankaj Chaudhary.</li>
+<li><strong>Fisheries, Animal Husbandry and Dairying</strong>: Develops fisheries, livestock and dairy through separate departments, including animal-health programmes, the National Gokul Mission and PM Matsya Sampada Yojana.. Minister in charge: Rajiv Ranjan (Lalan) Singh. Ministers of State: S. P. Singh Baghel.</li>
+<li><strong>Food Processing Industries</strong>: Promotes the food-processing industry with mega food parks, cold chains and the PM Formalisation of Micro Food Processing Enterprises scheme, to cut wastage and raise farm incomes.. Minister in charge: Chirag Paswan. Ministers of State: None.</li>
+<li><strong>Health and Family Welfare</strong>: Runs national health policy and programmes: Ayushman Bharat, disease control, immunisation, medical education and AIIMS, and health research through ICMR.. Minister in charge: J. P. Nadda. Ministers of State: Prataprao Jadhav, Anupriya Patel.</li>
+<li><strong>Heavy Industries</strong>: Oversees the capital-goods and automotive industries and heavy-engineering public-sector units, and runs electric-mobility programmes such as PM E-DRIVE and the auto PLI scheme.. Minister in charge: H. D. Kumaraswamy. Ministers of State: Bhupathiraju Srinivasa Varma.</li>
+<li><strong>Home Affairs</strong>: Handles internal security, border management, the central armed police forces, disaster management, centre-state relations and the administration of Union Territories.. Minister in charge: Amit Shah. Ministers of State: Nityanand Rai, Bandi Sanjay Kumar.</li>
+<li><strong>Housing and Urban Affairs</strong>: Sets urban development policy and runs the Smart Cities Mission, AMRUT, Swachh Bharat (Urban), PMAY-Urban housing and metro rail projects.. Minister in charge: Manohar Lal Khattar. Ministers of State: Tokhan Sahu.</li>
+<li><strong>Information and Broadcasting</strong>: Regulates broadcasting, films and the press, and runs public-service media: Prasar Bharati (Doordarshan and All India Radio) and the Press Information Bureau.. Minister in charge: Ashwini Vaishnaw. Ministers of State: None.</li>
+<li><strong>Jal Shakti</strong>: Manages India&#x27;s water resources through two departments: river development and water conservation, and drinking water and sanitation, including the Jal Jeevan Mission and Swachh Bharat (Grameen).. Minister in charge: C. R. Patil. Ministers of State: V. Somanna, Raj Bhushan Choudhary.</li>
+<li><strong>Labour and Employment</strong>: Frames labour law, including the four labour codes, provides social security through EPFO and ESIC, and runs employment schemes and the e-Shram registry of unorganised workers.. Minister in charge: Mansukh Mandaviya. Ministers of State: Shobha Karandlaje.</li>
+<li><strong>Law and Justice</strong>: Advises the government on legal matters (Department of Legal Affairs), drafts central legislation (Legislative Department) and supports judicial infrastructure and access to justice (Department of Justice).. Minister in charge: Arjun Ram Meghwal. Ministers of State: None.</li>
+<li><strong>Micro, Small and Medium Enterprises</strong>: Supports small businesses through credit guarantees, the Udyam registration portal and the PMEGP employment programme, and promotes khadi and village industries through KVIC.. Minister in charge: Jitan Ram Manjhi. Ministers of State: Shobha Karandlaje.</li>
+<li><strong>Mines</strong>: Regulates exploration and mining of minerals other than coal, oil and gas, including critical minerals, through the Geological Survey of India and mineral-block auctions.. Minister in charge: G. Kishan Reddy. Ministers of State: Satish Chandra Dubey.</li>
+<li><strong>Minority Affairs</strong>: Runs education, skilling and economic schemes for the six notified minority communities and oversees the administration of waqf properties.. Minister in charge: Kiren Rijiju. Ministers of State: None.</li>
+<li><strong>New and Renewable Energy</strong>: Leads solar, wind, green hydrogen and bioenergy development, including PM Surya Ghar rooftop solar and India&#x27;s 500 GW non-fossil capacity target.. Minister in charge: Pralhad Joshi. Ministers of State: Shripad Yesso Naik.</li>
+<li><strong>Panchayati Raj</strong>: Strengthens rural local self-government through gram panchayats, funding capacity building and e-governance, and runs the SVAMITVA scheme for rural property cards.. Minister in charge: Rajiv Ranjan (Lalan) Singh. Ministers of State: S. P. Singh Baghel.</li>
+<li><strong>Parliamentary Affairs</strong>: Manages the government&#x27;s business in Parliament: scheduling sessions, coordinating bills and floor strategy, and liaising with parties across both Houses.. Minister in charge: Kiren Rijiju. Ministers of State: Arjun Ram Meghwal.</li>
+<li><strong>Personnel, Public Grievances and Pensions</strong>: Manages the civil services: recruitment, training and cadre management (DoPT), administrative reforms and public grievances (DARPG), and central government pensions.. Minister in charge: Narendra Modi. Ministers of State: Dr Jitendra Singh.</li>
+<li><strong>Petroleum and Natural Gas</strong>: Oversees exploration, production, refining, distribution and marketing of oil and natural gas, and runs clean-cooking programmes such as PM Ujjwala Yojana.. Minister in charge: Hardeep Singh Puri. Ministers of State: Suresh Gopi.</li>
+<li><strong>Planning</strong>: Works with NITI Aayog, the government&#x27;s policy think tank, on long-term development strategy, programme monitoring and evaluation.. Minister in charge: Rao Inderjit Singh. Ministers of State: None.</li>
+<li><strong>Power</strong>: Sets policy for electricity generation, transmission and distribution, grid reliability and energy efficiency, and funds distribution reforms and smart metering.. Minister in charge: Manohar Lal Khattar. Ministers of State: Shripad Yesso Naik.</li>
+<li><strong>Railways</strong>: Runs Indian Railways, one of the world&#x27;s largest rail networks: passenger and freight services, station redevelopment, Vande Bharat trains and the dedicated freight corridors.. Minister in charge: Ashwini Vaishnaw. Ministers of State: V. Somanna.</li>
+<li><strong>Road Transport and Highways</strong>: Builds and maintains national highways through NHAI and NHIDCL, and frames motor-vehicle law and road-safety policy.. Minister in charge: Nitin Gadkari. Ministers of State: Ajay Tamta, Harsh Malhotra.</li>
+<li><strong>Rural Development</strong>: Runs rural employment and poverty-reduction programmes: the MGNREGA job guarantee, PMAY-Gramin housing, PMGSY rural roads and the DAY-NRLM livelihoods mission.. Minister in charge: Shivraj Singh Chouhan. Ministers of State: Pemmasani Chandra Sekhar, Kamlesh Paswan.</li>
+<li><strong>Science and Technology</strong>: Funds scientific research and innovation through the Department of Science and Technology, biotechnology through DBT, and industrial research through DSIR and CSIR.. Minister in charge: Dr Jitendra Singh. Ministers of State: None.</li>
+<li><strong>Ports, Shipping and Waterways</strong>: Develops major ports, merchant shipping, shipbuilding and inland waterways, and runs the Sagarmala port-led development programme.. Minister in charge: Sarbananda Sonowal. Ministers of State: Shantanu Thakur.</li>
+<li><strong>Skill Development and Entrepreneurship</strong>: Coordinates skilling nationwide through the Skill India Mission, ITIs and apprenticeships, and promotes entrepreneurship.. Minister in charge: Jayant Chaudhary. Ministers of State: None.</li>
+<li><strong>Social Justice and Empowerment</strong>: Works for Scheduled Castes, Other Backward Classes, senior citizens, persons with disabilities and transgender persons through scholarships, welfare schemes and rights legislation.. Minister in charge: Virendra Kumar. Ministers of State: Ramdas Athawale, B. L. Verma.</li>
+<li><strong>Statistics and Programme Implementation</strong>: Produces official statistics such as GDP, the Consumer Price Index and the Periodic Labour Force Survey, and monitors central schemes and large infrastructure projects.. Minister in charge: Rao Inderjit Singh. Ministers of State: None.</li>
+<li><strong>Steel</strong>: Plans growth of the steel sector, oversees SAIL, RINL and other steel public-sector units, and promotes domestic capacity and specialty steel.. Minister in charge: H. D. Kumaraswamy. Ministers of State: Bhupathiraju Srinivasa Varma.</li>
+<li><strong>Textiles</strong>: Supports textiles from fibre to fashion: handlooms, handicrafts, silk, jute and technical textiles, including the PM MITRA mega textile parks.. Minister in charge: Giriraj Singh. Ministers of State: Pabitra Margherita.</li>
+<li><strong>Tourism</strong>: Promotes India as a destination through Incredible India, develops tourist circuits under Swadesh Darshan and sets hospitality standards.. Minister in charge: Gajendra Singh Shekhawat. Ministers of State: Suresh Gopi.</li>
+<li><strong>Tribal Affairs</strong>: Leads welfare and development of Scheduled Tribes, including Eklavya Model Residential Schools, scholarships, forest-rights implementation and PM-JANMAN.. Minister in charge: Jual Oram. Ministers of State: Durgadas Uikey.</li>
+<li><strong>Women and Child Development</strong>: Works for the development of women and children: anganwadi services, nutrition under Poshan Abhiyaan, child protection and schemes such as Beti Bachao Beti Padhao.. Minister in charge: Annpurna Devi. Ministers of State: Savitri Thakur.</li>
+<li><strong>Youth Affairs and Sports</strong>: Runs youth programmes such as NSS and MY Bharat, and develops sport through Khelo India and athlete support from the Sports Authority of India.. Minister in charge: Mansukh Mandaviya. Ministers of State: Raksha Khadse.</li>
+<li><strong>Department of Atomic Energy</strong>: A department directly under the Prime Minister. It runs India&#x27;s nuclear power and research programme, including BARC, nuclear fuel and reactor development.. Minister in charge: Narendra Modi. Ministers of State: Dr Jitendra Singh.</li>
+<li><strong>Department of Space</strong>: A department directly under the Prime Minister. It runs the space programme through ISRO: launch vehicles, satellites and missions such as Chandrayaan and Gaganyaan.. Minister in charge: Narendra Modi. Ministers of State: Dr Jitendra Singh.</li>
+</ul><!--/STATIC--></section></noscript>
+
+  <footer>
+    <div>Unofficial reference compiled from public sources. Portfolios follow Wikipedia's record of the President's allocation and are checked against it every day. Birth details and social accounts come from Wikidata and official profiles; declared assets are the totals in each minister's latest election affidavit as published by ADR / MyNeta. Check the ministry's own website for authoritative information.</div>
+    <div>Where a ministry's own X account could not be confirmed, its X link opens a search instead. Photos: Wikimedia Commons, credited on each calling card.</div>
+  </footer>
+</div>
+
+<dialog id="card" aria-labelledby="ccName">
+  <div class="cc">
+    <div class="cc-band">
+      <svg class="wm chakra" viewBox="0 0 100 100" aria-hidden="true"></svg>
+      <span id="ccAv"></span>
+      <div><div class="cc-rank" id="ccRank"></div><h3 id="ccName"></h3><div class="cc-seat" id="ccSeat"></div></div>
+      <button class="close" id="ccClose" aria-label="Close calling card">×</button>
+    </div>
+    <div class="cc-body">
+      <dl class="facts" id="ccFacts"></dl>
+      <div class="cc-sec"><h4>Social media</h4><div class="socials" id="ccSocial"></div></div>
+      <div class="cc-sec"><h4 id="ccPortTitle">Portfolios</h4><ol id="ccPorts"></ol><p class="cc-foot" id="ccExtra"></p></div>
+      <div class="cc-foot" id="ccFoot"></div>
+    </div>
+  </div>
+</dialog>
+
+<script type="application/json" id="seed">{"schema":1,"generated":"2026-10-16T13:21:55+00:00","asOf":"2026-10-16","source":"https://en.wikipedia.org/wiki/Third_Modi_ministry","status":{"ok":true,"messages":[]},"changes":[{"date":"2026-10-13","text":"L. Murugan resigned as Minister of State for Information & Broadcasting and Parliamentary Affairs."},{"date":"2026-07-25","text":"Dharmendra Pradhan resigned as Education Minister; Pralhad Joshi given additional charge of Education."},{"date":"2026-07-24","text":"Ravneet Singh Bittu resigned as Minister of State for Railways and Food Processing Industries."},{"date":"2026-06-23","text":"George Kurian resigned as Minister of State for Fisheries, Animal Husbandry & Dairying and Minority Affairs."}],"people":{"modi":{"n":"Narendra Modi","r":"PM","extra":"Prime Minister. Also holds all important policy issues and every portfolio not allocated to another minister.","qid":"Q1058","wiki":"Narendra Modi","dob":"1950-09-17","pob":"Vadnagar, Mehsana district, Gujarat","email":null,"house":"Lok Sabha – Varanasi, UP","residence":"7, Lok Kalyan Marg, New Delhi","assets":{"total":"Rs 3,02,06,889 (approx 3 crore)","election":"Lok Sabha 2024","url":"https://myneta.info/LokSabha2024/candidate.php?candidate_id=8974"},"social":{"x":"narendramodi","facebook":"narendramodi"},"photo":null,"sources":["https://en.wikipedia.org/wiki/Narendra_Modi","https://www.wikidata.org/wiki/Q1058","https://www.opensanctions.org/entities/Q1058/","https://myneta.info/LokSabha2024/candidate.php?candidate_id=8974","https://www.wikidata.org/wiki/Q1058"]},"rajnath":{"n":"Rajnath Singh","r":"C","extra":null,"qid":"Q3506475","wiki":"Rajnath Singh","dob":"1951-07-10","pob":"Bhabhaura, Chandauli district, Uttar Pradesh","email":"rajnath@sansad.nic.in","house":"Lok Sabha – Lucknow, UP","residence":"17, Akbar Road, New Delhi","assets":{"total":"Rs 7,36,84,617 (approx 7.4 crore)","election":"Lok Sabha 2024","url":"https://myneta.info/LokSabha2024/candidate.php?candidate_id=7169"},"social":{"x":"rajnathsingh"},"photo":null,"sources":["https://en.wikipedia.org/wiki/Rajnath_Singh","https://www.wikidata.org/wiki/Q3506475","https://www.opensanctions.org/entities/Q3506475/","https://mod.gov.in/dod/whos-who","https://myneta.info/LokSabha2024/index.php?action=summary&subAction=winner_analyzed&sort=candidate&page=21","https://www.wikidata.org/wiki/Q3506475"]},"shah":{"n":"Amit Shah","r":"C","extra":null,"qid":"Q4746875","wiki":"Amit Shah","dob":"1964-10-22","pob":"Mumbai, Maharashtra","email":"amitshah.mp@sansad.nic.in","house":"Lok Sabha – Gandhinagar, Gujarat","residence":"6-A, Krishna Menon Marg, New Delhi","assets":{"total":"Rs 65,67,12,498 (approx 65.7 crore)","election":"Lok Sabha 2024","url":"https://myneta.info/LokSabha2024/candidate.php?candidate_id=4427"},"social":{"x":"AmitShah"},"photo":null,"sources":["https://en.wikipedia.org/wiki/Amit_Shah","https://www.wikidata.org/wiki/Q4746875","https://www.opensanctions.org/entities/Q4746875/","https://swarajyamag.com/insta/late-pm-vajpayees-former-delhi-bungalow-to-be-allotted-to-amit-shah-says-report","https://x.com/AmitShah","https://myneta.info/LokSabha2024/candidate.php?candidate_id=4427","https://www.wikidata.org/wiki/Q4746875"]},"gadkari":{"n":"Nitin Gadkari","r":"C","extra":null,"qid":"Q3504520","wiki":"Nitin Gadkari","dob":"1957-05-27","pob":"Nagpur, Maharashtra","email":null,"house":"Lok Sabha – Nagpur, Maharashtra","residence":"2, Motilal Nehru Marg, New Delhi","assets":{"total":"Rs 28,03,17,321 (approx 28 crore)","election":"Lok Sabha 2024","url":"https://myneta.info/LokSabha2024/candidate.php?candidate_id=329"},"social":{"x":"nitin_gadkari","facebook":"nitingadkary"},"photo":null,"sources":["https://en.wikipedia.org/wiki/Nitin_Gadkari","https://www.wikidata.org/wiki/Q3504520","https://www.opensanctions.org/entities/Q3504520/","https://x.com/nitin_gadkari","https://myneta.info/LokSabha2024/candidate.php?candidate_id=329","https://www.wikidata.org/wiki/Q3504520"]},"nadda":{"n":"J. P. Nadda","r":"C","extra":null,"qid":"Q16193764","wiki":"J. P. Nadda","dob":"1960-12-02","pob":"Patna, Bihar","email":"jp.nadda@sansad.nic.in","house":"Rajya Sabha – Gujarat","residence":"7-B, Motilal Nehru Marg, New Delhi","assets":{"total":"Rs 9,36,03,781 (approx 9.4 crore)","election":"Rajya Sabha 2024 (Gujarat)","url":"https://myneta.info/rajsab09aff/candidate.php?candidate_id=1055"},"social":{"x":"JPNadda"},"photo":null,"sources":["https://en.wikipedia.org/wiki/J._P._Nadda","https://www.wikidata.org/wiki/Q16193764","https://www.opensanctions.org/entities/Q16193764/","https://x.com/JPNadda","https://myneta.info/rajsab09aff/candidate.php?candidate_id=1055","https://www.wikidata.org/wiki/Q16193764"]},"chouhan":{"n":"Shivraj Singh Chouhan","r":"C","extra":null,"qid":"Q3180602","wiki":"Shivraj Singh Chouhan","dob":"1959-03-05","pob":"Jait, Sehore district, Madhya Pradesh","email":null,"house":"Lok Sabha – Vidisha, MP","residence":"12, Safdarjung Road, New Delhi","assets":{"total":"Rs 8,98,52,874 (approx 9 crore)","election":"Lok Sabha 2024","url":"https://myneta.info/LokSabha2024/candidate.php?candidate_id=4448"},"social":{"x":"ChouhanShivraj"},"photo":null,"sources":["https://en.wikipedia.org/wiki/Shivraj_Singh_Chouhan","https://www.wikidata.org/wiki/Q3180602","https://www.opensanctions.org/entities/Q3180602/","https://x.com/ChouhanShivraj","https://myneta.info/LokSabha2024/candidate.php?candidate_id=4448","https://www.wikidata.org/wiki/Q3180602"]},"nirmala":{"n":"Nirmala Sitharaman","r":"C","extra":null,"qid":"Q7040049","wiki":"Nirmala Sitharaman","dob":"1959-08-18","pob":"Madurai, Tamil Nadu","email":"nsitharaman@nic.in","house":"Rajya Sabha – Karnataka","residence":"15, Safdarjung Road, New Delhi","assets":{"total":"Rs 2,50,99,396 (approx 2.5 crore)","election":"Rajya Sabha 2022 (Karnataka)","url":"https://myneta.info/rajsab09aff/candidate.php?candidate_id=986"},"social":{"x":"nsitharaman"},"photo":null,"sources":["https://en.wikipedia.org/wiki/Nirmala_Sitharaman","https://www.wikidata.org/wiki/Q7040049","https://www.opensanctions.org/entities/Q7040049/","https://myneta.info/rajsab09aff/candidate.php?candidate_id=986","https://www.wikidata.org/wiki/Q7040049"]},"jaishankar":{"n":"S. Jaishankar","r":"C","extra":null,"qid":"Q16186720","wiki":"S. Jaishankar","dob":"1955-01-09","pob":"New Delhi, Delhi","email":"s.jaishankar@sansad.nic.in","house":"Rajya Sabha – Gujarat","residence":"12, Tughlak Road, New Delhi","assets":{"total":"Rs 20,09,28,804 (approx 20 crore)","election":"Rajya Sabha 2023 (Gujarat)","url":"https://myneta.info/rajsab09aff/candidate.php?candidate_id=1024"},"social":{"x":"DrSJaishankar"},"photo":null,"sources":["https://en.wikipedia.org/wiki/S._Jaishankar","https://www.wikidata.org/wiki/Q16186720","https://www.opensanctions.org/entities/Q16186720/","https://x.com/DrSJaishankar","https://myneta.info/rajsab09aff/candidate.php?candidate_id=1024","https://www.wikidata.org/wiki/Q16186720"]},"khattar":{"n":"Manohar Lal Khattar","r":"C","extra":null,"qid":"Q18336221","wiki":"Manohar Lal Khattar","dob":"1954-05-05","pob":"Nindana, Rohtak district, Haryana","email":"minister-mohua@nic.in","house":"Lok Sabha – Karnal, Haryana","residence":null,"assets":{"total":"Rs 2,54,42,914 (approx 2.5 crore)","election":"Lok Sabha 2024","url":"https://myneta.info/LokSabha2024/candidate.php?candidate_id=8552"},"social":{"x":"mlkhattar"},"photo":null,"sources":["https://en.wikipedia.org/wiki/Manohar_Lal_Khattar","https://www.wikidata.org/wiki/Q18336221","https://www.opensanctions.org/entities/Q18336221/","https://dda.gov.in/sites/default/files/2026-07/members_of_authority_01072026.pdf","https://x.com/mlkhattar/highlights","https://myneta.info/LokSabha2024/candidate.php?candidate_id=8552","https://www.wikidata.org/wiki/Q18336221"]},"hdk":{"n":"H. D. Kumaraswamy","r":"C","extra":null,"qid":"Q251790","wiki":"H. D. Kumaraswamy","dob":"1959-12-16","pob":"Haradanahalli, Hassan district, Karnataka","email":null,"house":"Lok Sabha – Mandya, Karnataka","residence":"6, Kushak Road, New Delhi","assets":{"total":"Rs 2,17,23,28,789 (approx 217 crore)","election":"Lok Sabha 2024","url":"https://myneta.info/LokSabha2024/candidate.php?candidate_id=2651"},"social":{"x":"hd_kumaraswamy"},"photo":null,"sources":["https://en.wikipedia.org/wiki/H._D._Kumaraswamy","https://www.wikidata.org/wiki/Q251790","https://www.opensanctions.org/entities/Q251790/","https://x.com/hd_kumaraswamy","https://myneta.info/LokSabha2024/candidate.php?candidate_id=2651","https://www.wikidata.org/wiki/Q251790"]},"goyal":{"n":"Piyush Goyal","r":"C","extra":null,"qid":"Q7199798","wiki":"Piyush Goyal","dob":"1964-06-13","pob":"Mumbai, Maharashtra","email":"piyush.goyal@gov.in","house":"Lok Sabha – Mumbai North, Maharashtra","residence":"8, Teen Murti Marg, New Delhi","assets":{"total":"Rs 1,10,95,14,447 (approx 111 crore)","election":"Lok Sabha 2024","url":"https://myneta.info/LokSabha2024/candidate.php?candidate_id=7093"},"social":{"x":"PiyushGoyal"},"photo":null,"sources":["https://en.wikipedia.org/wiki/Piyush_Goyal","https://www.wikidata.org/wiki/Q7199798","https://www.opensanctions.org/entities/Q7199798/","https://x.com/PiyushGoyal","https://myneta.info/LokSabha2024/candidate.php?candidate_id=7093","https://www.wikidata.org/wiki/Q7199798"]},"joshi":{"n":"Pralhad Joshi","r":"C","extra":null,"qid":"Q7238224","wiki":"Pralhad Joshi","dob":"1962-11-27","pob":"Vijayapura (Bijapur), Karnataka","email":"joshi.pralhad@sansad.nic.in","house":"Lok Sabha – Dharwad, Karnataka","residence":"11, Akbar Road, New Delhi","assets":{"total":"Rs 21,09,60,953 (approx 21 crore)","election":"Lok Sabha 2024","url":"https://myneta.info/LokSabha2024/candidate.php?candidate_id=3567"},"social":{"x":"JoshiPralhad"},"photo":null,"sources":["https://en.wikipedia.org/wiki/Pralhad_Joshi","https://www.wikidata.org/wiki/Q7238224","https://www.opensanctions.org/entities/Q7238224/","https://x.com/JoshiPralhad","https://myneta.info/LokSabha2024/candidate.php?candidate_id=3567","https://www.wikidata.org/wiki/Q7238224"]},"manjhi":{"n":"Jitan Ram Manjhi","r":"C","extra":null,"qid":"Q16910976","wiki":"Jitan Ram Manjhi","dob":"1944-10-06","pob":"Mahakar, Gaya district, Bihar","email":null,"house":"Lok Sabha – Gaya, Bihar","residence":"28, Akbar Road, New Delhi","assets":{"total":"Rs 30,20,578 (approx 30 lakh)","election":"Lok Sabha 2024","url":"https://myneta.info/LokSabha2024/candidate.php?candidate_id=1678"},"social":{"x":"jitanrmanjhi"},"photo":null,"sources":["https://en.wikipedia.org/wiki/Jitan_Ram_Manjhi","https://www.wikidata.org/wiki/Q16910976","https://www.opensanctions.org/entities/Q16910976/","https://x.com/jitanrmanjhi","https://myneta.info/LokSabha2024/candidate.php?candidate_id=1678","https://www.wikidata.org/wiki/Q16910976"]},"lalan":{"n":"Rajiv Ranjan (Lalan) Singh","r":"C","extra":null,"qid":"Q7286245","wiki":"Lalan Singh","dob":"1955-01-24","pob":"Patna, Bihar","email":null,"house":"Lok Sabha – Munger, Bihar","residence":"9, Tyagraj Marg, New Delhi","assets":{"total":"Rs 13,82,28,639 (approx 13.8 crore)","election":"Lok Sabha 2024","url":"https://myneta.info/LokSabha2024/candidate.php?candidate_id=5060"},"social":{"x":"LalanSingh_1"},"photo":null,"sources":["https://en.wikipedia.org/wiki/Lalan_Singh","https://www.wikidata.org/wiki/Q7286245","https://www.opensanctions.org/entities/Q7286245/","https://x.com/lalansingh_1","https://myneta.info/LokSabha2024/candidate.php?candidate_id=5060","https://www.wikidata.org/wiki/Q7286245"]},"sonowal":{"n":"Sarbananda Sonowal","r":"C","extra":null,"qid":"Q7423486","wiki":"Sarbananda Sonowal","dob":"1962-10-31","pob":"Muluk Gaon, Dibrugarh district, Assam","email":"sarbananda.sonowal@sansad.nic.in","house":"Lok Sabha – Dibrugarh, Assam","residence":"23, Safdarjung Road, New Delhi","assets":{"total":"Rs 4,75,85,258 (approx 4.8 crore)","election":"Lok Sabha 2024","url":"https://myneta.info/LokSabha2024/candidate.php?candidate_id=259"},"social":{"x":"sarbanandsonwal","facebook":"SarbanandaSonowal"},"photo":null,"sources":["https://en.wikipedia.org/wiki/Sarbananda_Sonowal","https://www.wikidata.org/wiki/Q7423486","https://www.opensanctions.org/entities/Q7423486/","https://x.com/sarbanandsonwal","https://myneta.info/LokSabha2024/candidate.php?candidate_id=259","https://www.wikidata.org/wiki/Q7423486"]},"virendra":{"n":"Virendra Kumar","r":"C","extra":null,"qid":"Q7933694","wiki":"Virendra Kumar Khatik","dob":"1954-02-27","pob":"Sagar, Madhya Pradesh","email":"vkumar@sansad.nic.in","house":"Lok Sabha – Tikamgarh, MP","residence":"4, Janpath, New Delhi","assets":{"total":"Rs 2,88,37,006 (approx 2.9 crore)","election":"Lok Sabha 2024","url":"https://myneta.info/LokSabha2024/candidate.php?candidate_id=2473"},"social":{"x":"Drvirendrakum13"},"photo":null,"sources":["https://en.wikipedia.org/wiki/Virendra_Kumar_Khatik","https://www.wikidata.org/wiki/Q7933694","https://www.opensanctions.org/entities/Q7933694/","https://x.com/Drvirendrakum13","https://myneta.info/LokSabha2024/candidate.php?candidate_id=2473","https://www.wikidata.org/wiki/Q7933694"]},"rmnaidu":{"n":"K. Ram Mohan Naidu","r":"C","extra":null,"qid":"Q16901223","wiki":"Kinjarapu Ram Mohan Naidu","dob":"1987-12-18","pob":"Nimmada, Srikakulam district, Andhra Pradesh","email":"rammohannaidu.k@sansad.nic.in","house":"Lok Sabha – Srikakulam, Andhra Pradesh","residence":"22, Akbar Road, New Delhi","assets":{"total":"Rs 23,30,73,561 (approx 23 crore)","election":"Lok Sabha 2024","url":"https://myneta.info/LokSabha2024/candidate.php?candidate_id=6620"},"social":{"x":"RamMNK"},"photo":null,"sources":["https://en.wikipedia.org/wiki/Kinjarapu_Ram_Mohan_Naidu","https://www.wikidata.org/wiki/Q16901223","https://www.opensanctions.org/entities/Q16901223/","https://x.com/RamMNK","https://myneta.info/LokSabha2024/candidate.php?candidate_id=6620","https://www.wikidata.org/wiki/Q16901223"]},"oram":{"n":"Jual Oram","r":"C","extra":null,"qid":"Q6298726","wiki":"Jual Oram","dob":"1961-03-22","pob":"Kendudihi, Sundargarh district, Odisha","email":"jualoram@sansad.nic.in","house":"Lok Sabha – Sundargarh, Odisha","residence":"3, Safdarjung Road, New Delhi","assets":{"total":"Rs 8,63,25,870 (approx 8.6 crore)","election":"Lok Sabha 2024","url":"https://myneta.info/LokSabha2024/candidate.php?candidate_id=7296"},"social":{"x":"jualoram"},"photo":null,"sources":["https://en.wikipedia.org/wiki/Jual_Oram","https://www.wikidata.org/wiki/Q6298726","https://www.opensanctions.org/entities/Q6298726/","https://x.com/jualoram","https://myneta.info/LokSabha2024/candidate.php?candidate_id=7296","https://www.wikidata.org/wiki/Q6298726"]},"giriraj":{"n":"Giriraj Singh","r":"C","extra":null,"qid":"Q16736894","wiki":"Giriraj Singh","dob":"1952-09-08","pob":"Barahiya, Lakhisarai district, Bihar","email":"giriraj.singh@sansad.nic.in","house":"Lok Sabha – Begusarai, Bihar","residence":"27, Lodhi Estate, New Delhi-110003","assets":{"total":"Rs 14,31,69,297 (approx 14.3 crore)","election":"Lok Sabha 2024","url":"https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=5058"},"social":{"x":"girirajsinghbjp"},"photo":null,"sources":["https://en.wikipedia.org/wiki/Giriraj_Singh","https://www.opensanctions.org/entities/Q16736894/","https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=5058","https://www.wikidata.org/wiki/Q16736894"]},"vaishnaw":{"n":"Ashwini Vaishnaw","r":"C","extra":null,"qid":"Q75184694","wiki":"Ashwini Vaishnaw","dob":"1970-07-18","pob":"Jodhpur, Rajasthan","email":"av.odisha@sansad.nic.in","house":"Rajya Sabha – Odisha","residence":"Bungalow no. 32, Prithviraj Road, New Delhi-110011","assets":{"total":"Rs 1,44,12,01,998 (approx 144.1 crore)","election":"Rajya Sabha 2024 (Odisha, 2024-2030)","url":"https://www.myneta.info/rajsab09aff/candidate.php?candidate_id=1067"},"social":{"x":"AshwiniVaishnaw"},"photo":null,"sources":["https://en.wikipedia.org/wiki/Ashwini_Vaishnaw","https://www.opensanctions.org/entities/Q75184694/","https://www.myneta.info/rajsab09aff/candidate.php?candidate_id=1067","https://www.adrindia.org/node/96112","https://www.wikidata.org/wiki/Q75184694"]},"scindia":{"n":"Jyotiraditya Scindia","r":"C","extra":null,"qid":"Q16213761","wiki":"Jyotiraditya Scindia","dob":"1971-01-01","pob":"Mumbai, Maharashtra","email":"jyotiraditya.scindia@sansad.nic.in","house":"Lok Sabha – Guna, Madhya Pradesh","residence":"27, Safdarjung Road, New Delhi","assets":{"total":"Rs 4,24,74,94,078 (approx 424.7 crore)","election":"Lok Sabha 2024","url":"https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=3613"},"social":{"x":"JM_Scindia"},"photo":null,"sources":["https://www.opensanctions.org/entities/Q16213761/","https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=3613","https://www.wikidata.org/wiki/Q16213761"]},"bhupender":{"n":"Bhupender Yadav","r":"C","extra":null,"qid":"Q16208337","wiki":"Bhupender Yadav","dob":"1969-06-30","pob":"Ajmer, Rajasthan","email":"bhupender.yadav@sansad.nic.in","house":"Lok Sabha – Alwar, Rajasthan","residence":"9, Motilal Nehru Marg, New Delhi-110011","assets":{"total":"Rs 2,32,36,037 (approx 2.3 crore)","election":"Lok Sabha 2024","url":"https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=360"},"social":{"x":"byadavbjp"},"photo":null,"sources":["https://www.opensanctions.org/entities/Q16208337/","https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=360","https://www.wikidata.org/wiki/Q16208337"]},"shekhawat":{"n":"Gajendra Singh Shekhawat","r":"C","extra":null,"qid":"Q16914124","wiki":"Gajendra Singh Shekhawat","dob":"1967-10-03","pob":"Jaisalmer, Rajasthan","email":"g.shekhawat@sansad.nic.in","house":"Lok Sabha – Jodhpur, Rajasthan","residence":"12, Akbar Road, New Delhi","assets":{"total":"Rs 19,30,27,658 (approx 19.3 crore)","election":"Lok Sabha 2024","url":"https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=1843"},"social":{"x":"gssjodhpur"},"photo":null,"sources":["https://www.opensanctions.org/entities/Q16914124/","https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=1843","https://www.wikidata.org/wiki/Q16914124"]},"annpurna":{"n":"Annpurna Devi","r":"C","extra":null,"qid":"Q64010478","wiki":"Annpurna Devi","dob":"1970-02-02","pob":"Ajmeri, Dumka district, Jharkhand (then Bihar)","email":null,"house":"Lok Sabha – Kodarma, Jharkhand","residence":"11, Teen Murti Lane, New Delhi","assets":{"total":"Rs 12,82,82,857 (approx 12.8 crore)","election":"Lok Sabha 2024","url":"https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=7285"},"social":{},"photo":null,"sources":["https://en.wikipedia.org/wiki/Annpurna_Devi","https://www.opensanctions.org/entities/Q64010478/","https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=7285","https://www.wikidata.org/wiki/Q64010478"]},"rijiju":{"n":"Kiren Rijiju","r":"C","extra":null,"qid":"Q6415053","wiki":"Kiren Rijiju","dob":"1971-11-19","pob":"Nakhu, West Kameng district, Arunachal Pradesh","email":"kiren.rijiju@sansad.nic.in","house":"Lok Sabha – Arunachal West, Arunachal Pradesh","residence":"9, K. Kamaraj Marg, New Delhi","assets":{"total":"Rs 4,94,03,234 (approx 4.9 crore)","election":"Lok Sabha 2024","url":"https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=251"},"social":{"x":"KirenRijiju"},"photo":null,"sources":["https://www.opensanctions.org/entities/Q6415053/","https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=251","https://www.wikidata.org/wiki/Q6415053"]},"puri":{"n":"Hardeep Singh Puri","r":"C","extra":null,"qid":"Q5655835","wiki":"Hardeep Singh Puri","dob":"1952-02-15","pob":"Amritsar, Punjab","email":"hardeep.spuri@sansad.nic.in","house":"Rajya Sabha – Uttar Pradesh","residence":"6, Akbar Road, New Delhi","assets":{"total":"Rs 26,12,84,244 (approx 26.1 crore)","election":"Rajya Sabha 2020 (Uttar Pradesh, 2020-2026)","url":"https://www.myneta.info/rajsab09aff/candidate.php?candidate_id=897"},"social":{"x":"HardeepSPuri"},"photo":null,"sources":["https://www.opensanctions.org/entities/Q5655835/","https://www.myneta.info/rajsab09aff/candidate.php?candidate_id=897","https://www.wikidata.org/wiki/Q5655835"]},"mandaviya":{"n":"Mansukh Mandaviya","r":"C","extra":null,"qid":"Q21170728","wiki":"Mansukh Mandaviya","dob":"1972-06-01","pob":"Hanol, Bhavnagar district, Gujarat","email":"mansukh.mandaviya@sansad.nic.in","house":"Lok Sabha – Porbandar, Gujarat","residence":"1, Tughlaq Road, New Delhi-110011","assets":{"total":"Rs 7,95,04,705 (approx 7.95 crore)","election":"Lok Sabha 2024","url":"https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=3459"},"social":{"x":"mansukhmandviya"},"photo":null,"sources":["https://www.opensanctions.org/entities/Q21170728/","https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=3459","https://www.wikidata.org/wiki/Q21170728"]},"kishan":{"n":"G. Kishan Reddy","r":"C","extra":null,"qid":"Q5512319","wiki":"G. Kishan Reddy","dob":"1964-06-15","pob":"Thimmapur, Kandukur mandal, Ranga Reddy district, Telangana","email":"kishanreddy.g@sansad.nic.in","house":"Lok Sabha – Secunderabad, Telangana","residence":"6, Ashok Road, New Delhi-110001","assets":{"total":"Rs 19,22,41,721 (approx 19.2 crore)","election":"Lok Sabha 2024","url":"https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=5251"},"social":{"x":"kishanreddybjp"},"photo":null,"sources":["https://www.coal.nic.in/en/minister/shri-g-kishan-reddy","https://www.opensanctions.org/entities/Q5512319/","https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=5251","https://www.wikidata.org/wiki/Q5512319"]},"chirag":{"n":"Chirag Paswan","r":"C","extra":null,"qid":"Q16728004","wiki":"Chirag Paswan","dob":"1982-10-31","pob":null,"email":null,"house":"Lok Sabha – Hajipur (SC), Bihar","residence":null,"assets":{"total":"Rs 2,68,75,873 (approx 2.7 crore)","election":"Lok Sabha 2024","url":"https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=7281"},"social":{"x":"iChiragPaswan"},"photo":null,"sources":["https://www.opensanctions.org/entities/Q16728004/","https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=7281","https://www.wikidata.org/wiki/Q16728004"]},"patil":{"n":"C. R. Patil","r":"C","extra":null,"qid":"Q5071367","wiki":"C. R. Patil","dob":"1955-03-16","pob":"Pimpri Akarraut, Edlabad, Jalgaon district, Maharashtra","email":"cr.patil@sansad.nic.in","house":"Lok Sabha – Navsari, Gujarat","residence":"501, New M.S. Flats, Dr. Bishambar Das Marg, New Delhi","assets":{"total":"Rs 39,49,30,044 (approx 39.5 crore)","election":"Lok Sabha 2024","url":"https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=5139"},"social":{"x":"CRPaatil"},"photo":null,"sources":["https://www.opensanctions.org/entities/Q5071367/","https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=5139","https://www.wikidata.org/wiki/Q5071367"]},"inderjit":{"n":"Rao Inderjit Singh","r":"IC","extra":null,"qid":"Q7293676","wiki":"Rao Inderjit Singh","dob":"1950-02-11","pob":"Rewari, Haryana","email":"rao.inderjit@sansad.nic.in","house":"Lok Sabha – Gurgaon, Haryana","residence":"6, Lodhi Estate, Subramaniam Bharti Marg, New Delhi","assets":{"total":"Rs 1,21,54,22,868 (approx 121.5 crore)","election":"Lok Sabha 2024","url":"https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=8448"},"social":{},"photo":null,"sources":["https://en.wikipedia.org/wiki/Rao_Inderjit_Singh","https://www.opensanctions.org/entities/Q7293676/","https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=8448","https://www.wikidata.org/wiki/Q7293676"]},"jitendra":{"n":"Dr Jitendra Singh","r":"IC","extra":"Also Minister of State in the Prime Minister's Office.","qid":"Q6203277","wiki":"Jitendra Singh Rana","dob":"1956-11-06","pob":"Jammu, Jammu and Kashmir","email":null,"house":"Lok Sabha – Udhampur, Jammu and Kashmir","residence":"4, Kushak Road, New Delhi","assets":{"total":"Rs 8,59,05,005 (approx 8.6 crore)","election":"Lok Sabha 2024","url":"https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=8"},"social":{"x":"DrJitendraSingh"},"photo":null,"sources":["https://en.wikipedia.org/wiki/Jitendra_Singh_Rana","https://www.opensanctions.org/entities/Q6203277/","https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=8","https://www.wikidata.org/wiki/Q6203277"]},"meghwal":{"n":"Arjun Ram Meghwal","r":"IC","extra":null,"qid":"Q4791582","wiki":"Arjun Ram Meghwal","dob":"1953-12-20","pob":"Kishmidesar, Bikaner district, Rajasthan","email":null,"house":"Lok Sabha – Bikaner (SC), Rajasthan","residence":"5-A, K. Kamaraj Marg, New Delhi","assets":{"total":"Rs 3,76,54,863 (approx 3.8 crore)","election":"Lok Sabha 2024","url":"https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=381"},"social":{"x":"arjunrammeghwal"},"photo":null,"sources":["https://www.opensanctions.org/entities/Q4791582/","https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=381","https://www.wikidata.org/wiki/Q4791582"]},"jadhav":{"n":"Prataprao Jadhav","r":"IC","extra":null,"qid":"Q7238626","wiki":"Prataprao Jadhav","dob":"1960-11-25","pob":"Mehkar, Buldhana district, Maharashtra","email":null,"house":"Lok Sabha – Buldhana, Maharashtra","residence":"23, Ashoka Road, New Delhi","assets":{"total":"Rs 16,42,60,448 (approx 16.4 crore)","election":"Lok Sabha 2024","url":"https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=1958"},"social":{},"photo":null,"sources":["https://www.mohfw.gov.in/sites/default/files/pratap.pdf","https://www.opensanctions.org/entities/Q7238626/","https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=1958","https://www.wikidata.org/wiki/Q7238626"]},"jayant":{"n":"Jayant Chaudhary","r":"IC","extra":null,"qid":"Q6167558","wiki":"Jayant Chaudhary","dob":"1978-12-27","pob":"Dallas, Texas, United States","email":"jayant.rld@sansad.nic.in","house":"Rajya Sabha – Uttar Pradesh","residence":"12, Tughlak Road, New Delhi-110011","assets":{"total":"Rs 52,40,93,536 (approx 52.4 crore)","election":"Rajya Sabha 2022 (Uttar Pradesh, 2022-2028)","url":"https://www.myneta.info/rajsab09aff/candidate.php?candidate_id=943"},"social":{"x":"jayantrld"},"photo":null,"sources":["https://en.wikipedia.org/wiki/Jayant_Chaudhary","https://www.opensanctions.org/entities/Q6167558/","https://www.myneta.info/rajsab09aff/candidate.php?candidate_id=943","https://www.wikidata.org/wiki/Q6167558"]},"anupriya":{"n":"Anupriya Patel","r":"MoS","extra":null,"qid":"Q4777851","wiki":"Anupriya Patel","dob":"1981-04-28","pob":"Kanpur, Uttar Pradesh","email":"anupriyasingh.patel@sansad.nic.in","house":"Lok Sabha – Mirzapur, Uttar Pradesh","residence":"5, Safdarjung Road, New Delhi","assets":{"total":"Rs 4,22,41,754 (approx 4.2 crore)","election":"Lok Sabha 2024","url":"https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=9380"},"social":{"x":"AnupriyaSPatel"},"photo":null,"sources":["https://www.opensanctions.org/entities/Q4777851/","https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=9380","https://www.wikidata.org/wiki/Q4777851"]},"sukanta":{"n":"Sukanta Majumdar","r":"MoS","extra":null,"qid":"Q64011108","wiki":"Sukanta Majumdar","dob":"1979-12-29","pob":"Balurghat, Dakshin Dinajpur, West Bengal","email":"sukanta.majumdar@mpls.sansad.in","house":"Lok Sabha – Balurghat, West Bengal","residence":"30, Dr. APJ Abdul Kalam Road, New Delhi 110001","assets":{"total":"Rs 1,24,76,825 (approx 1.2 crore)","election":"Lok Sabha 2024","url":"https://myneta.info/LokSabha2024/candidate.php?candidate_id=2211"},"social":{"x":"DrSukantaBJP"},"photo":null,"sources":["https://www.opensanctions.org/entities/Q64011108","https://en.wikipedia.org/wiki/Sukanta_Majumdar","https://www.sarkaritel.com/parliament-of-india-lok-sabha-member-of-parliament-m","https://myneta.info/LokSabha2024/candidate.php?candidate_id=2211","https://x.com/DrSukantaBJP","https://www.wikidata.org/wiki/Q64011108"]},"jitin":{"n":"Jitin Prasada","r":"MoS","extra":null,"qid":"Q290717","wiki":"Jitin Prasada","dob":"1973-11-29","pob":"Shahjahanpur, Uttar Pradesh","email":null,"house":"Lok Sabha – Pilibhit, UP","residence":"7, Motilal Nehru Marg, New Delhi 110011","assets":{"total":"Rs 29,89,25,408 (approx 29.9 crore)","election":"Lok Sabha 2024","url":"https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=899"},"social":{"x":"JitinPrasada"},"photo":null,"sources":["https://en.wikipedia.org/wiki/Jitin_Prasada","https://www.wikidata.org/wiki/Q290717","https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=899","https://www.psuconnect.in/profile/shri-jitin-prasada-184","https://pmindia.gov.in/wp-content/uploads/2024/08/Sh.-Jitin-Prasada.pdf","https://x.com/JitinPrasada/status/1800858694202327090","https://www.wikidata.org/wiki/Q290717"]},"naik":{"n":"Shripad Yesso Naik","r":"MoS","extra":null,"qid":"Q7504173","wiki":"Shripad Yesso Naik","dob":"1952-10-04","pob":"Adpai, North Goa, Goa","email":"shripad.naik@mpls.sansad.in","house":"Lok Sabha – North Goa, Goa","residence":"1, Lodhi Estate, New Delhi 110003","assets":{"total":"Rs 10,86,83,533 (approx 10.9 crore)","election":"Lok Sabha 2024","url":"https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=3668"},"social":{"x":"shripadynaik"},"photo":null,"sources":["https://en.wikipedia.org/wiki/Shripad_Naik","https://www.wikidata.org/wiki/Q7504173","https://www.sarkaritel.com/parliament-of-india-lok-sabha-member-of-parliament-n","https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=3668","https://x.com/shripadynaik","https://www.wikidata.org/wiki/Q7504173"]},"pankaj":{"n":"Pankaj Chaudhary","r":"MoS","extra":null,"qid":"Q7131282","wiki":"Pankaj Chaudhary","dob":"1964-11-20","pob":"Gorakhpur, Uttar Pradesh","email":"pankaj.chowdhary@mpls.sansad.in","house":"Lok Sabha – Maharajganj, UP","residence":"Bungalow No. 20, Pt. Ravi Shankar Shukla Lane, Kasturba Gandhi Marg, New Delhi","assets":{"total":"Rs 41,90,10,509 (approx 41.9 crore)","election":"Lok Sabha 2024","url":"https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=8774"},"social":{"x":"mppchaudhary"},"photo":null,"sources":["https://en.wikipedia.org/wiki/Pankaj_Chaudhary","https://www.wikidata.org/wiki/Q7131282","https://www.sarkaritel.com/parliament-of-india-lok-sabha-member-of-parliament-c","https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=8774","https://x.com/mppchaudhary","https://www.wikidata.org/wiki/Q7131282"]},"gurjar":{"n":"Krishan Pal Gurjar","r":"MoS","extra":null,"qid":"Q16901147","wiki":"Krishan Pal Gurjar","dob":"1957-02-04","pob":"Mewla Maharajpur, Faridabad, Haryana","email":"krishanpal.mp@mpls.sansad.in","house":"Lok Sabha – Faridabad, Haryana","residence":"8, Tughlak Lane, New Delhi 110011","assets":{"total":"Rs 62,58,15,843 (approx 62.6 crore)","election":"Lok Sabha 2024","url":"https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=8425"},"social":{"x":"KPGBJP","instagram":"kpgbjp","facebook":"KPGBJP"},"photo":null,"sources":["https://en.wikipedia.org/wiki/Krishan_Pal_Gurjar","https://www.wikidata.org/wiki/Q16901147","https://www.sarkaritel.com/parliament-of-india-lok-sabha-member-of-parliament-g","https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=8425","https://www.wikidata.org/wiki/Q16901147"]},"mohol":{"n":"Murlidhar Mohol","r":"MoS","extra":null,"qid":"Q76328310","wiki":"Murlidhar Mohol","dob":"1974-11-09","pob":"Mulshi taluka, Pune district, Maharashtra","email":"murlidhar.mohol@mpls.sansad.in","house":"Lok Sabha – Pune, Maharashtra","residence":"18, Mother Teresa Crescent, New Delhi 110011","assets":{"total":"Rs 24,32,44,483 (approx 24.3 crore)","election":"Lok Sabha 2024","url":"https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=6044"},"social":{"x":"mohol_murlidhar","instagram":"murlidharkmohol","facebook":"MurlidharKMohol"},"photo":null,"sources":["https://en.wikipedia.org/wiki/Murlidhar_Mohol","https://www.wikidata.org/wiki/Q76328310","https://www.sarkaritel.com/parliament-of-india-lok-sabha-member-of-parliament-m","https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=6044","https://www.wikidata.org/wiki/Q76328310"]},"athawale":{"n":"Ramdas Athawale","r":"MoS","extra":null,"qid":"Q4813289","wiki":"Ramdas Athawale","dob":"1959-12-25","pob":"Agalgaon, Sangli district, Maharashtra","email":null,"house":"Rajya Sabha – Maharashtra","residence":"11, Safdarjung Road, New Delhi 110011","assets":{"total":"Rs 6,80,13,776 (approx 6.8 crore)","election":"Rajya Sabha 2020 (Maharashtra)","url":"https://www.myneta.info/rajsab09aff/candidate.php?candidate_id=809"},"social":{"x":"RamdasAthawale"},"photo":null,"sources":["https://en.wikipedia.org/wiki/Ramdas_Athawale","https://www.wikidata.org/wiki/Q4813289","https://www.myneta.info/rajsab09aff/candidate.php?candidate_id=809","https://www.adrindia.org/sites/default/files/Analysis_of_Criminal_Background_Financial_Education_Gender_and_other_details_of_Sitting_Rajya_Sabha_MPs_March2026_Eng_0.pdf","https://pmindia.gov.in/wp-content/uploads/2020/12/Shri-Ramdas-Athawale_1.pdf","https://www.freepressjournal.in/amp/mumbai/maharashtra-sharad-pawar-ramdas-athawale-vinod-tawde-among-7-leaders-elected-unopposed-to-rajya-sabha","https://x.com/RamdasAthawale","https://www.wikidata.org/wiki/Q4813289"]},"blverma":{"n":"B. L. Verma","r":"MoS","extra":null,"qid":"Q104178808","wiki":"Banwari Lal Verma","dob":"1961-08-07","pob":"Ujhani, Badaun district, Uttar Pradesh","email":null,"house":"Rajya Sabha – Uttar Pradesh","residence":"4, Pandit Uma Shankar Dikshit Marg, Chanakyapuri, New Delhi 110011","assets":{"total":"Rs 2,72,55,192 (approx 2.7 crore)","election":"Rajya Sabha 2020 (Uttar Pradesh)","url":"https://www.myneta.info/rajsab09aff/candidate.php?candidate_id=894"},"social":{"x":"blvermaup"},"photo":null,"sources":["https://en.wikipedia.org/wiki/Banwari_Lal_Verma","https://www.wikidata.org/wiki/Q104178808","https://www.myneta.info/rajsab09aff/candidate.php?candidate_id=894","https://pmindia.gov.in/wp-content/uploads/2024/08/Sh.-B.-L.-Verma-.pdf","https://x.com/blvermaup","https://www.wikidata.org/wiki/Q104178808"]},"rnthakur":{"n":"Ram Nath Thakur","r":"MoS","extra":null,"qid":"Q21229980","wiki":"Ram Nath Thakur","dob":"1950-03-03","pob":"Karpoori Gram, Samastipur district, Bihar","email":null,"house":"Rajya Sabha – Bihar","residence":"301, Swarna Jayanti Sadan Deluxe, Dr. B.D. Marg, New Delhi 110001","assets":{"total":"Rs 3,95,93,754 (approx 3.96 crore)","election":"Rajya Sabha 2020 (Bihar)","url":"https://www.myneta.info/rajsab09aff/candidate.php?candidate_id=854"},"social":{"x":"RNK_Thakur"},"photo":null,"sources":["https://en.wikipedia.org/wiki/Ram_Nath_Thakur","https://www.opensanctions.org/entities/Q21229980","https://www.myneta.info/rajsab09aff/candidate.php?candidate_id=854","https://www.adrindia.org/sites/default/files/Analysis_of_Criminal_Background_Financial_Education_Gender_and_other_details_of_Sitting_Rajya_Sabha_MPs_March2026_Eng_0.pdf","https://patnapress.com/nda-sweeps-bihar-rajya-sabha-elections-2026/","https://pmindia.gov.in/wp-content/uploads/2024/08/Sh.-Ramnath-Thakur-.pdf","https://x.com/RNK_Thakur","https://www.wikidata.org/wiki/Q21229980"]},"bhagirath":{"n":"Bhagirath Choudhary","r":"MoS","extra":null,"qid":"Q28873568","wiki":"Bhagirath Choudhary","dob":"1954-06-01","pob":"Manpura, Ajmer district, Rajasthan","email":"bhagirath.choudhary@mpls.sansad.in","house":"Lok Sabha – Ajmer, Rajasthan","residence":"28, Tughlaq Crescent, New Delhi 110011","assets":{"total":"Rs 13,38,11,555 (approx 13.4 crore)","election":"Lok Sabha 2024","url":"https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=2038"},"social":{"x":"mpbhagirathbjp","facebook":"bhagirathchoudharybjp"},"photo":null,"sources":["https://sansad.in/api_ls/member/5203","https://en.wikipedia.org/wiki/Bhagirath_Choudhary","https://www.wikidata.org/wiki/Q28873568","https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=2038","https://www.wikidata.org/wiki/Q28873568"]},"rai":{"n":"Nityanand Rai","r":"MoS","extra":null,"qid":"Q16734872","wiki":"Nityanand Rai","dob":"1966-01-01","pob":"Hajipur, Vaishali district, Bihar","email":"nityanand.rai@mpls.sansad.in","house":"Lok Sabha – Ujiarpur, Bihar","residence":"4, Lodhi Estate, New Delhi","assets":{"total":"Rs 17,95,27,017 (approx 18 crore)","election":"Lok Sabha 2024","url":"https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=5152"},"social":{"x":"nityanandraibjp"},"photo":null,"sources":["https://en.wikipedia.org/wiki/Nityanand_Rai","https://www.wikidata.org/wiki/Q16734872","https://www.sarkaritel.com/parliament-of-india-lok-sabha-member-of-parliament-r","https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=5152","https://x.com/nityanandraibjp","https://www.wikidata.org/wiki/Q16734872"]},"bandi":{"n":"Bandi Sanjay Kumar","r":"MoS","extra":null,"qid":"Q64143189","wiki":"Bandi Sanjay Kumar","dob":"1971-07-11","pob":"Karimnagar, Telangana","email":"sanjay.indian@mpls.sansad.in","house":"Lok Sabha – Karimnagar, Telangana","residence":"Bungalow No. 1, Jantar Mantar, New Delhi","assets":{"total":"Rs 1,12,75,000 (approx 1.1 crore)","election":"Lok Sabha 2024","url":"https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=5230"},"social":{"x":"bandisanjay_bjp"},"photo":null,"sources":["https://en.wikipedia.org/wiki/Bandi_Sanjay_Kumar","https://www.wikidata.org/wiki/Q64143189","https://www.sarkaritel.com/parliament-of-india-lok-sabha-member-of-parliament-k","https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=5230","https://x.com/bandisanjay_bjp","https://www.wikidata.org/wiki/Q64143189"]},"somanna":{"n":"V. Somanna","r":"MoS","extra":null,"qid":"Q24851577","wiki":"V. Somanna","dob":"1951-07-20","pob":"Doddamaralavadi, Kanakapura taluk, Ramanagara district, Karnataka","email":null,"house":"Lok Sabha – Tumkur, Karnataka","residence":"7, Safdarjung Road, New Delhi 110011","assets":{"total":"Rs 60,78,05,215 (approx 60.8 crore)","election":"Lok Sabha 2024","url":"https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=1904"},"social":{"x":"VSOMANNA_BJP"},"photo":null,"sources":["https://sansad.in/api_ls/member/5625","https://en.wikipedia.org/wiki/V._Somanna","https://www.wikidata.org/wiki/Q24851577","https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=1904","https://x.com/VSOMANNA_BJP","https://www.wikidata.org/wiki/Q24851577"]},"rajbhushan":{"n":"Raj Bhushan Choudhary","r":"MoS","extra":null,"qid":"Q126365290","wiki":"Raj Bhushan Choudhary","dob":"1977-07-04","pob":"Begusarai, Bihar","email":"drrajbhushan.mp@mpls.sansad.in","house":"Lok Sabha – Muzaffarpur, Bihar","residence":"68, Lodhi Estate, New Delhi 110003","assets":{"total":"Rs 20,52,95,066 (approx 20.5 crore)","election":"Lok Sabha 2024","url":"https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=7133"},"social":{"x":"dr_rajbhushan","instagram":"drrajbhushan","facebook":"RajBhushanNishad"},"photo":null,"sources":["https://www.opensanctions.org/entities/Q126365290/","https://en.wikipedia.org/wiki/Raj_Bhushan_Choudhary","https://www.sarkaritel.com/parliament-of-india-lok-sabha-member-of-parliament-c","https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=7133","https://www.wikidata.org/wiki/Q126365290"]},"pemmasani":{"n":"Pemmasani Chandra Sekhar","r":"MoS","extra":null,"qid":"Q126111137","wiki":"Chandra Sekhar Pemmasani","dob":"1976-03-07","pob":"Narasaraopet, Andhra Pradesh","email":"dr.pemmasani@mpls.sansad.in","house":"Lok Sabha – Guntur, Andhra Pradesh","residence":"10, Teen Murti Lane, New Delhi","assets":{"total":"Rs 57,05,47,27,538 (approx 5,705 crore)","election":"Lok Sabha 2024","url":"https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=5106"},"social":{"x":"PemmasaniOnX"},"photo":null,"sources":["https://sansad.in/api_ls/member/5636","https://en.wikipedia.org/wiki/Chandra_Sekhar_Pemmasani","https://www.wikidata.org/wiki/Q126111137","https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=5106","https://x.com/PemmasaniOnX","https://www.wikidata.org/wiki/Q126111137"]},"kamlesh":{"n":"Kamlesh Paswan","r":"MoS","extra":null,"qid":"Q16215999","wiki":"Kamlesh Paswan","dob":"1976-08-06","pob":"Gorakhpur, Uttar Pradesh","email":null,"house":"Lok Sabha – Bansgaon (SC), UP","residence":"Bungalow No. 20, Mother Teresa Crescent, New Delhi","assets":{"total":"Rs 36,18,30,259 (approx 36.2 crore)","election":"Lok Sabha 2024","url":"https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=8799"},"social":{"x":"kamleshpassi67"},"photo":null,"sources":["https://en.wikipedia.org/wiki/Kamlesh_Paswan","https://www.wikidata.org/wiki/Q16215999","https://pmindia.gov.in/wp-content/uploads/2024/09/Shri-Kamlesh-Paswan.pdf","https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=8799","https://x.com/kamleshpassi67","https://www.wikidata.org/wiki/Q16215999"]},"baghel":{"n":"S. P. Singh Baghel","r":"MoS","extra":null,"qid":"Q7387753","wiki":"S. P. Singh Baghel","dob":"1960-06-21","pob":"Bhatpura, Etawah district, Uttar Pradesh","email":"spsingh.baghel@mpls.sansad.in","house":"Lok Sabha – Agra (SC), UP","residence":"7, K. Kamraj Lane, New Delhi 110011","assets":{"total":"Rs 10,43,58,691 (approx 10.4 crore)","election":"Lok Sabha 2024","url":"https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=3493"},"social":{"x":"ProBaghel"},"photo":null,"sources":["https://en.wikipedia.org/wiki/S._P._Singh_Baghel","https://www.wikidata.org/wiki/Q7387753","https://www.sarkaritel.com/parliament-of-india-lok-sabha-member-of-parliament-b","https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=3493","https://x.com/ProBaghel","https://www.wikidata.org/wiki/Q7387753"]},"shobha":{"n":"Shobha Karandlaje","r":"MoS","extra":null,"qid":"Q7499789","wiki":"Shobha Karandlaje","dob":"1966-10-23","pob":"Puttur, Dakshina Kannada, Karnataka","email":"shobhakarandlaje@mpls.sansad.in","house":"Lok Sabha – Bangalore North, Karnataka","residence":"101, Narmada Apartment, M.S. Flats, Dr. B.D. Marg, New Delhi 110001","assets":{"total":"Rs 13,88,66,909 (approx 13.9 crore)","election":"Lok Sabha 2024","url":"https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=2178"},"social":{"x":"ShobhaBJP"},"photo":null,"sources":["https://en.wikipedia.org/wiki/Shobha_Karandlaje","https://www.wikidata.org/wiki/Q7499789","https://www.sarkaritel.com/parliament-of-india-lok-sabha-member-of-parliament-k","https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=2178","https://x.com/ShobhaBJP","https://www.wikidata.org/wiki/Q7499789"]},"kirti":{"n":"Kirti Vardhan Singh","r":"MoS","extra":null,"qid":"Q6416217","wiki":"Kirti Vardhan Singh","dob":"1966-03-01","pob":"Lucknow, Uttar Pradesh","email":"kirtivardhan.singh@mpls.sansad.in","house":"Lok Sabha – Gonda, UP","residence":"23, Balwant Rai Mehta Lane, New Delhi 110001","assets":{"total":"Rs 37,07,96,430 (approx 37 crore)","election":"Lok Sabha 2024","url":"https://myneta.info/LokSabha2024/candidate.php?candidate_id=7194"},"social":{"x":"KVSinghMPGonda"},"photo":null,"sources":["https://sansad.in/api_ls/member/3926","https://en.wikipedia.org/wiki/Kirti_Vardhan_Singh","https://www.opensanctions.org/entities/Q6416217/","https://x.com/KVSinghMPGonda","https://myneta.info/LokSabha2024/index.php?action=show_winners&sort=default","https://www.wikidata.org/wiki/Q6416217"]},"pabitra":{"n":"Pabitra Margherita","r":"MoS","extra":null,"qid":"Q111352685","wiki":"Pabitra Margherita","dob":"1974-10-13","pob":"Margherita, Assam","email":"pabitra.mprs@sansad.nic.in","house":"Rajya Sabha – Assam","residence":"Bungalow No. 9, Teen Murti Marg, New Delhi 110011","assets":{"total":"Rs 1,30,08,631 (approx 1.3 crore)","election":"Rajya Sabha 2022 (Assam)","url":"https://myneta.info/rajsab09aff/candidate.php?candidate_id=937"},"social":{"x":"PmargheritaBJP"},"photo":null,"sources":["https://en.wikipedia.org/wiki/Pabitra_Margherita","https://www.opensanctions.org/entities/Q111352685/","https://myneta.info/rajsab09aff/candidate.php?candidate_id=937","https://x.com/PmargheritaBJP","https://www.wikidata.org/wiki/Q111352685"]},"nimuben":{"n":"Nimuben Bambhaniya","r":"MoS","extra":null,"qid":"Q126364657","wiki":"Nimuben Bambhaniya","dob":"1966-09-08","pob":"Bhavnagar, Gujarat","email":"nimuben.bambhania@sansad.nic.in","house":"Lok Sabha – Bhavnagar, Gujarat","residence":"2, Lodhi Estate, New Delhi","assets":{"total":"Rs 2,61,15,193 (approx 2.6 crore)","election":"Lok Sabha 2024","url":"https://myneta.info/LokSabha2024/candidate.php?candidate_id=3743"},"social":{"x":"Nimu_Bambhaniya"},"photo":null,"sources":["https://en.wikipedia.org/wiki/Nimuben_Bambhaniya","https://www.opensanctions.org/entities/Q126364657/","https://consumeraffairs.nic.in/sites/default/files/MoS_Profile.pdf","https://x.com/Nimu_Bambhaniya","https://myneta.info/LokSabha2024/index.php?action=show_winners&sort=default","https://www.wikidata.org/wiki/Q126364657"]},"shantanu":{"n":"Shantanu Thakur","r":"MoS","extra":null,"qid":"Q63992931","wiki":"Shantanu Thakur","dob":"1982-08-03","pob":"Thakurnagar, North 24 Parganas, West Bengal","email":null,"house":"Lok Sabha – Bangaon, West Bengal","residence":"187, South Avenue, New Delhi","assets":{"total":"Rs 3,34,11,607 (approx 3.3 crore)","election":"Lok Sabha 2024","url":"https://myneta.info/LokSabha2024/candidate.php?candidate_id=7112"},"social":{"x":"Shantanu_bjp"},"photo":null,"sources":["https://en.wikipedia.org/wiki/Shantanu_Thakur","https://www.opensanctions.org/entities/Q63992931/","https://x.com/Shantanu_bjp","https://myneta.info/LokSabha2024/index.php?action=show_winners&sort=default","https://www.wikidata.org/wiki/Q63992931"]},"gopi":{"n":"Suresh Gopi","r":"MoS","extra":null,"qid":"Q3530125","wiki":"Suresh Gopi","dob":"1958-06-26","pob":"Alappuzha, Kerala","email":"sureshgopi.mp@sansad.nic.in","house":"Lok Sabha – Thrissur, Kerala","residence":"1B, Maulana Azad Road, New Delhi","assets":{"total":"Rs 18,58,15,323 (approx 18.6 crore)","election":"Lok Sabha 2024","url":"https://myneta.info/LokSabha2024/candidate.php?candidate_id=2125"},"social":{"x":"TheSureshGopi"},"photo":null,"sources":["https://en.wikipedia.org/wiki/Suresh_Gopi","https://www.opensanctions.org/entities/Q3530125/","https://myneta.info/LokSabha2024/candidate.php?candidate_id=2125","https://x.com/TheSureshGopi","https://www.wikidata.org/wiki/Q3530125"]},"tamta":{"n":"Ajay Tamta","r":"MoS","extra":null,"qid":"Q16736901","wiki":"Ajay Tamta","dob":"1972-07-16","pob":"Almora, Uttarakhand","email":"ajay.tamta@sansad.nic.in","house":"Lok Sabha – Almora, Uttarakhand","residence":null,"assets":{"total":"Rs 1,23,81,663 (approx 1.2 crore)","election":"Lok Sabha 2024","url":"https://myneta.info/LokSabha2024/candidate.php?candidate_id=20"},"social":{"x":"AjayTamtaBJP"},"photo":null,"sources":["https://en.wikipedia.org/wiki/Ajay_Tamta","https://www.opensanctions.org/entities/Q16736901","https://x.com/AjayTamtaBJP","https://myneta.info/LokSabha2024/index.php?action=show_winners&sort=default","https://www.wikidata.org/wiki/Q16736901"]},"malhotra":{"n":"Harsh Malhotra","r":"MoS","extra":null,"qid":"Q126367708","wiki":"Harsh Malhotra","dob":"1964-04-24","pob":"Delhi","email":null,"house":"Lok Sabha – East Delhi, Delhi","residence":null,"assets":{"total":"Rs 4,08,24,015 (approx 4.1 crore)","election":"Lok Sabha 2024","url":"https://myneta.info/LokSabha2024/candidate.php?candidate_id=7899"},"social":{"x":"hdmalhotra"},"photo":null,"sources":["https://en.wikipedia.org/wiki/Harsh_Malhotra","https://www.opensanctions.org/entities/Q126367708/","https://x.com/hdmalhotra","https://myneta.info/LokSabha2024/index.php?action=show_winners&sort=default","https://www.wikidata.org/wiki/Q126367708"]},"dubey":{"n":"Satish Chandra Dubey","r":"MoS","extra":null,"qid":"Q16728677","wiki":"Satish Chandra Dubey","dob":"1975-05-02","pob":"Bettiah, West Champaran, Bihar","email":"satishchandra.dubey@sansad.nic.in","house":"Rajya Sabha – Bihar","residence":"15, Teen Murti Lane, New Delhi 110001","assets":{"total":"Rs 2,95,85,088 (approx 3 crore)","election":"Rajya Sabha 2022 (Bihar)","url":"https://myneta.info/rajsab09aff/candidate.php?candidate_id=999"},"social":{"x":"satishdubeyy"},"photo":null,"sources":["https://en.wikipedia.org/wiki/Satish_Chandra_Dubey","https://www.opensanctions.org/entities/Q16728677/","https://myneta.info/rajsab09aff/candidate.php?candidate_id=999","https://x.com/satishdubeyy","https://www.wikidata.org/wiki/Q16728677"]},"seth":{"n":"Sanjay Seth","r":"MoS","extra":null,"qid":"Q96404945","wiki":"Sanjay Seth (Jharkhand politician)","dob":"1959-08-25","pob":"Ranchi, Jharkhand","email":null,"house":"Lok Sabha – Ranchi, Jharkhand","residence":"2, Jantar Mantar Road, New Delhi","assets":{"total":"Rs 2,41,52,085 (approx 2.4 crore)","election":"Lok Sabha 2024","url":"https://myneta.info/LokSabha2024/candidate.php?candidate_id=8561"},"social":{"x":"SethSanjayMP"},"photo":null,"sources":["https://en.wikipedia.org/wiki/Sanjay_Seth_(Jharkhand_politician)","https://www.opensanctions.org/entities/Q96404945/","https://myneta.info/LokSabha2024/candidate.php?candidate_id=8561","https://x.com/sethsanjaymp","https://www.wikidata.org/wiki/Q96404945"]},"uikey":{"n":"Durgadas Uikey","r":"MoS","extra":null,"qid":"Q64006793","wiki":"Durga Das Uikey","dob":"1963-10-29","pob":"Mirapur, Betul, Madhya Pradesh","email":null,"house":"Lok Sabha – Betul, Madhya Pradesh","residence":"219, North Avenue, New Delhi","assets":{"total":"Rs 1,84,87,232 (approx 1.8 crore)","election":"Lok Sabha 2024","url":"https://myneta.info/LokSabha2024/candidate.php?candidate_id=1830"},"social":{"x":"DdUikey"},"photo":null,"sources":["https://en.wikipedia.org/wiki/Durga_Das_Uikey","https://www.opensanctions.org/entities/Q64006793/","https://x.com/dduikey","https://myneta.info/LokSabha2024/index.php?action=show_winners&sort=default","https://www.wikidata.org/wiki/Q64006793"]},"khadse":{"n":"Raksha Khadse","r":"MoS","extra":null,"qid":"Q16908900","wiki":"Raksha Khadse","dob":"1987-05-13","pob":"Khetia, Madhya Pradesh","email":"nr.khadase@sansad.nic.in","house":"Lok Sabha – Raver, Maharashtra","residence":"16, Talkatora Road, New Delhi","assets":{"total":"Rs 18,21,17,790 (approx 18.2 crore)","election":"Lok Sabha 2024","url":"https://myneta.info/LokSabha2024/candidate.php?candidate_id=6921"},"social":{"x":"khadseraksha"},"photo":null,"sources":["https://en.wikipedia.org/wiki/Raksha_Khadse","https://www.opensanctions.org/entities/Q16908900/","https://myneta.info/LokSabha2024/candidate.php?candidate_id=6921","https://x.com/khadseraksha","https://www.wikidata.org/wiki/Q16908900"]},"savitri":{"n":"Savitri Thakur","r":"MoS","extra":null,"qid":"Q16736902","wiki":"Savitri Thakur","dob":"1978-06-01","pob":"Kalikiray, Dhar, Madhya Pradesh","email":"savitri.thakur@sansad.nic.in","house":"Lok Sabha – Dhar, Madhya Pradesh","residence":"2A, South Avenue Lane, New Delhi","assets":{"total":"Rs 5,31,07,546 (approx 5.3 crore)","election":"Lok Sabha 2024","url":"https://myneta.info/LokSabha2024/candidate.php?candidate_id=5162"},"social":{"x":"savitrii4bjp"},"photo":null,"sources":["https://en.wikipedia.org/wiki/Savitri_Thakur","https://www.opensanctions.org/entities/Q16736902/","https://x.com/savitrii4bjp","https://myneta.info/LokSabha2024/index.php?action=show_winners&sort=default","https://www.wikidata.org/wiki/Q16736902"]},"tokhan":{"n":"Tokhan Sahu","r":"MoS","extra":null,"qid":"Q58290680","wiki":"Tokhan Sahu","dob":"1969-10-15","pob":"Dindori, Lalpur tehsil, Mungeli, Chhattisgarh","email":null,"house":"Lok Sabha – Bilaspur, Chhattisgarh","residence":"8, Pandit Pant Marg, New Delhi","assets":{"total":"Rs 1,31,90,513 (approx 1.3 crore)","election":"Lok Sabha 2024","url":"https://myneta.info/LokSabha2024/candidate.php?candidate_id=3590"},"social":{"x":"tokhansahu_bjp"},"photo":null,"sources":["https://en.wikipedia.org/wiki/Tokhan_Sahu","https://www.opensanctions.org/entities/Q58290680/","https://x.com/tokhansahu_bjp/","https://myneta.info/LokSabha2024/index.php?action=show_winners&sort=default","https://www.wikidata.org/wiki/Q58290680"]},"varma":{"n":"Bhupathiraju Srinivasa Varma","r":"MoS","extra":null,"qid":"Q126364180","wiki":"Bhupathi Raju Srinivasa Varma","dob":"1967-08-04","pob":"Bhimavaram, West Godavari, Andhra Pradesh","email":null,"house":"Lok Sabha – Narsapuram, Andhra Pradesh","residence":"15, Ashoka Road, New Delhi","assets":{"total":"Rs 7,16,64,809 (approx 7.2 crore)","election":"Lok Sabha 2024","url":"https://myneta.info/LokSabha2024/candidate.php?candidate_id=5273"},"social":{"x":"BjpVarma"},"photo":null,"sources":["https://en.wikipedia.org/wiki/Bhupathi_Raju_Srinivasa_Varma","https://www.opensanctions.org/entities/Q126364180/","https://myneta.info/LokSabha2024/candidate.php?candidate_id=5273","https://x.com/BjpVarma","https://www.wikidata.org/wiki/Q126364180"]}},"ministries":[{"id":"agriculture","n":"Agriculture and Farmers Welfare","s":"Agriculture & Rural","d":"Frames national policy on crops, farm inputs, credit and crop insurance, and runs farmer-income schemes such as PM-KISAN and PM Fasal Bima Yojana. Its Department of Agricultural Research and Education oversees ICAR.","dept":false,"links":{"web":"https://agriwelfare.gov.in","x":"AgriGoI"},"lead":"chouhan","charge":"Cabinet","mos":["rnthakur","bhagirath"],"note":null},{"id":"ayush","n":"AYUSH","s":"Social Welfare","d":"Promotes and regulates the traditional systems of medicine: Ayurveda, Yoga & Naturopathy, Unani, Siddha, Sowa-Rigpa and Homoeopathy. It covers their education, research, drug standards and the National AYUSH Mission.","dept":false,"links":{"web":"https://ayush.gov.in","x":"moayush"},"lead":"jadhav","charge":"IC","mos":[],"note":null},{"id":"chemicals","n":"Chemicals and Fertilizers","s":"Economy & Industry","d":"Covers chemicals and petrochemicals, fertilizers and pharmaceuticals through three departments. It secures fertilizer supply and subsidy for farmers and runs the Jan Aushadhi network of low-cost generic medicine stores.","dept":false,"links":{"web":"https://chemicals.gov.in","x":"dcpcindia","xl":"Dept of Chemicals & Petrochemicals","alt":[["Dept of Pharmaceuticals","Pharmadept"]]},"lead":"nadda","charge":"Cabinet","mos":["anupriya"],"note":null},{"id":"civil-aviation","n":"Civil Aviation","s":"Infrastructure & Transport","d":"Regulates and develops air transport: airports, airlines and air safety through the DGCA, and regional air connectivity under the UDAN scheme.","dept":false,"links":{"web":"https://civilaviation.gov.in","x":"MoCA_GoI"},"lead":"rmnaidu","charge":"Cabinet","mos":["mohol"],"note":null},{"id":"coal","n":"Coal","s":"Energy & Environment","d":"Sets policy for exploring, allocating and mining coal and lignite, including commercial coal-block auctions, and oversees Coal India Ltd and NLC India.","dept":false,"links":{"web":"https://coal.gov.in","x":"CoalMinistry"},"lead":"kishan","charge":"Cabinet","mos":["dubey"],"note":null},{"id":"commerce","n":"Commerce and Industry","s":"Economy & Industry","d":"Runs foreign trade policy and trade negotiations through the Department of Commerce, and industrial policy, investment promotion and Startup India through DPIIT.","dept":false,"links":{"web":"https://commerce.gov.in","x":"CimGOI","alt":[["DPIIT","DPIITGoI"]]},"lead":"goyal","charge":"Cabinet","mos":["jitin"],"note":null},{"id":"communications","n":"Communications","s":"Science & Digital","d":"Oversees telecommunications, spectrum and broadband through the Department of Telecommunications, and India Post through the Department of Posts.","dept":false,"links":{"web":"https://dot.gov.in","x":"DoT_India","xl":"Dept of Telecommunications","alt":[["India Post","IndiaPostOffice"]]},"lead":"scindia","charge":"Cabinet","mos":["pemmasani"],"note":null},{"id":"consumer-affairs","n":"Consumer Affairs, Food and Public Distribution","s":"Agriculture & Rural","d":"Protects consumer rights and product standards (BIS, consumer commissions) and manages food-grain procurement, storage and the public distribution system, including free grain under PM Garib Kalyan Anna Yojana.","dept":false,"links":{"web":"https://consumeraffairs.nic.in","x":"jagograhakjago","xl":"Dept of Consumer Affairs","alt":[["Dept of Food & Public Distribution","fooddeptgoi"]]},"lead":"joshi","charge":"Cabinet","mos":["blverma","nimuben"],"note":null},{"id":"cooperation","n":"Co-operation","s":"Agriculture & Rural","d":"Created in 2021 to strengthen the cooperative movement. It administers multi-state cooperative societies, is computerising primary agricultural credit societies and promotes cooperative-led growth.","dept":false,"links":{"web":"https://cooperation.gov.in","x":"MinOfCooperatn"},"lead":"shah","charge":"Cabinet","mos":["gurjar","mohol"],"note":null},{"id":"corporate-affairs","n":"Corporate Affairs","s":"Economy & Industry","d":"Administers the Companies Act, the LLP Act and the Insolvency and Bankruptcy Code, regulating company registration, governance and filings through the Registrars of Companies.","dept":false,"links":{"web":"https://www.mca.gov.in","x":"MCA21India"},"lead":"nirmala","charge":"Cabinet","mos":["malhotra"],"note":null},{"id":"culture","n":"Culture","s":"Culture & Media","d":"Preserves India's tangible and intangible heritage and promotes the arts through the Archaeological Survey of India, national museums, academies, libraries and archives.","dept":false,"links":{"web":"https://www.indiaculture.gov.in","x":"MinOfCultureGoI"},"lead":"shekhawat","charge":"Cabinet","mos":["inderjit"],"note":null},{"id":"defence","n":"Defence","s":"Security & Diplomacy","d":"Responsible for national defence and the armed forces: the Army, Navy and Air Force, defence production and exports, research through DRDO, and the welfare of ex-servicemen.","dept":false,"links":{"web":"https://www.mod.gov.in","x":"DefenceMinIndia"},"lead":"rajnath","charge":"Cabinet","mos":["seth"],"note":null},{"id":"doner","n":"Development of North Eastern Region","s":"Governance","d":"Coordinates development of the eight north-eastern states, funding infrastructure and livelihood projects and working with the North Eastern Council.","dept":false,"links":{"web":"https://mdoner.gov.in","x":"MDoNER_India"},"lead":"scindia","charge":"Cabinet","mos":["sukanta"],"note":null},{"id":"earth-sciences","n":"Earth Sciences","s":"Science & Digital","d":"Provides weather, climate, ocean and earthquake services through IMD, INCOIS and the National Centre for Seismology, and runs polar and deep-ocean research.","dept":false,"links":{"web":"https://moes.gov.in","x":"moesgoi"},"lead":"jitendra","charge":"IC","mos":[],"note":null},{"id":"education","n":"Education","s":"Social Welfare","d":"Shapes national education policy (NEP 2020) through the Departments of School Education & Literacy and Higher Education, overseeing bodies such as UGC, NCERT, the IITs and central universities.","dept":false,"links":{"web":"https://www.education.gov.in","x":"EduMinOfIndia"},"lead":"joshi","charge":"Additional charge","mos":["jayant","sukanta"],"note":"Pralhad Joshi has held Education as additional charge since Dharmendra Pradhan resigned on 25 July 2026."},{"id":"meity","n":"Electronics and Information Technology","s":"Science & Digital","d":"Drives Digital India: electronics and semiconductor manufacturing, IT and IT-enabled services, cybersecurity through CERT-In, Aadhaar through UIDAI, and data-protection rules.","dept":false,"links":{"web":"https://www.meity.gov.in","x":"GoI_MeitY"},"lead":"vaishnaw","charge":"Cabinet","mos":["jitin"],"note":null},{"id":"environment","n":"Environment, Forest and Climate Change","s":"Energy & Environment","d":"Plans and enforces environmental and forest conservation, wildlife protection and pollution control, and leads India's climate-change commitments.","dept":false,"links":{"web":"https://moef.gov.in","x":"moefcc"},"lead":"bhupender","charge":"Cabinet","mos":["kirti"],"note":null},{"id":"external-affairs","n":"External Affairs","s":"Security & Diplomacy","d":"Conducts India's foreign relations and diplomacy, runs embassies and missions abroad, and provides passport, visa and consular services.","dept":false,"links":{"web":"https://www.mea.gov.in","x":"MEAIndia"},"lead":"jaishankar","charge":"Cabinet","mos":["kirti","pabitra"],"note":null},{"id":"finance","n":"Finance","s":"Economy & Industry","d":"Manages the economy and public finances: the Union Budget, direct and indirect taxes, expenditure, banking and financial services, and public-sector enterprises through DIPAM and DPE.","dept":false,"links":{"web":"https://finmin.gov.in","x":"FinMinIndia"},"lead":"nirmala","charge":"Cabinet","mos":["pankaj"],"note":null},{"id":"fisheries","n":"Fisheries, Animal Husbandry and Dairying","s":"Agriculture & Rural","d":"Develops fisheries, livestock and dairy through separate departments, including animal-health programmes, the National Gokul Mission and PM Matsya Sampada Yojana.","dept":false,"links":{"web":"https://dahd.gov.in","x":"Dept_of_AHD","xl":"Dept of Animal Husbandry & Dairying","alt":[["Dept of Fisheries","FisheriesGoI"]]},"lead":"lalan","charge":"Cabinet","mos":["baghel"],"note":"One Minister of State post is vacant after George Kurian resigned on 23 June 2026."},{"id":"food-processing","n":"Food Processing Industries","s":"Agriculture & Rural","d":"Promotes the food-processing industry with mega food parks, cold chains and the PM Formalisation of Micro Food Processing Enterprises scheme, to cut wastage and raise farm incomes.","dept":false,"links":{"web":"https://www.mofpi.gov.in","x":"MOFPI_GOI"},"lead":"chirag","charge":"Cabinet","mos":[],"note":"Minister of State post vacant after Ravneet Singh Bittu resigned on 24 July 2026."},{"id":"health","n":"Health and Family Welfare","s":"Social Welfare","d":"Runs national health policy and programmes: Ayushman Bharat, disease control, immunisation, medical education and AIIMS, and health research through ICMR.","dept":false,"links":{"web":"https://www.mohfw.gov.in","x":"MoHFW_INDIA"},"lead":"nadda","charge":"Cabinet","mos":["jadhav","anupriya"],"note":null},{"id":"heavy-industries","n":"Heavy Industries","s":"Economy & Industry","d":"Oversees the capital-goods and automotive industries and heavy-engineering public-sector units, and runs electric-mobility programmes such as PM E-DRIVE and the auto PLI scheme.","dept":false,"links":{"web":"https://heavyindustries.gov.in","x":"MHI_GoI"},"lead":"hdk","charge":"Cabinet","mos":["varma"],"note":null},{"id":"home","n":"Home Affairs","s":"Security & Diplomacy","d":"Handles internal security, border management, the central armed police forces, disaster management, centre-state relations and the administration of Union Territories.","dept":false,"links":{"web":"https://www.mha.gov.in","x":"HMOIndia"},"lead":"shah","charge":"Cabinet","mos":["rai","bandi"],"note":null},{"id":"housing","n":"Housing and Urban Affairs","s":"Infrastructure & Transport","d":"Sets urban development policy and runs the Smart Cities Mission, AMRUT, Swachh Bharat (Urban), PMAY-Urban housing and metro rail projects.","dept":false,"links":{"web":"https://mohua.gov.in","x":"MoHUA_India"},"lead":"khattar","charge":"Cabinet","mos":["tokhan"],"note":null},{"id":"information-broadcasting","n":"Information and Broadcasting","s":"Culture & Media","d":"Regulates broadcasting, films and the press, and runs public-service media: Prasar Bharati (Doordarshan and All India Radio) and the Press Information Bureau.","dept":false,"links":{"web":"https://mib.gov.in","x":"MIB_India"},"lead":"vaishnaw","charge":"Cabinet","mos":[],"note":"Minister of State post vacant after L. Murugan resigned on 13 October 2026."},{"id":"jal-shakti","n":"Jal Shakti","s":"Energy & Environment","d":"Manages India's water resources through two departments: river development and water conservation, and drinking water and sanitation, including the Jal Jeevan Mission and Swachh Bharat (Grameen).","dept":false,"links":{"web":"https://jalshakti-dowr.gov.in","x":"MoJSDoWRRDGR","xl":"Dept of Water Resources"},"lead":"patil","charge":"Cabinet","mos":["somanna","rajbhushan"],"note":null},{"id":"labour","n":"Labour and Employment","s":"Social Welfare","d":"Frames labour law, including the four labour codes, provides social security through EPFO and ESIC, and runs employment schemes and the e-Shram registry of unorganised workers.","dept":false,"links":{"web":"https://labour.gov.in","x":"LabourMinistry"},"lead":"mandaviya","charge":"Cabinet","mos":["shobha"],"note":null},{"id":"law","n":"Law and Justice","s":"Governance","d":"Advises the government on legal matters (Department of Legal Affairs), drafts central legislation (Legislative Department) and supports judicial infrastructure and access to justice (Department of Justice).","dept":false,"links":{"web":"https://lawmin.gov.in","xs":"Ministry of Law and Justice India"},"lead":"meghwal","charge":"IC","mos":[],"note":null},{"id":"msme","n":"Micro, Small and Medium Enterprises","s":"Economy & Industry","d":"Supports small businesses through credit guarantees, the Udyam registration portal and the PMEGP employment programme, and promotes khadi and village industries through KVIC.","dept":false,"links":{"web":"https://msme.gov.in","x":"minmsme"},"lead":"manjhi","charge":"Cabinet","mos":["shobha"],"note":null},{"id":"mines","n":"Mines","s":"Energy & Environment","d":"Regulates exploration and mining of minerals other than coal, oil and gas, including critical minerals, through the Geological Survey of India and mineral-block auctions.","dept":false,"links":{"web":"https://mines.gov.in","x":"minesminindia"},"lead":"kishan","charge":"Cabinet","mos":["dubey"],"note":null},{"id":"minority-affairs","n":"Minority Affairs","s":"Social Welfare","d":"Runs education, skilling and economic schemes for the six notified minority communities and oversees the administration of waqf properties.","dept":false,"links":{"web":"https://www.minorityaffairs.gov.in","x":"MOMAIndia"},"lead":"rijiju","charge":"Cabinet","mos":[],"note":"Minister of State post vacant after George Kurian resigned on 23 June 2026."},{"id":"mnre","n":"New and Renewable Energy","s":"Energy & Environment","d":"Leads solar, wind, green hydrogen and bioenergy development, including PM Surya Ghar rooftop solar and India's 500 GW non-fossil capacity target.","dept":false,"links":{"web":"https://mnre.gov.in","x":"mnreindia"},"lead":"joshi","charge":"Cabinet","mos":["naik"],"note":null},{"id":"panchayati-raj","n":"Panchayati Raj","s":"Agriculture & Rural","d":"Strengthens rural local self-government through gram panchayats, funding capacity building and e-governance, and runs the SVAMITVA scheme for rural property cards.","dept":false,"links":{"web":"https://panchayat.gov.in","x":"mopr_goi"},"lead":"lalan","charge":"Cabinet","mos":["baghel"],"note":null},{"id":"parliamentary-affairs","n":"Parliamentary Affairs","s":"Governance","d":"Manages the government's business in Parliament: scheduling sessions, coordinating bills and floor strategy, and liaising with parties across both Houses.","dept":false,"links":{"web":"https://mpa.gov.in","xs":"Ministry of Parliamentary Affairs India"},"lead":"rijiju","charge":"Cabinet","mos":["meghwal"],"note":"One Minister of State post vacant after L. Murugan resigned on 13 October 2026."},{"id":"personnel","n":"Personnel, Public Grievances and Pensions","s":"Governance","d":"Manages the civil services: recruitment, training and cadre management (DoPT), administrative reforms and public grievances (DARPG), and central government pensions.","dept":false,"links":{"web":"https://dopt.gov.in","x":"DoPTGoI","xl":"DoPT","alt":[["DARPG","DARPG_GoI"]]},"lead":"modi","charge":"PM","mos":["jitendra"],"note":null},{"id":"petroleum","n":"Petroleum and Natural Gas","s":"Energy & Environment","d":"Oversees exploration, production, refining, distribution and marketing of oil and natural gas, and runs clean-cooking programmes such as PM Ujjwala Yojana.","dept":false,"links":{"web":"https://mopng.gov.in","x":"PetroleumMin"},"lead":"puri","charge":"Cabinet","mos":["gopi"],"note":null},{"id":"planning","n":"Planning","s":"Governance","d":"Works with NITI Aayog, the government's policy think tank, on long-term development strategy, programme monitoring and evaluation.","dept":false,"links":{"web":"https://www.niti.gov.in","x":"NITIAayog","xl":"NITI Aayog"},"lead":"inderjit","charge":"IC","mos":[],"note":null},{"id":"power","n":"Power","s":"Energy & Environment","d":"Sets policy for electricity generation, transmission and distribution, grid reliability and energy efficiency, and funds distribution reforms and smart metering.","dept":false,"links":{"web":"https://powermin.gov.in","x":"MinOfPower"},"lead":"khattar","charge":"Cabinet","mos":["naik"],"note":null},{"id":"railways","n":"Railways","s":"Infrastructure & Transport","d":"Runs Indian Railways, one of the world's largest rail networks: passenger and freight services, station redevelopment, Vande Bharat trains and the dedicated freight corridors.","dept":false,"links":{"web":"https://indianrailways.gov.in","x":"RailMinIndia"},"lead":"vaishnaw","charge":"Cabinet","mos":["somanna"],"note":"One Minister of State post vacant after Ravneet Singh Bittu resigned on 24 July 2026."},{"id":"road-transport","n":"Road Transport and Highways","s":"Infrastructure & Transport","d":"Builds and maintains national highways through NHAI and NHIDCL, and frames motor-vehicle law and road-safety policy.","dept":false,"links":{"web":"https://morth.gov.in","x":"MORTHIndia"},"lead":"gadkari","charge":"Cabinet","mos":["tamta","malhotra"],"note":null},{"id":"rural-development","n":"Rural Development","s":"Agriculture & Rural","d":"Runs rural employment and poverty-reduction programmes: the MGNREGA job guarantee, PMAY-Gramin housing, PMGSY rural roads and the DAY-NRLM livelihoods mission.","dept":false,"links":{"web":"https://rural.gov.in","x":"MoRD_GoI"},"lead":"chouhan","charge":"Cabinet","mos":["pemmasani","kamlesh"],"note":null},{"id":"science-technology","n":"Science and Technology","s":"Science & Digital","d":"Funds scientific research and innovation through the Department of Science and Technology, biotechnology through DBT, and industrial research through DSIR and CSIR.","dept":false,"links":{"web":"https://dst.gov.in","x":"IndiaDST","xl":"Dept of Science & Technology"},"lead":"jitendra","charge":"IC","mos":[],"note":null},{"id":"ports-shipping","n":"Ports, Shipping and Waterways","s":"Infrastructure & Transport","d":"Develops major ports, merchant shipping, shipbuilding and inland waterways, and runs the Sagarmala port-led development programme.","dept":false,"links":{"web":"https://shipmin.gov.in","x":"shipmin_india"},"lead":"sonowal","charge":"Cabinet","mos":["shantanu"],"note":null},{"id":"skill-development","n":"Skill Development and Entrepreneurship","s":"Social Welfare","d":"Coordinates skilling nationwide through the Skill India Mission, ITIs and apprenticeships, and promotes entrepreneurship.","dept":false,"links":{"web":"https://www.msde.gov.in","x":"MSDESkillIndia"},"lead":"jayant","charge":"IC","mos":[],"note":null},{"id":"social-justice","n":"Social Justice and Empowerment","s":"Social Welfare","d":"Works for Scheduled Castes, Other Backward Classes, senior citizens, persons with disabilities and transgender persons through scholarships, welfare schemes and rights legislation.","dept":false,"links":{"web":"https://socialjustice.gov.in","x":"MSJEGOI"},"lead":"virendra","charge":"Cabinet","mos":["athawale","blverma"],"note":null},{"id":"statistics","n":"Statistics and Programme Implementation","s":"Governance","d":"Produces official statistics such as GDP, the Consumer Price Index and the Periodic Labour Force Survey, and monitors central schemes and large infrastructure projects.","dept":false,"links":{"web":"https://mospi.gov.in","x":"GoIStats"},"lead":"inderjit","charge":"IC","mos":[],"note":null},{"id":"steel","n":"Steel","s":"Economy & Industry","d":"Plans growth of the steel sector, oversees SAIL, RINL and other steel public-sector units, and promotes domestic capacity and specialty steel.","dept":false,"links":{"web":"https://steel.gov.in","x":"SteelMinIndia"},"lead":"hdk","charge":"Cabinet","mos":["varma"],"note":null},{"id":"textiles","n":"Textiles","s":"Economy & Industry","d":"Supports textiles from fibre to fashion: handlooms, handicrafts, silk, jute and technical textiles, including the PM MITRA mega textile parks.","dept":false,"links":{"web":"https://texmin.gov.in","x":"TexMinIndia"},"lead":"giriraj","charge":"Cabinet","mos":["pabitra"],"note":null},{"id":"tourism","n":"Tourism","s":"Culture & Media","d":"Promotes India as a destination through Incredible India, develops tourist circuits under Swadesh Darshan and sets hospitality standards.","dept":false,"links":{"web":"https://tourism.gov.in","x":"tourismgoi","alt":[["Incredible India","incredibleindia"]]},"lead":"shekhawat","charge":"Cabinet","mos":["gopi"],"note":null},{"id":"tribal-affairs","n":"Tribal Affairs","s":"Social Welfare","d":"Leads welfare and development of Scheduled Tribes, including Eklavya Model Residential Schools, scholarships, forest-rights implementation and PM-JANMAN.","dept":false,"links":{"web":"https://tribal.gov.in","x":"TribalAffairsIn"},"lead":"oram","charge":"Cabinet","mos":["uikey"],"note":null},{"id":"women-child","n":"Women and Child Development","s":"Social Welfare","d":"Works for the development of women and children: anganwadi services, nutrition under Poshan Abhiyaan, child protection and schemes such as Beti Bachao Beti Padhao.","dept":false,"links":{"web":"https://wcd.gov.in","x":"MinistryWCD"},"lead":"annpurna","charge":"Cabinet","mos":["savitri"],"note":null},{"id":"youth-sports","n":"Youth Affairs and Sports","s":"Culture & Media","d":"Runs youth programmes such as NSS and MY Bharat, and develops sport through Khelo India and athlete support from the Sports Authority of India.","dept":false,"links":{"web":"https://yas.gov.in","x":"YASMinistry","alt":[["Dept of Sports","IndiaSports"]]},"lead":"mandaviya","charge":"Cabinet","mos":["khadse"],"note":null},{"id":"atomic-energy","n":"Department of Atomic Energy","s":"Science & Digital","d":"A department directly under the Prime Minister. It runs India's nuclear power and research programme, including BARC, nuclear fuel and reactor development.","dept":true,"links":{"web":"https://dae.gov.in","x":"DAEIndia"},"lead":"modi","charge":"PM","mos":["jitendra"],"note":null},{"id":"space","n":"Department of Space","s":"Science & Digital","d":"A department directly under the Prime Minister. It runs the space programme through ISRO: launch vehicles, satellites and missions such as Chandrayaan and Gaganyaan.","dept":true,"links":{"web":"https://www.isro.gov.in","x":"isro","xl":"ISRO"},"lead":"modi","charge":"PM","mos":["jitendra"],"note":null}]}</script>
+<script>
+(() => {
+const SCHEMA = 1;
+const RANK = {PM:"Prime Minister",C:"Cabinet Minister",IC:"Minister of State (Independent Charge)",MoS:"Minister of State"};
+const $ = s => document.querySelector(s);
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const DAY = 864e5;
+let SITE = null, P = {}, M = [], byId = {}, holdings = {}, hosted = false;
+
+/* ---------- Saved copy in this browser (IndexedDB), and photos (Cache Storage) ---------- */
+const DB = (() => {
+  let db = null;
+  const open = () => new Promise(res => {
+    try {
+      const r = indexedDB.open("union-ministries-india", 1);
+      r.onupgradeneeded = () => r.result.createObjectStore("kv");
+      r.onsuccess = () => { db = r.result; res(true); };
+      r.onerror = () => res(false);
+      r.onblocked = () => res(false);
+    } catch (e) { res(false); }
+  });
+  const tx = (mode, fn) => new Promise(res => {
+    if (!db) return res(null);
+    try { const t = db.transaction("kv", mode); const q = fn(t.objectStore("kv")); t.oncomplete = () => res(q && q.result); t.onerror = () => res(null); }
+    catch (e) { res(null); }
+  });
+  return { open, get: k => tx("readonly", s => s.get(k)), put: (k, v) => tx("readwrite", s => s.put(v, k)) };
+})();
+const photoURLs = {};
+async function photoFor(pid) {
+  const p = P[pid]; if (!p || !p.photo || !p.photo.file) return null;
+  if (photoURLs[pid]) return photoURLs[pid];
+  const url = p.photo.file;
+  try {
+    if ("caches" in window && location.protocol.startsWith("http")) {
+      const c = await caches.open("umi-photos-v1");
+      let r = await c.match(url);
+      if (!r) { const f = await fetch(url); if (!f.ok) return null; await c.put(url, f.clone()); r = f; }
+      return (photoURLs[pid] = URL.createObjectURL(await r.blob()));
+    }
+  } catch (e) { /* fall through to a plain image link */ }
+  return (photoURLs[pid] = url);
+}
+function paintPhotos(scope = document) {
+  if (!hosted) return;
+  scope.querySelectorAll(".av[data-pid]:not([data-painted])").forEach(async el => {
+    el.dataset.painted = "1";
+    const u = await photoFor(el.dataset.pid);
+    if (!u) return;
+    const im = new Image(); im.alt = ""; im.decoding = "async"; im.onerror = () => im.remove(); im.src = u; el.appendChild(im);
+  });
+}
+
+/* ---------- Load: built-in copy → saved copy → live site.json ---------- */
+function useSite(site) {
+  SITE = site; P = site.people; M = site.ministries;
+  byId = Object.fromEntries(M.map(m => [m.id, m]));
+  holdings = {};
+  M.forEach(m => {
+    if (m.lead) (holdings[m.lead] ||= []).push({m, role: leadRole(m), lead: true});
+    m.mos.forEach(pid => (holdings[pid] ||= []).push({m, role: "Minister of State"}));
+  });
+}
+function leadRole(m) {
+  return m.charge === "Additional charge" ? "Cabinet Minister (additional charge)" : m.charge === "PM" ? "Prime Minister (in charge)"
+    : m.charge === "IC" ? "Minister of State (Independent Charge)" : "Cabinet Minister";
+}
+const newer = (a, b) => !b || (a && Date.parse(a.generated) > Date.parse(b.generated));
+async function boot() {
+  let seed = null;
+  try { seed = JSON.parse($("#seed").textContent); } catch (e) {}
+  if (!seed || !seed.ministries) seed = null;
+  const dbOK = await DB.open();
+  let saved = dbOK ? await DB.get("site") : null;
+  if (saved && saved.schema !== SCHEMA) saved = null;
+  hosted = !!(dbOK && await DB.get("hosted")) && location.protocol.startsWith("http");
+  let site = newer(saved, seed) ? saved : seed;
+  let from = site === saved ? "saved" : "built-in";
+  if (site) { useSite(site); renderAll(); }
+  try {
+    const r = await fetch("data/site.json", {cache: "no-cache"});
+    if (r.ok) {
+      const live = await r.json();
+      if (live && live.schema === SCHEMA && live.ministries) {
+        hosted = true; if (dbOK) DB.put("hosted", true);
+        if (newer(live, site)) { site = live; from = "live"; useSite(live); renderAll(); }
+        if (dbOK) DB.put("site", site);
+        paintPhotos();
+        setStatus(from, true);
+        return;
+      }
+    }
+  } catch (e) { /* offline, opened as a file, or inside a viewer that blocks it */ }
+  if (location.protocol === "file:") { hosted = true; paintPhotos(); }
+  if (!site) { $("#statusText").textContent = "Couldn't load the data. Check your connection and reload."; return; }
+  if (dbOK && site === seed) DB.put("site", site);
+  setStatus(from, false);
+}
+function setStatus(from, checked) {
+  const g = new Date(SITE.generated);
+  const when = g.toLocaleString("en-IN", {day:"numeric", month:"short", year:"numeric", hour:"2-digit", minute:"2-digit", timeZone:"Asia/Kolkata"});
+  const ok = !SITE.status || SITE.status.ok !== false;
+  $("#status").classList.toggle("warn", !ok);
+  $("#statusText").textContent = `Data updated ${when} IST` +
+    (checked ? (from === "live" ? " · just refreshed and saved in this browser" : " · up to date, saved in this browser") : " · showing the copy saved in this page") +
+    (ok ? "" : " · the last automatic check needs a look, so portfolios may lag");
+}
+
+/* ---------- Helpers ---------- */
+const initials = n => n.replace(/\(.*?\)|\bDr\.? |\./g, "").trim().split(/\s+/).filter(Boolean).map(w => w[0]).filter((c,i,a) => i === 0 || i === a.length - 1).join("").toUpperCase();
+const rankClass = pid => "r-" + (P[pid].r === "PM" ? "C" : P[pid].r);
+const avatar = (pid, size = "") => `<span class="av ${size} ${rankClass(pid)}" data-pid="${pid}" aria-hidden="true">${esc(initials(P[pid].n))}</span>`;
+const holdLabel = pid => { const n = (holdings[pid] || []).length; return n === 1 ? "View calling card" : `View card · ${n} portfolios`; };
+const nameBtn = (pid, cls = "mname") => `<button class="${cls}" data-person="${pid}">${esc(P[pid].n)}</button>`;
+function wheel(svg) {
+  let s = `<circle cx="50" cy="50" r="44" fill="none" stroke="currentColor" stroke-width="5"/><circle cx="50" cy="50" r="7" fill="currentColor"/>`;
+  for (let i = 0; i < 24; i++) { const a = i * Math.PI / 12; s += `<line x1="${(50+7*Math.cos(a)).toFixed(2)}" y1="${(50+7*Math.sin(a)).toFixed(2)}" x2="${(50+42*Math.cos(a)).toFixed(2)}" y2="${(50+42*Math.sin(a)).toFixed(2)}" stroke="currentColor" stroke-width="2"/>`; }
+  svg.innerHTML = s;
+}
+document.querySelectorAll("svg.chakra").forEach(wheel);
+
+/* ---------- Render ---------- */
+let sector = "All", query = "", list = [], current = null;
+function renderAll() {
+  renderCounts(); renderChanges(); renderChips(); renderTrack(); renderLedger();
+  const start = (location.hash || "").slice(1);
+  select(byId[start] ? start : (byId[current] ? current : "home"), false);
+  if (byId[start]) revealInTrack(start);
+  paintPhotos();
+}
+function renderCounts() {
+  const v = Object.values(P);
+  $("#counts").innerHTML = [
+    [M.filter(m => !m.dept).length, "ministries"], [M.filter(m => m.dept).length, "departments under the PM"],
+    [v.filter(p => p.r === "C" || p.r === "PM").length, "Cabinet ministers incl. PM"],
+    [v.filter(p => p.r === "IC").length, "MoS (Independent Charge)"], [v.filter(p => p.r === "MoS").length, "Ministers of State"]
+  ].map(([n, l]) => `<div class="count"><b>${n}</b><span>${l}</span></div>`).join("");
+}
+function renderChanges() {
+  const fmt = d => new Date(d + "T00:00:00+05:30").toLocaleDateString("en-IN", {day:"numeric", month:"short", year:"numeric", timeZone:"Asia/Kolkata"});
+  const ch = (SITE.changes || []).slice(0, 6);
+  $("#changes").innerHTML = ch.map(c => `<li><time datetime="${esc(c.date)}">${fmt(c.date)}</time>${esc(c.text)}</li>`).join("") || "<li>No changes recorded.</li>";
+  $("#changesTitle").textContent = "Recent changes · position as of " + fmt(SITE.asOf || SITE.generated.slice(0, 10));
+}
+function renderChips() {
+  const S = ["All", ...[...new Set(M.map(m => m.s))].sort()];
+  if (!S.includes(sector)) sector = "All";
+  $("#chips").innerHTML = S.map(s => `<button class="chip" aria-pressed="${s === sector}" data-s="${esc(s)}">${esc(s)}</button>`).join("");
+}
+$("#chips").addEventListener("click", e => {
+  const b = e.target.closest(".chip"); if (!b) return;
+  sector = b.dataset.s; document.querySelectorAll(".chip").forEach(c => c.setAttribute("aria-pressed", c === b)); renderTrack(); paintPhotos($("#track"));
+});
+$("#q").addEventListener("input", e => { query = e.target.value.trim().toLowerCase(); renderTrack(); paintPhotos($("#track")); });
+
+function matches(m) {
+  if (sector !== "All" && m.s !== sector) return false;
+  if (!query) return true;
+  const hay = [m.n, m.s, m.d, m.lead && P[m.lead].n, ...m.mos.map(p => P[p].n)].join(" ").toLowerCase();
+  return query.split(/\s+/).every(t => hay.includes(t));
+}
+function chargeTag(m) { return m.charge === "Additional charge" ? "Additional charge" : m.charge === "PM" ? "Prime Minister" : m.charge === "IC" ? "MoS (Independent Charge)" : "Cabinet Minister"; }
+function renderTrack() {
+  list = M.filter(matches);
+  $("#carTitle").textContent = sector === "All" ? (query ? "Matching ministries" : "All ministries") : sector;
+  if (!list.length) { $("#track").innerHTML = `<div class="empty">No ministry matches “${esc(query)}”. Try a minister's surname or a sector such as energy.</div>`; updatePos(); return; }
+  $("#track").innerHTML = list.map(m => `<button class="card" data-id="${m.id}" aria-current="${m.id === current}">
+      <span class="sector">${m.dept ? "Department · " : ""}${esc(m.s)}</span>
+      <h3>${esc(m.n)}</h3>
+      <span class="who">${m.lead ? avatar(m.lead) + `<span class="nm">${esc(P[m.lead].n)}<small>${chargeTag(m)}</small></span>` : `<span class="nm">Vacant</span>`}
+        <span class="stack">${m.mos.map(p => avatar(p, "sm")).join("")}</span></span>
+    </button>`).join("");
+  updatePos();
+}
+$("#track").addEventListener("click", e => { const c = e.target.closest(".card"); if (c) select(c.dataset.id, true); });
+const step = dir => { const t = $("#track"), card = t.querySelector(".card"); const w = card ? card.getBoundingClientRect().width + 14 : 260; t.scrollBy({left: dir * Math.max(w, Math.floor(t.clientWidth / w) * w), behavior: "smooth"}); };
+$("#prev").onclick = () => step(-1); $("#next").onclick = () => step(1);
+$("#track").addEventListener("keydown", e => { if (e.key === "ArrowRight") { e.preventDefault(); step(1); } if (e.key === "ArrowLeft") { e.preventDefault(); step(-1); } });
+$("#track").addEventListener("scroll", () => requestAnimationFrame(updatePos), {passive: true});
+addEventListener("resize", () => requestAnimationFrame(updatePos));
+function updatePos() {
+  const t = $("#track"), cards = [...t.querySelectorAll(".card")];
+  if (!cards.length) { $("#pos").textContent = "0 of 0"; return; }
+  const tr = t.getBoundingClientRect(); let first = 0;
+  cards.forEach((c, i) => { if (c.getBoundingClientRect().right <= tr.left + 20) first = i + 1; });
+  const visible = cards.filter(c => { const r = c.getBoundingClientRect(); return r.left >= tr.left - 20 && r.right <= tr.right + 20; }).length || 1;
+  $("#pos").textContent = `${Math.min(first + 1, cards.length)}–${Math.min(first + visible, cards.length)} of ${cards.length}`;
+  $("#prev").disabled = t.scrollLeft <= 2; $("#next").disabled = t.scrollLeft + t.clientWidth >= t.scrollWidth - 2;
+}
+
+const ICON = {
+  web: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.8 3.8 5.8 3.8 9s-1.3 6.2-3.8 9c-2.5-2.8-3.8-5.8-3.8-9S9.5 5.8 12 3z"/></svg>`,
+  x: `<svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.8 3h3.1l-6.8 7.8L22 21h-6.2l-4.9-6.4L5.3 21H2.2l7.3-8.3L2 3h6.4l4.4 5.8L17.8 3zm-1.1 16.2h1.7L7.4 4.7H5.6l11.1 14.5z"/></svg>`,
+  instagram: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>`,
+  facebook: `<svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 8h3V4h-3c-2.8 0-4.5 1.9-4.5 4.7V11H7v4h2.5v8h4v-8h3l.5-4h-3.5V8.9c0-.6.3-.9 1-.9z"/></svg>`,
+  youtube: `<svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 8.2a3 3 0 0 0-2.1-2.1C18 5.6 12 5.6 12 5.6s-6 0-7.9.5A3 3 0 0 0 2 8.2 31 31 0 0 0 1.6 12 31 31 0 0 0 2 15.8a3 3 0 0 0 2.1 2.1c1.9.5 7.9.5 7.9.5s6 0 7.9-.5a3 3 0 0 0 2.1-2.1c.3-1.2.4-2.5.4-3.8s-.1-2.6-.4-3.8zM10 15.2V8.8l5.2 3.2-5.2 3.2z"/></svg>`
+};
+function select(id, scroll) {
+  if (!byId[id]) id = M[0].id;
+  current = id; const m = byId[id]; const L = m.links || {};
+  document.querySelectorAll(".card").forEach(c => c.setAttribute("aria-current", c.dataset.id === id));
+  const links = [
+    L.web ? `<a class="lnk" href="${esc(L.web)}" target="_blank" rel="noopener">${ICON.web}<span>${esc(L.web.replace(/^https?:\/\//, "").replace(/\/$/, ""))}</span></a>` : "",
+    L.x ? `<a class="lnk" href="https://x.com/${esc(L.x)}" target="_blank" rel="noopener">${ICON.x}<span>@${esc(L.x)}${L.xl ? ` · ${esc(L.xl)}` : ""}</span></a>` : "",
+    L.xs ? `<a class="lnk" href="https://x.com/search?q=${encodeURIComponent(L.xs)}&f=user" target="_blank" rel="noopener">${ICON.x}<span>Find on X</span></a>` : "",
+    ...(L.alt || []).map(([lab, h]) => `<a class="lnk" href="https://x.com/${esc(h)}" target="_blank" rel="noopener">${ICON.x}<span>@${esc(h)} · ${esc(lab)}</span></a>`)
+  ].join("");
+  const lead = m.lead ? P[m.lead] : null;
+  const leadRank = m.charge === "PM" ? "Prime Minister" : m.charge === "Additional charge" ? "Cabinet Minister · additional charge" : lead ? RANK[lead.r] : "";
+  $("#dossier").innerHTML = `
+    <div class="d-main">
+      <div class="eyebrow">${m.dept ? "Department · " : "Ministry of · "}${esc(m.s)}</div>
+      <h2>${esc(m.dept ? m.n : "Ministry of " + m.n)}</h2>
+      <p class="d-desc">${esc(m.d)}</p>
+      <div class="links">${links || '<span class="none">Links not available</span>'}</div>
+      ${m.note ? `<p class="d-note">${esc(m.note)}</p>` : ""}
+    </div>
+    <div class="d-side">
+      <div class="eyebrow">Minister in charge</div>
+      ${lead ? `<div class="lead"><button class="avbtn" data-person="${m.lead}" aria-label="Open ${esc(lead.n)}'s calling card">${avatar(m.lead, "lg")}</button>
+        <div><span class="rank ${rankClass(m.lead)}">${esc(leadRank)}</span>
+          <h3>${nameBtn(m.lead)}</h3>
+          <button class="plink" data-person="${m.lead}">${holdLabel(m.lead)}</button></div>
+      </div>` : `<p class="vacant">Vacant</p>`}
+      <div>
+        <div class="eyebrow">Ministers of State</div>
+        ${m.mos.length ? `<ul class="mos-list">${m.mos.map(pid => `<li><button class="avbtn" data-person="${pid}" aria-label="Open ${esc(P[pid].n)}'s calling card">${avatar(pid, "md")}</button><div><div class="nm">${nameBtn(pid)}</div>
+          <button class="plink" data-person="${pid}">${holdLabel(pid)}</button></div></li>`).join("")}</ul>`
+          : `<p class="vacant">${m.charge === "IC" ? "Run by a Minister of State with Independent Charge; no separate Minister of State." : "No Minister of State currently assigned."}</p>`}
+      </div>
+    </div>`;
+  paintPhotos($("#dossier"));
+  try { history.replaceState(null, "", "#" + id); } catch (e) {}
+  if (scroll) $("#dossier").scrollIntoView({behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start"});
+}
+document.addEventListener("click", e => { const b = e.target.closest("[data-person]"); if (b) openCard(b.dataset.person); });
+
+/* ---------- Calling card ---------- */
+const dlg = $("#card");
+function ageOn(dob) {
+  if (!/^\d{4}-\d\d-\d\d$/.test(dob || "")) return null;
+  const [y, m, d] = dob.split("-").map(Number), n = new Date();
+  return n.getFullYear() - y - ((n.getMonth() + 1 < m || (n.getMonth() + 1 === m && n.getDate() < d)) ? 1 : 0);
+}
+function fmtDob(dob) {
+  if (!dob) return null;
+  if (/^\d{4}-\d\d-\d\d$/.test(dob)) return new Date(dob + "T00:00:00").toLocaleDateString("en-IN", {day: "numeric", month: "long", year: "numeric"});
+  return dob;
+}
+const NA = `<span class="na">Not published in our sources</span>`;
+function fact(label, value, opts = {}) { return `<div class="fact${opts.wide ? " wide" : ""}"><dt>${label}</dt><dd>${value || NA}</dd></div>`; }
+function socialHref(k, v) {
+  if (/^https?:\/\//.test(v)) return v;
+  return {x: "https://x.com/", instagram: "https://www.instagram.com/", facebook: "https://www.facebook.com/", youtube: "https://www.youtube.com/channel/", website: ""}[k] + v;
+}
+function socialLabel(k, v) {
+  if (k === "website") return v.replace(/^https?:\/\/(www\.)?/, "").replace(/\/$/, "");
+  if (k === "youtube") return "YouTube";
+  return (k === "facebook" ? "" : "@") + v.replace(/^https?:\/\/[^/]+\//, "").replace(/\/$/, "");
+}
+function openCard(pid) {
+  const p = P[pid]; if (!p) return;
+  $("#ccAv").innerHTML = avatar(pid);
+  $("#ccRank").textContent = RANK[p.r];
+  $("#ccName").textContent = p.n;
+  $("#ccSeat").textContent = p.house || "";
+  const age = ageOn(p.dob);
+  const a = p.assets;
+  const email = p.email ? `${location.protocol.startsWith("http") && hosted ? `<a href="mailto:${esc(p.email)}">${esc(p.email)}</a>` : `<span>${esc(p.email)}</span>`}<button class="copy" data-copy="${esc(p.email)}">Copy</button>` : null;
+  $("#ccFacts").innerHTML = [
+    fact("Full name", esc(p.n)),
+    fact("Date of birth", p.dob ? esc(fmtDob(p.dob)) + (age != null ? `<small>Age ${age}</small>` : "") : null),
+    fact("Place of birth", p.pob ? esc(p.pob) : null),
+    fact("Official residence", p.residence ? esc(p.residence) + "<small>New Delhi address on parliament and ministry records; may lag a move</small>" : null),
+    fact("Official email", email, {wide: true}),
+    fact("Declared wealth", a ? `<span class="wealth">${esc(a.total)}</span><small>Total assets declared in the ${esc(a.election || "latest")} election affidavit${a.url ? ` · <a href="${esc(a.url)}" target="_blank" rel="noopener">Source</a>` : ""}</small>` : null, {wide: true})
+  ].join("");
+  const so = p.social || {};
+  const order = ["x", "instagram", "facebook", "youtube", "website"];
+  $("#ccSocial").innerHTML = order.filter(k => so[k]).map(k => `<a href="${esc(socialHref(k, so[k]))}" target="_blank" rel="noopener">${ICON[k === "website" ? "web" : k]}<span>${esc(socialLabel(k, so[k]))}</span></a>`).join("") || NA;
+  const h = (holdings[pid] || []).slice().sort((x, y) => (y.lead ? 1 : 0) - (x.lead ? 1 : 0));
+  $("#ccPortTitle").textContent = h.length === 1 ? "Portfolio" : `Portfolios (${h.length})`;
+  $("#ccPorts").innerHTML = h.map(({m, role}) => `<li><button data-goto="${m.id}"><span class="t">${esc(m.n)}</span><span class="rank ${role === "Minister of State" ? "r-MoS" : role.includes("Independent") ? "r-IC" : ""}">${esc(role)}</span></button></li>`).join("");
+  $("#ccExtra").textContent = p.extra || ""; $("#ccExtra").hidden = !p.extra;
+  const ph = p.photo || {};
+  const src = (p.sources || []).map((u, i) => `<a href="${esc(u)}" target="_blank" rel="noopener">${esc(u.replace(/^https?:\/\/(www\.)?/, "").split("/")[0])}</a>`);
+  $("#ccFoot").innerHTML = (ph.page ? `<div>Photo: <a href="${esc(ph.page)}" target="_blank" rel="noopener">Wikimedia Commons</a>${ph.credit ? ", " + esc(ph.credit) : ""}${ph.license ? " (" + esc(ph.license) + ")" : ""}</div>` : "") +
+    (src.length ? `<div>Sources: ${[...new Set(src)].join(" · ")}</div>` : "");
+  paintPhotos(dlg);
+  if (dlg.showModal) { if (!dlg.open) dlg.showModal(); } else dlg.setAttribute("open", "");
+  $("#ccClose").focus();
+}
+$("#ccClose").onclick = () => dlg.close ? dlg.close() : dlg.removeAttribute("open");
+dlg.addEventListener("click", async e => {
+  if (e.target === dlg) { dlg.close(); return; }
+  const c = e.target.closest("[data-copy]");
+  if (c) {
+    try { await navigator.clipboard.writeText(c.dataset.copy); c.textContent = "Copied"; }
+    catch (err) { const r = document.createRange(); r.selectNodeContents(c.previousElementSibling); const s = getSelection(); s.removeAllRanges(); s.addRange(r); c.textContent = "Selected"; }
+    setTimeout(() => (c.textContent = "Copy"), 1600);
+    return;
+  }
+  const g = e.target.closest("[data-goto]");
+  if (g) { dlg.close(); revealInTrack(g.dataset.goto); select(g.dataset.goto, true); }
+});
+function revealInTrack(id) {
+  if (!list.some(m => m.id === id)) { sector = "All"; query = ""; $("#q").value = ""; renderChips(); renderTrack(); paintPhotos($("#track")); }
+  const c = $(`.card[data-id="${id}"]`); if (c) $("#track").scrollTo({left: c.offsetLeft - $("#track").offsetLeft - 2, behavior: "smooth"});
+}
+
+/* ---------- Directory ---------- */
+function renderLedger() {
+  const sorted = M.slice().sort((a, b) => (a.dept ? 1 : 0) - (b.dept ? 1 : 0) || a.n.localeCompare(b.n));
+  $("#ledger").innerHTML = `<div class="row head"><div>Ministry</div><div>Minister in charge</div><div>Ministers of State</div></div>` +
+    sorted.map(m => `<div class="row">
+      <div><button class="mn" data-goto2="${m.id}">${esc(m.n)}</button></div>
+      <div><span class="lbl">Minister in charge</span><div class="people">${m.lead ? `<button class="person" data-person="${m.lead}">${avatar(m.lead, "sm")}<span>${esc(P[m.lead].n)}</span></button>` : `<span class="none">Vacant</span>`}</div></div>
+      <div><span class="lbl">Ministers of State</span><div class="people">${m.mos.length ? m.mos.map(pid => `<button class="person" data-person="${pid}">${avatar(pid, "sm")}<span>${esc(P[pid].n)}</span></button>`).join("") : `<span class="none">${m.charge === "IC" ? "—" : "Vacant / none"}</span>`}</div></div>
+    </div>`).join("");
+}
+$("#ledger").addEventListener("click", e => { const b = e.target.closest("[data-goto2]"); if (b) { revealInTrack(b.dataset.goto2); select(b.dataset.goto2, true); } });
+
+boot();
+})();
+</script>
+</body>
+</html>

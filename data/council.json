@@ -1,0 +1,1015 @@
+{
+ "asOf": "2026-10-16",
+ "lock": false,
+ "source": "https://en.wikipedia.org/wiki/Third_Modi_ministry",
+ "people": {
+  "modi": {
+   "n": "Narendra Modi",
+   "r": "PM",
+   "wiki": "Narendra Modi",
+   "wikiAlt": [],
+   "extra": "Prime Minister. Also holds all important policy issues and every portfolio not allocated to another minister.",
+   "qid": "Q1058"
+  },
+  "rajnath": {
+   "n": "Rajnath Singh",
+   "r": "C",
+   "wiki": "Rajnath Singh",
+   "wikiAlt": [],
+   "extra": null,
+   "qid": "Q3506475"
+  },
+  "shah": {
+   "n": "Amit Shah",
+   "r": "C",
+   "wiki": "Amit Shah",
+   "wikiAlt": [],
+   "extra": null,
+   "qid": "Q4746875"
+  },
+  "gadkari": {
+   "n": "Nitin Gadkari",
+   "r": "C",
+   "wiki": "Nitin Gadkari",
+   "wikiAlt": [],
+   "extra": null,
+   "qid": "Q3504520"
+  },
+  "nadda": {
+   "n": "J. P. Nadda",
+   "r": "C",
+   "wiki": "J. P. Nadda",
+   "wikiAlt": [
+    "Jagat Prakash Nadda"
+   ],
+   "extra": null,
+   "qid": "Q16193764"
+  },
+  "chouhan": {
+   "n": "Shivraj Singh Chouhan",
+   "r": "C",
+   "wiki": "Shivraj Singh Chouhan",
+   "wikiAlt": [],
+   "extra": null,
+   "qid": "Q3180602"
+  },
+  "nirmala": {
+   "n": "Nirmala Sitharaman",
+   "r": "C",
+   "wiki": "Nirmala Sitharaman",
+   "wikiAlt": [],
+   "extra": null,
+   "qid": "Q7040049"
+  },
+  "jaishankar": {
+   "n": "S. Jaishankar",
+   "r": "C",
+   "wiki": "S. Jaishankar",
+   "wikiAlt": [
+    "Subrahmanyam Jaishankar"
+   ],
+   "extra": null,
+   "qid": "Q16186720"
+  },
+  "khattar": {
+   "n": "Manohar Lal Khattar",
+   "r": "C",
+   "wiki": "Manohar Lal Khattar",
+   "wikiAlt": [],
+   "extra": null,
+   "qid": "Q18336221"
+  },
+  "hdk": {
+   "n": "H. D. Kumaraswamy",
+   "r": "C",
+   "wiki": "H. D. Kumaraswamy",
+   "wikiAlt": [],
+   "extra": null,
+   "qid": "Q251790"
+  },
+  "goyal": {
+   "n": "Piyush Goyal",
+   "r": "C",
+   "wiki": "Piyush Goyal",
+   "wikiAlt": [],
+   "extra": null,
+   "qid": "Q7199798"
+  },
+  "joshi": {
+   "n": "Pralhad Joshi",
+   "r": "C",
+   "wiki": "Pralhad Joshi",
+   "wikiAlt": [],
+   "extra": null,
+   "qid": "Q7238224"
+  },
+  "manjhi": {
+   "n": "Jitan Ram Manjhi",
+   "r": "C",
+   "wiki": "Jitan Ram Manjhi",
+   "wikiAlt": [],
+   "extra": null,
+   "qid": "Q16910976"
+  },
+  "lalan": {
+   "n": "Rajiv Ranjan (Lalan) Singh",
+   "r": "C",
+   "wiki": "Lalan Singh",
+   "wikiAlt": [
+    "Rajiv Ranjan Singh"
+   ],
+   "extra": null,
+   "qid": "Q7286245"
+  },
+  "sonowal": {
+   "n": "Sarbananda Sonowal",
+   "r": "C",
+   "wiki": "Sarbananda Sonowal",
+   "wikiAlt": [],
+   "extra": null,
+   "qid": "Q7423486"
+  },
+  "virendra": {
+   "n": "Virendra Kumar",
+   "r": "C",
+   "wiki": "Virendra Kumar Khatik",
+   "wikiAlt": [
+    "Virendra Kumar (politician)"
+   ],
+   "extra": null,
+   "qid": "Q7933694"
+  },
+  "rmnaidu": {
+   "n": "K. Ram Mohan Naidu",
+   "r": "C",
+   "wiki": "Kinjarapu Ram Mohan Naidu",
+   "wikiAlt": [
+    "Ram Mohan Naidu Kinjarapu"
+   ],
+   "extra": null,
+   "qid": "Q16901223"
+  },
+  "oram": {
+   "n": "Jual Oram",
+   "r": "C",
+   "wiki": "Jual Oram",
+   "wikiAlt": [],
+   "extra": null,
+   "qid": "Q6298726"
+  },
+  "giriraj": {
+   "n": "Giriraj Singh",
+   "r": "C",
+   "wiki": "Giriraj Singh",
+   "wikiAlt": [],
+   "extra": null,
+   "qid": "Q16736894"
+  },
+  "vaishnaw": {
+   "n": "Ashwini Vaishnaw",
+   "r": "C",
+   "wiki": "Ashwini Vaishnaw",
+   "wikiAlt": [],
+   "extra": null,
+   "qid": "Q75184694"
+  },
+  "scindia": {
+   "n": "Jyotiraditya Scindia",
+   "r": "C",
+   "wiki": "Jyotiraditya Scindia",
+   "wikiAlt": [],
+   "extra": null,
+   "qid": "Q16213761"
+  },
+  "bhupender": {
+   "n": "Bhupender Yadav",
+   "r": "C",
+   "wiki": "Bhupender Yadav",
+   "wikiAlt": [],
+   "extra": null,
+   "qid": "Q16208337"
+  },
+  "shekhawat": {
+   "n": "Gajendra Singh Shekhawat",
+   "r": "C",
+   "wiki": "Gajendra Singh Shekhawat",
+   "wikiAlt": [],
+   "extra": null,
+   "qid": "Q16914124"
+  },
+  "annpurna": {
+   "n": "Annpurna Devi",
+   "r": "C",
+   "wiki": "Annpurna Devi",
+   "wikiAlt": [],
+   "extra": null,
+   "qid": "Q64010478"
+  },
+  "rijiju": {
+   "n": "Kiren Rijiju",
+   "r": "C",
+   "wiki": "Kiren Rijiju",
+   "wikiAlt": [],
+   "extra": null,
+   "qid": "Q6415053"
+  },
+  "puri": {
+   "n": "Hardeep Singh Puri",
+   "r": "C",
+   "wiki": "Hardeep Singh Puri",
+   "wikiAlt": [],
+   "extra": null,
+   "qid": "Q5655835"
+  },
+  "mandaviya": {
+   "n": "Mansukh Mandaviya",
+   "r": "C",
+   "wiki": "Mansukh Mandaviya",
+   "wikiAlt": [],
+   "extra": null,
+   "qid": "Q21170728"
+  },
+  "kishan": {
+   "n": "G. Kishan Reddy",
+   "r": "C",
+   "wiki": "G. Kishan Reddy",
+   "wikiAlt": [],
+   "extra": null,
+   "qid": "Q5512319"
+  },
+  "chirag": {
+   "n": "Chirag Paswan",
+   "r": "C",
+   "wiki": "Chirag Paswan",
+   "wikiAlt": [],
+   "extra": null,
+   "qid": "Q16728004"
+  },
+  "patil": {
+   "n": "C. R. Patil",
+   "r": "C",
+   "wiki": "C. R. Patil",
+   "wikiAlt": [],
+   "extra": null,
+   "qid": "Q5071367"
+  },
+  "inderjit": {
+   "n": "Rao Inderjit Singh",
+   "r": "IC",
+   "wiki": "Rao Inderjit Singh",
+   "wikiAlt": [],
+   "extra": null,
+   "qid": "Q7293676"
+  },
+  "jitendra": {
+   "n": "Dr Jitendra Singh",
+   "r": "IC",
+   "wiki": "Jitendra Singh Rana",
+   "wikiAlt": [
+    "Jitendra Singh (politician, born 1956)",
+    "Jitendra Singh (Jammu and Kashmir politician)"
+   ],
+   "extra": "Also Minister of State in the Prime Minister's Office.",
+   "qid": "Q6203277"
+  },
+  "meghwal": {
+   "n": "Arjun Ram Meghwal",
+   "r": "IC",
+   "wiki": "Arjun Ram Meghwal",
+   "wikiAlt": [],
+   "extra": null,
+   "qid": "Q4791582"
+  },
+  "jadhav": {
+   "n": "Prataprao Jadhav",
+   "r": "IC",
+   "wiki": "Prataprao Jadhav",
+   "wikiAlt": [
+    "Prataprao Ganpatrao Jadhav"
+   ],
+   "extra": null,
+   "qid": "Q7238626"
+  },
+  "jayant": {
+   "n": "Jayant Chaudhary",
+   "r": "IC",
+   "wiki": "Jayant Chaudhary",
+   "wikiAlt": [],
+   "extra": null,
+   "qid": "Q6167558"
+  },
+  "anupriya": {
+   "n": "Anupriya Patel",
+   "r": "MoS",
+   "wiki": "Anupriya Patel",
+   "wikiAlt": [],
+   "extra": null,
+   "qid": "Q4777851"
+  },
+  "sukanta": {
+   "n": "Sukanta Majumdar",
+   "r": "MoS",
+   "wiki": "Sukanta Majumdar",
+   "wikiAlt": [],
+   "extra": null,
+   "qid": "Q64011108"
+  },
+  "jitin": {
+   "n": "Jitin Prasada",
+   "r": "MoS",
+   "wiki": "Jitin Prasada",
+   "wikiAlt": [],
+   "extra": null,
+   "qid": "Q290717"
+  },
+  "naik": {
+   "n": "Shripad Yesso Naik",
+   "r": "MoS",
+   "wiki": "Shripad Yesso Naik",
+   "wikiAlt": [
+    "Shripad Naik"
+   ],
+   "extra": null,
+   "qid": "Q7504173"
+  },
+  "pankaj": {
+   "n": "Pankaj Chaudhary",
+   "r": "MoS",
+   "wiki": "Pankaj Chaudhary",
+   "wikiAlt": [],
+   "extra": null,
+   "qid": "Q7131282"
+  },
+  "gurjar": {
+   "n": "Krishan Pal Gurjar",
+   "r": "MoS",
+   "wiki": "Krishan Pal Gurjar",
+   "wikiAlt": [],
+   "extra": null,
+   "qid": "Q16901147"
+  },
+  "mohol": {
+   "n": "Murlidhar Mohol",
+   "r": "MoS",
+   "wiki": "Murlidhar Mohol",
+   "wikiAlt": [],
+   "extra": null,
+   "qid": "Q76328310"
+  },
+  "athawale": {
+   "n": "Ramdas Athawale",
+   "r": "MoS",
+   "wiki": "Ramdas Athawale",
+   "wikiAlt": [],
+   "extra": null,
+   "qid": "Q4813289"
+  },
+  "blverma": {
+   "n": "B. L. Verma",
+   "r": "MoS",
+   "wiki": "Banwari Lal Verma",
+   "wikiAlt": [
+    "B. L. Verma"
+   ],
+   "extra": null,
+   "qid": "Q104178808"
+  },
+  "rnthakur": {
+   "n": "Ram Nath Thakur",
+   "r": "MoS",
+   "wiki": "Ram Nath Thakur",
+   "wikiAlt": [],
+   "extra": null,
+   "qid": "Q21229980"
+  },
+  "bhagirath": {
+   "n": "Bhagirath Choudhary",
+   "r": "MoS",
+   "wiki": "Bhagirath Choudhary",
+   "wikiAlt": [],
+   "extra": null,
+   "qid": "Q28873568"
+  },
+  "rai": {
+   "n": "Nityanand Rai",
+   "r": "MoS",
+   "wiki": "Nityanand Rai",
+   "wikiAlt": [],
+   "extra": null,
+   "qid": "Q16734872"
+  },
+  "bandi": {
+   "n": "Bandi Sanjay Kumar",
+   "r": "MoS",
+   "wiki": "Bandi Sanjay Kumar",
+   "wikiAlt": [],
+   "extra": null,
+   "qid": "Q64143189"
+  },
+  "somanna": {
+   "n": "V. Somanna",
+   "r": "MoS",
+   "wiki": "V. Somanna",
+   "wikiAlt": [],
+   "extra": null,
+   "qid": "Q24851577"
+  },
+  "rajbhushan": {
+   "n": "Raj Bhushan Choudhary",
+   "r": "MoS",
+   "wiki": "Raj Bhushan Choudhary",
+   "wikiAlt": [
+    "Raj Bhushan Choudhary Nishad"
+   ],
+   "extra": null,
+   "qid": "Q126365290"
+  },
+  "pemmasani": {
+   "n": "Pemmasani Chandra Sekhar",
+   "r": "MoS",
+   "wiki": "Chandra Sekhar Pemmasani",
+   "wikiAlt": [
+    "Pemmasani Chandra Sekhar"
+   ],
+   "extra": null,
+   "qid": "Q126111137"
+  },
+  "kamlesh": {
+   "n": "Kamlesh Paswan",
+   "r": "MoS",
+   "wiki": "Kamlesh Paswan",
+   "wikiAlt": [],
+   "extra": null,
+   "qid": "Q16215999"
+  },
+  "baghel": {
+   "n": "S. P. Singh Baghel",
+   "r": "MoS",
+   "wiki": "S. P. Singh Baghel",
+   "wikiAlt": [],
+   "extra": null,
+   "qid": "Q7387753"
+  },
+  "shobha": {
+   "n": "Shobha Karandlaje",
+   "r": "MoS",
+   "wiki": "Shobha Karandlaje",
+   "wikiAlt": [],
+   "extra": null,
+   "qid": "Q7499789"
+  },
+  "kirti": {
+   "n": "Kirti Vardhan Singh",
+   "r": "MoS",
+   "wiki": "Kirti Vardhan Singh",
+   "wikiAlt": [],
+   "extra": null,
+   "qid": "Q6416217"
+  },
+  "pabitra": {
+   "n": "Pabitra Margherita",
+   "r": "MoS",
+   "wiki": "Pabitra Margherita",
+   "wikiAlt": [],
+   "extra": null,
+   "qid": "Q111352685"
+  },
+  "nimuben": {
+   "n": "Nimuben Bambhaniya",
+   "r": "MoS",
+   "wiki": "Nimuben Bambhaniya",
+   "wikiAlt": [],
+   "extra": null,
+   "qid": "Q126364657"
+  },
+  "shantanu": {
+   "n": "Shantanu Thakur",
+   "r": "MoS",
+   "wiki": "Shantanu Thakur",
+   "wikiAlt": [],
+   "extra": null,
+   "qid": "Q63992931"
+  },
+  "gopi": {
+   "n": "Suresh Gopi",
+   "r": "MoS",
+   "wiki": "Suresh Gopi",
+   "wikiAlt": [],
+   "extra": null,
+   "qid": "Q3530125"
+  },
+  "tamta": {
+   "n": "Ajay Tamta",
+   "r": "MoS",
+   "wiki": "Ajay Tamta",
+   "wikiAlt": [],
+   "extra": null,
+   "qid": "Q16736901"
+  },
+  "malhotra": {
+   "n": "Harsh Malhotra",
+   "r": "MoS",
+   "wiki": "Harsh Malhotra",
+   "wikiAlt": [],
+   "extra": null,
+   "qid": "Q126367708"
+  },
+  "dubey": {
+   "n": "Satish Chandra Dubey",
+   "r": "MoS",
+   "wiki": "Satish Chandra Dubey",
+   "wikiAlt": [],
+   "extra": null,
+   "qid": "Q16728677"
+  },
+  "seth": {
+   "n": "Sanjay Seth",
+   "r": "MoS",
+   "wiki": "Sanjay Seth (Jharkhand politician)",
+   "wikiAlt": [
+    "Sanjay Seth (politician)",
+    "Sanjay Seth"
+   ],
+   "extra": null,
+   "qid": "Q96404945"
+  },
+  "uikey": {
+   "n": "Durgadas Uikey",
+   "r": "MoS",
+   "wiki": "Durga Das Uikey",
+   "wikiAlt": [
+    "Durgadas Uikey"
+   ],
+   "extra": null,
+   "qid": "Q64006793"
+  },
+  "khadse": {
+   "n": "Raksha Khadse",
+   "r": "MoS",
+   "wiki": "Raksha Khadse",
+   "wikiAlt": [],
+   "extra": null,
+   "qid": "Q16908900"
+  },
+  "savitri": {
+   "n": "Savitri Thakur",
+   "r": "MoS",
+   "wiki": "Savitri Thakur",
+   "wikiAlt": [],
+   "extra": null,
+   "qid": "Q16736902"
+  },
+  "tokhan": {
+   "n": "Tokhan Sahu",
+   "r": "MoS",
+   "wiki": "Tokhan Sahu",
+   "wikiAlt": [],
+   "extra": null,
+   "qid": "Q58290680"
+  },
+  "varma": {
+   "n": "Bhupathiraju Srinivasa Varma",
+   "r": "MoS",
+   "wiki": "Bhupathi Raju Srinivasa Varma",
+   "wikiAlt": [
+    "Bhupathiraju Srinivasa Varma",
+    "Srinivasa Varma"
+   ],
+   "extra": null,
+   "qid": "Q126364180"
+  }
+ },
+ "ministries": {
+  "agriculture": {
+   "lead": "chouhan",
+   "charge": "Cabinet",
+   "mos": [
+    "rnthakur",
+    "bhagirath"
+   ],
+   "note": null
+  },
+  "ayush": {
+   "lead": "jadhav",
+   "charge": "IC",
+   "mos": [],
+   "note": null
+  },
+  "chemicals": {
+   "lead": "nadda",
+   "charge": "Cabinet",
+   "mos": [
+    "anupriya"
+   ],
+   "note": null
+  },
+  "civil-aviation": {
+   "lead": "rmnaidu",
+   "charge": "Cabinet",
+   "mos": [
+    "mohol"
+   ],
+   "note": null
+  },
+  "coal": {
+   "lead": "kishan",
+   "charge": "Cabinet",
+   "mos": [
+    "dubey"
+   ],
+   "note": null
+  },
+  "commerce": {
+   "lead": "goyal",
+   "charge": "Cabinet",
+   "mos": [
+    "jitin"
+   ],
+   "note": null
+  },
+  "communications": {
+   "lead": "scindia",
+   "charge": "Cabinet",
+   "mos": [
+    "pemmasani"
+   ],
+   "note": null
+  },
+  "consumer-affairs": {
+   "lead": "joshi",
+   "charge": "Cabinet",
+   "mos": [
+    "blverma",
+    "nimuben"
+   ],
+   "note": null
+  },
+  "cooperation": {
+   "lead": "shah",
+   "charge": "Cabinet",
+   "mos": [
+    "gurjar",
+    "mohol"
+   ],
+   "note": null
+  },
+  "corporate-affairs": {
+   "lead": "nirmala",
+   "charge": "Cabinet",
+   "mos": [
+    "malhotra"
+   ],
+   "note": null
+  },
+  "culture": {
+   "lead": "shekhawat",
+   "charge": "Cabinet",
+   "mos": [
+    "inderjit"
+   ],
+   "note": null
+  },
+  "defence": {
+   "lead": "rajnath",
+   "charge": "Cabinet",
+   "mos": [
+    "seth"
+   ],
+   "note": null
+  },
+  "doner": {
+   "lead": "scindia",
+   "charge": "Cabinet",
+   "mos": [
+    "sukanta"
+   ],
+   "note": null
+  },
+  "earth-sciences": {
+   "lead": "jitendra",
+   "charge": "IC",
+   "mos": [],
+   "note": null
+  },
+  "education": {
+   "lead": "joshi",
+   "charge": "Additional charge",
+   "mos": [
+    "jayant",
+    "sukanta"
+   ],
+   "note": "Pralhad Joshi has held Education as additional charge since Dharmendra Pradhan resigned on 25 July 2026."
+  },
+  "meity": {
+   "lead": "vaishnaw",
+   "charge": "Cabinet",
+   "mos": [
+    "jitin"
+   ],
+   "note": null
+  },
+  "environment": {
+   "lead": "bhupender",
+   "charge": "Cabinet",
+   "mos": [
+    "kirti"
+   ],
+   "note": null
+  },
+  "external-affairs": {
+   "lead": "jaishankar",
+   "charge": "Cabinet",
+   "mos": [
+    "kirti",
+    "pabitra"
+   ],
+   "note": null
+  },
+  "finance": {
+   "lead": "nirmala",
+   "charge": "Cabinet",
+   "mos": [
+    "pankaj"
+   ],
+   "note": null
+  },
+  "fisheries": {
+   "lead": "lalan",
+   "charge": "Cabinet",
+   "mos": [
+    "baghel"
+   ],
+   "note": "One Minister of State post is vacant after George Kurian resigned on 23 June 2026."
+  },
+  "food-processing": {
+   "lead": "chirag",
+   "charge": "Cabinet",
+   "mos": [],
+   "note": "Minister of State post vacant after Ravneet Singh Bittu resigned on 24 July 2026."
+  },
+  "health": {
+   "lead": "nadda",
+   "charge": "Cabinet",
+   "mos": [
+    "jadhav",
+    "anupriya"
+   ],
+   "note": null
+  },
+  "heavy-industries": {
+   "lead": "hdk",
+   "charge": "Cabinet",
+   "mos": [
+    "varma"
+   ],
+   "note": null
+  },
+  "home": {
+   "lead": "shah",
+   "charge": "Cabinet",
+   "mos": [
+    "rai",
+    "bandi"
+   ],
+   "note": null
+  },
+  "housing": {
+   "lead": "khattar",
+   "charge": "Cabinet",
+   "mos": [
+    "tokhan"
+   ],
+   "note": null
+  },
+  "information-broadcasting": {
+   "lead": "vaishnaw",
+   "charge": "Cabinet",
+   "mos": [],
+   "note": "Minister of State post vacant after L. Murugan resigned on 13 October 2026."
+  },
+  "jal-shakti": {
+   "lead": "patil",
+   "charge": "Cabinet",
+   "mos": [
+    "somanna",
+    "rajbhushan"
+   ],
+   "note": null
+  },
+  "labour": {
+   "lead": "mandaviya",
+   "charge": "Cabinet",
+   "mos": [
+    "shobha"
+   ],
+   "note": null
+  },
+  "law": {
+   "lead": "meghwal",
+   "charge": "IC",
+   "mos": [],
+   "note": null
+  },
+  "msme": {
+   "lead": "manjhi",
+   "charge": "Cabinet",
+   "mos": [
+    "shobha"
+   ],
+   "note": null
+  },
+  "mines": {
+   "lead": "kishan",
+   "charge": "Cabinet",
+   "mos": [
+    "dubey"
+   ],
+   "note": null
+  },
+  "minority-affairs": {
+   "lead": "rijiju",
+   "charge": "Cabinet",
+   "mos": [],
+   "note": "Minister of State post vacant after George Kurian resigned on 23 June 2026."
+  },
+  "mnre": {
+   "lead": "joshi",
+   "charge": "Cabinet",
+   "mos": [
+    "naik"
+   ],
+   "note": null
+  },
+  "panchayati-raj": {
+   "lead": "lalan",
+   "charge": "Cabinet",
+   "mos": [
+    "baghel"
+   ],
+   "note": null
+  },
+  "parliamentary-affairs": {
+   "lead": "rijiju",
+   "charge": "Cabinet",
+   "mos": [
+    "meghwal"
+   ],
+   "note": "One Minister of State post vacant after L. Murugan resigned on 13 October 2026."
+  },
+  "personnel": {
+   "lead": "modi",
+   "charge": "PM",
+   "mos": [
+    "jitendra"
+   ],
+   "note": null
+  },
+  "petroleum": {
+   "lead": "puri",
+   "charge": "Cabinet",
+   "mos": [
+    "gopi"
+   ],
+   "note": null
+  },
+  "planning": {
+   "lead": "inderjit",
+   "charge": "IC",
+   "mos": [],
+   "note": null
+  },
+  "power": {
+   "lead": "khattar",
+   "charge": "Cabinet",
+   "mos": [
+    "naik"
+   ],
+   "note": null
+  },
+  "railways": {
+   "lead": "vaishnaw",
+   "charge": "Cabinet",
+   "mos": [
+    "somanna"
+   ],
+   "note": "One Minister of State post vacant after Ravneet Singh Bittu resigned on 24 July 2026."
+  },
+  "road-transport": {
+   "lead": "gadkari",
+   "charge": "Cabinet",
+   "mos": [
+    "tamta",
+    "malhotra"
+   ],
+   "note": null
+  },
+  "rural-development": {
+   "lead": "chouhan",
+   "charge": "Cabinet",
+   "mos": [
+    "pemmasani",
+    "kamlesh"
+   ],
+   "note": null
+  },
+  "science-technology": {
+   "lead": "jitendra",
+   "charge": "IC",
+   "mos": [],
+   "note": null
+  },
+  "ports-shipping": {
+   "lead": "sonowal",
+   "charge": "Cabinet",
+   "mos": [
+    "shantanu"
+   ],
+   "note": null
+  },
+  "skill-development": {
+   "lead": "jayant",
+   "charge": "IC",
+   "mos": [],
+   "note": null
+  },
+  "social-justice": {
+   "lead": "virendra",
+   "charge": "Cabinet",
+   "mos": [
+    "athawale",
+    "blverma"
+   ],
+   "note": null
+  },
+  "statistics": {
+   "lead": "inderjit",
+   "charge": "IC",
+   "mos": [],
+   "note": null
+  },
+  "steel": {
+   "lead": "hdk",
+   "charge": "Cabinet",
+   "mos": [
+    "varma"
+   ],
+   "note": null
+  },
+  "textiles": {
+   "lead": "giriraj",
+   "charge": "Cabinet",
+   "mos": [
+    "pabitra"
+   ],
+   "note": null
+  },
+  "tourism": {
+   "lead": "shekhawat",
+   "charge": "Cabinet",
+   "mos": [
+    "gopi"
+   ],
+   "note": null
+  },
+  "tribal-affairs": {
+   "lead": "oram",
+   "charge": "Cabinet",
+   "mos": [
+    "uikey"
+   ],
+   "note": null
+  },
+  "women-child": {
+   "lead": "annpurna",
+   "charge": "Cabinet",
+   "mos": [
+    "savitri"
+   ],
+   "note": null
+  },
+  "youth-sports": {
+   "lead": "mandaviya",
+   "charge": "Cabinet",
+   "mos": [
+    "khadse"
+   ],
+   "note": null
+  },
+  "atomic-energy": {
+   "lead": "modi",
+   "charge": "PM",
+   "mos": [
+    "jitendra"
+   ],
+   "note": null
+  },
+  "space": {
+   "lead": "modi",
+   "charge": "PM",
+   "mos": [
+    "jitendra"
+   ],
+   "note": null
+  }
+ }
+}

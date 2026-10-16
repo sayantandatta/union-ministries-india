@@ -1,0 +1,1457 @@
+{
+ "_help": "Calling-card details checked by hand. Anything here wins over Wikidata. Keys match the people in council.json. Fields: dob (yyyy-mm-dd), pob, house, residence, email, assets {total, election, url}, social {x, instagram, facebook, youtube, website}, sources [urls]. Leave a field out to let Wikidata fill it.",
+ "modi": {
+  "dob": "1950-09-17",
+  "pob": "Vadnagar, Mehsana district, Gujarat",
+  "house": "Lok Sabha – Varanasi, UP",
+  "residence": "7, Lok Kalyan Marg, New Delhi",
+  "assets": {
+   "total": "Rs 3,02,06,889 (approx 3 crore)",
+   "election": "Lok Sabha 2024",
+   "url": "https://myneta.info/LokSabha2024/candidate.php?candidate_id=8974"
+  },
+  "social": {
+   "x": "narendramodi",
+   "facebook": "narendramodi"
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Narendra_Modi",
+   "https://www.wikidata.org/wiki/Q1058",
+   "https://www.opensanctions.org/entities/Q1058/",
+   "https://myneta.info/LokSabha2024/candidate.php?candidate_id=8974"
+  ]
+ },
+ "rajnath": {
+  "dob": "1951-07-10",
+  "pob": "Bhabhaura, Chandauli district, Uttar Pradesh",
+  "house": "Lok Sabha – Lucknow, UP",
+  "residence": "17, Akbar Road, New Delhi",
+  "email": "rajnath@sansad.nic.in",
+  "assets": {
+   "total": "Rs 7,36,84,617 (approx 7.4 crore)",
+   "election": "Lok Sabha 2024",
+   "url": "https://myneta.info/LokSabha2024/candidate.php?candidate_id=7169"
+  },
+  "social": {
+   "x": "rajnathsingh"
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Rajnath_Singh",
+   "https://www.wikidata.org/wiki/Q3506475",
+   "https://www.opensanctions.org/entities/Q3506475/",
+   "https://mod.gov.in/dod/whos-who",
+   "https://myneta.info/LokSabha2024/index.php?action=summary&subAction=winner_analyzed&sort=candidate&page=21"
+  ]
+ },
+ "shah": {
+  "dob": "1964-10-22",
+  "pob": "Mumbai, Maharashtra",
+  "house": "Lok Sabha – Gandhinagar, Gujarat",
+  "residence": "6-A, Krishna Menon Marg, New Delhi",
+  "email": "amitshah.mp@sansad.nic.in",
+  "assets": {
+   "total": "Rs 65,67,12,498 (approx 65.7 crore)",
+   "election": "Lok Sabha 2024",
+   "url": "https://myneta.info/LokSabha2024/candidate.php?candidate_id=4427"
+  },
+  "social": {
+   "x": "AmitShah"
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Amit_Shah",
+   "https://www.wikidata.org/wiki/Q4746875",
+   "https://www.opensanctions.org/entities/Q4746875/",
+   "https://swarajyamag.com/insta/late-pm-vajpayees-former-delhi-bungalow-to-be-allotted-to-amit-shah-says-report",
+   "https://x.com/AmitShah",
+   "https://myneta.info/LokSabha2024/candidate.php?candidate_id=4427"
+  ]
+ },
+ "gadkari": {
+  "dob": "1957-05-27",
+  "pob": "Nagpur, Maharashtra",
+  "house": "Lok Sabha – Nagpur, Maharashtra",
+  "residence": "2, Motilal Nehru Marg, New Delhi",
+  "assets": {
+   "total": "Rs 28,03,17,321 (approx 28 crore)",
+   "election": "Lok Sabha 2024",
+   "url": "https://myneta.info/LokSabha2024/candidate.php?candidate_id=329"
+  },
+  "social": {
+   "x": "nitin_gadkari",
+   "facebook": "nitingadkary"
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Nitin_Gadkari",
+   "https://www.wikidata.org/wiki/Q3504520",
+   "https://www.opensanctions.org/entities/Q3504520/",
+   "https://x.com/nitin_gadkari",
+   "https://myneta.info/LokSabha2024/candidate.php?candidate_id=329"
+  ]
+ },
+ "nadda": {
+  "dob": "1960-12-02",
+  "pob": "Patna, Bihar",
+  "house": "Rajya Sabha – Gujarat",
+  "residence": "7-B, Motilal Nehru Marg, New Delhi",
+  "email": "jp.nadda@sansad.nic.in",
+  "assets": {
+   "total": "Rs 9,36,03,781 (approx 9.4 crore)",
+   "election": "Rajya Sabha 2024 (Gujarat)",
+   "url": "https://myneta.info/rajsab09aff/candidate.php?candidate_id=1055"
+  },
+  "social": {
+   "x": "JPNadda"
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/J._P._Nadda",
+   "https://www.wikidata.org/wiki/Q16193764",
+   "https://www.opensanctions.org/entities/Q16193764/",
+   "https://x.com/JPNadda",
+   "https://myneta.info/rajsab09aff/candidate.php?candidate_id=1055"
+  ]
+ },
+ "chouhan": {
+  "dob": "1959-03-05",
+  "pob": "Jait, Sehore district, Madhya Pradesh",
+  "house": "Lok Sabha – Vidisha, MP",
+  "residence": "12, Safdarjung Road, New Delhi",
+  "assets": {
+   "total": "Rs 8,98,52,874 (approx 9 crore)",
+   "election": "Lok Sabha 2024",
+   "url": "https://myneta.info/LokSabha2024/candidate.php?candidate_id=4448"
+  },
+  "social": {
+   "x": "ChouhanShivraj"
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Shivraj_Singh_Chouhan",
+   "https://www.wikidata.org/wiki/Q3180602",
+   "https://www.opensanctions.org/entities/Q3180602/",
+   "https://x.com/ChouhanShivraj",
+   "https://myneta.info/LokSabha2024/candidate.php?candidate_id=4448"
+  ]
+ },
+ "nirmala": {
+  "dob": "1959-08-18",
+  "pob": "Madurai, Tamil Nadu",
+  "house": "Rajya Sabha – Karnataka",
+  "residence": "15, Safdarjung Road, New Delhi",
+  "email": "nsitharaman@nic.in",
+  "assets": {
+   "total": "Rs 2,50,99,396 (approx 2.5 crore)",
+   "election": "Rajya Sabha 2022 (Karnataka)",
+   "url": "https://myneta.info/rajsab09aff/candidate.php?candidate_id=986"
+  },
+  "social": {
+   "x": "nsitharaman"
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Nirmala_Sitharaman",
+   "https://www.wikidata.org/wiki/Q7040049",
+   "https://www.opensanctions.org/entities/Q7040049/",
+   "https://myneta.info/rajsab09aff/candidate.php?candidate_id=986"
+  ]
+ },
+ "jaishankar": {
+  "dob": "1955-01-09",
+  "pob": "New Delhi, Delhi",
+  "house": "Rajya Sabha – Gujarat",
+  "residence": "12, Tughlak Road, New Delhi",
+  "email": "s.jaishankar@sansad.nic.in",
+  "assets": {
+   "total": "Rs 20,09,28,804 (approx 20 crore)",
+   "election": "Rajya Sabha 2023 (Gujarat)",
+   "url": "https://myneta.info/rajsab09aff/candidate.php?candidate_id=1024"
+  },
+  "social": {
+   "x": "DrSJaishankar"
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/S._Jaishankar",
+   "https://www.wikidata.org/wiki/Q16186720",
+   "https://www.opensanctions.org/entities/Q16186720/",
+   "https://x.com/DrSJaishankar",
+   "https://myneta.info/rajsab09aff/candidate.php?candidate_id=1024"
+  ]
+ },
+ "khattar": {
+  "dob": "1954-05-05",
+  "pob": "Nindana, Rohtak district, Haryana",
+  "house": "Lok Sabha – Karnal, Haryana",
+  "email": "minister-mohua@nic.in",
+  "assets": {
+   "total": "Rs 2,54,42,914 (approx 2.5 crore)",
+   "election": "Lok Sabha 2024",
+   "url": "https://myneta.info/LokSabha2024/candidate.php?candidate_id=8552"
+  },
+  "social": {
+   "x": "mlkhattar"
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Manohar_Lal_Khattar",
+   "https://www.wikidata.org/wiki/Q18336221",
+   "https://www.opensanctions.org/entities/Q18336221/",
+   "https://dda.gov.in/sites/default/files/2026-07/members_of_authority_01072026.pdf",
+   "https://x.com/mlkhattar/highlights",
+   "https://myneta.info/LokSabha2024/candidate.php?candidate_id=8552"
+  ]
+ },
+ "hdk": {
+  "dob": "1959-12-16",
+  "pob": "Haradanahalli, Hassan district, Karnataka",
+  "house": "Lok Sabha – Mandya, Karnataka",
+  "residence": "6, Kushak Road, New Delhi",
+  "assets": {
+   "total": "Rs 2,17,23,28,789 (approx 217 crore)",
+   "election": "Lok Sabha 2024",
+   "url": "https://myneta.info/LokSabha2024/candidate.php?candidate_id=2651"
+  },
+  "social": {
+   "x": "hd_kumaraswamy"
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/H._D._Kumaraswamy",
+   "https://www.wikidata.org/wiki/Q251790",
+   "https://www.opensanctions.org/entities/Q251790/",
+   "https://x.com/hd_kumaraswamy",
+   "https://myneta.info/LokSabha2024/candidate.php?candidate_id=2651"
+  ]
+ },
+ "goyal": {
+  "dob": "1964-06-13",
+  "pob": "Mumbai, Maharashtra",
+  "house": "Lok Sabha – Mumbai North, Maharashtra",
+  "residence": "8, Teen Murti Marg, New Delhi",
+  "email": "piyush.goyal@gov.in",
+  "assets": {
+   "total": "Rs 1,10,95,14,447 (approx 111 crore)",
+   "election": "Lok Sabha 2024",
+   "url": "https://myneta.info/LokSabha2024/candidate.php?candidate_id=7093"
+  },
+  "social": {
+   "x": "PiyushGoyal"
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Piyush_Goyal",
+   "https://www.wikidata.org/wiki/Q7199798",
+   "https://www.opensanctions.org/entities/Q7199798/",
+   "https://x.com/PiyushGoyal",
+   "https://myneta.info/LokSabha2024/candidate.php?candidate_id=7093"
+  ]
+ },
+ "joshi": {
+  "dob": "1962-11-27",
+  "pob": "Vijayapura (Bijapur), Karnataka",
+  "house": "Lok Sabha – Dharwad, Karnataka",
+  "residence": "11, Akbar Road, New Delhi",
+  "email": "joshi.pralhad@sansad.nic.in",
+  "assets": {
+   "total": "Rs 21,09,60,953 (approx 21 crore)",
+   "election": "Lok Sabha 2024",
+   "url": "https://myneta.info/LokSabha2024/candidate.php?candidate_id=3567"
+  },
+  "social": {
+   "x": "JoshiPralhad"
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Pralhad_Joshi",
+   "https://www.wikidata.org/wiki/Q7238224",
+   "https://www.opensanctions.org/entities/Q7238224/",
+   "https://x.com/JoshiPralhad",
+   "https://myneta.info/LokSabha2024/candidate.php?candidate_id=3567"
+  ]
+ },
+ "manjhi": {
+  "dob": "1944-10-06",
+  "pob": "Mahakar, Gaya district, Bihar",
+  "house": "Lok Sabha – Gaya, Bihar",
+  "residence": "28, Akbar Road, New Delhi",
+  "assets": {
+   "total": "Rs 30,20,578 (approx 30 lakh)",
+   "election": "Lok Sabha 2024",
+   "url": "https://myneta.info/LokSabha2024/candidate.php?candidate_id=1678"
+  },
+  "social": {
+   "x": "jitanrmanjhi"
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Jitan_Ram_Manjhi",
+   "https://www.wikidata.org/wiki/Q16910976",
+   "https://www.opensanctions.org/entities/Q16910976/",
+   "https://x.com/jitanrmanjhi",
+   "https://myneta.info/LokSabha2024/candidate.php?candidate_id=1678"
+  ]
+ },
+ "lalan": {
+  "dob": "1955-01-24",
+  "pob": "Patna, Bihar",
+  "house": "Lok Sabha – Munger, Bihar",
+  "residence": "9, Tyagraj Marg, New Delhi",
+  "assets": {
+   "total": "Rs 13,82,28,639 (approx 13.8 crore)",
+   "election": "Lok Sabha 2024",
+   "url": "https://myneta.info/LokSabha2024/candidate.php?candidate_id=5060"
+  },
+  "social": {
+   "x": "LalanSingh_1"
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Lalan_Singh",
+   "https://www.wikidata.org/wiki/Q7286245",
+   "https://www.opensanctions.org/entities/Q7286245/",
+   "https://x.com/lalansingh_1",
+   "https://myneta.info/LokSabha2024/candidate.php?candidate_id=5060"
+  ]
+ },
+ "sonowal": {
+  "dob": "1962-10-31",
+  "pob": "Muluk Gaon, Dibrugarh district, Assam",
+  "house": "Lok Sabha – Dibrugarh, Assam",
+  "residence": "23, Safdarjung Road, New Delhi",
+  "email": "sarbananda.sonowal@sansad.nic.in",
+  "assets": {
+   "total": "Rs 4,75,85,258 (approx 4.8 crore)",
+   "election": "Lok Sabha 2024",
+   "url": "https://myneta.info/LokSabha2024/candidate.php?candidate_id=259"
+  },
+  "social": {
+   "x": "sarbanandsonwal",
+   "facebook": "SarbanandaSonowal"
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Sarbananda_Sonowal",
+   "https://www.wikidata.org/wiki/Q7423486",
+   "https://www.opensanctions.org/entities/Q7423486/",
+   "https://x.com/sarbanandsonwal",
+   "https://myneta.info/LokSabha2024/candidate.php?candidate_id=259"
+  ]
+ },
+ "virendra": {
+  "dob": "1954-02-27",
+  "pob": "Sagar, Madhya Pradesh",
+  "house": "Lok Sabha – Tikamgarh, MP",
+  "residence": "4, Janpath, New Delhi",
+  "email": "vkumar@sansad.nic.in",
+  "assets": {
+   "total": "Rs 2,88,37,006 (approx 2.9 crore)",
+   "election": "Lok Sabha 2024",
+   "url": "https://myneta.info/LokSabha2024/candidate.php?candidate_id=2473"
+  },
+  "social": {
+   "x": "Drvirendrakum13"
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Virendra_Kumar_Khatik",
+   "https://www.wikidata.org/wiki/Q7933694",
+   "https://www.opensanctions.org/entities/Q7933694/",
+   "https://x.com/Drvirendrakum13",
+   "https://myneta.info/LokSabha2024/candidate.php?candidate_id=2473"
+  ]
+ },
+ "rmnaidu": {
+  "dob": "1987-12-18",
+  "pob": "Nimmada, Srikakulam district, Andhra Pradesh",
+  "house": "Lok Sabha – Srikakulam, Andhra Pradesh",
+  "residence": "22, Akbar Road, New Delhi",
+  "email": "rammohannaidu.k@sansad.nic.in",
+  "assets": {
+   "total": "Rs 23,30,73,561 (approx 23 crore)",
+   "election": "Lok Sabha 2024",
+   "url": "https://myneta.info/LokSabha2024/candidate.php?candidate_id=6620"
+  },
+  "social": {
+   "x": "RamMNK"
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Kinjarapu_Ram_Mohan_Naidu",
+   "https://www.wikidata.org/wiki/Q16901223",
+   "https://www.opensanctions.org/entities/Q16901223/",
+   "https://x.com/RamMNK",
+   "https://myneta.info/LokSabha2024/candidate.php?candidate_id=6620"
+  ]
+ },
+ "oram": {
+  "dob": "1961-03-22",
+  "pob": "Kendudihi, Sundargarh district, Odisha",
+  "house": "Lok Sabha – Sundargarh, Odisha",
+  "residence": "3, Safdarjung Road, New Delhi",
+  "email": "jualoram@sansad.nic.in",
+  "assets": {
+   "total": "Rs 8,63,25,870 (approx 8.6 crore)",
+   "election": "Lok Sabha 2024",
+   "url": "https://myneta.info/LokSabha2024/candidate.php?candidate_id=7296"
+  },
+  "social": {
+   "x": "jualoram"
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Jual_Oram",
+   "https://www.wikidata.org/wiki/Q6298726",
+   "https://www.opensanctions.org/entities/Q6298726/",
+   "https://x.com/jualoram",
+   "https://myneta.info/LokSabha2024/candidate.php?candidate_id=7296"
+  ]
+ },
+ "giriraj": {
+  "dob": "1952-09-08",
+  "pob": "Barahiya, Lakhisarai district, Bihar",
+  "house": "Lok Sabha – Begusarai, Bihar",
+  "residence": "27, Lodhi Estate, New Delhi-110003",
+  "email": "giriraj.singh@sansad.nic.in",
+  "assets": {
+   "total": "Rs 14,31,69,297 (approx 14.3 crore)",
+   "election": "Lok Sabha 2024",
+   "url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=5058"
+  },
+  "social": {
+   "x": "girirajsinghbjp"
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Giriraj_Singh",
+   "https://www.opensanctions.org/entities/Q16736894/",
+   "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=5058"
+  ],
+  "note": "X handle from prior knowledge, not verified this session."
+ },
+ "vaishnaw": {
+  "dob": "1970-07-18",
+  "pob": "Jodhpur, Rajasthan",
+  "house": "Rajya Sabha – Odisha",
+  "residence": "Bungalow no. 32, Prithviraj Road, New Delhi-110011",
+  "email": "av.odisha@sansad.nic.in",
+  "assets": {
+   "total": "Rs 1,44,12,01,998 (approx 144.1 crore)",
+   "election": "Rajya Sabha 2024 (Odisha, 2024-2030)",
+   "url": "https://www.myneta.info/rajsab09aff/candidate.php?candidate_id=1067"
+  },
+  "social": {
+   "x": "AshwiniVaishnaw"
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Ashwini_Vaishnaw",
+   "https://www.opensanctions.org/entities/Q75184694/",
+   "https://www.myneta.info/rajsab09aff/candidate.php?candidate_id=1067",
+   "https://www.adrindia.org/node/96112"
+  ],
+  "note": "X handle from prior knowledge, not verified this session."
+ },
+ "scindia": {
+  "dob": "1971-01-01",
+  "pob": "Mumbai, Maharashtra",
+  "house": "Lok Sabha – Guna, Madhya Pradesh",
+  "residence": "27, Safdarjung Road, New Delhi",
+  "email": "jyotiraditya.scindia@sansad.nic.in",
+  "assets": {
+   "total": "Rs 4,24,74,94,078 (approx 424.7 crore)",
+   "election": "Lok Sabha 2024",
+   "url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=3613"
+  },
+  "social": {
+   "x": "JM_Scindia"
+  },
+  "sources": [
+   "https://www.opensanctions.org/entities/Q16213761/",
+   "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=3613"
+  ],
+  "note": "X handle from prior knowledge, not verified this session."
+ },
+ "bhupender": {
+  "dob": "1969-06-30",
+  "pob": "Ajmer, Rajasthan",
+  "house": "Lok Sabha – Alwar, Rajasthan",
+  "residence": "9, Motilal Nehru Marg, New Delhi-110011",
+  "email": "bhupender.yadav@sansad.nic.in",
+  "assets": {
+   "total": "Rs 2,32,36,037 (approx 2.3 crore)",
+   "election": "Lok Sabha 2024",
+   "url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=360"
+  },
+  "social": {
+   "x": "byadavbjp"
+  },
+  "sources": [
+   "https://www.opensanctions.org/entities/Q16208337/",
+   "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=360"
+  ],
+  "note": "X handle from prior knowledge, not verified this session."
+ },
+ "shekhawat": {
+  "dob": "1967-10-03",
+  "pob": "Jaisalmer, Rajasthan",
+  "house": "Lok Sabha – Jodhpur, Rajasthan",
+  "residence": "12, Akbar Road, New Delhi",
+  "email": "g.shekhawat@sansad.nic.in",
+  "assets": {
+   "total": "Rs 19,30,27,658 (approx 19.3 crore)",
+   "election": "Lok Sabha 2024",
+   "url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=1843"
+  },
+  "social": {
+   "x": "gssjodhpur"
+  },
+  "sources": [
+   "https://www.opensanctions.org/entities/Q16914124/",
+   "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=1843"
+  ],
+  "note": "pob is from the parliament record via OpenSanctions. X handle from prior knowledge, not verified this session."
+ },
+ "annpurna": {
+  "dob": "1970-02-02",
+  "pob": "Ajmeri, Dumka district, Jharkhand (then Bihar)",
+  "house": "Lok Sabha – Kodarma, Jharkhand",
+  "residence": "11, Teen Murti Lane, New Delhi",
+  "assets": {
+   "total": "Rs 12,82,82,857 (approx 12.8 crore)",
+   "election": "Lok Sabha 2024",
+   "url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=7285"
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Annpurna_Devi",
+   "https://www.opensanctions.org/entities/Q64010478/",
+   "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=7285"
+  ],
+  "note": "No email found in the sources. X handle could not be verified because the x.com fetch timed out."
+ },
+ "rijiju": {
+  "dob": "1971-11-19",
+  "pob": "Nakhu, West Kameng district, Arunachal Pradesh",
+  "house": "Lok Sabha – Arunachal West, Arunachal Pradesh",
+  "residence": "9, K. Kamaraj Marg, New Delhi",
+  "email": "kiren.rijiju@sansad.nic.in",
+  "assets": {
+   "total": "Rs 4,94,03,234 (approx 4.9 crore)",
+   "election": "Lok Sabha 2024",
+   "url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=251"
+  },
+  "social": {
+   "x": "KirenRijiju"
+  },
+  "sources": [
+   "https://www.opensanctions.org/entities/Q6415053/",
+   "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=251"
+  ]
+ },
+ "puri": {
+  "dob": "1952-02-15",
+  "pob": "Amritsar, Punjab",
+  "house": "Rajya Sabha – Uttar Pradesh",
+  "residence": "6, Akbar Road, New Delhi",
+  "email": "hardeep.spuri@sansad.nic.in",
+  "assets": {
+   "total": "Rs 26,12,84,244 (approx 26.1 crore)",
+   "election": "Rajya Sabha 2020 (Uttar Pradesh, 2020-2026)",
+   "url": "https://www.myneta.info/rajsab09aff/candidate.php?candidate_id=897"
+  },
+  "social": {
+   "x": "HardeepSPuri"
+  },
+  "sources": [
+   "https://www.opensanctions.org/entities/Q5655835/",
+   "https://www.myneta.info/rajsab09aff/candidate.php?candidate_id=897"
+  ],
+  "note": "pob is from Wikidata via OpenSanctions; not checked against Wikipedia. His Rajya Sabha term ends Nov 2026. X handle from prior knowledge, not verified this session."
+ },
+ "mandaviya": {
+  "dob": "1972-06-01",
+  "pob": "Hanol, Bhavnagar district, Gujarat",
+  "house": "Lok Sabha – Porbandar, Gujarat",
+  "residence": "1, Tughlaq Road, New Delhi-110011",
+  "email": "mansukh.mandaviya@sansad.nic.in",
+  "assets": {
+   "total": "Rs 7,95,04,705 (approx 7.95 crore)",
+   "election": "Lok Sabha 2024",
+   "url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=3459"
+  },
+  "social": {
+   "x": "mansukhmandviya"
+  },
+  "sources": [
+   "https://www.opensanctions.org/entities/Q21170728/",
+   "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=3459"
+  ],
+  "note": "Wikidata gives Palitana as the place of birth; the parliament record gives Hanol, Bhavnagar. X handle from prior knowledge, not verified this session."
+ },
+ "kishan": {
+  "dob": "1964-06-15",
+  "pob": "Thimmapur, Kandukur mandal, Ranga Reddy district, Telangana",
+  "house": "Lok Sabha – Secunderabad, Telangana",
+  "residence": "6, Ashok Road, New Delhi-110001",
+  "email": "kishanreddy.g@sansad.nic.in",
+  "assets": {
+   "total": "Rs 19,22,41,721 (approx 19.2 crore)",
+   "election": "Lok Sabha 2024",
+   "url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=5251"
+  },
+  "social": {
+   "x": "kishanreddybjp"
+  },
+  "sources": [
+   "https://www.coal.nic.in/en/minister/shri-g-kishan-reddy",
+   "https://www.opensanctions.org/entities/Q5512319/",
+   "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=5251"
+  ],
+  "note": "One source gives his date of birth as 1960-06-15. X handle from prior knowledge, not verified this session."
+ },
+ "chirag": {
+  "dob": "1982-10-31",
+  "house": "Lok Sabha – Hajipur (SC), Bihar",
+  "assets": {
+   "total": "Rs 2,68,75,873 (approx 2.7 crore)",
+   "election": "Lok Sabha 2024",
+   "url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=7281"
+  },
+  "social": {
+   "x": "iChiragPaswan"
+  },
+  "sources": [
+   "https://www.opensanctions.org/entities/Q16728004/",
+   "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=7281"
+  ],
+  "note": "Sources conflict on place of birth (Delhi vs Khagaria, Bihar). The only email listed is office.chiragpaswan@gmail.com, which is not official. X handle from prior knowledge, not verified this session."
+ },
+ "patil": {
+  "dob": "1955-03-16",
+  "pob": "Pimpri Akarraut, Edlabad, Jalgaon district, Maharashtra",
+  "house": "Lok Sabha – Navsari, Gujarat",
+  "residence": "501, New M.S. Flats, Dr. Bishambar Das Marg, New Delhi",
+  "email": "cr.patil@sansad.nic.in",
+  "assets": {
+   "total": "Rs 39,49,30,044 (approx 39.5 crore)",
+   "election": "Lok Sabha 2024",
+   "url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=5139"
+  },
+  "social": {
+   "x": "CRPaatil"
+  },
+  "sources": [
+   "https://www.opensanctions.org/entities/Q5071367/",
+   "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=5139"
+  ],
+  "note": "The residence is an MP flat from the parliament record and may be out of date for a cabinet minister. X handle from prior knowledge, not verified this session."
+ },
+ "inderjit": {
+  "dob": "1950-02-11",
+  "pob": "Rewari, Haryana",
+  "house": "Lok Sabha – Gurgaon, Haryana",
+  "residence": "6, Lodhi Estate, Subramaniam Bharti Marg, New Delhi",
+  "email": "rao.inderjit@sansad.nic.in",
+  "assets": {
+   "total": "Rs 1,21,54,22,868 (approx 121.5 crore)",
+   "election": "Lok Sabha 2024",
+   "url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=8448"
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Rao_Inderjit_Singh",
+   "https://www.opensanctions.org/entities/Q7293676/",
+   "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=8448"
+  ],
+  "note": "X handle not verified."
+ },
+ "jitendra": {
+  "dob": "1956-11-06",
+  "pob": "Jammu, Jammu and Kashmir",
+  "house": "Lok Sabha – Udhampur, Jammu and Kashmir",
+  "residence": "4, Kushak Road, New Delhi",
+  "assets": {
+   "total": "Rs 8,59,05,005 (approx 8.6 crore)",
+   "election": "Lok Sabha 2024",
+   "url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=8"
+  },
+  "social": {
+   "x": "DrJitendraSingh"
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Jitendra_Singh_Rana",
+   "https://www.opensanctions.org/entities/Q6203277/",
+   "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=8"
+  ],
+  "note": "The en.wikipedia URL Jitendra_Singh_Rana loads his article, but OpenSanctions lists the title as 'Jitendra Singh'; check which is canonical. The parliament record gives his date of birth as 1956-09-15. The only email listed is drjitendras@gmail.com, which is not official. X handle from prior knowledge, not verified this session."
+ },
+ "meghwal": {
+  "dob": "1953-12-20",
+  "pob": "Kishmidesar, Bikaner district, Rajasthan",
+  "house": "Lok Sabha – Bikaner (SC), Rajasthan",
+  "residence": "5-A, K. Kamaraj Marg, New Delhi",
+  "assets": {
+   "total": "Rs 3,76,54,863 (approx 3.8 crore)",
+   "election": "Lok Sabha 2024",
+   "url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=381"
+  },
+  "social": {
+   "x": "arjunrammeghwal"
+  },
+  "sources": [
+   "https://www.opensanctions.org/entities/Q4791582/",
+   "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=381"
+  ],
+  "note": "dob is from the Lok Sabha record; Wikidata gives 1954-12-07 (dob_alt). The only email listed is arjunrammeghwal@gmail.com, which is not official. X handle from prior knowledge, not verified this session."
+ },
+ "jadhav": {
+  "dob": "1960-11-25",
+  "pob": "Mehkar, Buldhana district, Maharashtra",
+  "house": "Lok Sabha – Buldhana, Maharashtra",
+  "residence": "23, Ashoka Road, New Delhi",
+  "assets": {
+   "total": "Rs 16,42,60,448 (approx 16.4 crore)",
+   "election": "Lok Sabha 2024",
+   "url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=1958"
+  },
+  "sources": [
+   "https://www.mohfw.gov.in/sites/default/files/pratap.pdf",
+   "https://www.opensanctions.org/entities/Q7238626/",
+   "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=1958"
+  ],
+  "note": "The only email listed is jadhavprataprao25@gmail.com, which is not official. X handle not verified."
+ },
+ "jayant": {
+  "dob": "1978-12-27",
+  "pob": "Dallas, Texas, United States",
+  "house": "Rajya Sabha – Uttar Pradesh",
+  "residence": "12, Tughlak Road, New Delhi-110011",
+  "email": "jayant.rld@sansad.nic.in",
+  "assets": {
+   "total": "Rs 52,40,93,536 (approx 52.4 crore)",
+   "election": "Rajya Sabha 2022 (Uttar Pradesh, 2022-2028)",
+   "url": "https://www.myneta.info/rajsab09aff/candidate.php?candidate_id=943"
+  },
+  "social": {
+   "x": "jayantrld"
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Jayant_Chaudhary",
+   "https://www.opensanctions.org/entities/Q6167558/",
+   "https://www.myneta.info/rajsab09aff/candidate.php?candidate_id=943"
+  ],
+  "note": "The parliament records also list 25, Tughlaq Road, so the current residence is uncertain. X handle from prior knowledge, not verified this session."
+ },
+ "anupriya": {
+  "dob": "1981-04-28",
+  "pob": "Kanpur, Uttar Pradesh",
+  "house": "Lok Sabha – Mirzapur, Uttar Pradesh",
+  "residence": "5, Safdarjung Road, New Delhi",
+  "email": "anupriyasingh.patel@sansad.nic.in",
+  "assets": {
+   "total": "Rs 4,22,41,754 (approx 4.2 crore)",
+   "election": "Lok Sabha 2024",
+   "url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=9380"
+  },
+  "social": {
+   "x": "AnupriyaSPatel"
+  },
+  "sources": [
+   "https://www.opensanctions.org/entities/Q4777851/",
+   "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=9380"
+  ],
+  "note": "X handle from prior knowledge, not verified this session."
+ },
+ "sukanta": {
+  "dob": "1979-12-29",
+  "pob": "Balurghat, Dakshin Dinajpur, West Bengal",
+  "house": "Lok Sabha – Balurghat, West Bengal",
+  "residence": "30, Dr. APJ Abdul Kalam Road, New Delhi 110001",
+  "email": "sukanta.majumdar@mpls.sansad.in",
+  "assets": {
+   "total": "Rs 1,24,76,825 (approx 1.2 crore)",
+   "election": "Lok Sabha 2024",
+   "url": "https://myneta.info/LokSabha2024/candidate.php?candidate_id=2211"
+  },
+  "social": {
+   "x": "DrSukantaBJP"
+  },
+  "sources": [
+   "https://www.opensanctions.org/entities/Q64011108",
+   "https://en.wikipedia.org/wiki/Sukanta_Majumdar",
+   "https://www.sarkaritel.com/parliament-of-india-lok-sabha-member-of-parliament-m",
+   "https://myneta.info/LokSabha2024/candidate.php?candidate_id=2211",
+   "https://x.com/DrSukantaBJP"
+  ],
+  "note": "The Wikipedia body text gives 30 Dec 1979. The infobox, Wikidata and the MP directory give 29 Dec."
+ },
+ "jitin": {
+  "dob": "1973-11-29",
+  "pob": "Shahjahanpur, Uttar Pradesh",
+  "house": "Lok Sabha – Pilibhit, UP",
+  "residence": "7, Motilal Nehru Marg, New Delhi 110011",
+  "assets": {
+   "total": "Rs 29,89,25,408 (approx 29.9 crore)",
+   "election": "Lok Sabha 2024",
+   "url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=899"
+  },
+  "social": {
+   "x": "JitinPrasada"
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Jitin_Prasada",
+   "https://www.wikidata.org/wiki/Q290717",
+   "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=899",
+   "https://www.psuconnect.in/profile/shri-jitin-prasada-184",
+   "https://pmindia.gov.in/wp-content/uploads/2024/08/Sh.-Jitin-Prasada.pdf",
+   "https://x.com/JitinPrasada/status/1800858694202327090"
+  ],
+  "note": "Sources disagree on the residence. The residence above is from psuconnect. The PMIndia profile PDF (Aug 2024) gives 'C-237, Ground Floor, Defence Colony, New Delhi 110024'. The sarkaritel 'P' page could not be fetched, so no email was found."
+ },
+ "naik": {
+  "dob": "1952-10-04",
+  "pob": "Adpai, North Goa, Goa",
+  "house": "Lok Sabha – North Goa, Goa",
+  "residence": "1, Lodhi Estate, New Delhi 110003",
+  "email": "shripad.naik@mpls.sansad.in",
+  "assets": {
+   "total": "Rs 10,86,83,533 (approx 10.9 crore)",
+   "election": "Lok Sabha 2024",
+   "url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=3668"
+  },
+  "social": {
+   "x": "shripadynaik"
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Shripad_Naik",
+   "https://www.wikidata.org/wiki/Q7504173",
+   "https://www.sarkaritel.com/parliament-of-india-lok-sabha-member-of-parliament-n",
+   "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=3668",
+   "https://x.com/shripadynaik"
+  ]
+ },
+ "pankaj": {
+  "dob": "1964-11-20",
+  "pob": "Gorakhpur, Uttar Pradesh",
+  "house": "Lok Sabha – Maharajganj, UP",
+  "residence": "Bungalow No. 20, Pt. Ravi Shankar Shukla Lane, Kasturba Gandhi Marg, New Delhi",
+  "email": "pankaj.chowdhary@mpls.sansad.in",
+  "assets": {
+   "total": "Rs 41,90,10,509 (approx 41.9 crore)",
+   "election": "Lok Sabha 2024",
+   "url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=8774"
+  },
+  "social": {
+   "x": "mppchaudhary"
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Pankaj_Chaudhary",
+   "https://www.wikidata.org/wiki/Q7131282",
+   "https://www.sarkaritel.com/parliament-of-india-lok-sabha-member-of-parliament-c",
+   "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=8774",
+   "https://x.com/mppchaudhary"
+  ]
+ },
+ "gurjar": {
+  "dob": "1957-02-04",
+  "pob": "Mewla Maharajpur, Faridabad, Haryana",
+  "house": "Lok Sabha – Faridabad, Haryana",
+  "residence": "8, Tughlak Lane, New Delhi 110011",
+  "email": "krishanpal.mp@mpls.sansad.in",
+  "assets": {
+   "total": "Rs 62,58,15,843 (approx 62.6 crore)",
+   "election": "Lok Sabha 2024",
+   "url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=8425"
+  },
+  "social": {
+   "x": "KPGBJP",
+   "instagram": "kpgbjp",
+   "facebook": "KPGBJP"
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Krishan_Pal_Gurjar",
+   "https://www.wikidata.org/wiki/Q16901147",
+   "https://www.sarkaritel.com/parliament-of-india-lok-sabha-member-of-parliament-g",
+   "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=8425"
+  ]
+ },
+ "mohol": {
+  "dob": "1974-11-09",
+  "pob": "Mulshi taluka, Pune district, Maharashtra",
+  "house": "Lok Sabha – Pune, Maharashtra",
+  "residence": "18, Mother Teresa Crescent, New Delhi 110011",
+  "email": "murlidhar.mohol@mpls.sansad.in",
+  "assets": {
+   "total": "Rs 24,32,44,483 (approx 24.3 crore)",
+   "election": "Lok Sabha 2024",
+   "url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=6044"
+  },
+  "social": {
+   "x": "mohol_murlidhar",
+   "instagram": "murlidharkmohol",
+   "facebook": "MurlidharKMohol"
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Murlidhar_Mohol",
+   "https://www.wikidata.org/wiki/Q76328310",
+   "https://www.sarkaritel.com/parliament-of-india-lok-sabha-member-of-parliament-m",
+   "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=6044"
+  ],
+  "note": "Place of birth comes from the Wikipedia body text. The infobox says 'Hyderabad, Maharashtra', which looks wrong, so treat the place of birth as moderate confidence."
+ },
+ "athawale": {
+  "dob": "1959-12-25",
+  "pob": "Agalgaon, Sangli district, Maharashtra",
+  "house": "Rajya Sabha – Maharashtra",
+  "residence": "11, Safdarjung Road, New Delhi 110011",
+  "assets": {
+   "total": "Rs 6,80,13,776 (approx 6.8 crore)",
+   "election": "Rajya Sabha 2020 (Maharashtra)",
+   "url": "https://www.myneta.info/rajsab09aff/candidate.php?candidate_id=809"
+  },
+  "social": {
+   "x": "RamdasAthawale"
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Ramdas_Athawale",
+   "https://www.wikidata.org/wiki/Q4813289",
+   "https://www.myneta.info/rajsab09aff/candidate.php?candidate_id=809",
+   "https://www.adrindia.org/sites/default/files/Analysis_of_Criminal_Background_Financial_Education_Gender_and_other_details_of_Sitting_Rajya_Sabha_MPs_March2026_Eng_0.pdf",
+   "https://pmindia.gov.in/wp-content/uploads/2020/12/Shri-Ramdas-Athawale_1.pdf",
+   "https://www.freepressjournal.in/amp/mumbai/maharashtra-sharad-pawar-ramdas-athawale-vinod-tawde-among-7-leaders-elected-unopposed-to-rajya-sabha",
+   "https://x.com/RamdasAthawale"
+  ],
+  "note": "He was re-elected unopposed to the Rajya Sabha in March 2026 (term 2026–2032), but no MyNeta page for the 2026 affidavit was found. ADR's March 2026 report on sitting Rajya Sabha MPs lists Rs 9,91,66,882, which may come from the 2026 affidavit. The residence is from a Dec 2020 PMIndia PDF and may be out of date."
+ },
+ "blverma": {
+  "dob": "1961-08-07",
+  "pob": "Ujhani, Badaun district, Uttar Pradesh",
+  "house": "Rajya Sabha – Uttar Pradesh",
+  "residence": "4, Pandit Uma Shankar Dikshit Marg, Chanakyapuri, New Delhi 110011",
+  "assets": {
+   "total": "Rs 2,72,55,192 (approx 2.7 crore)",
+   "election": "Rajya Sabha 2020 (Uttar Pradesh)",
+   "url": "https://www.myneta.info/rajsab09aff/candidate.php?candidate_id=894"
+  },
+  "social": {
+   "x": "blvermaup"
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Banwari_Lal_Verma",
+   "https://www.wikidata.org/wiki/Q104178808",
+   "https://www.myneta.info/rajsab09aff/candidate.php?candidate_id=894",
+   "https://pmindia.gov.in/wp-content/uploads/2024/08/Sh.-B.-L.-Verma-.pdf",
+   "https://x.com/blvermaup"
+  ],
+  "note": "The Wikipedia title 'B. L. Verma' is a different person (an educationist). His current Rajya Sabha term runs from 26 Nov 2020 to 25 Nov 2026."
+ },
+ "rnthakur": {
+  "dob": "1950-03-03",
+  "pob": "Karpoori Gram, Samastipur district, Bihar",
+  "house": "Rajya Sabha – Bihar",
+  "residence": "301, Swarna Jayanti Sadan Deluxe, Dr. B.D. Marg, New Delhi 110001",
+  "assets": {
+   "total": "Rs 3,95,93,754 (approx 3.96 crore)",
+   "election": "Rajya Sabha 2020 (Bihar)",
+   "url": "https://www.myneta.info/rajsab09aff/candidate.php?candidate_id=854"
+  },
+  "social": {
+   "x": "RNK_Thakur"
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Ram_Nath_Thakur",
+   "https://www.opensanctions.org/entities/Q21229980",
+   "https://www.myneta.info/rajsab09aff/candidate.php?candidate_id=854",
+   "https://www.adrindia.org/sites/default/files/Analysis_of_Criminal_Background_Financial_Education_Gender_and_other_details_of_Sitting_Rajya_Sabha_MPs_March2026_Eng_0.pdf",
+   "https://patnapress.com/nda-sweeps-bihar-rajya-sabha-elections-2026/",
+   "https://pmindia.gov.in/wp-content/uploads/2024/08/Sh.-Ramnath-Thakur-.pdf",
+   "https://x.com/RNK_Thakur"
+  ],
+  "note": "He was re-elected to the Rajya Sabha from Bihar in 2026, but no MyNeta page for the 2026 affidavit was found. ADR's March 2026 report lists Rs 3,12,01,663. There is also a separate account, @thakurramnath. @RNK_Thakur was chosen because its posts are ministerial and tag @AgriGoI."
+ },
+ "bhagirath": {
+  "dob": "1954-06-01",
+  "pob": "Manpura, Ajmer district, Rajasthan",
+  "house": "Lok Sabha – Ajmer, Rajasthan",
+  "residence": "28, Tughlaq Crescent, New Delhi 110011",
+  "email": "bhagirath.choudhary@mpls.sansad.in",
+  "assets": {
+   "total": "Rs 13,38,11,555 (approx 13.4 crore)",
+   "election": "Lok Sabha 2024",
+   "url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=2038"
+  },
+  "social": {
+   "x": "mpbhagirathbjp",
+   "facebook": "bhagirathchoudharybjp"
+  },
+  "sources": [
+   "https://sansad.in/api_ls/member/5203",
+   "https://en.wikipedia.org/wiki/Bhagirath_Choudhary",
+   "https://www.wikidata.org/wiki/Q28873568",
+   "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=2038"
+  ],
+  "note": "Sources disagree on the date of birth: sansad.in gives 01-Jun-1954 and Wikipedia gives 16 June 1954. The sarkaritel entry for him mixes in another MP's data (Satpal Brahmachari), so it was not used."
+ },
+ "rai": {
+  "dob": "1966-01-01",
+  "pob": "Hajipur, Vaishali district, Bihar",
+  "house": "Lok Sabha – Ujiarpur, Bihar",
+  "residence": "4, Lodhi Estate, New Delhi",
+  "email": "nityanand.rai@mpls.sansad.in",
+  "assets": {
+   "total": "Rs 17,95,27,017 (approx 18 crore)",
+   "election": "Lok Sabha 2024",
+   "url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=5152"
+  },
+  "social": {
+   "x": "nityanandraibjp"
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Nityanand_Rai",
+   "https://www.wikidata.org/wiki/Q16734872",
+   "https://www.sarkaritel.com/parliament-of-india-lok-sabha-member-of-parliament-r",
+   "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=5152",
+   "https://x.com/nityanandraibjp"
+  ]
+ },
+ "bandi": {
+  "dob": "1971-07-11",
+  "pob": "Karimnagar, Telangana",
+  "house": "Lok Sabha – Karimnagar, Telangana",
+  "residence": "Bungalow No. 1, Jantar Mantar, New Delhi",
+  "email": "sanjay.indian@mpls.sansad.in",
+  "assets": {
+   "total": "Rs 1,12,75,000 (approx 1.1 crore)",
+   "election": "Lok Sabha 2024",
+   "url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=5230"
+  },
+  "social": {
+   "x": "bandisanjay_bjp"
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Bandi_Sanjay_Kumar",
+   "https://www.wikidata.org/wiki/Q64143189",
+   "https://www.sarkaritel.com/parliament-of-india-lok-sabha-member-of-parliament-k",
+   "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=5230",
+   "https://x.com/bandisanjay_bjp"
+  ],
+  "note": "The address is truncated in the source as 'Bungalow No. 1, Jantar Mantar, New Delh'. The road name is not confirmed."
+ },
+ "somanna": {
+  "dob": "1951-07-20",
+  "pob": "Doddamaralavadi, Kanakapura taluk, Ramanagara district, Karnataka",
+  "house": "Lok Sabha – Tumkur, Karnataka",
+  "residence": "7, Safdarjung Road, New Delhi 110011",
+  "assets": {
+   "total": "Rs 60,78,05,215 (approx 60.8 crore)",
+   "election": "Lok Sabha 2024",
+   "url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=1904"
+  },
+  "social": {
+   "x": "VSOMANNA_BJP"
+  },
+  "sources": [
+   "https://sansad.in/api_ls/member/5625",
+   "https://en.wikipedia.org/wiki/V._Somanna",
+   "https://www.wikidata.org/wiki/Q24851577",
+   "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=1904",
+   "https://x.com/VSOMANNA_BJP"
+  ],
+  "note": "Date of birth is from sansad.in. The Wikipedia infobox says 20 July 1950 and its body text says 1951. The only email sansad.in lists is a Gmail address; no mpls.sansad.in address was found."
+ },
+ "rajbhushan": {
+  "dob": "1977-07-04",
+  "pob": "Begusarai, Bihar",
+  "house": "Lok Sabha – Muzaffarpur, Bihar",
+  "residence": "68, Lodhi Estate, New Delhi 110003",
+  "email": "drrajbhushan.mp@mpls.sansad.in",
+  "assets": {
+   "total": "Rs 20,52,95,066 (approx 20.5 crore)",
+   "election": "Lok Sabha 2024",
+   "url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=7133"
+  },
+  "social": {
+   "x": "dr_rajbhushan",
+   "instagram": "drrajbhushan",
+   "facebook": "RajBhushanNishad"
+  },
+  "sources": [
+   "https://www.opensanctions.org/entities/Q126365290/",
+   "https://en.wikipedia.org/wiki/Raj_Bhushan_Choudhary",
+   "https://www.sarkaritel.com/parliament-of-india-lok-sabha-member-of-parliament-c",
+   "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=7133"
+  ],
+  "note": "The place of birth comes only from Wikidata, via OpenSanctions. Moderate confidence."
+ },
+ "pemmasani": {
+  "dob": "1976-03-07",
+  "pob": "Narasaraopet, Andhra Pradesh",
+  "house": "Lok Sabha – Guntur, Andhra Pradesh",
+  "residence": "10, Teen Murti Lane, New Delhi",
+  "email": "dr.pemmasani@mpls.sansad.in",
+  "assets": {
+   "total": "Rs 57,05,47,27,538 (approx 5,705 crore)",
+   "election": "Lok Sabha 2024",
+   "url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=5106"
+  },
+  "social": {
+   "x": "PemmasaniOnX"
+  },
+  "sources": [
+   "https://sansad.in/api_ls/member/5636",
+   "https://en.wikipedia.org/wiki/Chandra_Sekhar_Pemmasani",
+   "https://www.wikidata.org/wiki/Q126111137",
+   "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=5106",
+   "https://x.com/PemmasaniOnX"
+  ],
+  "note": "Place of birth is from sansad.in. Wikipedia gives Burripalem, Guntur district."
+ },
+ "kamlesh": {
+  "dob": "1976-08-06",
+  "pob": "Gorakhpur, Uttar Pradesh",
+  "house": "Lok Sabha – Bansgaon (SC), UP",
+  "residence": "Bungalow No. 20, Mother Teresa Crescent, New Delhi",
+  "assets": {
+   "total": "Rs 36,18,30,259 (approx 36.2 crore)",
+   "election": "Lok Sabha 2024",
+   "url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=8799"
+  },
+  "social": {
+   "x": "kamleshpassi67"
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Kamlesh_Paswan",
+   "https://www.wikidata.org/wiki/Q16215999",
+   "https://pmindia.gov.in/wp-content/uploads/2024/09/Shri-Kamlesh-Paswan.pdf",
+   "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=8799",
+   "https://x.com/kamleshpassi67"
+  ]
+ },
+ "baghel": {
+  "dob": "1960-06-21",
+  "pob": "Bhatpura, Etawah district, Uttar Pradesh",
+  "house": "Lok Sabha – Agra (SC), UP",
+  "residence": "7, K. Kamraj Lane, New Delhi 110011",
+  "email": "spsingh.baghel@mpls.sansad.in",
+  "assets": {
+   "total": "Rs 10,43,58,691 (approx 10.4 crore)",
+   "election": "Lok Sabha 2024",
+   "url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=3493"
+  },
+  "social": {
+   "x": "ProBaghel"
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/S._P._Singh_Baghel",
+   "https://www.wikidata.org/wiki/Q7387753",
+   "https://www.sarkaritel.com/parliament-of-india-lok-sabha-member-of-parliament-b",
+   "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=3493",
+   "https://x.com/ProBaghel"
+  ],
+  "note": "There are several Baghel X accounts (@ProBaghel, @spsinghbaghelpr, @pfspsinghbaghel). @ProBaghel looks like the main personal one. Moderate confidence."
+ },
+ "shobha": {
+  "dob": "1966-10-23",
+  "pob": "Puttur, Dakshina Kannada, Karnataka",
+  "house": "Lok Sabha – Bangalore North, Karnataka",
+  "residence": "101, Narmada Apartment, M.S. Flats, Dr. B.D. Marg, New Delhi 110001",
+  "email": "shobhakarandlaje@mpls.sansad.in",
+  "assets": {
+   "total": "Rs 13,88,66,909 (approx 13.9 crore)",
+   "election": "Lok Sabha 2024",
+   "url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=2178"
+  },
+  "social": {
+   "x": "ShobhaBJP"
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Shobha_Karandlaje",
+   "https://www.wikidata.org/wiki/Q7499789",
+   "https://www.sarkaritel.com/parliament-of-india-lok-sabha-member-of-parliament-k",
+   "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=2178",
+   "https://x.com/ShobhaBJP"
+  ]
+ },
+ "kirti": {
+  "dob": "1966-03-01",
+  "pob": "Lucknow, Uttar Pradesh",
+  "house": "Lok Sabha – Gonda, UP",
+  "residence": "23, Balwant Rai Mehta Lane, New Delhi 110001",
+  "email": "kirtivardhan.singh@mpls.sansad.in",
+  "assets": {
+   "total": "Rs 37,07,96,430 (approx 37 crore)",
+   "election": "Lok Sabha 2024",
+   "url": "https://myneta.info/LokSabha2024/candidate.php?candidate_id=7194"
+  },
+  "social": {
+   "x": "KVSinghMPGonda"
+  },
+  "sources": [
+   "https://sansad.in/api_ls/member/3926",
+   "https://en.wikipedia.org/wiki/Kirti_Vardhan_Singh",
+   "https://www.opensanctions.org/entities/Q6416217/",
+   "https://x.com/KVSinghMPGonda",
+   "https://myneta.info/LokSabha2024/index.php?action=show_winners&sort=default"
+  ],
+  "note": "sansad.in profile also lists kvsng66@gmail.com; OpenSanctions lists kirtivardhan.singh@sansad.nic.in. Office account: KVSinghOffice."
+ },
+ "pabitra": {
+  "dob": "1974-10-13",
+  "pob": "Margherita, Assam",
+  "house": "Rajya Sabha – Assam",
+  "residence": "Bungalow No. 9, Teen Murti Marg, New Delhi 110011",
+  "email": "pabitra.mprs@sansad.nic.in",
+  "assets": {
+   "total": "Rs 1,30,08,631 (approx 1.3 crore)",
+   "election": "Rajya Sabha 2022 (Assam)",
+   "url": "https://myneta.info/rajsab09aff/candidate.php?candidate_id=937"
+  },
+  "social": {
+   "x": "PmargheritaBJP"
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Pabitra_Margherita",
+   "https://www.opensanctions.org/entities/Q111352685/",
+   "https://myneta.info/rajsab09aff/candidate.php?candidate_id=937",
+   "https://x.com/PmargheritaBJP"
+  ],
+  "note": "MyNeta spells the name 'Pabitra Mergherit'."
+ },
+ "nimuben": {
+  "dob": "1966-09-08",
+  "pob": "Bhavnagar, Gujarat",
+  "house": "Lok Sabha – Bhavnagar, Gujarat",
+  "residence": "2, Lodhi Estate, New Delhi",
+  "email": "nimuben.bambhania@sansad.nic.in",
+  "assets": {
+   "total": "Rs 2,61,15,193 (approx 2.6 crore)",
+   "election": "Lok Sabha 2024",
+   "url": "https://myneta.info/LokSabha2024/candidate.php?candidate_id=3743"
+  },
+  "social": {
+   "x": "Nimu_Bambhaniya"
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Nimuben_Bambhaniya",
+   "https://www.opensanctions.org/entities/Q126364657/",
+   "https://consumeraffairs.nic.in/sites/default/files/MoS_Profile.pdf",
+   "https://x.com/Nimu_Bambhaniya",
+   "https://myneta.info/LokSabha2024/index.php?action=show_winners&sort=default"
+  ],
+  "note": "Ministry email: mos.cafpd@nic.in."
+ },
+ "shantanu": {
+  "dob": "1982-08-03",
+  "pob": "Thakurnagar, North 24 Parganas, West Bengal",
+  "house": "Lok Sabha – Bangaon, West Bengal",
+  "residence": "187, South Avenue, New Delhi",
+  "assets": {
+   "total": "Rs 3,34,11,607 (approx 3.3 crore)",
+   "election": "Lok Sabha 2024",
+   "url": "https://myneta.info/LokSabha2024/candidate.php?candidate_id=7112"
+  },
+  "social": {
+   "x": "Shantanu_bjp"
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Shantanu_Thakur",
+   "https://www.opensanctions.org/entities/Q63992931/",
+   "https://x.com/Shantanu_bjp",
+   "https://myneta.info/LokSabha2024/index.php?action=show_winners&sort=default"
+  ],
+  "note": "The residence comes from the sansad.in record via OpenSanctions and may be from the 17th Lok Sabha."
+ },
+ "gopi": {
+  "dob": "1958-06-26",
+  "pob": "Alappuzha, Kerala",
+  "house": "Lok Sabha – Thrissur, Kerala",
+  "residence": "1B, Maulana Azad Road, New Delhi",
+  "email": "sureshgopi.mp@sansad.nic.in",
+  "assets": {
+   "total": "Rs 18,58,15,323 (approx 18.6 crore)",
+   "election": "Lok Sabha 2024",
+   "url": "https://myneta.info/LokSabha2024/candidate.php?candidate_id=2125"
+  },
+  "social": {
+   "x": "TheSureshGopi"
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Suresh_Gopi",
+   "https://www.opensanctions.org/entities/Q3530125/",
+   "https://myneta.info/LokSabha2024/candidate.php?candidate_id=2125",
+   "https://x.com/TheSureshGopi"
+  ],
+  "note": "The DOB is from Wikipedia; OpenSanctions also gives 1958-06-25 and lists Kollam as an alternative birthplace. OpenSanctions also lists '501, Swarna Jayanti Sadan, Dr. B.D. Marg', which is probably from his Rajya Sabha term, so I can't confirm the residence is current."
+ },
+ "tamta": {
+  "dob": "1972-07-16",
+  "pob": "Almora, Uttarakhand",
+  "house": "Lok Sabha – Almora, Uttarakhand",
+  "email": "ajay.tamta@sansad.nic.in",
+  "assets": {
+   "total": "Rs 1,23,81,663 (approx 1.2 crore)",
+   "election": "Lok Sabha 2024",
+   "url": "https://myneta.info/LokSabha2024/candidate.php?candidate_id=20"
+  },
+  "social": {
+   "x": "AjayTamtaBJP"
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Ajay_Tamta",
+   "https://www.opensanctions.org/entities/Q16736901",
+   "https://x.com/AjayTamtaBJP",
+   "https://myneta.info/LokSabha2024/index.php?action=show_winners&sort=default"
+  ]
+ },
+ "malhotra": {
+  "dob": "1964-04-24",
+  "pob": "Delhi",
+  "house": "Lok Sabha – East Delhi, Delhi",
+  "assets": {
+   "total": "Rs 4,08,24,015 (approx 4.1 crore)",
+   "election": "Lok Sabha 2024",
+   "url": "https://myneta.info/LokSabha2024/candidate.php?candidate_id=7899"
+  },
+  "social": {
+   "x": "hdmalhotra"
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Harsh_Malhotra",
+   "https://www.opensanctions.org/entities/Q126367708/",
+   "https://x.com/hdmalhotra",
+   "https://myneta.info/LokSabha2024/index.php?action=show_winners&sort=default"
+  ],
+  "note": "The DOB and birthplace come only from the sansad.in record via OpenSanctions; Wikipedia gives neither. The only address on record is in Delhi (H-31 Naveen Shahdara), not an official residence."
+ },
+ "dubey": {
+  "dob": "1975-05-02",
+  "pob": "Bettiah, West Champaran, Bihar",
+  "house": "Rajya Sabha – Bihar",
+  "residence": "15, Teen Murti Lane, New Delhi 110001",
+  "email": "satishchandra.dubey@sansad.nic.in",
+  "assets": {
+   "total": "Rs 2,95,85,088 (approx 3 crore)",
+   "election": "Rajya Sabha 2022 (Bihar)",
+   "url": "https://myneta.info/rajsab09aff/candidate.php?candidate_id=999"
+  },
+  "social": {
+   "x": "satishdubeyy"
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Satish_Chandra_Dubey",
+   "https://www.opensanctions.org/entities/Q16728677/",
+   "https://myneta.info/rajsab09aff/candidate.php?candidate_id=999",
+   "https://x.com/satishdubeyy"
+  ],
+  "note": "OpenSanctions also lists '15-17, South Avenue', which is probably from his earlier Lok Sabha term."
+ },
+ "seth": {
+  "dob": "1959-08-25",
+  "pob": "Ranchi, Jharkhand",
+  "house": "Lok Sabha – Ranchi, Jharkhand",
+  "residence": "2, Jantar Mantar Road, New Delhi",
+  "assets": {
+   "total": "Rs 2,41,52,085 (approx 2.4 crore)",
+   "election": "Lok Sabha 2024",
+   "url": "https://myneta.info/LokSabha2024/candidate.php?candidate_id=8561"
+  },
+  "social": {
+   "x": "SethSanjayMP"
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Sanjay_Seth_(Jharkhand_politician)",
+   "https://www.opensanctions.org/entities/Q96404945/",
+   "https://myneta.info/LokSabha2024/candidate.php?candidate_id=8561",
+   "https://x.com/sethsanjaymp"
+  ],
+  "note": "Not to be confused with Sanjay Seth (UP, Rajya Sabha, Q24572763, sanjay.seth@sansad.nic.in). A second account, MpSanjayseth, is also active, so I'm not certain which X handle is the main one."
+ },
+ "uikey": {
+  "dob": "1963-10-29",
+  "pob": "Mirapur, Betul, Madhya Pradesh",
+  "house": "Lok Sabha – Betul, Madhya Pradesh",
+  "residence": "219, North Avenue, New Delhi",
+  "assets": {
+   "total": "Rs 1,84,87,232 (approx 1.8 crore)",
+   "election": "Lok Sabha 2024",
+   "url": "https://myneta.info/LokSabha2024/candidate.php?candidate_id=1830"
+  },
+  "social": {
+   "x": "DdUikey"
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Durga_Das_Uikey",
+   "https://www.opensanctions.org/entities/Q64006793/",
+   "https://x.com/dduikey",
+   "https://myneta.info/LokSabha2024/index.php?action=show_winners&sort=default"
+  ],
+  "note": "The residence may be from before he became a minister."
+ },
+ "khadse": {
+  "dob": "1987-05-13",
+  "pob": "Khetia, Madhya Pradesh",
+  "house": "Lok Sabha – Raver, Maharashtra",
+  "residence": "16, Talkatora Road, New Delhi",
+  "email": "nr.khadase@sansad.nic.in",
+  "assets": {
+   "total": "Rs 18,21,17,790 (approx 18.2 crore)",
+   "election": "Lok Sabha 2024",
+   "url": "https://myneta.info/LokSabha2024/candidate.php?candidate_id=6921"
+  },
+  "social": {
+   "x": "khadseraksha"
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Raksha_Khadse",
+   "https://www.opensanctions.org/entities/Q16908900/",
+   "https://myneta.info/LokSabha2024/candidate.php?candidate_id=6921",
+   "https://x.com/khadseraksha"
+  ],
+  "note": "MyNeta's 'Totals Calculated' section shows Rs 17,00,35,250. Her office account is OfficeOfRKhadse and her website is rakshataikhadse.in."
+ },
+ "savitri": {
+  "dob": "1978-06-01",
+  "pob": "Kalikiray, Dhar, Madhya Pradesh",
+  "house": "Lok Sabha – Dhar, Madhya Pradesh",
+  "residence": "2A, South Avenue Lane, New Delhi",
+  "email": "savitri.thakur@sansad.nic.in",
+  "assets": {
+   "total": "Rs 5,31,07,546 (approx 5.3 crore)",
+   "election": "Lok Sabha 2024",
+   "url": "https://myneta.info/LokSabha2024/candidate.php?candidate_id=5162"
+  },
+  "social": {
+   "x": "savitrii4bjp"
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Savitri_Thakur",
+   "https://www.opensanctions.org/entities/Q16736902/",
+   "https://x.com/savitrii4bjp",
+   "https://myneta.info/LokSabha2024/index.php?action=show_winners&sort=default"
+  ],
+  "note": "Her office account is SThakuroffice."
+ },
+ "tokhan": {
+  "dob": "1969-10-15",
+  "pob": "Dindori, Lalpur tehsil, Mungeli, Chhattisgarh",
+  "house": "Lok Sabha – Bilaspur, Chhattisgarh",
+  "residence": "8, Pandit Pant Marg, New Delhi",
+  "assets": {
+   "total": "Rs 1,31,90,513 (approx 1.3 crore)",
+   "election": "Lok Sabha 2024",
+   "url": "https://myneta.info/LokSabha2024/candidate.php?candidate_id=3590"
+  },
+  "social": {
+   "x": "tokhansahu_bjp"
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Tokhan_Sahu",
+   "https://www.opensanctions.org/entities/Q58290680/",
+   "https://x.com/tokhansahu_bjp/",
+   "https://myneta.info/LokSabha2024/index.php?action=show_winners&sort=default"
+  ]
+ },
+ "varma": {
+  "dob": "1967-08-04",
+  "pob": "Bhimavaram, West Godavari, Andhra Pradesh",
+  "house": "Lok Sabha – Narsapuram, Andhra Pradesh",
+  "residence": "15, Ashoka Road, New Delhi",
+  "assets": {
+   "total": "Rs 7,16,64,809 (approx 7.2 crore)",
+   "election": "Lok Sabha 2024",
+   "url": "https://myneta.info/LokSabha2024/candidate.php?candidate_id=5273"
+  },
+  "social": {
+   "x": "BjpVarma"
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Bhupathi_Raju_Srinivasa_Varma",
+   "https://www.opensanctions.org/entities/Q126364180/",
+   "https://myneta.info/LokSabha2024/candidate.php?candidate_id=5273",
+   "https://x.com/BjpVarma"
+  ],
+  "note": "The DOB and birthplace come from the sansad.in record via OpenSanctions; Wikipedia gives neither. A birthday post on his X account on 4 Aug 2025 matches the date. The Wikipedia title is my best inference; the page did load at that title."
+ }
+}
