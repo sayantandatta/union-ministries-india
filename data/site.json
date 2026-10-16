@@ -1,14 +1,12 @@
 {
  "schema": 1,
- "generated": "2026-10-16T13:45:11+00:00",
+ "generated": "2026-10-16T13:46:24+00:00",
  "asOf": "2026-10-16",
  "source": "https://en.wikipedia.org/wiki/Third_Modi_ministry",
  "status": {
   "ok": true,
   "messages": [],
-  "review": [
-   "\"And\" (held by Narendra Modi) looks like a new ministry. It will be added if it's still there on the next run."
-  ],
+  "review": [],
   "wikipediaRevision": 1380051637
  },
  "changes": [
