@@ -25,7 +25,16 @@ Every day at 02:45 India time (and whenever you upload a change or press **Run w
 2. Refreshes each minister's date and place of birth, social accounts and photo from Wikidata and Wikimedia Commons, downloading only photos that have changed.
 3. Rebuilds `data/site.json` and the built-in copy inside `index.html`, saves them to the repository and republishes the site.
 
-**Safety checks.** If Wikipedia's tables can't be read cleanly (for example the article is restructured), or more than 40 changes appear at once, nothing is changed: the site keeps its last good data and an issue titled "Ministers update needs a look" is opened in the repository. After a big reshuffle you've checked, open **Actions → Sync ministers and publish → Run workflow**, tick **force**, and run it.
+**Safety checks.** If Wikipedia's tables can't be read cleanly (for example the article is restructured), or more than 40 changes appear at once, nothing is changed: the site keeps its last good data and an issue titled "Ministers update needs a look" is opened in the repository. The same issue is used for anything that's been applied but deserves a look, such as a newly added ministry; later notes are added to it as comments. After a big reshuffle you've checked, open **Actions → Sync ministers and publish → Run workflow**, tick **force**, and run it.
+
+**New, renamed and removed ministries.** The list of ministries isn't fixed: every run compares Wikipedia's portfolio column with `data/ministries-meta.json`.
+
+- *New ministry.* A portfolio held by a Cabinet minister or a Minister of State (Independent Charge) that matches no known ministry is noted on the first run and added on the next run, at least 3 hours later (so a passing edit on Wikipedia doesn't reach the site). Its description, website and X account are taken from its Wikipedia article and Wikidata where they exist; its sector shows as "Other" until you set one. It appears in Recent changes, and the review issue asks you to check it and then delete `"auto": true`.
+- *Renamed ministry.* If a ministry disappears and a new name appears the same day, held by the same minister, it's treated as a rename: the page, links and history carry over under the new name, and the old name is kept in `formerNames`.
+- *Merged or wound-up ministry.* A ministry missing from the tables stays on the site with its last known ministers for a day. If it's still missing on the next day's run, it's marked `"retired"` and taken off the site. Delete that line to bring it back.
+- *Big restructures.* If more than 6 ministries look new or gone at once, nothing is changed until you run the workflow with **force** ticked.
+
+Every run also saves `data/wikipedia-portfolios.json`, listing each portfolio name read from Wikipedia and the ministry it was matched to, so you can see exactly what the check saw.
 
 **Correcting something by hand.** Edit `data/council.json` and set `"lock": true` near the top so the daily check doesn't overwrite your edit. Set it back to `false` once Wikipedia is right. To fix a calling-card detail, edit that minister's entry in `data/profiles.json`; to let Wikidata supply a field instead, delete it there.
 

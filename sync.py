@@ -317,20 +317,53 @@ def norm(s):
     return re.sub(r"\s+", " ", s).strip()
 
 
-def match_ministries(text, meta):
-    t = norm(text)
+NOT_A_MINISTRY = r"(?i)prime minister|policy issues|not allocated|all other portfolios|^office\b|^$"
+
+
+def split_parts(text):
+    """Pieces of a portfolio cell, as (normalised, original) pairs."""
+    raw = [clean(p).strip(" .,") for p in re.split(r";|\n", text or "")]
+    return [(norm(p), p) for p in raw if p]
+
+
+GENERIC_WORDS = {"and", "of", "the", "department", "ministry", "minister", "ministers", "affairs", "india", "indian", "in", "for",
+                 "state", "charge", "additional", "independent", "union", "government", "with", "also"}
+
+
+def name_words(s):
+    return {w for w in re.findall(r"[a-z]+", norm(s)) if len(w) > 2 and w not in GENERIC_WORDS}
+
+
+def match_ministries(text, meta, unknown=None):
+    """Ministry ids named in a portfolio cell. Pieces that match no ministry go into `unknown`.
+
+    A piece matches when it is a ministry's name, or when its patterns match and the piece has no
+    other significant words (so "Space Economy" is not mistaken for the Department of Space)."""
     hits = []
-    for parts in re.split(r";|\n", t):
-        part = parts.strip()
-        if not part:
-            continue
-        for m in meta:
-            if m["id"] in hits:
-                continue
-            if any(re.search(p, part) for p in m.get("match", [])):
+    for part, original in split_parts(text):
+        pw = name_words(ministry_name(part)[0])
+        found = [m for m in meta if not m.get("retired") and pw and any(pw == name_words(n) for n in [m["n"]] + list(m.get("formerNames") or []))]
+        if not found:
+            found = [m for m in meta if not m.get("retired") and any(re.search(p, part) for p in m.get("match", []))]
+            known = set().union(*[name_words(n) for m in found for n in [m["n"]] + list(m.get("formerNames") or [])]) if found else set()
+            if found and pw - known:
+                found = []
+        for m in found:
+            if m["id"] not in hits:
                 hits.append(m["id"])
-    # "Information and Broadcasting" and "Electronics and Information Technology" both contain words of the other
+        if not found and unknown is not None and not re.search(NOT_A_MINISTRY, part):
+            unknown.append(original)
     return hits
+
+
+def ministry_name(part):
+    """'Minister of State in the Ministry of Space Economy (additional charge)' -> ('Space Economy', False)"""
+    s = re.sub(r"\(.*?\)", "", clean(part)).strip(" .,")
+    s = re.sub(r"^(minister of state|union minister|minister|ministry)\s+(in the ministry of|in the|of|for)\s+", "", s, flags=re.I)
+    s = re.sub(r"^(the\s+)?ministry of\s+", "", s, flags=re.I).strip(" .,")
+    dept = bool(re.match(r"department of\s", s, re.I))
+    s = s[0].upper() + s[1:] if s else s
+    return s, dept
 
 
 # ---------------------------------------------------------------- council from Wikipedia
@@ -359,7 +392,7 @@ def resolve_titles(titles):
 
 
 def build_council_from_rows(rows, meta, council, resolved):
-    """Turn table rows into a new council. Returns (new_council, problems)."""
+    """Turn table rows into a new council. Returns (new_council, problems, unknown_pieces)."""
     problems = []
     people_old = council["people"]
     by_canon = {}
@@ -396,7 +429,8 @@ def build_council_from_rows(rows, meta, council, resolved):
     canon_of = lambda r: resolved.get(r["title"], (r["title"], None, True))[0]
     pm_canon = next((canon_of(r) for r in rows if r["kind"] == "cabinet" and norm(r["portfolio"]).startswith("prime minister")), None)
     for r in rows:
-        ids = match_ministries(r["portfolio"], meta)
+        pieces = []
+        ids = match_ministries(r["portfolio"], meta, pieces)
         addl = "additional charge" in norm(r["portfolio"] + " " + r["remarks"])
         if r["kind"] == "cabinet":
             is_pm = pm_canon is not None and canon_of(r) == pm_canon
@@ -406,10 +440,8 @@ def build_council_from_rows(rows, meta, council, resolved):
             pid, charge = person_for(r, "IC"), "IC"
         else:
             pid, charge = person_for(r, "MoS"), None
-        if not ids:
-            if not re.search(r"prime minister|policy|not allocated|office", norm(r["portfolio"])):
-                unmatched.append(r["portfolio"])
-            continue
+        for piece in pieces:
+            unmatched.append({"text": piece, "kind": r["kind"], "pid": pid, "title": canon_of(r)})
         for mid in ids:
             m = mins[mid]
             if charge is None:
@@ -432,15 +464,14 @@ def build_council_from_rows(rows, meta, council, resolved):
             pid = by_canon.get(resolved.get(r["title"], (r["title"],))[0].lower())
             if pid in people:
                 people[pid]["extra"] = "Also Minister of State in the Prime Minister's Office."
-    if unmatched:
-        problems.append("Portfolios not recognised (add a pattern in ministries-meta.json): " + "; ".join(sorted(set(unmatched))[:12]))
-    return {"people": people, "ministries": mins}, problems
+    return {"people": people, "ministries": mins}, problems, unmatched
 
 
 def validate(new, meta):
     cab = [p for p in new["people"].values() if p["r"] in ("C", "PM")]
     mos = [p for p in new["people"].values() if p["r"] == "MoS"]
-    led = [mid for mid, m in new["ministries"].items() if m["lead"]]
+    meta = [m for m in meta if not m.get("retired")]
+    led = [m["id"] for m in meta if (new["ministries"].get(m["id"]) or {}).get("lead")]
     errs = []
     if not any(p["r"] == "PM" for p in new["people"].values()):
         errs.append("no Prime Minister found")
@@ -454,7 +485,7 @@ def validate(new, meta):
     return errs
 
 
-def describe_changes(old, new, meta):
+def describe_changes(old, new, meta, skip=()):
     names = {m["id"]: m["n"] for m in meta}
     nm = lambda pid, src: (src["people"].get(pid) or {}).get("n", pid)
     out = []
@@ -467,6 +498,8 @@ def describe_changes(old, new, meta):
         if pid not in new["people"]:
             out.append("%s left the Council of Ministers." % nm(pid, old))
     for mid, m in new["ministries"].items():
+        if mid in skip:
+            continue
         o = old["ministries"].get(mid, {})
         if m["lead"] != o.get("lead"):
             if o.get("lead"):
@@ -484,7 +517,139 @@ def describe_changes(old, new, meta):
     return out
 
 
-def refresh_council(council, meta, force):
+def describe_new_ministry(name, dept):
+    """Description, website and X account for a ministry, from Wikipedia and Wikidata. Best effort."""
+    full = name if dept else "Ministry of " + name
+    out = {"d": None, "web": None, "x": None, "wiki": None}
+    try:
+        res = resolve_titles([full + " (India)", full])
+        for t in (full + " (India)", full):
+            canon, qid, exists = res.get(t, (t, None, False))
+            if not exists:
+                continue
+            j = api(WP_API, action="query", prop="extracts", exintro=1, explaintext=1, exsentences=3, titles=canon, redirects=1)
+            pages = j.get("query", {}).get("pages", [])
+            text = clean((pages[0] if pages else {}).get("extract", ""))
+            if "india" not in text.lower():
+                continue
+            out["d"], out["wiki"] = text[:600], canon
+            if qid:
+                e = wd_entities([qid]).get(qid, {})
+                c = e.get("claims", {})
+                out["web"] = (claim_values(c, "P856") or [None])[0]
+                out["x"] = (claim_values(c, "P2002") or [None])[0]
+            break
+    except Exception as ex:
+        log("  couldn't describe %s: %s" % (full, ex))
+    return out
+
+
+def evolve_ministries(rows, meta, council, resolved, today, force, pending=None):
+    """Notice ministries that are new, renamed or no longer in the tables, and update the list of ministries.
+
+    Returns (meta, created_ids, change_lines, review_notes, abort_message)."""
+    meta = [dict(m) for m in meta]
+    _, _, unknown = build_council_from_rows(rows, meta, council, resolved)
+    present = set()
+    for r in rows:
+        present.update(match_ministries(r["portfolio"], meta))
+    active = [m for m in meta if not m.get("retired")]
+    gone = [m for m in active if m["id"] not in present]
+    lines, review, created = [], [], []
+
+    # Pieces held by a Cabinet minister or a Minister of State (Independent Charge) are candidate ministries.
+    cands = {}
+    for u in unknown:
+        name, dept = ministry_name(u["text"])
+        if name and len(name) >= 3 and u["kind"] in ("cabinet", "ic"):
+            cands.setdefault(name, dict(u, dept=dept))
+
+    if len(cands) + len(gone) > 6 and not force:
+        return meta, [], [], [], "%d ministries look new and %d look wound up. Nothing was changed; check Wikipedia, then run the workflow with force." % (
+            len(cands), len(gone)), [], pending
+
+    lead_title = lambda mid: (council["people"].get((council["ministries"].get(mid) or {}).get("lead") or "") or {}).get("wikiResolved")
+    # Renamed: a ministry vanished and an unknown one appeared, headed by the same minister
+    for m in list(gone):
+        for name, u in list(cands.items()):
+            if lead_title(m["id"]) and lead_title(m["id"]) == u["title"]:
+                old_name = m["n"]
+                m.setdefault("formerNames", []).append(old_name)
+                m["n"] = name
+                m["match"] = list(m.get("match", [])) + [re.escape(norm(name))]
+                m.pop("missingSince", None)
+                lines.append("Ministry of %s renamed Ministry of %s." % (old_name, name) if not m.get("dept") else "%s renamed %s." % (old_name, name))
+                review.append("Treated \"%s\" as the new name of \"%s\" because the same minister holds it. Check the description in data/ministries-meta.json." % (name, old_name))
+                gone.remove(m)
+                del cands[name]
+                break
+
+    # New ministries: added when they are still there on a run at least 3 hours after first being seen
+    pending = dict(pending or {})
+    now = datetime.now(timezone.utc)
+    for name in list(pending):
+        if name not in cands:
+            del pending[name]                       # gone again before it was confirmed
+    for name, u in cands.items():
+        first = pending.get(name)
+        if not first:
+            pending[name] = now.replace(microsecond=0).isoformat()
+            review.append("\"%s\" (held by %s) looks like a new ministry. It will be added if it's still there on the next run." % (name, u["title"]))
+            continue
+        if now - datetime.fromisoformat(first) < timedelta(hours=3):
+            continue
+        del pending[name]
+        mid = slug(name)
+        while any(x["id"] == mid for x in meta):
+            mid += "-new"
+        info = describe_new_ministry(name, u["dept"])
+        links = {}
+        if info["web"]:
+            links["web"] = info["web"]
+        if info["x"]:
+            links["x"] = info["x"]
+        else:
+            links["xs"] = (name if u["dept"] else "Ministry of " + name) + " India"
+        meta.append({
+            "id": mid, "n": name, "s": "Other", "dept": u["dept"],
+            "d": info["d"] or "A newly created %s of the Government of India. A description will be added after review." % ("department" if u["dept"] else "ministry"),
+            "links": links, "match": [re.escape(norm(name))], "auto": True, "added": today,
+        })
+        created.append(mid)
+        who = (council["people"].get(u["pid"]) or {}).get("n") or u["title"]
+        lines.append("New %s: %s%s, headed by %s." % ("department" if u["dept"] else "ministry", "" if u["dept"] else "Ministry of ", name, who))
+        review.append("Added \"%s\" automatically%s. Check its description, sector, website and X account in data/ministries-meta.json, then delete \"auto\": true." % (
+            name, " using Wikipedia's article on it" if info["d"] else " (no Wikipedia article found yet)"))
+
+    # Ministries no longer in the tables: wait one day before removing, in case it's a passing edit
+    keep = []
+    for m in gone:
+        if not m.get("missingSince"):
+            m["missingSince"] = today
+            keep.append(m["id"])
+            review.append("\"%s\" isn't in Wikipedia's tables today. It stays on the site for now and will be removed if it's still missing on the next run." % m["n"])
+        elif m["missingSince"] < today:
+            m["retired"] = today
+            m.pop("missingSince", None)
+            lines.append("%s no longer appears in the Council of Ministers (merged or wound up)." % (m["n"] if m.get("dept") else "Ministry of " + m["n"]))
+            review.append("Removed \"%s\" from the site because it has been missing from Wikipedia's tables for more than a day. To bring it back, delete its \"retired\" line in data/ministries-meta.json." % m["n"])
+        else:
+            keep.append(m["id"])
+    for m in meta:
+        if m["id"] in present:
+            m.pop("missingSince", None)
+            if m.get("retired"):
+                m.pop("retired")
+                lines.append("%s is listed again." % (m["n"] if m.get("dept") else "Ministry of " + m["n"]))
+    _, _, still = build_council_from_rows(rows, meta, council, resolved)
+    for u in still:
+        if u["kind"] == "mos":
+            review.append("A Minister of State portfolio wasn't recognised: \"%s\" (%s)." % (u["text"], u["title"]))
+    return meta, created, lines, review, None, keep, pending
+
+
+def refresh_council(council, meta, force, today):
+    """Returns (new_council, new_meta, change_lines, problems, review_notes, revid). new_council is None if nothing should change."""
     log("Reading %s from Wikipedia…" % MINISTRY_PAGE)
     j = api(WP_API, action="parse", page=MINISTRY_PAGE, prop="text|revid", redirects=1)
     html = j["parse"]["text"]
@@ -492,19 +657,51 @@ def refresh_council(council, meta, force):
     rows = parse_council_html(html)
     log("  %d current rows found in the ministers' tables" % len(rows))
     resolved = resolve_titles([r["title"] for r in rows])
-    new, problems = build_council_from_rows(rows, meta, council, resolved)
-    errs = validate(new, meta)
+
+    # A first read must look like a real council before ministries are added or removed on its strength
+    first, _, _ = build_council_from_rows(rows, meta, council, resolved)
+    errs = [e for e in validate(first, meta) if "no minister in charge" not in e]
     if errs:
-        return None, [], ["Portfolio check skipped, Wikipedia's tables didn't read cleanly: " + "; ".join(errs)] + problems, revid
-    changes = describe_changes(council, new, meta)
+        return None, meta, [], ["Portfolio check skipped, Wikipedia's tables didn't read cleanly: " + "; ".join(errs)], [], revid
+
+    new_meta, created, ministry_lines, review, abort, keep, pending = evolve_ministries(
+        rows, meta, council, resolved, today, force, council.get("pendingMinistries"))
+    if pending:
+        council["pendingMinistries"] = pending
+    else:
+        council.pop("pendingMinistries", None)
+    # What was read, for checking by hand: every portfolio piece and the ministry it was matched to
+    seen = {}
+    for r in rows:
+        for _, original in split_parts(r["portfolio"]):
+            seen.setdefault(original, {"matched": match_ministries(original, new_meta), "tables": []})
+            if r["kind"] not in seen[original]["tables"]:
+                seen[original]["tables"].append(r["kind"])
+    save("wikipedia-portfolios.json", {"revision": revid, "pieces": seen})
+    if abort:
+        return None, meta, [], [abort], review, revid
+    new, problems, _ = build_council_from_rows(rows, new_meta, council, resolved)
+    for mid in keep:                       # missing for the first time: show the last known ministers for now
+        if mid in council["ministries"]:
+            new["ministries"][mid] = dict(council["ministries"][mid])
+            for pid in [council["ministries"][mid].get("lead")] + list(council["ministries"][mid].get("mos") or []):
+                if pid and pid not in new["people"] and pid in council["people"]:
+                    new["people"][pid] = council["people"][pid]
+    for m in new_meta:
+        if m.get("retired"):
+            new["ministries"].pop(m["id"], None)
+    errs = validate(new, new_meta)
+    if errs:
+        return None, meta, [], ["Portfolio check skipped, Wikipedia's tables didn't read cleanly: " + "; ".join(errs)] + problems, review, revid
+    changes = ministry_lines + describe_changes(council, new, new_meta, skip=set(created))
     if len(changes) > 40 and not force:
-        return None, changes, ["%d portfolio changes found at once. Nothing was applied; check them, then run the workflow with force." % len(changes)] + problems, revid
+        return None, meta, changes, ["%d portfolio changes found at once. Nothing was applied; check them, then run the workflow with force." % len(changes)] + problems, review, revid
     # Keep hand-written notes only where nothing changed
     for mid, m in new["ministries"].items():
         o = council["ministries"].get(mid, {})
         if o.get("note") and o.get("lead") == m["lead"] and o.get("mos") == m["mos"] and o.get("charge") == m["charge"]:
             m["note"] = o["note"]
-    return new, changes, problems, revid
+    return new, new_meta, changes, problems, review, revid
 
 
 # ---------------------------------------------------------------- Wikidata details and photos
@@ -685,11 +882,16 @@ def build_site(meta, council, profiles, changes, wd, photos, status):
         people[pid] = merge_person(pid, p, profiles.get(pid, {}), wd.get(pid), photos.get(pid))
     mins = []
     for m in meta:
+        if m.get("retired"):
+            continue
         c = council["ministries"].get(m["id"]) or {}
         if not c.get("lead"):
             c = dict(c, lead=None)
+        note = c.get("note")
+        if m.get("auto") and not note:
+            note = "Added automatically on %s when it appeared in the Council of Ministers. Its description and links are being checked." % m.get("added", "")
         mins.append({"id": m["id"], "n": m["n"], "s": m["s"], "d": m["d"], "dept": m.get("dept", False), "links": m.get("links", {}),
-                     "lead": c.get("lead"), "charge": c.get("charge"), "mos": c.get("mos", []), "note": c.get("note")})
+                     "lead": c.get("lead"), "charge": c.get("charge"), "mos": c.get("mos", []), "note": note})
     return {
         "schema": SCHEMA,
         "generated": datetime.now(timezone.utc).replace(microsecond=0).isoformat(),
@@ -746,24 +948,30 @@ def main():
             status["messages"].append("council.json is locked, so portfolios were not checked against Wikipedia.")
         else:
             try:
-                new, diff, problems, revid = refresh_council(council, meta, a.force)
+                new, new_meta, diff, problems, review, revid = refresh_council(council, meta, a.force, today)
                 status["messages"] += problems
+                status["review"] = review
                 status["wikipediaRevision"] = revid
                 if new is None:
                     status["ok"] = False
-                elif diff:
-                    log("Portfolio changes:\n  " + "\n  ".join(diff))
-                    council["people"], council["ministries"] = new["people"], new["ministries"]
-                    council["asOf"] = today
-                    changes = [{"date": today, "text": t} for t in diff] + changes
-                    save("changes.json", {"changes": changes[:60]})
-                    status["changed"] = len(diff)
                 else:
-                    log("No portfolio changes.")
+                    if new_meta != meta:
+                        meta = new_meta
+                        mf = load("ministries-meta.json")
+                        mf["ministries"] = meta
+                        save("ministries-meta.json", mf)
+                    if diff:
+                        log("Portfolio changes:\n  " + "\n  ".join(diff))
+                        council["people"], council["ministries"] = new["people"], new["ministries"]
+                        changes = [{"date": today, "text": t} for t in diff] + changes
+                        save("changes.json", {"changes": changes[:60]})
+                        status["changed"] = len(diff)
+                    else:
+                        log("No portfolio changes.")
+                        for pid, p in new["people"].items():          # keep resolved titles and ids
+                            if pid in council["people"]:
+                                council["people"][pid].update({k: p[k] for k in ("wikiResolved", "qid") if p.get(k)})
                     council["asOf"] = today
-                    for pid, p in new["people"].items():          # keep resolved titles and ids
-                        if pid in council["people"]:
-                            council["people"][pid].update({k: p[k] for k in ("wikiResolved", "qid") if p.get(k)})
                 save("council.json", council)
             except Exception as ex:
                 status["ok"] = False
@@ -795,11 +1003,16 @@ def main():
     write_page(site)
     log("Done: %d ministries, %d ministers, %d photos. %s" % (len(site["ministries"]), len(site["people"]),
         sum(1 for p in site["people"].values() if p.get("photo")), "OK" if status["ok"] else "Needs a look: " + " | ".join(status["messages"])))
-    if not status["ok"]:
+    review = status.get("review") or []
+    if not status["ok"] or review:
+        parts = []
+        if not status["ok"]:
+            parts.append("**The update couldn't be applied.** The site kept showing the last good data.\n\n" + "\n".join("- " + m for m in status["messages"]) +
+                         "\n\nFix the cause, or edit `data/council.json` by hand and set `\"lock\": true` until Wikipedia's tables read cleanly again.")
+        if review:
+            parts.append("**Please check** (the site has already been updated):\n\n" + "\n".join("- " + m for m in review))
         with open(os.path.join(HERE, ".sync-review.md"), "w", encoding="utf-8") as f:
-            f.write("The scheduled update of Union Ministries of India needs a look.\n\n" + "\n".join("- " + m for m in status["messages"]) +
-                    "\n\nThe site kept showing the last good data. Fix the cause, or edit `data/council.json` by hand and set `\"lock\": true` until Wikipedia's tables read cleanly again.\n")
-
+            f.write("Run of %s\n\n" % today + "\n\n".join(parts) + "\n")
 
 if __name__ == "__main__":
     main()
