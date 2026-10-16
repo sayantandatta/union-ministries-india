@@ -854,6 +854,42 @@ def refresh_photos(people, wd, old_site):
     return result
 
 
+# ---------------------------------------------------------------- link check
+BROWSER_UA = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36 UnionMinistriesIndia-linkcheck"
+
+
+def check_url(url):
+    """Open a page the way a browser would. Returns {status, final, title, error}."""
+    out = {"url": url, "status": None, "final": None, "title": None, "error": None}
+    try:
+        req = urllib.request.Request(url, headers={"User-Agent": BROWSER_UA, "Accept": "text/html,*/*;q=0.8", "Accept-Language": "en-IN,en;q=0.9"})
+        with urllib.request.urlopen(req, timeout=30) as r:
+            out["status"], out["final"] = r.status, r.geturl()
+            body = r.read(400000).decode("utf-8", "replace")
+            m = re.search(r"<title[^>]*>(.*?)</title>", body, re.S | re.I)
+            if m:
+                out["title"] = clean(htmllib.unescape(m.group(1)))[:160]
+    except urllib.error.HTTPError as e:
+        out["status"], out["error"] = e.code, "HTTP %d" % e.code
+    except Exception as e:
+        out["error"] = str(getattr(e, "reason", e))[:160]
+    return out
+
+
+def check_links(meta):
+    """Check every ministry website. Returns (results, review_notes)."""
+    from concurrent.futures import ThreadPoolExecutor
+    jobs = [(m["id"], m["n"], m["links"]["web"]) for m in meta if not m.get("retired") and (m.get("links") or {}).get("web")]
+    with ThreadPoolExecutor(8) as ex:
+        res = list(ex.map(lambda j: dict(check_url(j[2]), id=j[0], ministry=j[1]), jobs))
+    notes = []
+    for r in res:
+        if r["status"] in (404, 410) or (r["error"] and re.search(r"Name or service not known|nodename nor servname|getaddrinfo|No address", r["error"])):
+            notes.append("The website for %s doesn't open (%s): %s. Fix it in data/ministries-meta.json." % (r["ministry"], r["error"] or r["status"], r["url"]))
+    log("Link check: %d checked, %d opened, %d problems" % (len(res), sum(1 for r in res if r["status"] and r["status"] < 400), len(notes)))
+    return res, notes
+
+
 # ---------------------------------------------------------------- build
 def merge_person(pid, p, prof, wd, photo):
     d = dict(wd or {})
@@ -948,6 +984,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--offline", action="store_true")
     ap.add_argument("--force", action="store_true")
+    ap.add_argument("--check-links", action="store_true", help="also check every ministry website (done automatically on Sundays)")
     a = ap.parse_args()
 
     meta = load("ministries-meta.json")["ministries"]
@@ -1019,6 +1056,14 @@ def main():
     write_page(site)
     log("Done: %d ministries, %d ministers, %d photos. %s" % (len(site["ministries"]), len(site["people"]),
         sum(1 for p in site["people"].values() if p.get("photo")), "OK" if status["ok"] else "Needs a look: " + " | ".join(status["messages"])))
+    if not a.offline and (a.check_links or datetime.now(IST).weekday() == 6):
+        try:
+            res, notes = check_links(meta)
+            save("link-check.json", {"at": datetime.now(timezone.utc).replace(microsecond=0).isoformat(), "results": res})
+            if notes:
+                status.setdefault("review", []).extend(notes)
+        except Exception as ex:
+            log("Link check failed: %s" % ex)
     budget = load("budget.json", {}) or {}
     by = budget.get("year") or ""
     now_ist = datetime.now(IST)

@@ -12,6 +12,10 @@ on:
         description: "Apply portfolio changes even if there are a lot at once (use after a reshuffle you've checked)"
         type: boolean
         default: false
+      check_links:
+        description: "Also check every ministry website now (this happens automatically on Sundays)"
+        type: boolean
+        default: false
   push:
     branches: [main]
     paths-ignore: ["data/site.json", "data/sync-status.json", "data/council.json", "data/changes.json", "photos/**"]
@@ -45,7 +49,7 @@ jobs:
         env:
           UMI_USER_AGENT: ${{ vars.UMI_USER_AGENT }}
           UMI_SITE_URL: ${{ vars.UMI_SITE_URL || format('https://{0}.github.io/{1}/', github.repository_owner, github.event.repository.name) }}
-        run: python3 sync.py ${{ inputs.force && '--force' || '' }}
+        run: python3 sync.py ${{ inputs.force && '--force' || '' }} ${{ inputs.check_links && '--check-links' || '' }}
 
       - name: Save new data and photos to the repository
         id: save
