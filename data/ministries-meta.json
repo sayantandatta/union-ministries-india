@@ -952,7 +952,7 @@
     "altWeb": [
      [
       "Dept of Biotechnology",
-      "https://www.dbtindia.gov.in"
+      "https://dbtindia.gov.in"
      ],
      [
       "DSIR",
@@ -1230,5 +1230,8 @@
    ]
   }
  ],
- "_help": "Static facts about each ministry. links.web is the official website (links.webl names the department when the site covers only one), links.altWeb lists other departments' sites, links.email is the official contact address shown on the page (emailChecked false means it came from a directory rather than a government page). 'match' holds the patterns sync.py uses to recognise the ministry on Wikipedia. 'links.xs' means no confirmed X account."
+ "_help": "Static facts about each ministry. links.web is the official website (links.webl names the department when the site covers only one), links.altWeb lists other departments' sites, links.email is the official contact address shown on the page (emailChecked false means it came from a directory rather than a government page). 'match' holds the patterns sync.py uses to recognise the ministry on Wikipedia. 'links.xs' means no confirmed X account.",
+ "linkCheckSkip": {
+  "https://dbtindia.gov.in": "Official address (listed on igod.gov.in) but it doesn't resolve from GitHub's servers abroad; opens fine in India."
+ }
 }

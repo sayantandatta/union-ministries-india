@@ -876,8 +876,9 @@ def check_url(url):
     return out
 
 
-def check_links(meta):
-    """Check every ministry website. Returns (results, review_notes)."""
+def check_links(meta, skip=None):
+    """Check every ministry website. Returns (results, review_notes). `skip` maps addresses not to flag to the reason."""
+    skip = skip or {}
     from concurrent.futures import ThreadPoolExecutor
     jobs = []
     for m in meta:
@@ -892,6 +893,9 @@ def check_links(meta):
         res = list(ex.map(lambda j: dict(check_url(j[2]), id=j[0], ministry=j[1]), jobs))
     notes = []
     for r in res:
+        if r["url"] in skip:
+            r["skipped"] = skip[r["url"]]
+            continue
         if r["status"] in (404, 410) or (r["error"] and re.search(r"Name or service not known|nodename nor servname|getaddrinfo|No address", r["error"])):
             notes.append("The website for %s doesn't open (%s): %s. Fix it in data/ministries-meta.json." % (r["ministry"], r["error"] or r["status"], r["url"]))
     log("Link check: %d checked, %d opened, %d problems" % (len(res), sum(1 for r in res if r["status"] and r["status"] < 400), len(notes)))
@@ -1065,7 +1069,7 @@ def main():
         sum(1 for p in site["people"].values() if p.get("photo")), "OK" if status["ok"] else "Needs a look: " + " | ".join(status["messages"])))
     if not a.offline and (a.check_links or datetime.now(IST).weekday() == 6):
         try:
-            res, notes = check_links(meta)
+            res, notes = check_links(meta, (load("ministries-meta.json") or {}).get("linkCheckSkip"))
             save("link-check.json", {"at": datetime.now(timezone.utc).replace(microsecond=0).isoformat(), "results": res})
             if notes:
                 status.setdefault("review", []).extend(notes)

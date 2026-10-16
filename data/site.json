@@ -1,13 +1,11 @@
 {
  "schema": 1,
- "generated": "2026-10-16T14:21:57+00:00",
+ "generated": "2026-10-16T14:24:02+00:00",
  "asOf": "2026-10-16",
  "source": "https://en.wikipedia.org/wiki/Third_Modi_ministry",
  "status": {
   "ok": true,
-  "messages": [],
-  "review": [],
-  "wikipediaRevision": 1380051637
+  "messages": []
  },
  "changes": [
   {
@@ -3915,7 +3913,7 @@
     "altWeb": [
      [
       "Dept of Biotechnology",
-      "https://www.dbtindia.gov.in"
+      "https://dbtindia.gov.in"
      ],
      [
       "DSIR",

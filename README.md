@@ -38,7 +38,7 @@ It will tell you what happened. The usual cases:
 - **A new ministry was added.** Open `data/ministries-meta.json`, find it (it has `"auto": true`), fix its sector (`"s"`), description (`"d"`), website and email, then delete the `"auto": true` line.
 - **Too many changes at once** (a big reshuffle). Nothing was changed. Check Wikipedia, then run the update with **force** ticked (see below).
 - **Wikipedia couldn't be read.** Nothing was changed; the site keeps the last good data. Usually it fixes itself the next day.
-- **A website doesn't open.** Fix the address in `data/ministries-meta.json`.
+- **A website doesn't open.** Fix the address in `data/ministries-meta.json`. If the address is right but GitHub's servers abroad can't reach it (some .gov.in sites only answer in India), add it to `"linkCheckSkip"` at the bottom of that file so it isn't reported again.
 - **The budget is out of date** (reminder every Monday from February). Update `data/budget.json`.
 
 Close the issue when you're done.
