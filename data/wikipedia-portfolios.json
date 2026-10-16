@@ -1,0 +1,835 @@
+{
+ "revision": 1380051637,
+ "pieces": {
+  "Prime Minister": {
+   "matched": [],
+   "tables": [
+    "cabinet"
+   ]
+  },
+  "Minister of Personnel, Public Grievances and Pensions": {
+   "matched": [
+    "personnel"
+   ],
+   "tables": [
+    "cabinet"
+   ]
+  },
+  "Department of Atomic Energy": {
+   "matched": [
+    "atomic-energy"
+   ],
+   "tables": [
+    "cabinet"
+   ]
+  },
+  "Department of Space": {
+   "matched": [
+    "space"
+   ],
+   "tables": [
+    "cabinet"
+   ]
+  },
+  "All important policy issues": {
+   "matched": [],
+   "tables": [
+    "cabinet"
+   ]
+  },
+  "and": {
+   "matched": [],
+   "tables": [
+    "cabinet"
+   ]
+  },
+  "All other portfolios not allocated to any Minister": {
+   "matched": [],
+   "tables": [
+    "cabinet"
+   ]
+  },
+  "Minister of Defence": {
+   "matched": [
+    "defence"
+   ],
+   "tables": [
+    "cabinet"
+   ]
+  },
+  "Minister of Home Affairs": {
+   "matched": [
+    "home"
+   ],
+   "tables": [
+    "cabinet"
+   ]
+  },
+  "Minister of Co-operation": {
+   "matched": [
+    "cooperation"
+   ],
+   "tables": [
+    "cabinet"
+   ]
+  },
+  "Minister of Road Transport and Highways": {
+   "matched": [
+    "road-transport"
+   ],
+   "tables": [
+    "cabinet"
+   ]
+  },
+  "Minister of Health and Family Welfare": {
+   "matched": [
+    "health"
+   ],
+   "tables": [
+    "cabinet"
+   ]
+  },
+  "Minister of Chemicals and Fertilizers": {
+   "matched": [
+    "chemicals"
+   ],
+   "tables": [
+    "cabinet"
+   ]
+  },
+  "Minister of Agriculture and Farmers' Welfare": {
+   "matched": [
+    "agriculture"
+   ],
+   "tables": [
+    "cabinet"
+   ]
+  },
+  "Minister of Rural Development": {
+   "matched": [
+    "rural-development"
+   ],
+   "tables": [
+    "cabinet"
+   ]
+  },
+  "Minister of Finance": {
+   "matched": [
+    "finance"
+   ],
+   "tables": [
+    "cabinet"
+   ]
+  },
+  "Minister of Corporate Affairs": {
+   "matched": [
+    "corporate-affairs"
+   ],
+   "tables": [
+    "cabinet"
+   ]
+  },
+  "Minister of External Affairs": {
+   "matched": [
+    "external-affairs"
+   ],
+   "tables": [
+    "cabinet"
+   ]
+  },
+  "Minister of Power": {
+   "matched": [
+    "power"
+   ],
+   "tables": [
+    "cabinet"
+   ]
+  },
+  "Minister of Housing and Urban Affairs": {
+   "matched": [
+    "housing"
+   ],
+   "tables": [
+    "cabinet"
+   ]
+  },
+  "Minister of Heavy Industries": {
+   "matched": [
+    "heavy-industries"
+   ],
+   "tables": [
+    "cabinet"
+   ]
+  },
+  "Minister of Steel": {
+   "matched": [
+    "steel"
+   ],
+   "tables": [
+    "cabinet"
+   ]
+  },
+  "Minister of Commerce and Industry": {
+   "matched": [
+    "commerce"
+   ],
+   "tables": [
+    "cabinet"
+   ]
+  },
+  "Minister of Education": {
+   "matched": [
+    "education"
+   ],
+   "tables": [
+    "cabinet"
+   ]
+  },
+  "Minister of Micro, Small and Medium Enterprises": {
+   "matched": [
+    "msme"
+   ],
+   "tables": [
+    "cabinet"
+   ]
+  },
+  "Minister of Panchayati Raj": {
+   "matched": [
+    "panchayati-raj"
+   ],
+   "tables": [
+    "cabinet"
+   ]
+  },
+  "Minister of Fisheries, Animal Husbandry and Dairying": {
+   "matched": [
+    "fisheries"
+   ],
+   "tables": [
+    "cabinet"
+   ]
+  },
+  "Minister of Ports, Shipping and Waterways": {
+   "matched": [
+    "ports-shipping"
+   ],
+   "tables": [
+    "cabinet"
+   ]
+  },
+  "Minister of Social Justice and Empowerment": {
+   "matched": [
+    "social-justice"
+   ],
+   "tables": [
+    "cabinet"
+   ]
+  },
+  "Minister of Civil Aviation": {
+   "matched": [
+    "civil-aviation"
+   ],
+   "tables": [
+    "cabinet"
+   ]
+  },
+  "Minister of Consumer Affairs, Food and Public Distribution": {
+   "matched": [
+    "consumer-affairs"
+   ],
+   "tables": [
+    "cabinet"
+   ]
+  },
+  "Minister of New and Renewable Energy": {
+   "matched": [
+    "mnre"
+   ],
+   "tables": [
+    "cabinet"
+   ]
+  },
+  "Minister of Tribal Affairs": {
+   "matched": [
+    "tribal-affairs"
+   ],
+   "tables": [
+    "cabinet"
+   ]
+  },
+  "Minister of Textiles": {
+   "matched": [
+    "textiles"
+   ],
+   "tables": [
+    "cabinet"
+   ]
+  },
+  "Minister of Railways": {
+   "matched": [
+    "railways"
+   ],
+   "tables": [
+    "cabinet"
+   ]
+  },
+  "Minister of Information and Broadcasting": {
+   "matched": [
+    "information-broadcasting"
+   ],
+   "tables": [
+    "cabinet"
+   ]
+  },
+  "Minister of Electronics and Information Technology": {
+   "matched": [
+    "meity"
+   ],
+   "tables": [
+    "cabinet"
+   ]
+  },
+  "Minister of Communications": {
+   "matched": [
+    "communications"
+   ],
+   "tables": [
+    "cabinet"
+   ]
+  },
+  "Minister of Development of North Eastern Region": {
+   "matched": [
+    "doner"
+   ],
+   "tables": [
+    "cabinet"
+   ]
+  },
+  "Minister of Environment, Forest and Climate Change": {
+   "matched": [
+    "environment"
+   ],
+   "tables": [
+    "cabinet"
+   ]
+  },
+  "Minister of Culture": {
+   "matched": [
+    "culture"
+   ],
+   "tables": [
+    "cabinet"
+   ]
+  },
+  "Minister of Tourism": {
+   "matched": [
+    "tourism"
+   ],
+   "tables": [
+    "cabinet"
+   ]
+  },
+  "Minister of Women and Child Development": {
+   "matched": [
+    "women-child"
+   ],
+   "tables": [
+    "cabinet"
+   ]
+  },
+  "Minister of Parliamentary Affairs": {
+   "matched": [
+    "parliamentary-affairs"
+   ],
+   "tables": [
+    "cabinet"
+   ]
+  },
+  "Minister of Minority Affairs": {
+   "matched": [
+    "minority-affairs"
+   ],
+   "tables": [
+    "cabinet"
+   ]
+  },
+  "Minister of Petroleum and Natural Gas": {
+   "matched": [
+    "petroleum"
+   ],
+   "tables": [
+    "cabinet"
+   ]
+  },
+  "Minister of Labour and Employment": {
+   "matched": [
+    "labour"
+   ],
+   "tables": [
+    "cabinet"
+   ]
+  },
+  "Minister of Youth Affairs and Sports": {
+   "matched": [
+    "youth-sports"
+   ],
+   "tables": [
+    "cabinet"
+   ]
+  },
+  "Minister of Coal": {
+   "matched": [
+    "coal"
+   ],
+   "tables": [
+    "cabinet"
+   ]
+  },
+  "Minister of Mines": {
+   "matched": [
+    "mines"
+   ],
+   "tables": [
+    "cabinet"
+   ]
+  },
+  "Minister of Food Processing Industries": {
+   "matched": [
+    "food-processing"
+   ],
+   "tables": [
+    "cabinet"
+   ]
+  },
+  "Minister of Jal Shakti": {
+   "matched": [
+    "jal-shakti"
+   ],
+   "tables": [
+    "cabinet"
+   ]
+  },
+  "Minister of State (Independent Charge) of the Ministry of Statistics and Programme Implementation": {
+   "matched": [
+    "statistics"
+   ],
+   "tables": [
+    "ic"
+   ]
+  },
+  "Minister of State (Independent Charge) of the Ministry of Planning": {
+   "matched": [
+    "planning"
+   ],
+   "tables": [
+    "ic"
+   ]
+  },
+  "Minister of State (Independent Charge) of the Ministry of Science and Technology": {
+   "matched": [
+    "science-technology"
+   ],
+   "tables": [
+    "ic"
+   ]
+  },
+  "Minister of State (Independent Charge) of the Ministry of Earth Sciences": {
+   "matched": [
+    "earth-sciences"
+   ],
+   "tables": [
+    "ic"
+   ]
+  },
+  "Minister of State (Independent Charge) of the Ministry of Law and Justice": {
+   "matched": [
+    "law"
+   ],
+   "tables": [
+    "ic"
+   ]
+  },
+  "Minister of State (Independent Charge) of the Ministry of AYUSH": {
+   "matched": [
+    "ayush"
+   ],
+   "tables": [
+    "ic"
+   ]
+  },
+  "Minister of State (Independent Charge) of the Ministry of Skill Development and Entrepreneurship": {
+   "matched": [
+    "skill-development"
+   ],
+   "tables": [
+    "ic"
+   ]
+  },
+  "Minister of State in the Ministry of Culture": {
+   "matched": [
+    "culture"
+   ],
+   "tables": [
+    "mos"
+   ]
+  },
+  "Minister of State in the Prime Minister’s Office": {
+   "matched": [],
+   "tables": [
+    "mos"
+   ]
+  },
+  "Minister of State in the Ministry of Personnel, Public Grievances and Pensions": {
+   "matched": [
+    "personnel"
+   ],
+   "tables": [
+    "mos"
+   ]
+  },
+  "Minister of State in the Department of Atomic Energy": {
+   "matched": [
+    "atomic-energy"
+   ],
+   "tables": [
+    "mos"
+   ]
+  },
+  "Minister of State in the Department of Space": {
+   "matched": [
+    "space"
+   ],
+   "tables": [
+    "mos"
+   ]
+  },
+  "Minister of State in the Ministry of Parliamentary Affairs": {
+   "matched": [
+    "parliamentary-affairs"
+   ],
+   "tables": [
+    "mos"
+   ]
+  },
+  "Minister of State in the Ministry of Health and Family Welfare": {
+   "matched": [
+    "health"
+   ],
+   "tables": [
+    "mos"
+   ]
+  },
+  "Minister of State in the Ministry of Education": {
+   "matched": [
+    "education"
+   ],
+   "tables": [
+    "mos"
+   ]
+  },
+  "Minister of State in the Ministry of Commerce and Industry": {
+   "matched": [
+    "commerce"
+   ],
+   "tables": [
+    "mos"
+   ]
+  },
+  "Minister of State in the Ministry of Electronics and Information Technology": {
+   "matched": [
+    "meity"
+   ],
+   "tables": [
+    "mos"
+   ]
+  },
+  "Minister of State in the Ministry of Power": {
+   "matched": [
+    "power"
+   ],
+   "tables": [
+    "mos"
+   ]
+  },
+  "Minister of State in the Ministry of New and Renewable Energy": {
+   "matched": [
+    "mnre"
+   ],
+   "tables": [
+    "mos"
+   ]
+  },
+  "Minister of State in the Ministry of Finance": {
+   "matched": [
+    "finance"
+   ],
+   "tables": [
+    "mos"
+   ]
+  },
+  "Minister of State in the Ministry of Co-operation": {
+   "matched": [
+    "cooperation"
+   ],
+   "tables": [
+    "mos"
+   ]
+  },
+  "Minister of State in the Ministry of Social Justice and Empowerment": {
+   "matched": [
+    "social-justice"
+   ],
+   "tables": [
+    "mos"
+   ]
+  },
+  "Minister of State in the Ministry of Agriculture and Farmers Welfare": {
+   "matched": [
+    "agriculture"
+   ],
+   "tables": [
+    "mos"
+   ]
+  },
+  "Minister of State in the Ministry of Home Affairs": {
+   "matched": [
+    "home"
+   ],
+   "tables": [
+    "mos"
+   ]
+  },
+  "Minister of State in the Ministry of Chemicals and Fertilizers": {
+   "matched": [
+    "chemicals"
+   ],
+   "tables": [
+    "mos"
+   ]
+  },
+  "Minister of State in the Ministry of Jal Shakti": {
+   "matched": [
+    "jal-shakti"
+   ],
+   "tables": [
+    "mos"
+   ]
+  },
+  "Minister of State in the Ministry of Railways": {
+   "matched": [
+    "railways"
+   ],
+   "tables": [
+    "mos"
+   ]
+  },
+  "Minister of State in the Ministry of Rural Development": {
+   "matched": [
+    "rural-development"
+   ],
+   "tables": [
+    "mos"
+   ]
+  },
+  "Minister of State in the Ministry of Communications": {
+   "matched": [
+    "communications"
+   ],
+   "tables": [
+    "mos"
+   ]
+  },
+  "Minister of State in the Ministry of Fisheries, Animal Husbandry and Dairying": {
+   "matched": [
+    "fisheries"
+   ],
+   "tables": [
+    "mos"
+   ]
+  },
+  "Minister of State in the Ministry of Panchayati Raj": {
+   "matched": [
+    "panchayati-raj"
+   ],
+   "tables": [
+    "mos"
+   ]
+  },
+  "Minister of State in the Ministry of Micro, Small and Medium Enterprises": {
+   "matched": [
+    "msme"
+   ],
+   "tables": [
+    "mos"
+   ]
+  },
+  "Minister of State in the Ministry of Labour and Employment": {
+   "matched": [
+    "labour"
+   ],
+   "tables": [
+    "mos"
+   ]
+  },
+  "Minister of State in the Ministry of Environment, Forest and Climate Change": {
+   "matched": [
+    "environment"
+   ],
+   "tables": [
+    "mos"
+   ]
+  },
+  "Minister of State in the Ministry of External Affairs": {
+   "matched": [
+    "external-affairs"
+   ],
+   "tables": [
+    "mos"
+   ]
+  },
+  "Minister of State in the Ministry of Consumer Affairs, Food and Public Distribution": {
+   "matched": [
+    "consumer-affairs"
+   ],
+   "tables": [
+    "mos"
+   ]
+  },
+  "Minister of State in the Ministry of Ports, Shipping and Waterways": {
+   "matched": [
+    "ports-shipping"
+   ],
+   "tables": [
+    "mos"
+   ]
+  },
+  "Minister of State in the Ministry of Petroleum and Natural Gas": {
+   "matched": [
+    "petroleum"
+   ],
+   "tables": [
+    "mos"
+   ]
+  },
+  "Minister of State in the Ministry of Tourism": {
+   "matched": [
+    "tourism"
+   ],
+   "tables": [
+    "mos"
+   ]
+  },
+  "Minister of State in the Ministry of Road Transport and Highways": {
+   "matched": [
+    "road-transport"
+   ],
+   "tables": [
+    "mos"
+   ]
+  },
+  "Minister of State in the Ministry of Coal": {
+   "matched": [
+    "coal"
+   ],
+   "tables": [
+    "mos"
+   ]
+  },
+  "Minister of State in the Ministry of Mines": {
+   "matched": [
+    "mines"
+   ],
+   "tables": [
+    "mos"
+   ]
+  },
+  "Minister of State in the Ministry of Defence": {
+   "matched": [
+    "defence"
+   ],
+   "tables": [
+    "mos"
+   ]
+  },
+  "Minister of State in the Ministry of Tribal Affairs": {
+   "matched": [
+    "tribal-affairs"
+   ],
+   "tables": [
+    "mos"
+   ]
+  },
+  "Minister of State in the Ministry of Youth Affairs and Sports": {
+   "matched": [
+    "youth-sports"
+   ],
+   "tables": [
+    "mos"
+   ]
+  },
+  "Minister of State in the Ministry of Development of North Eastern Region": {
+   "matched": [
+    "doner"
+   ],
+   "tables": [
+    "mos"
+   ]
+  },
+  "Minister of State in the Ministry of Women and Child Development": {
+   "matched": [
+    "women-child"
+   ],
+   "tables": [
+    "mos"
+   ]
+  },
+  "Minister of State in the Ministry of Housing and Urban Affairs": {
+   "matched": [
+    "housing"
+   ],
+   "tables": [
+    "mos"
+   ]
+  },
+  "Minister of State in the Ministry of Heavy Industries": {
+   "matched": [
+    "heavy-industries"
+   ],
+   "tables": [
+    "mos"
+   ]
+  },
+  "Minister of State in the Ministry of Steel": {
+   "matched": [
+    "steel"
+   ],
+   "tables": [
+    "mos"
+   ]
+  },
+  "Minister of State in the Ministry of Corporate Affairs": {
+   "matched": [
+    "corporate-affairs"
+   ],
+   "tables": [
+    "mos"
+   ]
+  },
+  "Minister of State in the Ministry of Civil Aviation": {
+   "matched": [
+    "civil-aviation"
+   ],
+   "tables": [
+    "mos"
+   ]
+  },
+  "Minister of State in the Ministry of Textiles": {
+   "matched": [
+    "textiles"
+   ],
+   "tables": [
+    "mos"
+   ]
+  }
+ }
+}
