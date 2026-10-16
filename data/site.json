@@ -1,13 +1,11 @@
 {
  "schema": 1,
- "generated": "2026-10-16T13:46:24+00:00",
+ "generated": "2026-10-16T13:58:31+00:00",
  "asOf": "2026-10-16",
  "source": "https://en.wikipedia.org/wiki/Third_Modi_ministry",
  "status": {
   "ok": true,
-  "messages": [],
-  "review": [],
-  "wikipediaRevision": 1380051637
+  "messages": []
  },
  "changes": [
   {
@@ -2360,7 +2358,19 @@
     "rnthakur",
     "bhagirath"
    ],
-   "note": null
+   "note": null,
+   "budget": {
+    "amount": 140528.78,
+    "year": "2026-27",
+    "kind": "Budget Estimates",
+    "unit": "Rs crore",
+    "share": 2.63,
+    "rank": 9,
+    "of": 55,
+    "source": "https://www.indiabudget.gov.in/doc/eb/allsbe.pdf",
+    "sourceTitle": "Union Budget 2026-27, Expenditure Budget: summary by ministry",
+    "note": null
+   }
   },
   {
    "id": "ayush",
@@ -2375,7 +2385,19 @@
    "lead": "jadhav",
    "charge": "IC",
    "mos": [],
-   "note": null
+   "note": null,
+   "budget": {
+    "amount": 4408.93,
+    "year": "2026-27",
+    "kind": "Budget Estimates",
+    "unit": "Rs crore",
+    "share": 0.08,
+    "rank": 40,
+    "of": 55,
+    "source": "https://www.indiabudget.gov.in/doc/eb/allsbe.pdf",
+    "sourceTitle": "Union Budget 2026-27, Expenditure Budget: summary by ministry",
+    "note": null
+   }
   },
   {
    "id": "chemicals",
@@ -2399,7 +2421,19 @@
    "mos": [
     "anupriya"
    ],
-   "note": null
+   "note": null,
+   "budget": {
+    "amount": 177061.47,
+    "year": "2026-27",
+    "kind": "Budget Estimates",
+    "unit": "Rs crore",
+    "share": 3.31,
+    "rank": 8,
+    "of": 55,
+    "source": "https://www.indiabudget.gov.in/doc/eb/allsbe.pdf",
+    "sourceTitle": "Union Budget 2026-27, Expenditure Budget: summary by ministry",
+    "note": null
+   }
   },
   {
    "id": "civil-aviation",
@@ -2416,7 +2450,19 @@
    "mos": [
     "mohol"
    ],
-   "note": null
+   "note": null,
+   "budget": {
+    "amount": 2102.87,
+    "year": "2026-27",
+    "kind": "Budget Estimates",
+    "unit": "Rs crore",
+    "share": 0.04,
+    "rank": 50,
+    "of": 55,
+    "source": "https://www.indiabudget.gov.in/doc/eb/allsbe.pdf",
+    "sourceTitle": "Union Budget 2026-27, Expenditure Budget: summary by ministry",
+    "note": null
+   }
   },
   {
    "id": "coal",
@@ -2433,7 +2479,19 @@
    "mos": [
     "dubey"
    ],
-   "note": null
+   "note": null,
+   "budget": {
+    "amount": 3635.32,
+    "year": "2026-27",
+    "kind": "Budget Estimates",
+    "unit": "Rs crore",
+    "share": 0.07,
+    "rank": 45,
+    "of": 55,
+    "source": "https://www.indiabudget.gov.in/doc/eb/allsbe.pdf",
+    "sourceTitle": "Union Budget 2026-27, Expenditure Budget: summary by ministry",
+    "note": null
+   }
   },
   {
    "id": "commerce",
@@ -2456,7 +2514,19 @@
    "mos": [
     "jitin"
    ],
-   "note": null
+   "note": null,
+   "budget": {
+    "amount": 17843.9,
+    "year": "2026-27",
+    "kind": "Budget Estimates",
+    "unit": "Rs crore",
+    "share": 0.33,
+    "rank": 25,
+    "of": 55,
+    "source": "https://www.indiabudget.gov.in/doc/eb/allsbe.pdf",
+    "sourceTitle": "Union Budget 2026-27, Expenditure Budget: summary by ministry",
+    "note": null
+   }
   },
   {
    "id": "communications",
@@ -2480,7 +2550,19 @@
    "mos": [
     "pemmasani"
    ],
-   "note": null
+   "note": null,
+   "budget": {
+    "amount": 102267.02,
+    "year": "2026-27",
+    "kind": "Budget Estimates",
+    "unit": "Rs crore",
+    "share": 1.91,
+    "rank": 12,
+    "of": 55,
+    "source": "https://www.indiabudget.gov.in/doc/eb/allsbe.pdf",
+    "sourceTitle": "Union Budget 2026-27, Expenditure Budget: summary by ministry",
+    "note": null
+   }
   },
   {
    "id": "consumer-affairs",
@@ -2505,7 +2587,19 @@
     "blverma",
     "nimuben"
    ],
-   "note": null
+   "note": null,
+   "budget": {
+    "amount": 239521.37,
+    "year": "2026-27",
+    "kind": "Budget Estimates",
+    "unit": "Rs crore",
+    "share": 4.48,
+    "rank": 6,
+    "of": 55,
+    "source": "https://www.indiabudget.gov.in/doc/eb/allsbe.pdf",
+    "sourceTitle": "Union Budget 2026-27, Expenditure Budget: summary by ministry",
+    "note": null
+   }
   },
   {
    "id": "cooperation",
@@ -2523,7 +2617,19 @@
     "gurjar",
     "mohol"
    ],
-   "note": null
+   "note": null,
+   "budget": {
+    "amount": 1744.74,
+    "year": "2026-27",
+    "kind": "Budget Estimates",
+    "unit": "Rs crore",
+    "share": 0.03,
+    "rank": 51,
+    "of": 55,
+    "source": "https://www.indiabudget.gov.in/doc/eb/allsbe.pdf",
+    "sourceTitle": "Union Budget 2026-27, Expenditure Budget: summary by ministry",
+    "note": null
+   }
   },
   {
    "id": "corporate-affairs",
@@ -2540,7 +2646,19 @@
    "mos": [
     "malhotra"
    ],
-   "note": null
+   "note": null,
+   "budget": {
+    "amount": 5561.86,
+    "year": "2026-27",
+    "kind": "Budget Estimates",
+    "unit": "Rs crore",
+    "share": 0.1,
+    "rank": 33,
+    "of": 55,
+    "source": "https://www.indiabudget.gov.in/doc/eb/allsbe.pdf",
+    "sourceTitle": "Union Budget 2026-27, Expenditure Budget: summary by ministry",
+    "note": null
+   }
   },
   {
    "id": "culture",
@@ -2557,7 +2675,19 @@
    "mos": [
     "inderjit"
    ],
-   "note": null
+   "note": null,
+   "budget": {
+    "amount": 3416.63,
+    "year": "2026-27",
+    "kind": "Budget Estimates",
+    "unit": "Rs crore",
+    "share": 0.06,
+    "rank": 46,
+    "of": 55,
+    "source": "https://www.indiabudget.gov.in/doc/eb/allsbe.pdf",
+    "sourceTitle": "Union Budget 2026-27, Expenditure Budget: summary by ministry",
+    "note": null
+   }
   },
   {
    "id": "defence",
@@ -2574,7 +2704,19 @@
    "mos": [
     "seth"
    ],
-   "note": null
+   "note": null,
+   "budget": {
+    "amount": 784678.28,
+    "year": "2026-27",
+    "kind": "Budget Estimates",
+    "unit": "Rs crore",
+    "share": 14.67,
+    "rank": 2,
+    "of": 55,
+    "source": "https://www.indiabudget.gov.in/doc/eb/allsbe.pdf",
+    "sourceTitle": "Union Budget 2026-27, Expenditure Budget: summary by ministry",
+    "note": "Includes defence pensions and capital spending on the armed forces."
+   }
   },
   {
    "id": "doner",
@@ -2591,7 +2733,19 @@
    "mos": [
     "sukanta"
    ],
-   "note": null
+   "note": null,
+   "budget": {
+    "amount": 6812.3,
+    "year": "2026-27",
+    "kind": "Budget Estimates",
+    "unit": "Rs crore",
+    "share": 0.13,
+    "rank": 32,
+    "of": 55,
+    "source": "https://www.indiabudget.gov.in/doc/eb/allsbe.pdf",
+    "sourceTitle": "Union Budget 2026-27, Expenditure Budget: summary by ministry",
+    "note": null
+   }
   },
   {
    "id": "earth-sciences",
@@ -2606,7 +2760,19 @@
    "lead": "jitendra",
    "charge": "IC",
    "mos": [],
-   "note": null
+   "note": null,
+   "budget": {
+    "amount": 3789.23,
+    "year": "2026-27",
+    "kind": "Budget Estimates",
+    "unit": "Rs crore",
+    "share": 0.07,
+    "rank": 43,
+    "of": 55,
+    "source": "https://www.indiabudget.gov.in/doc/eb/allsbe.pdf",
+    "sourceTitle": "Union Budget 2026-27, Expenditure Budget: summary by ministry",
+    "note": null
+   }
   },
   {
    "id": "education",
@@ -2624,7 +2790,19 @@
     "jayant",
     "sukanta"
    ],
-   "note": "Pralhad Joshi has held Education as additional charge since Dharmendra Pradhan resigned on 25 July 2026."
+   "note": "Pralhad Joshi has held Education as additional charge since Dharmendra Pradhan resigned on 25 July 2026.",
+   "budget": {
+    "amount": 139289.48,
+    "year": "2026-27",
+    "kind": "Budget Estimates",
+    "unit": "Rs crore",
+    "share": 2.6,
+    "rank": 10,
+    "of": 55,
+    "source": "https://www.indiabudget.gov.in/doc/eb/allsbe.pdf",
+    "sourceTitle": "Union Budget 2026-27, Expenditure Budget: summary by ministry",
+    "note": null
+   }
   },
   {
    "id": "meity",
@@ -2641,7 +2819,19 @@
    "mos": [
     "jitin"
    ],
-   "note": null
+   "note": null,
+   "budget": {
+    "amount": 21632.96,
+    "year": "2026-27",
+    "kind": "Budget Estimates",
+    "unit": "Rs crore",
+    "share": 0.4,
+    "rank": 24,
+    "of": 55,
+    "source": "https://www.indiabudget.gov.in/doc/eb/allsbe.pdf",
+    "sourceTitle": "Union Budget 2026-27, Expenditure Budget: summary by ministry",
+    "note": null
+   }
   },
   {
    "id": "environment",
@@ -2658,7 +2848,19 @@
    "mos": [
     "kirti"
    ],
-   "note": null
+   "note": null,
+   "budget": {
+    "amount": 3759.46,
+    "year": "2026-27",
+    "kind": "Budget Estimates",
+    "unit": "Rs crore",
+    "share": 0.07,
+    "rank": 44,
+    "of": 55,
+    "source": "https://www.indiabudget.gov.in/doc/eb/allsbe.pdf",
+    "sourceTitle": "Union Budget 2026-27, Expenditure Budget: summary by ministry",
+    "note": null
+   }
   },
   {
    "id": "external-affairs",
@@ -2676,7 +2878,19 @@
     "kirti",
     "pabitra"
    ],
-   "note": null
+   "note": null,
+   "budget": {
+    "amount": 22118.97,
+    "year": "2026-27",
+    "kind": "Budget Estimates",
+    "unit": "Rs crore",
+    "share": 0.41,
+    "rank": 23,
+    "of": 55,
+    "source": "https://www.indiabudget.gov.in/doc/eb/allsbe.pdf",
+    "sourceTitle": "Union Budget 2026-27, Expenditure Budget: summary by ministry",
+    "note": null
+   }
   },
   {
    "id": "finance",
@@ -2693,7 +2907,19 @@
    "mos": [
     "pankaj"
    ],
-   "note": null
+   "note": null,
+   "budget": {
+    "amount": 1972509.48,
+    "year": "2026-27",
+    "kind": "Budget Estimates",
+    "unit": "Rs crore",
+    "share": 36.89,
+    "rank": 1,
+    "of": 55,
+    "source": "https://www.indiabudget.gov.in/doc/eb/allsbe.pdf",
+    "sourceTitle": "Union Budget 2026-27, Expenditure Budget: summary by ministry",
+    "note": "Most of the Finance Ministry's outlay is interest on government debt and transfers to states, not spending on its own programmes."
+   }
   },
   {
    "id": "fisheries",
@@ -2717,7 +2943,19 @@
    "mos": [
     "baghel"
    ],
-   "note": "One Minister of State post is vacant after George Kurian resigned on 23 June 2026."
+   "note": "One Minister of State post is vacant after George Kurian resigned on 23 June 2026.",
+   "budget": {
+    "amount": 8915.26,
+    "year": "2026-27",
+    "kind": "Budget Estimates",
+    "unit": "Rs crore",
+    "share": 0.17,
+    "rank": 30,
+    "of": 55,
+    "source": "https://www.indiabudget.gov.in/doc/eb/allsbe.pdf",
+    "sourceTitle": "Union Budget 2026-27, Expenditure Budget: summary by ministry",
+    "note": null
+   }
   },
   {
    "id": "food-processing",
@@ -2732,7 +2970,19 @@
    "lead": "chirag",
    "charge": "Cabinet",
    "mos": [],
-   "note": "Minister of State post vacant after Ravneet Singh Bittu resigned on 24 July 2026."
+   "note": "Minister of State post vacant after Ravneet Singh Bittu resigned on 24 July 2026.",
+   "budget": {
+    "amount": 4064.16,
+    "year": "2026-27",
+    "kind": "Budget Estimates",
+    "unit": "Rs crore",
+    "share": 0.08,
+    "rank": 41,
+    "of": 55,
+    "source": "https://www.indiabudget.gov.in/doc/eb/allsbe.pdf",
+    "sourceTitle": "Union Budget 2026-27, Expenditure Budget: summary by ministry",
+    "note": null
+   }
   },
   {
    "id": "health",
@@ -2750,7 +3000,19 @@
     "jadhav",
     "anupriya"
    ],
-   "note": null
+   "note": null,
+   "budget": {
+    "amount": 106530.42,
+    "year": "2026-27",
+    "kind": "Budget Estimates",
+    "unit": "Rs crore",
+    "share": 1.99,
+    "rank": 11,
+    "of": 55,
+    "source": "https://www.indiabudget.gov.in/doc/eb/allsbe.pdf",
+    "sourceTitle": "Union Budget 2026-27, Expenditure Budget: summary by ministry",
+    "note": null
+   }
   },
   {
    "id": "heavy-industries",
@@ -2767,7 +3029,19 @@
    "mos": [
     "varma"
    ],
-   "note": null
+   "note": null,
+   "budget": {
+    "amount": 7939.9,
+    "year": "2026-27",
+    "kind": "Budget Estimates",
+    "unit": "Rs crore",
+    "share": 0.15,
+    "rank": 31,
+    "of": 55,
+    "source": "https://www.indiabudget.gov.in/doc/eb/allsbe.pdf",
+    "sourceTitle": "Union Budget 2026-27, Expenditure Budget: summary by ministry",
+    "note": null
+   }
   },
   {
    "id": "home",
@@ -2785,7 +3059,19 @@
     "rai",
     "bandi"
    ],
-   "note": null
+   "note": null,
+   "budget": {
+    "amount": 255233.53,
+    "year": "2026-27",
+    "kind": "Budget Estimates",
+    "unit": "Rs crore",
+    "share": 4.77,
+    "rank": 5,
+    "of": 55,
+    "source": "https://www.indiabudget.gov.in/doc/eb/allsbe.pdf",
+    "sourceTitle": "Union Budget 2026-27, Expenditure Budget: summary by ministry",
+    "note": null
+   }
   },
   {
    "id": "housing",
@@ -2802,7 +3088,19 @@
    "mos": [
     "tokhan"
    ],
-   "note": null
+   "note": null,
+   "budget": {
+    "amount": 85522.39,
+    "year": "2026-27",
+    "kind": "Budget Estimates",
+    "unit": "Rs crore",
+    "share": 1.6,
+    "rank": 14,
+    "of": 55,
+    "source": "https://www.indiabudget.gov.in/doc/eb/allsbe.pdf",
+    "sourceTitle": "Union Budget 2026-27, Expenditure Budget: summary by ministry",
+    "note": null
+   }
   },
   {
    "id": "information-broadcasting",
@@ -2817,7 +3115,19 @@
    "lead": "vaishnaw",
    "charge": "Cabinet",
    "mos": [],
-   "note": "Minister of State post vacant after L. Murugan resigned on 13 October 2026."
+   "note": "Minister of State post vacant after L. Murugan resigned on 13 October 2026.",
+   "budget": {
+    "amount": 4551.94,
+    "year": "2026-27",
+    "kind": "Budget Estimates",
+    "unit": "Rs crore",
+    "share": 0.09,
+    "rank": 38,
+    "of": 55,
+    "source": "https://www.indiabudget.gov.in/doc/eb/allsbe.pdf",
+    "sourceTitle": "Union Budget 2026-27, Expenditure Budget: summary by ministry",
+    "note": null
+   }
   },
   {
    "id": "jal-shakti",
@@ -2836,7 +3146,19 @@
     "somanna",
     "rajbhushan"
    ],
-   "note": null
+   "note": null,
+   "budget": {
+    "amount": 94807.84,
+    "year": "2026-27",
+    "kind": "Budget Estimates",
+    "unit": "Rs crore",
+    "share": 1.77,
+    "rank": 13,
+    "of": 55,
+    "source": "https://www.indiabudget.gov.in/doc/eb/allsbe.pdf",
+    "sourceTitle": "Union Budget 2026-27, Expenditure Budget: summary by ministry",
+    "note": null
+   }
   },
   {
    "id": "labour",
@@ -2853,7 +3175,19 @@
    "mos": [
     "shobha"
    ],
-   "note": null
+   "note": null,
+   "budget": {
+    "amount": 32666.31,
+    "year": "2026-27",
+    "kind": "Budget Estimates",
+    "unit": "Rs crore",
+    "share": 0.61,
+    "rank": 17,
+    "of": 55,
+    "source": "https://www.indiabudget.gov.in/doc/eb/allsbe.pdf",
+    "sourceTitle": "Union Budget 2026-27, Expenditure Budget: summary by ministry",
+    "note": null
+   }
   },
   {
    "id": "law",
@@ -2868,7 +3202,19 @@
    "lead": "meghwal",
    "charge": "IC",
    "mos": [],
-   "note": null
+   "note": null,
+   "budget": {
+    "amount": 5513.39,
+    "year": "2026-27",
+    "kind": "Budget Estimates",
+    "unit": "Rs crore",
+    "share": 0.1,
+    "rank": 34,
+    "of": 55,
+    "source": "https://www.indiabudget.gov.in/doc/eb/allsbe.pdf",
+    "sourceTitle": "Union Budget 2026-27, Expenditure Budget: summary by ministry",
+    "note": null
+   }
   },
   {
    "id": "msme",
@@ -2885,7 +3231,19 @@
    "mos": [
     "shobha"
    ],
-   "note": null
+   "note": null,
+   "budget": {
+    "amount": 24566.27,
+    "year": "2026-27",
+    "kind": "Budget Estimates",
+    "unit": "Rs crore",
+    "share": 0.46,
+    "rank": 21,
+    "of": 55,
+    "source": "https://www.indiabudget.gov.in/doc/eb/allsbe.pdf",
+    "sourceTitle": "Union Budget 2026-27, Expenditure Budget: summary by ministry",
+    "note": null
+   }
   },
   {
    "id": "mines",
@@ -2902,7 +3260,19 @@
    "mos": [
     "dubey"
    ],
-   "note": null
+   "note": null,
+   "budget": {
+    "amount": 3806.45,
+    "year": "2026-27",
+    "kind": "Budget Estimates",
+    "unit": "Rs crore",
+    "share": 0.07,
+    "rank": 42,
+    "of": 55,
+    "source": "https://www.indiabudget.gov.in/doc/eb/allsbe.pdf",
+    "sourceTitle": "Union Budget 2026-27, Expenditure Budget: summary by ministry",
+    "note": null
+   }
   },
   {
    "id": "minority-affairs",
@@ -2917,7 +3287,19 @@
    "lead": "rijiju",
    "charge": "Cabinet",
    "mos": [],
-   "note": "Minister of State post vacant after George Kurian resigned on 23 June 2026."
+   "note": "Minister of State post vacant after George Kurian resigned on 23 June 2026.",
+   "budget": {
+    "amount": 3400.0,
+    "year": "2026-27",
+    "kind": "Budget Estimates",
+    "unit": "Rs crore",
+    "share": 0.06,
+    "rank": 47,
+    "of": 55,
+    "source": "https://www.indiabudget.gov.in/doc/eb/allsbe.pdf",
+    "sourceTitle": "Union Budget 2026-27, Expenditure Budget: summary by ministry",
+    "note": null
+   }
   },
   {
    "id": "mnre",
@@ -2934,7 +3316,19 @@
    "mos": [
     "naik"
    ],
-   "note": null
+   "note": null,
+   "budget": {
+    "amount": 32914.67,
+    "year": "2026-27",
+    "kind": "Budget Estimates",
+    "unit": "Rs crore",
+    "share": 0.62,
+    "rank": 16,
+    "of": 55,
+    "source": "https://www.indiabudget.gov.in/doc/eb/allsbe.pdf",
+    "sourceTitle": "Union Budget 2026-27, Expenditure Budget: summary by ministry",
+    "note": null
+   }
   },
   {
    "id": "panchayati-raj",
@@ -2951,7 +3345,19 @@
    "mos": [
     "baghel"
    ],
-   "note": null
+   "note": null,
+   "budget": {
+    "amount": 1190.16,
+    "year": "2026-27",
+    "kind": "Budget Estimates",
+    "unit": "Rs crore",
+    "share": 0.02,
+    "rank": 53,
+    "of": 55,
+    "source": "https://www.indiabudget.gov.in/doc/eb/allsbe.pdf",
+    "sourceTitle": "Union Budget 2026-27, Expenditure Budget: summary by ministry",
+    "note": null
+   }
   },
   {
    "id": "parliamentary-affairs",
@@ -2968,7 +3374,19 @@
    "mos": [
     "meghwal"
    ],
-   "note": "One Minister of State post vacant after L. Murugan resigned on 13 October 2026."
+   "note": "One Minister of State post vacant after L. Murugan resigned on 13 October 2026.",
+   "budget": {
+    "amount": 68.45,
+    "year": "2026-27",
+    "kind": "Budget Estimates",
+    "unit": "Rs crore",
+    "share": 0.0,
+    "rank": 55,
+    "of": 55,
+    "source": "https://www.indiabudget.gov.in/doc/eb/allsbe.pdf",
+    "sourceTitle": "Union Budget 2026-27, Expenditure Budget: summary by ministry",
+    "note": null
+   }
   },
   {
    "id": "personnel",
@@ -2992,7 +3410,19 @@
    "mos": [
     "jitendra"
    ],
-   "note": null
+   "note": null,
+   "budget": {
+    "amount": 2662.01,
+    "year": "2026-27",
+    "kind": "Budget Estimates",
+    "unit": "Rs crore",
+    "share": 0.05,
+    "rank": 48,
+    "of": 55,
+    "source": "https://www.indiabudget.gov.in/doc/eb/allsbe.pdf",
+    "sourceTitle": "Union Budget 2026-27, Expenditure Budget: summary by ministry",
+    "note": null
+   }
   },
   {
    "id": "petroleum",
@@ -3009,7 +3439,19 @@
    "mos": [
     "gopi"
    ],
-   "note": null
+   "note": null,
+   "budget": {
+    "amount": 30443.22,
+    "year": "2026-27",
+    "kind": "Budget Estimates",
+    "unit": "Rs crore",
+    "share": 0.57,
+    "rank": 18,
+    "of": 55,
+    "source": "https://www.indiabudget.gov.in/doc/eb/allsbe.pdf",
+    "sourceTitle": "Union Budget 2026-27, Expenditure Budget: summary by ministry",
+    "note": null
+   }
   },
   {
    "id": "planning",
@@ -3025,7 +3467,19 @@
    "lead": "inderjit",
    "charge": "IC",
    "mos": [],
-   "note": null
+   "note": null,
+   "budget": {
+    "amount": 1232.16,
+    "year": "2026-27",
+    "kind": "Budget Estimates",
+    "unit": "Rs crore",
+    "share": 0.02,
+    "rank": 52,
+    "of": 55,
+    "source": "https://www.indiabudget.gov.in/doc/eb/allsbe.pdf",
+    "sourceTitle": "Union Budget 2026-27, Expenditure Budget: summary by ministry",
+    "note": null
+   }
   },
   {
    "id": "power",
@@ -3042,7 +3496,19 @@
    "mos": [
     "naik"
    ],
-   "note": null
+   "note": null,
+   "budget": {
+    "amount": 29996.85,
+    "year": "2026-27",
+    "kind": "Budget Estimates",
+    "unit": "Rs crore",
+    "share": 0.56,
+    "rank": 19,
+    "of": 55,
+    "source": "https://www.indiabudget.gov.in/doc/eb/allsbe.pdf",
+    "sourceTitle": "Union Budget 2026-27, Expenditure Budget: summary by ministry",
+    "note": null
+   }
   },
   {
    "id": "railways",
@@ -3059,7 +3525,19 @@
    "mos": [
     "somanna"
    ],
-   "note": "One Minister of State post vacant after Ravneet Singh Bittu resigned on 24 July 2026."
+   "note": "One Minister of State post vacant after Ravneet Singh Bittu resigned on 24 July 2026.",
+   "budget": {
+    "amount": 281377.32,
+    "year": "2026-27",
+    "kind": "Budget Estimates",
+    "unit": "Rs crore",
+    "share": 5.26,
+    "rank": 4,
+    "of": 55,
+    "source": "https://www.indiabudget.gov.in/doc/eb/allsbe.pdf",
+    "sourceTitle": "Union Budget 2026-27, Expenditure Budget: summary by ministry",
+    "note": null
+   }
   },
   {
    "id": "road-transport",
@@ -3077,7 +3555,19 @@
     "tamta",
     "malhotra"
    ],
-   "note": null
+   "note": null,
+   "budget": {
+    "amount": 309875.3,
+    "year": "2026-27",
+    "kind": "Budget Estimates",
+    "unit": "Rs crore",
+    "share": 5.79,
+    "rank": 3,
+    "of": 55,
+    "source": "https://www.indiabudget.gov.in/doc/eb/allsbe.pdf",
+    "sourceTitle": "Union Budget 2026-27, Expenditure Budget: summary by ministry",
+    "note": null
+   }
   },
   {
    "id": "rural-development",
@@ -3095,7 +3585,19 @@
     "pemmasani",
     "kamlesh"
    ],
-   "note": null
+   "note": null,
+   "budget": {
+    "amount": 197023.14,
+    "year": "2026-27",
+    "kind": "Budget Estimates",
+    "unit": "Rs crore",
+    "share": 3.68,
+    "rank": 7,
+    "of": 55,
+    "source": "https://www.indiabudget.gov.in/doc/eb/allsbe.pdf",
+    "sourceTitle": "Union Budget 2026-27, Expenditure Budget: summary by ministry",
+    "note": null
+   }
   },
   {
    "id": "science-technology",
@@ -3111,7 +3613,19 @@
    "lead": "jitendra",
    "charge": "IC",
    "mos": [],
-   "note": null
+   "note": null,
+   "budget": {
+    "amount": 38260.94,
+    "year": "2026-27",
+    "kind": "Budget Estimates",
+    "unit": "Rs crore",
+    "share": 0.72,
+    "rank": 15,
+    "of": 55,
+    "source": "https://www.indiabudget.gov.in/doc/eb/allsbe.pdf",
+    "sourceTitle": "Union Budget 2026-27, Expenditure Budget: summary by ministry",
+    "note": null
+   }
   },
   {
    "id": "ports-shipping",
@@ -3128,7 +3642,19 @@
    "mos": [
     "shantanu"
    ],
-   "note": null
+   "note": null,
+   "budget": {
+    "amount": 5164.8,
+    "year": "2026-27",
+    "kind": "Budget Estimates",
+    "unit": "Rs crore",
+    "share": 0.1,
+    "rank": 37,
+    "of": 55,
+    "source": "https://www.indiabudget.gov.in/doc/eb/allsbe.pdf",
+    "sourceTitle": "Union Budget 2026-27, Expenditure Budget: summary by ministry",
+    "note": null
+   }
   },
   {
    "id": "skill-development",
@@ -3143,7 +3669,19 @@
    "lead": "jayant",
    "charge": "IC",
    "mos": [],
-   "note": null
+   "note": null,
+   "budget": {
+    "amount": 9885.8,
+    "year": "2026-27",
+    "kind": "Budget Estimates",
+    "unit": "Rs crore",
+    "share": 0.18,
+    "rank": 29,
+    "of": 55,
+    "source": "https://www.indiabudget.gov.in/doc/eb/allsbe.pdf",
+    "sourceTitle": "Union Budget 2026-27, Expenditure Budget: summary by ministry",
+    "note": null
+   }
   },
   {
    "id": "social-justice",
@@ -3161,7 +3699,19 @@
     "athawale",
     "blverma"
    ],
-   "note": null
+   "note": null,
+   "budget": {
+    "amount": 15357.31,
+    "year": "2026-27",
+    "kind": "Budget Estimates",
+    "unit": "Rs crore",
+    "share": 0.29,
+    "rank": 27,
+    "of": 55,
+    "source": "https://www.indiabudget.gov.in/doc/eb/allsbe.pdf",
+    "sourceTitle": "Union Budget 2026-27, Expenditure Budget: summary by ministry",
+    "note": null
+   }
   },
   {
    "id": "statistics",
@@ -3176,7 +3726,19 @@
    "lead": "inderjit",
    "charge": "IC",
    "mos": [],
-   "note": null
+   "note": null,
+   "budget": {
+    "amount": 5502.89,
+    "year": "2026-27",
+    "kind": "Budget Estimates",
+    "unit": "Rs crore",
+    "share": 0.1,
+    "rank": 35,
+    "of": 55,
+    "source": "https://www.indiabudget.gov.in/doc/eb/allsbe.pdf",
+    "sourceTitle": "Union Budget 2026-27, Expenditure Budget: summary by ministry",
+    "note": null
+   }
   },
   {
    "id": "steel",
@@ -3193,7 +3755,19 @@
    "mos": [
     "varma"
    ],
-   "note": null
+   "note": null,
+   "budget": {
+    "amount": 443.18,
+    "year": "2026-27",
+    "kind": "Budget Estimates",
+    "unit": "Rs crore",
+    "share": 0.01,
+    "rank": 54,
+    "of": 55,
+    "source": "https://www.indiabudget.gov.in/doc/eb/allsbe.pdf",
+    "sourceTitle": "Union Budget 2026-27, Expenditure Budget: summary by ministry",
+    "note": null
+   }
   },
   {
    "id": "textiles",
@@ -3210,7 +3784,19 @@
    "mos": [
     "pabitra"
    ],
-   "note": null
+   "note": null,
+   "budget": {
+    "amount": 5279.01,
+    "year": "2026-27",
+    "kind": "Budget Estimates",
+    "unit": "Rs crore",
+    "share": 0.1,
+    "rank": 36,
+    "of": 55,
+    "source": "https://www.indiabudget.gov.in/doc/eb/allsbe.pdf",
+    "sourceTitle": "Union Budget 2026-27, Expenditure Budget: summary by ministry",
+    "note": null
+   }
   },
   {
    "id": "tourism",
@@ -3233,7 +3819,19 @@
    "mos": [
     "gopi"
    ],
-   "note": null
+   "note": null,
+   "budget": {
+    "amount": 2438.4,
+    "year": "2026-27",
+    "kind": "Budget Estimates",
+    "unit": "Rs crore",
+    "share": 0.05,
+    "rank": 49,
+    "of": 55,
+    "source": "https://www.indiabudget.gov.in/doc/eb/allsbe.pdf",
+    "sourceTitle": "Union Budget 2026-27, Expenditure Budget: summary by ministry",
+    "note": null
+   }
   },
   {
    "id": "tribal-affairs",
@@ -3250,7 +3848,19 @@
    "mos": [
     "uikey"
    ],
-   "note": null
+   "note": null,
+   "budget": {
+    "amount": 15421.97,
+    "year": "2026-27",
+    "kind": "Budget Estimates",
+    "unit": "Rs crore",
+    "share": 0.29,
+    "rank": 26,
+    "of": 55,
+    "source": "https://www.indiabudget.gov.in/doc/eb/allsbe.pdf",
+    "sourceTitle": "Union Budget 2026-27, Expenditure Budget: summary by ministry",
+    "note": null
+   }
   },
   {
    "id": "women-child",
@@ -3267,7 +3877,19 @@
    "mos": [
     "savitri"
    ],
-   "note": null
+   "note": null,
+   "budget": {
+    "amount": 28183.06,
+    "year": "2026-27",
+    "kind": "Budget Estimates",
+    "unit": "Rs crore",
+    "share": 0.53,
+    "rank": 20,
+    "of": 55,
+    "source": "https://www.indiabudget.gov.in/doc/eb/allsbe.pdf",
+    "sourceTitle": "Union Budget 2026-27, Expenditure Budget: summary by ministry",
+    "note": null
+   }
   },
   {
    "id": "youth-sports",
@@ -3290,7 +3912,19 @@
    "mos": [
     "khadse"
    ],
-   "note": null
+   "note": null,
+   "budget": {
+    "amount": 4479.88,
+    "year": "2026-27",
+    "kind": "Budget Estimates",
+    "unit": "Rs crore",
+    "share": 0.08,
+    "rank": 39,
+    "of": 55,
+    "source": "https://www.indiabudget.gov.in/doc/eb/allsbe.pdf",
+    "sourceTitle": "Union Budget 2026-27, Expenditure Budget: summary by ministry",
+    "note": null
+   }
   },
   {
    "id": "atomic-energy",
@@ -3307,7 +3941,19 @@
    "mos": [
     "jitendra"
    ],
-   "note": null
+   "note": null,
+   "budget": {
+    "amount": 24123.92,
+    "year": "2026-27",
+    "kind": "Budget Estimates",
+    "unit": "Rs crore",
+    "share": 0.45,
+    "rank": 22,
+    "of": 55,
+    "source": "https://www.indiabudget.gov.in/doc/eb/allsbe.pdf",
+    "sourceTitle": "Union Budget 2026-27, Expenditure Budget: summary by ministry",
+    "note": null
+   }
   },
   {
    "id": "space",
@@ -3325,7 +3971,19 @@
    "mos": [
     "jitendra"
    ],
-   "note": null
+   "note": null,
+   "budget": {
+    "amount": 13705.63,
+    "year": "2026-27",
+    "kind": "Budget Estimates",
+    "unit": "Rs crore",
+    "share": 0.26,
+    "rank": 28,
+    "of": 55,
+    "source": "https://www.indiabudget.gov.in/doc/eb/allsbe.pdf",
+    "sourceTitle": "Union Budget 2026-27, Expenditure Budget: summary by ministry",
+    "note": null
+   }
   }
  ]
 }

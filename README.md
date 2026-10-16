@@ -38,6 +38,8 @@ Every run also saves `data/wikipedia-portfolios.json`, listing each portfolio na
 
 **Correcting something by hand.** Edit `data/council.json` and set `"lock": true` near the top so the daily check doesn't overwrite your edit. Set it back to `false` once Wikipedia is right. To fix a calling-card detail, edit that minister's entry in `data/profiles.json`; to let Wikidata supply a field instead, delete it there.
 
+**Ministry budgets.** Each ministry shows its annual outlay from the Union Budget (Budget Estimates, revenue plus capital, from the Expenditure Budget's summary by ministry), its share of total spending and its rank. The figures live in `data/budget.json` and change once a year: after the Budget on 1 February, update the year, total and each ministry's figure from `indiabudget.gov.in/doc/eb/allsbe.pdf`. Until you do, the review issue gets a reminder every Monday. A new ministry shows "Not yet shown separately in the Union Budget" until it has a figure.
+
 **What isn't automatic.** Official residence, official email and declared assets aren't published in any machine-readable source, so they live in `data/profiles.json`. Assets only change at elections; when a minister is new or re-elected, add their totals from their MyNeta page (myneta.info).
 
 ## In the visitor's browser

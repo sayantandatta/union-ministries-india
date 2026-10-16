@@ -892,6 +892,21 @@ def build_site(meta, council, profiles, changes, wd, photos, status):
             note = "Added automatically on %s when it appeared in the Council of Ministers. Its description and links are being checked." % m.get("added", "")
         mins.append({"id": m["id"], "n": m["n"], "s": m["s"], "d": m["d"], "dept": m.get("dept", False), "links": m.get("links", {}),
                      "lead": c.get("lead"), "charge": c.get("charge"), "mos": c.get("mos", []), "note": note})
+    budget = load("budget.json", {}) or {}
+    amounts = budget.get("ministries") or {}
+    ranked = sorted((v, k) for k, v in amounts.items() if any(x["id"] == k for x in mins))
+    ranked.reverse()
+    for m in mins:
+        v = amounts.get(m["id"])
+        if v is None:
+            continue
+        m["budget"] = {
+            "amount": v, "year": budget.get("year"), "kind": budget.get("kind"), "unit": budget.get("unit", "Rs crore"),
+            "share": round(100.0 * v / budget["total"], 2) if budget.get("total") else None,
+            "rank": [k for _, k in ranked].index(m["id"]) + 1, "of": len(ranked),
+            "source": budget.get("source"), "sourceTitle": budget.get("sourceTitle"),
+            "note": (budget.get("notes") or {}).get(m["id"]),
+        }
     return {
         "schema": SCHEMA,
         "generated": datetime.now(timezone.utc).replace(microsecond=0).isoformat(),
@@ -915,8 +930,9 @@ def write_page(site):
     for m in site["ministries"]:
         lead = site["people"].get(m["lead"] or "", {}).get("n", "Vacant")
         mos = ", ".join(site["people"][x]["n"] for x in m["mos"] if x in site["people"]) or "None"
-        rows.append("<li><strong>%s</strong>: %s. Minister in charge: %s. Ministers of State: %s.</li>" % (
-            htmllib.escape(m["n"]), htmllib.escape(m["d"]), htmllib.escape(lead), htmllib.escape(mos)))
+        bud = " Budget %s: Rs %s crore." % (m["budget"]["year"], "{:,.0f}".format(m["budget"]["amount"])) if m.get("budget") else ""
+        rows.append("<li><strong>%s</strong>: %s. Minister in charge: %s. Ministers of State: %s.%s</li>" % (
+            htmllib.escape(m["n"]), htmllib.escape(m["d"]), htmllib.escape(lead), htmllib.escape(mos), htmllib.escape(bud)))
     static = "<ul>\n" + "\n".join(rows) + "\n</ul>"
     page = re.sub(r"(<!--STATIC-->).*?(<!--/STATIC-->)", lambda m: m.group(1) + static + m.group(2), page, count=1, flags=re.S)
     with open(p + ".tmp", "w", encoding="utf-8") as f:
@@ -1003,6 +1019,13 @@ def main():
     write_page(site)
     log("Done: %d ministries, %d ministers, %d photos. %s" % (len(site["ministries"]), len(site["people"]),
         sum(1 for p in site["people"].values() if p.get("photo")), "OK" if status["ok"] else "Needs a look: " + " | ".join(status["messages"])))
+    budget = load("budget.json", {}) or {}
+    by = budget.get("year") or ""
+    now_ist = datetime.now(IST)
+    expected = "%d-%02d" % (now_ist.year, (now_ist.year + 1) % 100) if now_ist.month >= 2 else "%d-%02d" % (now_ist.year - 1, now_ist.year % 100)
+    if by and by < expected and not a.offline and now_ist.weekday() == 0:      # a reminder on Mondays until it's done
+        status.setdefault("review", []).append(
+            "The Union Budget %s has been presented, but data/budget.json still shows %s. Update it from the Expenditure Budget's summary by ministry (indiabudget.gov.in/doc/eb/allsbe.pdf)." % (expected, by))
     review = status.get("review") or []
     if not status["ok"] or review:
         parts = []
