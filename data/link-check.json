@@ -1,5 +1,5 @@
 {
- "at": "2026-10-16T14:20:49+00:00",
+ "at": "2026-10-16T14:23:17+00:00",
  "results": [
   {
    "url": "https://agriwelfare.gov.in",
@@ -47,11 +47,11 @@
    "ministry": "Chemicals and Fertilizers (Dept of Fertilizers)"
   },
   {
-   "url": "https://pharmaceuticals.gov.in",
-   "status": null,
-   "final": null,
-   "title": null,
-   "error": "[Errno -2] Name or service not known",
+   "url": "https://pharma-dept.gov.in",
+   "status": 200,
+   "final": "https://pharma-dept.gov.in",
+   "title": "Home | Department of Pharmaceuticals | Government of India",
+   "error": null,
    "id": "chemicals",
    "ministry": "Chemicals and Fertilizers (Dept of Pharmaceuticals)"
   },
@@ -461,7 +461,7 @@
    "ministry": "Science and Technology"
   },
   {
-   "url": "https://dbtindia.gov.in",
+   "url": "https://www.dbtindia.gov.in",
    "status": null,
    "final": null,
    "title": null,
