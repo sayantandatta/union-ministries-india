@@ -1,0 +1,500 @@
+{
+ "at": "2026-10-16T14:05:38+00:00",
+ "results": [
+  {
+   "url": "https://agriwelfare.gov.in",
+   "status": 403,
+   "final": null,
+   "title": null,
+   "error": "HTTP 403",
+   "id": "agriculture",
+   "ministry": "Agriculture and Farmers Welfare"
+  },
+  {
+   "url": "https://ayush.gov.in",
+   "status": 200,
+   "final": "https://ayush.gov.in",
+   "title": "Moaayush",
+   "error": null,
+   "id": "ayush",
+   "ministry": "AYUSH"
+  },
+  {
+   "url": "https://chemicals.gov.in",
+   "status": 200,
+   "final": "https://chemicals.gov.in",
+   "title": "Home | Department of Chemicals and Petrochemicals - Ministry of Chemicals and Fertilizers, Government of India",
+   "error": null,
+   "id": "chemicals",
+   "ministry": "Chemicals and Fertilizers"
+  },
+  {
+   "url": "https://civilaviation.gov.in",
+   "status": 200,
+   "final": "https://www.civilaviation.gov.in/",
+   "title": "Welcome! | Ministry of Civil Aviation",
+   "error": null,
+   "id": "civil-aviation",
+   "ministry": "Civil Aviation"
+  },
+  {
+   "url": "https://coal.gov.in",
+   "status": 200,
+   "final": "https://coal.gov.in",
+   "title": "Home | Ministry of Coal, Government of India",
+   "error": null,
+   "id": "coal",
+   "ministry": "Coal"
+  },
+  {
+   "url": "https://commerce.gov.in",
+   "status": 200,
+   "final": "https://www.commerce.gov.in/",
+   "title": "DOC",
+   "error": null,
+   "id": "commerce",
+   "ministry": "Commerce and Industry"
+  },
+  {
+   "url": "https://dot.gov.in",
+   "status": 200,
+   "final": "https://www.dot.gov.in/",
+   "title": null,
+   "error": null,
+   "id": "communications",
+   "ministry": "Communications"
+  },
+  {
+   "url": "https://consumeraffairs.nic.in",
+   "status": null,
+   "final": null,
+   "title": null,
+   "error": "timed out",
+   "id": "consumer-affairs",
+   "ministry": "Consumer Affairs, Food and Public Distribution"
+  },
+  {
+   "url": "https://cooperation.gov.in",
+   "status": null,
+   "final": null,
+   "title": null,
+   "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)",
+   "id": "cooperation",
+   "ministry": "Co-operation"
+  },
+  {
+   "url": "https://www.mca.gov.in",
+   "status": 403,
+   "final": null,
+   "title": null,
+   "error": "HTTP 403",
+   "id": "corporate-affairs",
+   "ministry": "Corporate Affairs"
+  },
+  {
+   "url": "https://www.indiaculture.gov.in",
+   "status": null,
+   "final": null,
+   "title": null,
+   "error": "timed out",
+   "id": "culture",
+   "ministry": "Culture"
+  },
+  {
+   "url": "https://www.mod.gov.in",
+   "status": 200,
+   "final": "https://www.mod.gov.in",
+   "title": null,
+   "error": null,
+   "id": "defence",
+   "ministry": "Defence"
+  },
+  {
+   "url": "https://mdoner.gov.in",
+   "status": 200,
+   "final": "https://www.mdoner.gov.in/",
+   "title": null,
+   "error": null,
+   "id": "doner",
+   "ministry": "Development of North Eastern Region"
+  },
+  {
+   "url": "https://moes.gov.in",
+   "status": 200,
+   "final": "https://www.moes.gov.in/",
+   "title": null,
+   "error": null,
+   "id": "earth-sciences",
+   "ministry": "Earth Sciences"
+  },
+  {
+   "url": "https://www.education.gov.in",
+   "status": 200,
+   "final": "https://www.education.gov.in",
+   "title": null,
+   "error": null,
+   "id": "education",
+   "ministry": "Education"
+  },
+  {
+   "url": "https://www.meity.gov.in",
+   "status": 200,
+   "final": "https://www.meity.gov.in",
+   "title": "Home",
+   "error": null,
+   "id": "meity",
+   "ministry": "Electronics and Information Technology"
+  },
+  {
+   "url": "https://moef.gov.in",
+   "status": 200,
+   "final": "https://moef.gov.in",
+   "title": "Ministry of Environment, Forest and Climate Change",
+   "error": null,
+   "id": "environment",
+   "ministry": "Environment, Forest and Climate Change"
+  },
+  {
+   "url": "https://www.mea.gov.in",
+   "status": 403,
+   "final": null,
+   "title": null,
+   "error": "HTTP 403",
+   "id": "external-affairs",
+   "ministry": "External Affairs"
+  },
+  {
+   "url": "https://finmin.gov.in",
+   "status": null,
+   "final": null,
+   "title": null,
+   "error": "timed out",
+   "id": "finance",
+   "ministry": "Finance"
+  },
+  {
+   "url": "https://dahd.gov.in",
+   "status": 200,
+   "final": "https://www.dahd.gov.in/",
+   "title": null,
+   "error": null,
+   "id": "fisheries",
+   "ministry": "Fisheries, Animal Husbandry and Dairying"
+  },
+  {
+   "url": "https://www.mofpi.gov.in",
+   "status": 200,
+   "final": "https://www.mofpi.gov.in",
+   "title": "Home | Ministry of Food Processing Industries | Government of India",
+   "error": null,
+   "id": "food-processing",
+   "ministry": "Food Processing Industries"
+  },
+  {
+   "url": "https://www.mohfw.gov.in",
+   "status": 200,
+   "final": "https://www.mohfw.gov.in",
+   "title": null,
+   "error": null,
+   "id": "health",
+   "ministry": "Health and Family Welfare"
+  },
+  {
+   "url": "https://heavyindustries.gov.in",
+   "status": 200,
+   "final": "https://heavyindustries.gov.in/hi",
+   "title": "मुख्य पृष्ठ | भारी उद्योग मंत्रालय",
+   "error": null,
+   "id": "heavy-industries",
+   "ministry": "Heavy Industries"
+  },
+  {
+   "url": "https://www.mha.gov.in",
+   "status": 200,
+   "final": "https://www.mha.gov.in/hi",
+   "title": "Home | Ministry of Home Affairs",
+   "error": null,
+   "id": "home",
+   "ministry": "Home Affairs"
+  },
+  {
+   "url": "https://mohua.gov.in",
+   "status": 200,
+   "final": "https://www.mohua.gov.in/",
+   "title": null,
+   "error": null,
+   "id": "housing",
+   "ministry": "Housing and Urban Affairs"
+  },
+  {
+   "url": "https://mib.gov.in",
+   "status": 200,
+   "final": "https://mib.gov.in",
+   "title": "मुख्य पृष्ठ | Ministry of Information and Broadcasting",
+   "error": null,
+   "id": "information-broadcasting",
+   "ministry": "Information and Broadcasting"
+  },
+  {
+   "url": "https://jalshakti-dowr.gov.in",
+   "status": 200,
+   "final": "https://www.jalshakti-dowr.gov.in/",
+   "title": "Home",
+   "error": null,
+   "id": "jal-shakti",
+   "ministry": "Jal Shakti"
+  },
+  {
+   "url": "https://labour.gov.in",
+   "status": 200,
+   "final": "https://www.labour.gov.in/",
+   "title": null,
+   "error": null,
+   "id": "labour",
+   "ministry": "Labour and Employment"
+  },
+  {
+   "url": "https://lawmin.gov.in",
+   "status": 200,
+   "final": "https://www.lawmin.gov.in/",
+   "title": null,
+   "error": null,
+   "id": "law",
+   "ministry": "Law and Justice"
+  },
+  {
+   "url": "https://msme.gov.in",
+   "status": 200,
+   "final": "https://www.msme.gov.in/",
+   "title": null,
+   "error": null,
+   "id": "msme",
+   "ministry": "Micro, Small and Medium Enterprises"
+  },
+  {
+   "url": "https://mines.gov.in",
+   "status": 200,
+   "final": "https://mines.gov.in/webportal/",
+   "title": "Ministry of Mines, Government of India, Home",
+   "error": null,
+   "id": "mines",
+   "ministry": "Mines"
+  },
+  {
+   "url": "https://www.minorityaffairs.gov.in",
+   "status": null,
+   "final": null,
+   "title": null,
+   "error": "timed out",
+   "id": "minority-affairs",
+   "ministry": "Minority Affairs"
+  },
+  {
+   "url": "https://mnre.gov.in",
+   "status": 200,
+   "final": "https://mnre.gov.in",
+   "title": "Homepage | नवीन और नवीकरणीय ऊर्जा मंत्रालय | नवीन और नवीकरणीय ऊर्जा मंत्रालय | भारत",
+   "error": null,
+   "id": "mnre",
+   "ministry": "New and Renewable Energy"
+  },
+  {
+   "url": "https://panchayat.gov.in",
+   "status": 200,
+   "final": "https://panchayat.gov.in",
+   "title": "पंचायती राज मंत्रालय | सशक्त पंचायत सतत् विकास | भारत",
+   "error": null,
+   "id": "panchayati-raj",
+   "ministry": "Panchayati Raj"
+  },
+  {
+   "url": "https://mpa.gov.in",
+   "status": 200,
+   "final": "https://www.mpa.gov.in/",
+   "title": null,
+   "error": null,
+   "id": "parliamentary-affairs",
+   "ministry": "Parliamentary Affairs"
+  },
+  {
+   "url": "https://dopt.gov.in",
+   "status": null,
+   "final": null,
+   "title": null,
+   "error": "[Errno 104] Connection reset by peer",
+   "id": "personnel",
+   "ministry": "Personnel, Public Grievances and Pensions"
+  },
+  {
+   "url": "https://mopng.gov.in",
+   "status": 200,
+   "final": "https://mopng.gov.in/hi",
+   "title": "Home | पेट्रोलियम और प्राकृतिक गैस मंत्रालय | Government of India",
+   "error": null,
+   "id": "petroleum",
+   "ministry": "Petroleum and Natural Gas"
+  },
+  {
+   "url": "https://www.niti.gov.in",
+   "status": 200,
+   "final": "https://www.niti.gov.in",
+   "title": "NITI Aayog",
+   "error": null,
+   "id": "planning",
+   "ministry": "Planning"
+  },
+  {
+   "url": "https://powermin.gov.in",
+   "status": 200,
+   "final": "https://www.powermin.gov.in/",
+   "title": null,
+   "error": null,
+   "id": "power",
+   "ministry": "Power"
+  },
+  {
+   "url": "https://indianrailways.gov.in",
+   "status": null,
+   "final": null,
+   "title": null,
+   "error": "timed out",
+   "id": "railways",
+   "ministry": "Railways"
+  },
+  {
+   "url": "https://morth.gov.in",
+   "status": 200,
+   "final": "https://morth.gov.in",
+   "title": "Ministry of Road Transport & Highways, Government Of India",
+   "error": null,
+   "id": "road-transport",
+   "ministry": "Road Transport and Highways"
+  },
+  {
+   "url": "https://rural.gov.in",
+   "status": 200,
+   "final": "https://www.rural.gov.in/",
+   "title": null,
+   "error": null,
+   "id": "rural-development",
+   "ministry": "Rural Development"
+  },
+  {
+   "url": "https://dst.gov.in",
+   "status": 200,
+   "final": "https://www.dst.gov.in/",
+   "title": null,
+   "error": null,
+   "id": "science-technology",
+   "ministry": "Science and Technology"
+  },
+  {
+   "url": "https://shipmin.gov.in",
+   "status": 200,
+   "final": "https://shipmin.gov.in",
+   "title": "Homepage | Ministry of Ports, Shipping and Waterways",
+   "error": null,
+   "id": "ports-shipping",
+   "ministry": "Ports, Shipping and Waterways"
+  },
+  {
+   "url": "https://www.msde.gov.in",
+   "status": 200,
+   "final": "https://www.msde.gov.in",
+   "title": null,
+   "error": null,
+   "id": "skill-development",
+   "ministry": "Skill Development and Entrepreneurship"
+  },
+  {
+   "url": "https://socialjustice.gov.in",
+   "status": 200,
+   "final": "https://socialjustice.gov.in",
+   "title": "Home | Department of Social Justice and Empowerment - Government of India",
+   "error": null,
+   "id": "social-justice",
+   "ministry": "Social Justice and Empowerment"
+  },
+  {
+   "url": "https://mospi.gov.in",
+   "status": 200,
+   "final": "https://mospi.gov.in",
+   "title": "Ministry of Statistics and Program Implementation | Government Of India",
+   "error": null,
+   "id": "statistics",
+   "ministry": "Statistics and Programme Implementation"
+  },
+  {
+   "url": "https://steel.gov.in",
+   "status": 200,
+   "final": "https://steel.gov.in",
+   "title": "Home | Steel Ministry",
+   "error": null,
+   "id": "steel",
+   "ministry": "Steel"
+  },
+  {
+   "url": "https://texmin.gov.in",
+   "status": 200,
+   "final": "https://www.texmin.gov.in/",
+   "title": null,
+   "error": null,
+   "id": "textiles",
+   "ministry": "Textiles"
+  },
+  {
+   "url": "https://tourism.gov.in",
+   "status": 200,
+   "final": "https://www.tourism.gov.in/",
+   "title": null,
+   "error": null,
+   "id": "tourism",
+   "ministry": "Tourism"
+  },
+  {
+   "url": "https://tribal.gov.in",
+   "status": null,
+   "final": null,
+   "title": null,
+   "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)",
+   "id": "tribal-affairs",
+   "ministry": "Tribal Affairs"
+  },
+  {
+   "url": "https://wcd.gov.in",
+   "status": 200,
+   "final": "https://wcd.gov.in",
+   "title": "Home | Ministry of Women and Child Development",
+   "error": null,
+   "id": "women-child",
+   "ministry": "Women and Child Development"
+  },
+  {
+   "url": "https://yas.gov.in",
+   "status": null,
+   "final": null,
+   "title": null,
+   "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)",
+   "id": "youth-sports",
+   "ministry": "Youth Affairs and Sports"
+  },
+  {
+   "url": "https://dae.gov.in",
+   "status": 200,
+   "final": "https://dae.gov.in",
+   "title": "Homepage | Department Of Atomic Energy | India",
+   "error": null,
+   "id": "atomic-energy",
+   "ministry": "Department of Atomic Energy"
+  },
+  {
+   "url": "https://www.isro.gov.in",
+   "status": 200,
+   "final": "https://www.isro.gov.in",
+   "title": "Indian Space Research Organisation",
+   "error": null,
+   "id": "space",
+   "ministry": "Department of Space"
+  }
+ ]
+}
