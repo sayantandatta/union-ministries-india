@@ -9,7 +9,8 @@
    "wiki": "Narendra Modi",
    "wikiAlt": [],
    "extra": "Prime Minister. Also holds all important policy issues and every portfolio not allocated to another minister.",
-   "qid": "Q1058"
+   "qid": "Q1058",
+   "wikiResolved": "Narendra Modi"
   },
   "rajnath": {
    "n": "Rajnath Singh",
@@ -17,7 +18,8 @@
    "wiki": "Rajnath Singh",
    "wikiAlt": [],
    "extra": null,
-   "qid": "Q3506475"
+   "qid": "Q3506475",
+   "wikiResolved": "Rajnath Singh"
   },
   "shah": {
    "n": "Amit Shah",
@@ -25,7 +27,8 @@
    "wiki": "Amit Shah",
    "wikiAlt": [],
    "extra": null,
-   "qid": "Q4746875"
+   "qid": "Q4746875",
+   "wikiResolved": "Amit Shah"
   },
   "gadkari": {
    "n": "Nitin Gadkari",
@@ -33,7 +36,8 @@
    "wiki": "Nitin Gadkari",
    "wikiAlt": [],
    "extra": null,
-   "qid": "Q3504520"
+   "qid": "Q3504520",
+   "wikiResolved": "Nitin Gadkari"
   },
   "nadda": {
    "n": "J. P. Nadda",
@@ -43,7 +47,8 @@
     "Jagat Prakash Nadda"
    ],
    "extra": null,
-   "qid": "Q16193764"
+   "qid": "Q16193764",
+   "wikiResolved": "J. P. Nadda"
   },
   "chouhan": {
    "n": "Shivraj Singh Chouhan",
@@ -51,7 +56,8 @@
    "wiki": "Shivraj Singh Chouhan",
    "wikiAlt": [],
    "extra": null,
-   "qid": "Q3180602"
+   "qid": "Q3180602",
+   "wikiResolved": "Shivraj Singh Chouhan"
   },
   "nirmala": {
    "n": "Nirmala Sitharaman",
@@ -59,7 +65,8 @@
    "wiki": "Nirmala Sitharaman",
    "wikiAlt": [],
    "extra": null,
-   "qid": "Q7040049"
+   "qid": "Q7040049",
+   "wikiResolved": "Nirmala Sitharaman"
   },
   "jaishankar": {
    "n": "S. Jaishankar",
@@ -69,7 +76,8 @@
     "Subrahmanyam Jaishankar"
    ],
    "extra": null,
-   "qid": "Q16186720"
+   "qid": "Q16186720",
+   "wikiResolved": "S. Jaishankar"
   },
   "khattar": {
    "n": "Manohar Lal Khattar",
@@ -77,7 +85,8 @@
    "wiki": "Manohar Lal Khattar",
    "wikiAlt": [],
    "extra": null,
-   "qid": "Q18336221"
+   "qid": "Q18336221",
+   "wikiResolved": "Manohar Lal Khattar"
   },
   "hdk": {
    "n": "H. D. Kumaraswamy",
@@ -85,7 +94,8 @@
    "wiki": "H. D. Kumaraswamy",
    "wikiAlt": [],
    "extra": null,
-   "qid": "Q251790"
+   "qid": "Q251790",
+   "wikiResolved": "H. D. Kumaraswamy"
   },
   "goyal": {
    "n": "Piyush Goyal",
@@ -93,7 +103,8 @@
    "wiki": "Piyush Goyal",
    "wikiAlt": [],
    "extra": null,
-   "qid": "Q7199798"
+   "qid": "Q7199798",
+   "wikiResolved": "Piyush Goyal"
   },
   "joshi": {
    "n": "Pralhad Joshi",
@@ -101,7 +112,8 @@
    "wiki": "Pralhad Joshi",
    "wikiAlt": [],
    "extra": null,
-   "qid": "Q7238224"
+   "qid": "Q7238224",
+   "wikiResolved": "Pralhad Joshi"
   },
   "manjhi": {
    "n": "Jitan Ram Manjhi",
@@ -109,7 +121,8 @@
    "wiki": "Jitan Ram Manjhi",
    "wikiAlt": [],
    "extra": null,
-   "qid": "Q16910976"
+   "qid": "Q16910976",
+   "wikiResolved": "Jitan Ram Manjhi"
   },
   "lalan": {
    "n": "Rajiv Ranjan (Lalan) Singh",
@@ -119,7 +132,8 @@
     "Rajiv Ranjan Singh"
    ],
    "extra": null,
-   "qid": "Q7286245"
+   "qid": "Q7286245",
+   "wikiResolved": "Lalan Singh"
   },
   "sonowal": {
    "n": "Sarbananda Sonowal",
@@ -127,7 +141,8 @@
    "wiki": "Sarbananda Sonowal",
    "wikiAlt": [],
    "extra": null,
-   "qid": "Q7423486"
+   "qid": "Q7423486",
+   "wikiResolved": "Sarbananda Sonowal"
   },
   "virendra": {
    "n": "Virendra Kumar",
@@ -137,7 +152,8 @@
     "Virendra Kumar (politician)"
    ],
    "extra": null,
-   "qid": "Q7933694"
+   "qid": "Q7933694",
+   "wikiResolved": "Virendra Kumar Khatik"
   },
   "rmnaidu": {
    "n": "K. Ram Mohan Naidu",
@@ -147,7 +163,8 @@
     "Ram Mohan Naidu Kinjarapu"
    ],
    "extra": null,
-   "qid": "Q16901223"
+   "qid": "Q16901223",
+   "wikiResolved": "Kinjarapu Ram Mohan Naidu"
   },
   "oram": {
    "n": "Jual Oram",
@@ -155,7 +172,8 @@
    "wiki": "Jual Oram",
    "wikiAlt": [],
    "extra": null,
-   "qid": "Q6298726"
+   "qid": "Q6298726",
+   "wikiResolved": "Jual Oram"
   },
   "giriraj": {
    "n": "Giriraj Singh",
@@ -163,7 +181,8 @@
    "wiki": "Giriraj Singh",
    "wikiAlt": [],
    "extra": null,
-   "qid": "Q16736894"
+   "qid": "Q16736894",
+   "wikiResolved": "Giriraj Singh"
   },
   "vaishnaw": {
    "n": "Ashwini Vaishnaw",
@@ -171,7 +190,8 @@
    "wiki": "Ashwini Vaishnaw",
    "wikiAlt": [],
    "extra": null,
-   "qid": "Q75184694"
+   "qid": "Q75184694",
+   "wikiResolved": "Ashwini Vaishnaw"
   },
   "scindia": {
    "n": "Jyotiraditya Scindia",
@@ -179,7 +199,8 @@
    "wiki": "Jyotiraditya Scindia",
    "wikiAlt": [],
    "extra": null,
-   "qid": "Q16213761"
+   "qid": "Q16213761",
+   "wikiResolved": "Jyotiraditya Scindia"
   },
   "bhupender": {
    "n": "Bhupender Yadav",
@@ -187,7 +208,8 @@
    "wiki": "Bhupender Yadav",
    "wikiAlt": [],
    "extra": null,
-   "qid": "Q16208337"
+   "qid": "Q16208337",
+   "wikiResolved": "Bhupender Yadav"
   },
   "shekhawat": {
    "n": "Gajendra Singh Shekhawat",
@@ -195,7 +217,8 @@
    "wiki": "Gajendra Singh Shekhawat",
    "wikiAlt": [],
    "extra": null,
-   "qid": "Q16914124"
+   "qid": "Q16914124",
+   "wikiResolved": "Gajendra Singh Shekhawat"
   },
   "annpurna": {
    "n": "Annpurna Devi",
@@ -203,7 +226,8 @@
    "wiki": "Annpurna Devi",
    "wikiAlt": [],
    "extra": null,
-   "qid": "Q64010478"
+   "qid": "Q64010478",
+   "wikiResolved": "Annpurna Devi"
   },
   "rijiju": {
    "n": "Kiren Rijiju",
@@ -211,7 +235,8 @@
    "wiki": "Kiren Rijiju",
    "wikiAlt": [],
    "extra": null,
-   "qid": "Q6415053"
+   "qid": "Q6415053",
+   "wikiResolved": "Kiren Rijiju"
   },
   "puri": {
    "n": "Hardeep Singh Puri",
@@ -219,7 +244,8 @@
    "wiki": "Hardeep Singh Puri",
    "wikiAlt": [],
    "extra": null,
-   "qid": "Q5655835"
+   "qid": "Q5655835",
+   "wikiResolved": "Hardeep Singh Puri"
   },
   "mandaviya": {
    "n": "Mansukh Mandaviya",
@@ -227,7 +253,8 @@
    "wiki": "Mansukh Mandaviya",
    "wikiAlt": [],
    "extra": null,
-   "qid": "Q21170728"
+   "qid": "Q21170728",
+   "wikiResolved": "Mansukh Mandaviya"
   },
   "kishan": {
    "n": "G. Kishan Reddy",
@@ -235,7 +262,8 @@
    "wiki": "G. Kishan Reddy",
    "wikiAlt": [],
    "extra": null,
-   "qid": "Q5512319"
+   "qid": "Q5512319",
+   "wikiResolved": "G. Kishan Reddy"
   },
   "chirag": {
    "n": "Chirag Paswan",
@@ -243,7 +271,8 @@
    "wiki": "Chirag Paswan",
    "wikiAlt": [],
    "extra": null,
-   "qid": "Q16728004"
+   "qid": "Q16728004",
+   "wikiResolved": "Chirag Paswan"
   },
   "patil": {
    "n": "C. R. Patil",
@@ -251,7 +280,8 @@
    "wiki": "C. R. Patil",
    "wikiAlt": [],
    "extra": null,
-   "qid": "Q5071367"
+   "qid": "Q5071367",
+   "wikiResolved": "C. R. Patil"
   },
   "inderjit": {
    "n": "Rao Inderjit Singh",
@@ -259,7 +289,8 @@
    "wiki": "Rao Inderjit Singh",
    "wikiAlt": [],
    "extra": null,
-   "qid": "Q7293676"
+   "qid": "Q7293676",
+   "wikiResolved": "Rao Inderjit Singh"
   },
   "jitendra": {
    "n": "Dr Jitendra Singh",
@@ -270,7 +301,8 @@
     "Jitendra Singh (Jammu and Kashmir politician)"
    ],
    "extra": "Also Minister of State in the Prime Minister's Office.",
-   "qid": "Q6203277"
+   "qid": "Q6203277",
+   "wikiResolved": "Jitendra Singh"
   },
   "meghwal": {
    "n": "Arjun Ram Meghwal",
@@ -278,7 +310,8 @@
    "wiki": "Arjun Ram Meghwal",
    "wikiAlt": [],
    "extra": null,
-   "qid": "Q4791582"
+   "qid": "Q4791582",
+   "wikiResolved": "Arjun Ram Meghwal"
   },
   "jadhav": {
    "n": "Prataprao Jadhav",
@@ -288,7 +321,8 @@
     "Prataprao Ganpatrao Jadhav"
    ],
    "extra": null,
-   "qid": "Q7238626"
+   "qid": "Q7238626",
+   "wikiResolved": "Prataprao Jadhav"
   },
   "jayant": {
    "n": "Jayant Chaudhary",
@@ -296,7 +330,8 @@
    "wiki": "Jayant Chaudhary",
    "wikiAlt": [],
    "extra": null,
-   "qid": "Q6167558"
+   "qid": "Q6167558",
+   "wikiResolved": "Jayant Chaudhary"
   },
   "anupriya": {
    "n": "Anupriya Patel",
@@ -304,7 +339,8 @@
    "wiki": "Anupriya Patel",
    "wikiAlt": [],
    "extra": null,
-   "qid": "Q4777851"
+   "qid": "Q4777851",
+   "wikiResolved": "Anupriya Patel"
   },
   "sukanta": {
    "n": "Sukanta Majumdar",
@@ -312,7 +348,8 @@
    "wiki": "Sukanta Majumdar",
    "wikiAlt": [],
    "extra": null,
-   "qid": "Q64011108"
+   "qid": "Q64011108",
+   "wikiResolved": "Sukanta Majumdar"
   },
   "jitin": {
    "n": "Jitin Prasada",
@@ -320,7 +357,8 @@
    "wiki": "Jitin Prasada",
    "wikiAlt": [],
    "extra": null,
-   "qid": "Q290717"
+   "qid": "Q290717",
+   "wikiResolved": "Jitin Prasada"
   },
   "naik": {
    "n": "Shripad Yesso Naik",
@@ -330,7 +368,8 @@
     "Shripad Naik"
    ],
    "extra": null,
-   "qid": "Q7504173"
+   "qid": "Q7504173",
+   "wikiResolved": "Shripad Naik"
   },
   "pankaj": {
    "n": "Pankaj Chaudhary",
@@ -338,7 +377,8 @@
    "wiki": "Pankaj Chaudhary",
    "wikiAlt": [],
    "extra": null,
-   "qid": "Q7131282"
+   "qid": "Q7131282",
+   "wikiResolved": "Pankaj Chaudhary"
   },
   "gurjar": {
    "n": "Krishan Pal Gurjar",
@@ -346,7 +386,8 @@
    "wiki": "Krishan Pal Gurjar",
    "wikiAlt": [],
    "extra": null,
-   "qid": "Q16901147"
+   "qid": "Q16901147",
+   "wikiResolved": "Krishan Pal Gurjar"
   },
   "mohol": {
    "n": "Murlidhar Mohol",
@@ -354,7 +395,8 @@
    "wiki": "Murlidhar Mohol",
    "wikiAlt": [],
    "extra": null,
-   "qid": "Q76328310"
+   "qid": "Q76328310",
+   "wikiResolved": "Murlidhar Mohol"
   },
   "athawale": {
    "n": "Ramdas Athawale",
@@ -362,7 +404,8 @@
    "wiki": "Ramdas Athawale",
    "wikiAlt": [],
    "extra": null,
-   "qid": "Q4813289"
+   "qid": "Q4813289",
+   "wikiResolved": "Ramdas Athawale"
   },
   "blverma": {
    "n": "B. L. Verma",
@@ -372,7 +415,8 @@
     "B. L. Verma"
    ],
    "extra": null,
-   "qid": "Q104178808"
+   "qid": "Q104178808",
+   "wikiResolved": "Banwari Lal Verma"
   },
   "rnthakur": {
    "n": "Ram Nath Thakur",
@@ -380,7 +424,8 @@
    "wiki": "Ram Nath Thakur",
    "wikiAlt": [],
    "extra": null,
-   "qid": "Q21229980"
+   "qid": "Q21229980",
+   "wikiResolved": "Ram Nath Thakur"
   },
   "bhagirath": {
    "n": "Bhagirath Choudhary",
@@ -388,7 +433,8 @@
    "wiki": "Bhagirath Choudhary",
    "wikiAlt": [],
    "extra": null,
-   "qid": "Q28873568"
+   "qid": "Q28873568",
+   "wikiResolved": "Bhagirath Choudhary"
   },
   "rai": {
    "n": "Nityanand Rai",
@@ -396,7 +442,8 @@
    "wiki": "Nityanand Rai",
    "wikiAlt": [],
    "extra": null,
-   "qid": "Q16734872"
+   "qid": "Q16734872",
+   "wikiResolved": "Nityanand Rai"
   },
   "bandi": {
    "n": "Bandi Sanjay Kumar",
@@ -404,7 +451,8 @@
    "wiki": "Bandi Sanjay Kumar",
    "wikiAlt": [],
    "extra": null,
-   "qid": "Q64143189"
+   "qid": "Q64143189",
+   "wikiResolved": "Bandi Sanjay Kumar"
   },
   "somanna": {
    "n": "V. Somanna",
@@ -412,7 +460,8 @@
    "wiki": "V. Somanna",
    "wikiAlt": [],
    "extra": null,
-   "qid": "Q24851577"
+   "qid": "Q24851577",
+   "wikiResolved": "V. Somanna"
   },
   "rajbhushan": {
    "n": "Raj Bhushan Choudhary",
@@ -422,7 +471,8 @@
     "Raj Bhushan Choudhary Nishad"
    ],
    "extra": null,
-   "qid": "Q126365290"
+   "qid": "Q126365290",
+   "wikiResolved": "Raj Bhushan Choudhary"
   },
   "pemmasani": {
    "n": "Pemmasani Chandra Sekhar",
@@ -432,7 +482,8 @@
     "Pemmasani Chandra Sekhar"
    ],
    "extra": null,
-   "qid": "Q126111137"
+   "qid": "Q126111137",
+   "wikiResolved": "Chandra Sekhar Pemmasani"
   },
   "kamlesh": {
    "n": "Kamlesh Paswan",
@@ -440,7 +491,8 @@
    "wiki": "Kamlesh Paswan",
    "wikiAlt": [],
    "extra": null,
-   "qid": "Q16215999"
+   "qid": "Q16215999",
+   "wikiResolved": "Kamlesh Paswan"
   },
   "baghel": {
    "n": "S. P. Singh Baghel",
@@ -448,7 +500,8 @@
    "wiki": "S. P. Singh Baghel",
    "wikiAlt": [],
    "extra": null,
-   "qid": "Q7387753"
+   "qid": "Q7387753",
+   "wikiResolved": "S. P. Singh Baghel"
   },
   "shobha": {
    "n": "Shobha Karandlaje",
@@ -456,7 +509,8 @@
    "wiki": "Shobha Karandlaje",
    "wikiAlt": [],
    "extra": null,
-   "qid": "Q7499789"
+   "qid": "Q7499789",
+   "wikiResolved": "Shobha Karandlaje"
   },
   "kirti": {
    "n": "Kirti Vardhan Singh",
@@ -464,7 +518,8 @@
    "wiki": "Kirti Vardhan Singh",
    "wikiAlt": [],
    "extra": null,
-   "qid": "Q6416217"
+   "qid": "Q6416217",
+   "wikiResolved": "Kirti Vardhan Singh"
   },
   "pabitra": {
    "n": "Pabitra Margherita",
@@ -472,7 +527,8 @@
    "wiki": "Pabitra Margherita",
    "wikiAlt": [],
    "extra": null,
-   "qid": "Q111352685"
+   "qid": "Q111352685",
+   "wikiResolved": "Pabitra Margherita"
   },
   "nimuben": {
    "n": "Nimuben Bambhaniya",
@@ -480,7 +536,8 @@
    "wiki": "Nimuben Bambhaniya",
    "wikiAlt": [],
    "extra": null,
-   "qid": "Q126364657"
+   "qid": "Q126364657",
+   "wikiResolved": "Nimuben Bambhaniya"
   },
   "shantanu": {
    "n": "Shantanu Thakur",
@@ -488,7 +545,8 @@
    "wiki": "Shantanu Thakur",
    "wikiAlt": [],
    "extra": null,
-   "qid": "Q63992931"
+   "qid": "Q63992931",
+   "wikiResolved": "Shantanu Thakur"
   },
   "gopi": {
    "n": "Suresh Gopi",
@@ -496,7 +554,8 @@
    "wiki": "Suresh Gopi",
    "wikiAlt": [],
    "extra": null,
-   "qid": "Q3530125"
+   "qid": "Q3530125",
+   "wikiResolved": "Suresh Gopi"
   },
   "tamta": {
    "n": "Ajay Tamta",
@@ -504,7 +563,8 @@
    "wiki": "Ajay Tamta",
    "wikiAlt": [],
    "extra": null,
-   "qid": "Q16736901"
+   "qid": "Q16736901",
+   "wikiResolved": "Ajay Tamta"
   },
   "malhotra": {
    "n": "Harsh Malhotra",
@@ -512,7 +572,8 @@
    "wiki": "Harsh Malhotra",
    "wikiAlt": [],
    "extra": null,
-   "qid": "Q126367708"
+   "qid": "Q126367708",
+   "wikiResolved": "Harsh Malhotra"
   },
   "dubey": {
    "n": "Satish Chandra Dubey",
@@ -520,7 +581,8 @@
    "wiki": "Satish Chandra Dubey",
    "wikiAlt": [],
    "extra": null,
-   "qid": "Q16728677"
+   "qid": "Q16728677",
+   "wikiResolved": "Satish Chandra Dubey"
   },
   "seth": {
    "n": "Sanjay Seth",
@@ -531,7 +593,8 @@
     "Sanjay Seth"
    ],
    "extra": null,
-   "qid": "Q96404945"
+   "qid": "Q96404945",
+   "wikiResolved": "Sanjay Seth (Jharkhand politician)"
   },
   "uikey": {
    "n": "Durgadas Uikey",
@@ -541,7 +604,8 @@
     "Durgadas Uikey"
    ],
    "extra": null,
-   "qid": "Q64006793"
+   "qid": "Q64006793",
+   "wikiResolved": "Durga Das Uikey"
   },
   "khadse": {
    "n": "Raksha Khadse",
@@ -549,7 +613,8 @@
    "wiki": "Raksha Khadse",
    "wikiAlt": [],
    "extra": null,
-   "qid": "Q16908900"
+   "qid": "Q16908900",
+   "wikiResolved": "Raksha Khadse"
   },
   "savitri": {
    "n": "Savitri Thakur",
@@ -557,7 +622,8 @@
    "wiki": "Savitri Thakur",
    "wikiAlt": [],
    "extra": null,
-   "qid": "Q16736902"
+   "qid": "Q16736902",
+   "wikiResolved": "Savitri Thakur"
   },
   "tokhan": {
    "n": "Tokhan Sahu",
@@ -565,7 +631,8 @@
    "wiki": "Tokhan Sahu",
    "wikiAlt": [],
    "extra": null,
-   "qid": "Q58290680"
+   "qid": "Q58290680",
+   "wikiResolved": "Tokhan Sahu"
   },
   "varma": {
    "n": "Bhupathiraju Srinivasa Varma",
@@ -576,7 +643,8 @@
     "Srinivasa Varma"
    ],
    "extra": null,
-   "qid": "Q126364180"
+   "qid": "Q126364180",
+   "wikiResolved": "Bhupathi Raju Srinivasa Varma"
   }
  },
  "ministries": {

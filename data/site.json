@@ -1,11 +1,12 @@
 {
  "schema": 1,
- "generated": "2026-10-16T13:21:55+00:00",
+ "generated": "2026-10-16T13:29:58+00:00",
  "asOf": "2026-10-16",
  "source": "https://en.wikipedia.org/wiki/Third_Modi_ministry",
  "status": {
   "ok": true,
-  "messages": []
+  "messages": [],
+  "wikipediaRevision": 1380051637
  },
  "changes": [
   {
@@ -44,9 +45,17 @@
    },
    "social": {
     "x": "narendramodi",
-    "facebook": "narendramodi"
+    "instagram": "narendramodi",
+    "facebook": "narendramodi",
+    "youtube": "UC1NF71EwP41VdjAU1iXdLkw",
+    "website": "https://www.narendramodi.in"
    },
-   "photo": null,
+   "photo": {
+    "file": "photos/Q1058-ca0a71f8a2.jpg",
+    "credit": "Prime Minister's Office",
+    "license": "GODL-India",
+    "page": "https://commons.wikimedia.org/wiki/File:Prime_Minister_Of_Bharat_Shri_Narendra_Damodardas_Modi.jpg"
+   },
    "sources": [
     "https://en.wikipedia.org/wiki/Narendra_Modi",
     "https://www.wikidata.org/wiki/Q1058",
@@ -72,9 +81,18 @@
     "url": "https://myneta.info/LokSabha2024/candidate.php?candidate_id=7169"
    },
    "social": {
-    "x": "rajnathsingh"
+    "x": "rajnathsingh",
+    "instagram": "rajnathsinghbjp",
+    "facebook": "RajnathSinghBJP",
+    "youtube": "UC_5HPOWK_SDqV5FszV7HS7A",
+    "website": "http://rajnathsingh.in/"
    },
-   "photo": null,
+   "photo": {
+    "file": "photos/Q3506475-8011fc55bf.jpg",
+    "credit": "U.S. Secretary of War",
+    "license": "Public domain",
+    "page": "https://commons.wikimedia.org/wiki/File:2025_Rajnath_Singh_(cropped).jpg"
+   },
    "sources": [
     "https://en.wikipedia.org/wiki/Rajnath_Singh",
     "https://www.wikidata.org/wiki/Q3506475",
@@ -101,9 +119,18 @@
     "url": "https://myneta.info/LokSabha2024/candidate.php?candidate_id=4427"
    },
    "social": {
-    "x": "AmitShah"
+    "x": "AmitShah",
+    "instagram": "amitshahofficial",
+    "facebook": "AmitShah.Official",
+    "youtube": "UCnC4JCEAMQetXkR_DVy2onA",
+    "website": "http://www.amitshah.co.in/"
    },
-   "photo": null,
+   "photo": {
+    "file": "photos/Q4746875-1c75e7c470.jpg",
+    "credit": "Ministry of Home Affairs",
+    "license": "GODL-India",
+    "page": "https://commons.wikimedia.org/wiki/File:Shri_Amit_Shah_in_Raigad.jpg"
+   },
    "sources": [
     "https://en.wikipedia.org/wiki/Amit_Shah",
     "https://www.wikidata.org/wiki/Q4746875",
@@ -132,9 +159,16 @@
    },
    "social": {
     "x": "nitin_gadkari",
-    "facebook": "nitingadkary"
+    "instagram": "gadkari.nitin",
+    "facebook": "nitingadkary",
+    "website": "https://www.nitingadkari.org/"
    },
-   "photo": null,
+   "photo": {
+    "file": "photos/Q3504520-9d5eeb7af5.jpg",
+    "credit": "Ministry of Road Transport and Highways",
+    "license": "GODL-India",
+    "page": "https://commons.wikimedia.org/wiki/File:Shri_Nitin_Jairam_Gadkari.jpg"
+   },
    "sources": [
     "https://en.wikipedia.org/wiki/Nitin_Gadkari",
     "https://www.wikidata.org/wiki/Q3504520",
@@ -161,9 +195,15 @@
     "url": "https://myneta.info/rajsab09aff/candidate.php?candidate_id=1055"
    },
    "social": {
+    "facebook": "JagatPrakashNadda",
     "x": "JPNadda"
    },
-   "photo": null,
+   "photo": {
+    "file": "photos/Q16193764-42230dcd73.jpg",
+    "credit": "President's Secretariat",
+    "license": "GODL-India",
+    "page": "https://commons.wikimedia.org/wiki/File:Jagat_Prakash_Nadda_2023.jpg"
+   },
    "sources": [
     "https://en.wikipedia.org/wiki/J._P._Nadda",
     "https://www.wikidata.org/wiki/Q16193764",
@@ -190,9 +230,18 @@
     "url": "https://myneta.info/LokSabha2024/candidate.php?candidate_id=4448"
    },
    "social": {
-    "x": "ChouhanShivraj"
+    "x": "ChouhanShivraj",
+    "instagram": "chouhanshivrajsingh",
+    "facebook": "ChouhanShivraj",
+    "youtube": "UC2-MHVaFAAmCdL5yTJolLSg",
+    "website": "http://www.shivrajsinghchouhan.org/"
    },
-   "photo": null,
+   "photo": {
+    "file": "photos/Q3180602-68ee1c0877.jpg",
+    "credit": "Ministry of Home Affairs",
+    "license": "GODL-India",
+    "page": "https://commons.wikimedia.org/wiki/File:Shivraj_Singh_Chouhan_(Cropped_3).jpg"
+   },
    "sources": [
     "https://en.wikipedia.org/wiki/Shivraj_Singh_Chouhan",
     "https://www.wikidata.org/wiki/Q3180602",
@@ -219,9 +268,16 @@
     "url": "https://myneta.info/rajsab09aff/candidate.php?candidate_id=986"
    },
    "social": {
-    "x": "nsitharaman"
+    "x": "nsitharaman",
+    "instagram": "nsitharaman",
+    "facebook": "nirmala.sitharaman"
    },
-   "photo": null,
+   "photo": {
+    "file": "photos/Q7040049-e977da1bd2.jpg",
+    "credit": "Bundesministerium für europäische und internationale Angelegenheiten",
+    "license": "CC BY 2.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Am_11._April_2025_empfing_Au%C3%9Fenministerin_Beate_Meinl-Reisinger_die_indische_Finanzministerin_Nirmala_Sitharaman_in_Wien_(54445397025)_(cropped).jpg"
+   },
    "sources": [
     "https://en.wikipedia.org/wiki/Nirmala_Sitharaman",
     "https://www.wikidata.org/wiki/Q7040049",
@@ -249,7 +305,12 @@
    "social": {
     "x": "DrSJaishankar"
    },
-   "photo": null,
+   "photo": {
+    "file": "photos/Q16186720-de18a74b32.jpg",
+    "credit": "Bundesministerium für europäische und internationale Angelegenheiten",
+    "license": "CC BY 2.0",
+    "page": "https://commons.wikimedia.org/wiki/File:The_official_portrait_of_External_Minister_Subrahmanyam_Jaishankar.jpg"
+   },
    "sources": [
     "https://en.wikipedia.org/wiki/S._Jaishankar",
     "https://www.wikidata.org/wiki/Q16186720",
@@ -276,9 +337,15 @@
     "url": "https://myneta.info/LokSabha2024/candidate.php?candidate_id=8552"
    },
    "social": {
-    "x": "mlkhattar"
+    "x": "mlkhattar",
+    "website": "http://manoharlalkhattar.in/"
    },
-   "photo": null,
+   "photo": {
+    "file": "photos/Q18336221-b3cc2ec3e8.jpg",
+    "credit": "Maryland GovPics",
+    "license": "CC BY 2.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Manohar_Lal_Khattar_in_2015.jpg"
+   },
    "sources": [
     "https://en.wikipedia.org/wiki/Manohar_Lal_Khattar",
     "https://www.wikidata.org/wiki/Q18336221",
@@ -306,9 +373,15 @@
     "url": "https://myneta.info/LokSabha2024/candidate.php?candidate_id=2651"
    },
    "social": {
+    "website": "http://jds.ind.in/h-d-kumaraswamy/",
     "x": "hd_kumaraswamy"
    },
-   "photo": null,
+   "photo": {
+    "file": "photos/Q251790-a4bd28eac3.jpg",
+    "credit": "Prime Minister's Office",
+    "license": "GODL-India",
+    "page": "https://commons.wikimedia.org/wiki/File:H._D._Kumaraswamy.jpg"
+   },
    "sources": [
     "https://en.wikipedia.org/wiki/H._D._Kumaraswamy",
     "https://www.wikidata.org/wiki/Q251790",
@@ -335,9 +408,17 @@
     "url": "https://myneta.info/LokSabha2024/candidate.php?candidate_id=7093"
    },
    "social": {
-    "x": "PiyushGoyal"
+    "x": "PiyushGoyal",
+    "instagram": "piyushgoyalofficial",
+    "facebook": "PiyushGoyalOfficial",
+    "website": "http://www.piyushgoyal.in"
    },
-   "photo": null,
+   "photo": {
+    "file": "photos/Q7199798-591d5728cb.jpg",
+    "credit": "U.S. Department of State from United States",
+    "license": "Public domain",
+    "page": "https://commons.wikimedia.org/wiki/File:Piyush_Goyal_(cropped).jpg"
+   },
    "sources": [
     "https://en.wikipedia.org/wiki/Piyush_Goyal",
     "https://www.wikidata.org/wiki/Q7199798",
@@ -366,7 +447,12 @@
    "social": {
     "x": "JoshiPralhad"
    },
-   "photo": null,
+   "photo": {
+    "file": "photos/Q7238224-0e31b60e4e.jpg",
+    "credit": "Ministry of Parliamentary Affairs",
+    "license": "GODL-India",
+    "page": "https://commons.wikimedia.org/wiki/File:The_Union_Minister_for_Parliamentary_Affairs,_Coal_and_Mines,_Shri_Pralhad_Joshi.jpg"
+   },
    "sources": [
     "https://en.wikipedia.org/wiki/Pralhad_Joshi",
     "https://www.wikidata.org/wiki/Q7238224",
@@ -393,9 +479,15 @@
     "url": "https://myneta.info/LokSabha2024/candidate.php?candidate_id=1678"
    },
    "social": {
-    "x": "jitanrmanjhi"
+    "x": "jitanrmanjhi",
+    "facebook": "JRManjhi"
    },
-   "photo": null,
+   "photo": {
+    "file": "photos/Q16910976-63bfb02764.jpg",
+    "credit": "Prime Minister's Office, Government of India",
+    "license": "GODL-India",
+    "page": "https://commons.wikimedia.org/wiki/File:Bihar_CM_meets_PM_Modi.jpg"
+   },
    "sources": [
     "https://en.wikipedia.org/wiki/Jitan_Ram_Manjhi",
     "https://www.wikidata.org/wiki/Q16910976",
@@ -424,7 +516,12 @@
    "social": {
     "x": "LalanSingh_1"
    },
-   "photo": null,
+   "photo": {
+    "file": "photos/Q7286245-be1c716a1a.jpg",
+    "credit": "Vice President's Secretariat",
+    "license": "GODL-India",
+    "page": "https://commons.wikimedia.org/wiki/File:Shri_Lalan_Singh.jpg"
+   },
    "sources": [
     "https://en.wikipedia.org/wiki/Lalan_Singh",
     "https://www.wikidata.org/wiki/Q7286245",
@@ -452,9 +549,15 @@
    },
    "social": {
     "x": "sarbanandsonwal",
+    "instagram": "sarbanandasonowal",
     "facebook": "SarbanandaSonowal"
    },
-   "photo": null,
+   "photo": {
+    "file": "photos/Q7423486-94c094a468.jpg",
+    "credit": "Vice President Office, Government of India",
+    "license": "GODL-India",
+    "page": "https://commons.wikimedia.org/wiki/File:Chief_Minister_of_Assam_Sarbananda_Sonowal.jpg"
+   },
    "sources": [
     "https://en.wikipedia.org/wiki/Sarbananda_Sonowal",
     "https://www.wikidata.org/wiki/Q7423486",
@@ -483,7 +586,12 @@
    "social": {
     "x": "Drvirendrakum13"
    },
-   "photo": null,
+   "photo": {
+    "file": "photos/Q7933694-c424e9c15b.jpg",
+    "credit": "Ministry of Women and Child Development",
+    "license": "GODL-India",
+    "page": "https://commons.wikimedia.org/wiki/File:Virendra_Kumar_releasing_the_compilation_of_speeches,_written_by_children_of_CCIs,_at_the_closing_ceremony_of_the_weeklong_festival_%E2%80%98Hausla_2017%E2%80%99,_in_New_Delhi.jpg"
+   },
    "sources": [
     "https://en.wikipedia.org/wiki/Virendra_Kumar_Khatik",
     "https://www.wikidata.org/wiki/Q7933694",
@@ -512,7 +620,12 @@
    "social": {
     "x": "RamMNK"
    },
-   "photo": null,
+   "photo": {
+    "file": "photos/Q16901223-afabadcf5e.jpg",
+    "credit": "Ministry of Civil Aviation",
+    "license": "GODL-India",
+    "page": "https://commons.wikimedia.org/wiki/File:Shri_Kinjarapu_Rammohan_Naidu.jpg"
+   },
    "sources": [
     "https://en.wikipedia.org/wiki/Kinjarapu_Ram_Mohan_Naidu",
     "https://www.wikidata.org/wiki/Q16901223",
@@ -539,9 +652,15 @@
     "url": "https://myneta.info/LokSabha2024/candidate.php?candidate_id=7296"
    },
    "social": {
-    "x": "jualoram"
+    "x": "jualoram",
+    "facebook": "jualoram1"
    },
-   "photo": null,
+   "photo": {
+    "file": "photos/Q6298726-4aefd8e352.jpg",
+    "credit": "Ministry of Tribal Affairs",
+    "license": "GODL-India",
+    "page": "https://commons.wikimedia.org/wiki/File:Jual_Oram_addressing_a_meeting_on_effective_and_efficient_implementation_mechanism_of_schemes_of_Ministry_of_Tribal_Affairs_for_development_of_Tribals,_in_New_Delhi_on_August_05,_2014.jpg"
+   },
    "sources": [
     "https://en.wikipedia.org/wiki/Jual_Oram",
     "https://www.wikidata.org/wiki/Q6298726",
@@ -568,9 +687,15 @@
     "url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=5058"
    },
    "social": {
+    "website": "http://girirajsingh.in",
     "x": "girirajsinghbjp"
    },
-   "photo": null,
+   "photo": {
+    "file": "photos/Q16736894-ec5cf2d95a.jpg",
+    "credit": "Ministry of Micro, Small & Medium Enterprises",
+    "license": "GODL-India",
+    "page": "https://commons.wikimedia.org/wiki/File:Giriraj_Singh_addressing_a_press_conference_on_the_achievements_of_the_Ministry_of_Micro,_Small_%26_Medium_Enterprises,_during_the_last_four_years,_in_New_Delhi.JPG"
+   },
    "sources": [
     "https://en.wikipedia.org/wiki/Giriraj_Singh",
     "https://www.opensanctions.org/entities/Q16736894/",
@@ -595,9 +720,15 @@
     "url": "https://www.myneta.info/rajsab09aff/candidate.php?candidate_id=1067"
    },
    "social": {
+    "website": "http://www.ashwinivaishnaw.in",
     "x": "AshwiniVaishnaw"
    },
-   "photo": null,
+   "photo": {
+    "file": "photos/Q75184694-32f7a28e6c.jpg",
+    "credit": "Ministry of Railways",
+    "license": "GODL-India",
+    "page": "https://commons.wikimedia.org/wiki/File:Ashwini_Vaishnaw_addressing_the_Media_after_assuming_charge_as_the_Minister_of_Railways_at_Rail_Bhavan.jpg"
+   },
    "sources": [
     "https://en.wikipedia.org/wiki/Ashwini_Vaishnaw",
     "https://www.opensanctions.org/entities/Q75184694/",
@@ -623,9 +754,15 @@
     "url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=3613"
    },
    "social": {
+    "website": "http://jyotiradityamscindia.com/",
     "x": "JM_Scindia"
    },
-   "photo": null,
+   "photo": {
+    "file": "photos/Q16213761-ec4730cc83.jpg",
+    "credit": "Ministry of Civil Aviation",
+    "license": "GODL-India",
+    "page": "https://commons.wikimedia.org/wiki/File:Shri_Jyotiraditya_Madhavrao_Scindia_(cropped).jpg"
+   },
    "sources": [
     "https://www.opensanctions.org/entities/Q16213761/",
     "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=3613",
@@ -649,9 +786,15 @@
     "url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=360"
    },
    "social": {
+    "facebook": "bhupenderyadavbjp",
     "x": "byadavbjp"
    },
-   "photo": null,
+   "photo": {
+    "file": "photos/Q16208337-a998a50caa.jpg",
+    "credit": "Ministry of Environment, Forest and Climate Change",
+    "license": "GODL-India",
+    "page": "https://commons.wikimedia.org/wiki/File:Union_Minister_Bhupender_Yadav.jpg"
+   },
    "sources": [
     "https://www.opensanctions.org/entities/Q16208337/",
     "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=360",
@@ -675,9 +818,15 @@
     "url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=1843"
    },
    "social": {
+    "website": "http://gajendrasinghshekhawat.com",
     "x": "gssjodhpur"
    },
-   "photo": null,
+   "photo": {
+    "file": "photos/Q16914124-0ae622c99d.jpg",
+    "credit": "Ministry of Tourism",
+    "license": "GODL-India",
+    "page": "https://commons.wikimedia.org/wiki/File:Shri_Gajendra_Singh_Shekhawat.jpg"
+   },
    "sources": [
     "https://www.opensanctions.org/entities/Q16914124/",
     "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=1843",
@@ -701,7 +850,12 @@
     "url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=7285"
    },
    "social": {},
-   "photo": null,
+   "photo": {
+    "file": "photos/Q64010478-3295f795b5.jpg",
+    "credit": "Prime Minister's Office",
+    "license": "GODL-India",
+    "page": "https://commons.wikimedia.org/wiki/File:Annpurna_Devi_Minister_(cropped).jpg"
+   },
    "sources": [
     "https://en.wikipedia.org/wiki/Annpurna_Devi",
     "https://www.opensanctions.org/entities/Q64010478/",
@@ -726,9 +880,16 @@
     "url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=251"
    },
    "social": {
-    "x": "KirenRijiju"
+    "x": "KirenRijiju",
+    "instagram": "kiren.rijiju",
+    "website": "http://kirenrijiju.googlepages.com/"
    },
-   "photo": null,
+   "photo": {
+    "file": "photos/Q6415053-5ca59f516b.jpg",
+    "credit": "Ministry of Parliamentary Affairs",
+    "license": "GODL-India",
+    "page": "https://commons.wikimedia.org/wiki/File:Shri_Kiren_Rijiju.jpg"
+   },
    "sources": [
     "https://www.opensanctions.org/entities/Q6415053/",
     "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=251",
@@ -752,9 +913,16 @@
     "url": "https://www.myneta.info/rajsab09aff/candidate.php?candidate_id=897"
    },
    "social": {
+    "facebook": "HardeepSPuri",
+    "website": "https://hardeepsinghpuri.com/",
     "x": "HardeepSPuri"
    },
-   "photo": null,
+   "photo": {
+    "file": "photos/Q5655835-e9db70254e.jpg",
+    "credit": "Andrew Scheer",
+    "license": "CC0",
+    "page": "https://commons.wikimedia.org/wiki/File:Hardeep_Singh_Puri_-_2018_(45176824921)_(cropped).jpg"
+   },
    "sources": [
     "https://www.opensanctions.org/entities/Q5655835/",
     "https://www.myneta.info/rajsab09aff/candidate.php?candidate_id=897",
@@ -778,9 +946,16 @@
     "url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=3459"
    },
    "social": {
+    "facebook": "mansukhmandviya",
+    "website": "https://mansukhmandaviya.in/",
     "x": "mansukhmandviya"
    },
-   "photo": null,
+   "photo": {
+    "file": "photos/Q21170728-af7475efd9.jpg",
+    "credit": "Ministry of Chemicals and Fertilizers",
+    "license": "GODL-India",
+    "page": "https://commons.wikimedia.org/wiki/File:Mansukh_L._Mandaviya_addressing_at_the_launch_of_the_%E2%80%98Janaushadhi_Suvidha_-_Oxo-Biodegradable_Sanitary_Napkins%E2%80%99_under_the_%E2%80%98Pradhan_Mantri_Bhartiya_Janaushadhi_Pariyojana_(PMBJP)%E2%80%99,_in_New_Delhi.JPG"
+   },
    "sources": [
     "https://www.opensanctions.org/entities/Q21170728/",
     "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=3459",
@@ -806,7 +981,12 @@
    "social": {
     "x": "kishanreddybjp"
    },
-   "photo": null,
+   "photo": {
+    "file": "photos/Q5512319-57f3d1f6d5.jpg",
+    "credit": "Ministry of Labour and Employment",
+    "license": "GODL-India",
+    "page": "https://commons.wikimedia.org/wiki/File:G._Kishan_Reddy.jpg"
+   },
    "sources": [
     "https://www.coal.nic.in/en/minister/shri-g-kishan-reddy",
     "https://www.opensanctions.org/entities/Q5512319/",
@@ -821,7 +1001,7 @@
    "qid": "Q16728004",
    "wiki": "Chirag Paswan",
    "dob": "1982-10-31",
-   "pob": null,
+   "pob": "Khagaria, Khagaria district",
    "email": null,
    "house": "Lok Sabha – Hajipur (SC), Bihar",
    "residence": null,
@@ -831,9 +1011,17 @@
     "url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=7281"
    },
    "social": {
-    "x": "iChiragPaswan"
+    "x": "iChiragPaswan",
+    "instagram": "ichiragpaswan",
+    "facebook": "ichiragpaswan",
+    "website": "https://sansad.in/ls/members/biographyM/4777"
    },
-   "photo": null,
+   "photo": {
+    "file": "photos/Q16728004-d77168d73f.jpg",
+    "credit": "Ministry of Food Processing Industries",
+    "license": "GODL-India",
+    "page": "https://commons.wikimedia.org/wiki/File:Shri_Chirag_Paswan.jpg"
+   },
    "sources": [
     "https://www.opensanctions.org/entities/Q16728004/",
     "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=7281",
@@ -859,7 +1047,12 @@
    "social": {
     "x": "CRPaatil"
    },
-   "photo": null,
+   "photo": {
+    "file": "photos/Q5071367-bfb9e3481b.jpg",
+    "credit": "Prime Minister's Office",
+    "license": "GODL-India",
+    "page": "https://commons.wikimedia.org/wiki/File:Chandrakant_Raghunath_Patil.jpg"
+   },
    "sources": [
     "https://www.opensanctions.org/entities/Q5071367/",
     "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=5139",
@@ -883,7 +1076,12 @@
     "url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=8448"
    },
    "social": {},
-   "photo": null,
+   "photo": {
+    "file": "photos/Q7293676-e577068ad5.jpg",
+    "credit": "Ministry of Housing and Urban Poverty Alleviation",
+    "license": "GODL-India",
+    "page": "https://commons.wikimedia.org/wiki/File:Rao_Inderjit_Singh_addressing_at_the_Meeting_with_the_StatesUTs_on_the_Implementation_of_%E2%80%9CThe_Real_Estate_(Regulation_and_Development)_Act,_2016%E2%80%9D,_in_New_Delhi.jpg"
+   },
    "sources": [
     "https://en.wikipedia.org/wiki/Rao_Inderjit_Singh",
     "https://www.opensanctions.org/entities/Q7293676/",
@@ -896,7 +1094,7 @@
    "r": "IC",
    "extra": "Also Minister of State in the Prime Minister's Office.",
    "qid": "Q6203277",
-   "wiki": "Jitendra Singh Rana",
+   "wiki": "Jitendra Singh",
    "dob": "1956-11-06",
    "pob": "Jammu, Jammu and Kashmir",
    "email": null,
@@ -910,7 +1108,12 @@
    "social": {
     "x": "DrJitendraSingh"
    },
-   "photo": null,
+   "photo": {
+    "file": "photos/Q6203277-534fd3d1b1.jpg",
+    "credit": "Ministry of Personnel, Public Grievances and Pensions",
+    "license": "GODL-India",
+    "page": "https://commons.wikimedia.org/wiki/File:Shri_Jitendra_Singh_Minister_of_for_Personnel,_Public_Grievances_%26_Pensions_(cropped).jpg"
+   },
    "sources": [
     "https://en.wikipedia.org/wiki/Jitendra_Singh_Rana",
     "https://www.opensanctions.org/entities/Q6203277/",
@@ -935,9 +1138,15 @@
     "url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=381"
    },
    "social": {
+    "website": "http://www.arjunrammeghwal.com",
     "x": "arjunrammeghwal"
    },
-   "photo": null,
+   "photo": {
+    "file": "photos/Q4791582-24d12ea83b.jpg",
+    "credit": "Ministry of Parliamentary Affairs",
+    "license": "GODL-India",
+    "page": "https://commons.wikimedia.org/wiki/File:Shri_Arjun_Ram_Meghwal.jpg"
+   },
    "sources": [
     "https://www.opensanctions.org/entities/Q4791582/",
     "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=381",
@@ -961,7 +1170,12 @@
     "url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=1958"
    },
    "social": {},
-   "photo": null,
+   "photo": {
+    "file": "photos/Q7238626-6e1de4819d.jpg",
+    "credit": "Ministry of Ayush",
+    "license": "GODL-India",
+    "page": "https://commons.wikimedia.org/wiki/File:Shri_Jadhav_Prataprao_Ganpatrao_being_welcomed_on_her_arrival_for_assumption_of_charge_as_the_Minister_of_State_(Independent_Charge)_for_Ayush_(cropped).jpg"
+   },
    "sources": [
     "https://www.mohfw.gov.in/sites/default/files/pratap.pdf",
     "https://www.opensanctions.org/entities/Q7238626/",
@@ -988,7 +1202,12 @@
    "social": {
     "x": "jayantrld"
    },
-   "photo": null,
+   "photo": {
+    "file": "photos/Q6167558-987455e1e4.jpg",
+    "credit": "President's Secretariat",
+    "license": "GODL-India",
+    "page": "https://commons.wikimedia.org/wiki/File:Shri_Jayant_Singh_Chaudhary.jpg"
+   },
    "sources": [
     "https://en.wikipedia.org/wiki/Jayant_Chaudhary",
     "https://www.opensanctions.org/entities/Q6167558/",
@@ -1015,7 +1234,12 @@
    "social": {
     "x": "AnupriyaSPatel"
    },
-   "photo": null,
+   "photo": {
+    "file": "photos/Q4777851-b1c688ea2e.jpg",
+    "credit": "Prime Minister's Office",
+    "license": "GODL-India",
+    "page": "https://commons.wikimedia.org/wiki/File:Anupriya_Singh_Patel_with_PM_Modi_in_2021.jpg"
+   },
    "sources": [
     "https://www.opensanctions.org/entities/Q4777851/",
     "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=9380",
@@ -1039,9 +1263,17 @@
     "url": "https://myneta.info/LokSabha2024/candidate.php?candidate_id=2211"
    },
    "social": {
-    "x": "DrSukantaBJP"
+    "x": "DrSukantaBJP",
+    "instagram": "dr.sukantabjp",
+    "facebook": "DR.SUKANTABJP",
+    "website": "https://sukantamajumdar.in/"
    },
-   "photo": null,
+   "photo": {
+    "file": "photos/Q64011108-63436d5a7a.jpg",
+    "credit": "Biswarup Ganguly",
+    "license": "CC BY 3.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Sukanta_Majumdar_-_Kolkata_2022-08-04_0400.jpg"
+   },
    "sources": [
     "https://www.opensanctions.org/entities/Q64011108",
     "https://en.wikipedia.org/wiki/Sukanta_Majumdar",
@@ -1068,9 +1300,15 @@
     "url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=899"
    },
    "social": {
+    "website": "http://www.archive.india.gov.in/govt/loksabhampbiodata.php?mpcode=4065",
     "x": "JitinPrasada"
    },
-   "photo": null,
+   "photo": {
+    "file": "photos/Q290717-fb142ff8d5.jpg",
+    "credit": "Ministry of Textiles",
+    "license": "GODL-India",
+    "page": "https://commons.wikimedia.org/wiki/File:Jitin_Prasada_crop.jpg"
+   },
    "sources": [
     "https://en.wikipedia.org/wiki/Jitin_Prasada",
     "https://www.wikidata.org/wiki/Q290717",
@@ -1086,7 +1324,7 @@
    "r": "MoS",
    "extra": null,
    "qid": "Q7504173",
-   "wiki": "Shripad Yesso Naik",
+   "wiki": "Shripad Naik",
    "dob": "1952-10-04",
    "pob": "Adpai, North Goa, Goa",
    "email": "shripad.naik@mpls.sansad.in",
@@ -1100,7 +1338,12 @@
    "social": {
     "x": "shripadynaik"
    },
-   "photo": null,
+   "photo": {
+    "file": "photos/Q7504173-fa91a29a50.jpg",
+    "credit": "Biswarup Ganguly",
+    "license": "CC BY 3.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Shripad_Yasso_Naik_-_Kolkata_2014-10-12_7755.JPG"
+   },
    "sources": [
     "https://en.wikipedia.org/wiki/Shripad_Naik",
     "https://www.wikidata.org/wiki/Q7504173",
@@ -1129,7 +1372,12 @@
    "social": {
     "x": "mppchaudhary"
    },
-   "photo": null,
+   "photo": {
+    "file": "photos/Q7131282-fd68dc30be.jpg",
+    "credit": "Prime Minister's Office",
+    "license": "GODL-India",
+    "page": "https://commons.wikimedia.org/wiki/File:Pankaj_Chaudhary_in_2021_(cropped).jpg"
+   },
    "sources": [
     "https://en.wikipedia.org/wiki/Pankaj_Chaudhary",
     "https://www.wikidata.org/wiki/Q7131282",
@@ -1160,7 +1408,12 @@
     "instagram": "kpgbjp",
     "facebook": "KPGBJP"
    },
-   "photo": null,
+   "photo": {
+    "file": "photos/Q16901147-9e8cc21da3.jpg",
+    "credit": "Nivisharma845",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Prabhat_PARWANA_Awarded_by_Krishan_Pal_Gurjar,_Central_Cabinet_Minister,_Govt._Of_India.jpg"
+   },
    "sources": [
     "https://en.wikipedia.org/wiki/Krishan_Pal_Gurjar",
     "https://www.wikidata.org/wiki/Q16901147",
@@ -1190,7 +1443,12 @@
     "instagram": "murlidharkmohol",
     "facebook": "MurlidharKMohol"
    },
-   "photo": null,
+   "photo": {
+    "file": "photos/Q76328310-995f89cdaa.png",
+    "credit": "Vijaykz1784",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Murlidhar_Mohol.png"
+   },
    "sources": [
     "https://en.wikipedia.org/wiki/Murlidhar_Mohol",
     "https://www.wikidata.org/wiki/Q76328310",
@@ -1216,9 +1474,15 @@
     "url": "https://www.myneta.info/rajsab09aff/candidate.php?candidate_id=809"
    },
    "social": {
+    "facebook": "ramdasathawale",
     "x": "RamdasAthawale"
    },
-   "photo": null,
+   "photo": {
+    "file": "photos/Q4813289-fadc115fff.jpg",
+    "credit": "Prime Minister's Office",
+    "license": "GODL-India",
+    "page": "https://commons.wikimedia.org/wiki/File:Ramdas_Athawale.jpg"
+   },
    "sources": [
     "https://en.wikipedia.org/wiki/Ramdas_Athawale",
     "https://www.wikidata.org/wiki/Q4813289",
@@ -1249,7 +1513,12 @@
    "social": {
     "x": "blvermaup"
    },
-   "photo": null,
+   "photo": {
+    "file": "photos/Q104178808-d791e993a5.jpg",
+    "credit": "Prime Minister's Office",
+    "license": "GODL-India",
+    "page": "https://commons.wikimedia.org/wiki/File:B._L._Verma_with_PM_Modi_2021_(cropped).jpg"
+   },
    "sources": [
     "https://en.wikipedia.org/wiki/Banwari_Lal_Verma",
     "https://www.wikidata.org/wiki/Q104178808",
@@ -1278,7 +1547,12 @@
    "social": {
     "x": "RNK_Thakur"
    },
-   "photo": null,
+   "photo": {
+    "file": "photos/Q21229980-45d656e182.jpg",
+    "credit": "President's Secretariat",
+    "license": "GODL-India",
+    "page": "https://commons.wikimedia.org/wiki/File:Shri_Ram_Nath_Thakur.jpg"
+   },
    "sources": [
     "https://en.wikipedia.org/wiki/Ram_Nath_Thakur",
     "https://www.opensanctions.org/entities/Q21229980",
@@ -1310,7 +1584,12 @@
     "x": "mpbhagirathbjp",
     "facebook": "bhagirathchoudharybjp"
    },
-   "photo": null,
+   "photo": {
+    "file": "photos/Q28873568-bc10cb3d94.jpg",
+    "credit": "Ministry of Agriculture and Farmers' Welfare",
+    "license": "GODL-India",
+    "page": "https://commons.wikimedia.org/wiki/File:Ministers_of_State_for_Agriculture_and_farmers_Welfare_Shri_Bhagirath_Choudhary.jpg"
+   },
    "sources": [
     "https://sansad.in/api_ls/member/5203",
     "https://en.wikipedia.org/wiki/Bhagirath_Choudhary",
@@ -1336,9 +1615,15 @@
     "url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=5152"
    },
    "social": {
+    "facebook": "nityanandraibjp",
     "x": "nityanandraibjp"
    },
-   "photo": null,
+   "photo": {
+    "file": "photos/Q16734872-ad85d7fde3.jpg",
+    "credit": "Ministry of Home Affairs",
+    "license": "GODL-India",
+    "page": "https://commons.wikimedia.org/wiki/File:Shri_Nityanand_Rai_taking_charge_as_the_Minister_of_State_for_Home_Affairs,_in_New_Delhi_on_June_01,_2019.jpg"
+   },
    "sources": [
     "https://en.wikipedia.org/wiki/Nityanand_Rai",
     "https://www.wikidata.org/wiki/Q16734872",
@@ -1365,9 +1650,15 @@
     "url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=5230"
    },
    "social": {
+    "website": "https://bandisanjaybjp.in",
     "x": "bandisanjay_bjp"
    },
-   "photo": null,
+   "photo": {
+    "file": "photos/Q64143189-70755bacec.png",
+    "credit": "https://www.youtube.com/@mangonews",
+    "license": "CC BY 3.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Sanjay_Bandi_Bjp.png"
+   },
    "sources": [
     "https://en.wikipedia.org/wiki/Bandi_Sanjay_Kumar",
     "https://www.wikidata.org/wiki/Q64143189",
@@ -1396,7 +1687,12 @@
    "social": {
     "x": "VSOMANNA_BJP"
    },
-   "photo": null,
+   "photo": {
+    "file": "photos/Q24851577-221dadd160.jpg",
+    "credit": "Ministry of Jal Shakti",
+    "license": "GODL-India",
+    "page": "https://commons.wikimedia.org/wiki/File:Veeranna_Somanna.jpg"
+   },
    "sources": [
     "https://sansad.in/api_ls/member/5625",
     "https://en.wikipedia.org/wiki/V._Somanna",
@@ -1427,7 +1723,12 @@
     "instagram": "drrajbhushan",
     "facebook": "RajBhushanNishad"
    },
-   "photo": null,
+   "photo": {
+    "file": "photos/Q126365290-928de2caf9.jpg",
+    "credit": "President's Secretariat",
+    "license": "GODL-India",
+    "page": "https://commons.wikimedia.org/wiki/File:The_President,_Smt_Droupadi_Murmu_administering_the_oath_as_Minister_of_State_to_Shri_Raj_Bhushan_Choudhary_at_a_Swearing-in_Ceremony_at_Rashtrapati_Bhavan,_in_New_Delhi_on_June_09,_2024.jpg"
+   },
    "sources": [
     "https://www.opensanctions.org/entities/Q126365290/",
     "https://en.wikipedia.org/wiki/Raj_Bhushan_Choudhary",
@@ -1455,7 +1756,12 @@
    "social": {
     "x": "PemmasaniOnX"
    },
-   "photo": null,
+   "photo": {
+    "file": "photos/Q126111137-d7cacf70ef.jpg",
+    "credit": "Mango News",
+    "license": "CC BY 3.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Chandra_Sekhar_Pemmasani.jpg"
+   },
    "sources": [
     "https://sansad.in/api_ls/member/5636",
     "https://en.wikipedia.org/wiki/Chandra_Sekhar_Pemmasani",
@@ -1484,7 +1790,12 @@
    "social": {
     "x": "kamleshpassi67"
    },
-   "photo": null,
+   "photo": {
+    "file": "photos/Q16215999-6c628d1436.jpg",
+    "credit": "Ministry of Rural Development",
+    "license": "GODL-India",
+    "page": "https://commons.wikimedia.org/wiki/File:Kamlesh_Paswan,_Minister_of_State_for_Rural_Development_in_2024.jpg"
+   },
    "sources": [
     "https://en.wikipedia.org/wiki/Kamlesh_Paswan",
     "https://www.wikidata.org/wiki/Q16215999",
@@ -1513,7 +1824,12 @@
    "social": {
     "x": "ProBaghel"
    },
-   "photo": null,
+   "photo": {
+    "file": "photos/Q7387753-3a86bac14c.jpg",
+    "credit": "Ministry of Health and Family Welfare",
+    "license": "GODL-India",
+    "page": "https://commons.wikimedia.org/wiki/File:SPS_Baghel_MoS_Health.jpg"
+   },
    "sources": [
     "https://en.wikipedia.org/wiki/S._P._Singh_Baghel",
     "https://www.wikidata.org/wiki/Q7387753",
@@ -1540,9 +1856,15 @@
     "url": "https://www.myneta.info/LokSabha2024/candidate.php?candidate_id=2178"
    },
    "social": {
+    "website": "http://shobhakarandlaje.com",
     "x": "ShobhaBJP"
    },
-   "photo": null,
+   "photo": {
+    "file": "photos/Q7499789-ee9774f173.jpeg",
+    "credit": "User:Divyabandodkar",
+    "license": "CC BY-SA 3.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Shobha_karandlaje_2014-05-17_07-02.jpeg"
+   },
    "sources": [
     "https://en.wikipedia.org/wiki/Shobha_Karandlaje",
     "https://www.wikidata.org/wiki/Q7499789",
@@ -1571,7 +1893,12 @@
    "social": {
     "x": "KVSinghMPGonda"
    },
-   "photo": null,
+   "photo": {
+    "file": "photos/Q6416217-a34ba6bf95.jpg",
+    "credit": "Ministry of Environment, Forest and Climate Change",
+    "license": "GODL-India",
+    "page": "https://commons.wikimedia.org/wiki/File:Kirtivardhan_Singh_assuming_charge_as_the_Minister_of_State_of_Environment,_Forest_and_Climate_Change.jpg"
+   },
    "sources": [
     "https://sansad.in/api_ls/member/3926",
     "https://en.wikipedia.org/wiki/Kirti_Vardhan_Singh",
@@ -1600,7 +1927,12 @@
    "social": {
     "x": "PmargheritaBJP"
    },
-   "photo": null,
+   "photo": {
+    "file": "photos/Q111352685-e638bda57f.jpg",
+    "credit": "Ministry of Textiles",
+    "license": "GODL-India",
+    "page": "https://commons.wikimedia.org/wiki/File:Pabitra_Margherita_in_2024_(cropped).jpg"
+   },
    "sources": [
     "https://en.wikipedia.org/wiki/Pabitra_Margherita",
     "https://www.opensanctions.org/entities/Q111352685/",
@@ -1628,7 +1960,12 @@
    "social": {
     "x": "Nimu_Bambhaniya"
    },
-   "photo": null,
+   "photo": {
+    "file": "photos/Q126364657-473de62b8d.jpg",
+    "credit": "Ministry of Consumer Affairs, Food and Public Distribution",
+    "license": "GODL-India",
+    "page": "https://commons.wikimedia.org/wiki/File:Nimuben_Jayantibhai_Bambhaniya_being_welcomed_on_her_arrival_for_assumption_of_charge_as_the_Minister_of_State_for_Ministry_of_Consumer_Affairs,_Food_and_Public_Distribution_(cropped).jpg"
+   },
    "sources": [
     "https://en.wikipedia.org/wiki/Nimuben_Bambhaniya",
     "https://www.opensanctions.org/entities/Q126364657/",
@@ -1655,9 +1992,15 @@
     "url": "https://myneta.info/LokSabha2024/candidate.php?candidate_id=7112"
    },
    "social": {
+    "facebook": "ShantanuThakurBJP",
     "x": "Shantanu_bjp"
    },
-   "photo": null,
+   "photo": {
+    "file": "photos/Q63992931-0e0fee9d3b.jpg",
+    "credit": "Prime Minister's Office",
+    "license": "GODL-India",
+    "page": "https://commons.wikimedia.org/wiki/File:Shri_Shantanu_Thakur.jpg"
+   },
    "sources": [
     "https://en.wikipedia.org/wiki/Shantanu_Thakur",
     "https://www.opensanctions.org/entities/Q63992931/",
@@ -1683,9 +2026,16 @@
     "url": "https://myneta.info/LokSabha2024/candidate.php?candidate_id=2125"
    },
    "social": {
-    "x": "TheSureshGopi"
+    "x": "TheSureshGopi",
+    "instagram": "sureshgopi",
+    "facebook": "ActorSureshGopi"
    },
-   "photo": null,
+   "photo": {
+    "file": "photos/Q3530125-db23ab9b15.jpg",
+    "credit": "Challiyan at Malayalam Wikipedia",
+    "license": "CC BY 3.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Suresh_Gopi.jpg"
+   },
    "sources": [
     "https://en.wikipedia.org/wiki/Suresh_Gopi",
     "https://www.opensanctions.org/entities/Q3530125/",
@@ -1713,7 +2063,12 @@
    "social": {
     "x": "AjayTamtaBJP"
    },
-   "photo": null,
+   "photo": {
+    "file": "photos/Q16736901-266de3eddd.jpg",
+    "credit": "Ministry of Textiles",
+    "license": "GODL-India",
+    "page": "https://commons.wikimedia.org/wiki/File:The_Minister_of_State_for_Textiles,_Shri_Ajay_Tamta_addressing_at_the_inauguration_of_the_60th_India_International_Garment_Fair,_in_New_Delhi_on_January_17,_2018.jpg"
+   },
    "sources": [
     "https://en.wikipedia.org/wiki/Ajay_Tamta",
     "https://www.opensanctions.org/entities/Q16736901",
@@ -1741,7 +2096,12 @@
    "social": {
     "x": "hdmalhotra"
    },
-   "photo": null,
+   "photo": {
+    "file": "photos/Q126367708-a522ad0710.jpg",
+    "credit": "Ministry of Road Transport and Highways",
+    "license": "GODL-India",
+    "page": "https://commons.wikimedia.org/wiki/File:Shri_Harsh_Malhotra.jpg"
+   },
    "sources": [
     "https://en.wikipedia.org/wiki/Harsh_Malhotra",
     "https://www.opensanctions.org/entities/Q126367708/",
@@ -1769,7 +2129,12 @@
    "social": {
     "x": "satishdubeyy"
    },
-   "photo": null,
+   "photo": {
+    "file": "photos/Q16728677-31fb3f6e32.jpeg",
+    "credit": "Ministry of Mines",
+    "license": "GODL-India",
+    "page": "https://commons.wikimedia.org/wiki/File:Shri_Satish_Chandra_Dubey.jpeg"
+   },
    "sources": [
     "https://en.wikipedia.org/wiki/Satish_Chandra_Dubey",
     "https://www.opensanctions.org/entities/Q16728677/",
@@ -1797,7 +2162,12 @@
    "social": {
     "x": "SethSanjayMP"
    },
-   "photo": null,
+   "photo": {
+    "file": "photos/Q96404945-fd0091f6fd.jpg",
+    "credit": "Lok Sabha Secretariat, Government of India",
+    "license": "CC BY 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Sanjay_Seth.jpg"
+   },
    "sources": [
     "https://en.wikipedia.org/wiki/Sanjay_Seth_(Jharkhand_politician)",
     "https://www.opensanctions.org/entities/Q96404945/",
@@ -1825,7 +2195,12 @@
    "social": {
     "x": "DdUikey"
    },
-   "photo": null,
+   "photo": {
+    "file": "photos/Q64006793-60aeabfd86.jpg",
+    "credit": "Ministry of Tribal Affairs",
+    "license": "GODL-India",
+    "page": "https://commons.wikimedia.org/wiki/File:Durga_Das_Uikey_2024_(cropped).jpg"
+   },
    "sources": [
     "https://en.wikipedia.org/wiki/Durga_Das_Uikey",
     "https://www.opensanctions.org/entities/Q64006793/",
@@ -1853,7 +2228,12 @@
    "social": {
     "x": "khadseraksha"
    },
-   "photo": null,
+   "photo": {
+    "file": "photos/Q16908900-4039a09ff4.jpg",
+    "credit": "GSkoli",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Raksha_N_Khadse.jpg"
+   },
    "sources": [
     "https://en.wikipedia.org/wiki/Raksha_Khadse",
     "https://www.opensanctions.org/entities/Q16908900/",
@@ -1881,7 +2261,12 @@
    "social": {
     "x": "savitrii4bjp"
    },
-   "photo": null,
+   "photo": {
+    "file": "photos/Q16736902-cccf989520.jpg",
+    "credit": "Ministry of Women and Child Development",
+    "license": "GODL-India",
+    "page": "https://commons.wikimedia.org/wiki/File:Savitri_Thakur_assumed_charge_as_the_Minister_of_State_for_Ministry_of_Women_and_Child_development.jpg"
+   },
    "sources": [
     "https://en.wikipedia.org/wiki/Savitri_Thakur",
     "https://www.opensanctions.org/entities/Q16736902/",
@@ -1909,7 +2294,12 @@
    "social": {
     "x": "tokhansahu_bjp"
    },
-   "photo": null,
+   "photo": {
+    "file": "photos/Q58290680-22f4f7b1d8.jpg",
+    "credit": "President's Secretariat",
+    "license": "GODL-India",
+    "page": "https://commons.wikimedia.org/wiki/File:The_President,_Smt_Droupadi_Murmu_administering_the_oath_as_Minister_of_State_to_Shri_Tokhan_Sahu_at_a_Swearing-in_Ceremony_at_Rashtrapati_Bhavan,_in_New_Delhi_on_June_09,_2024.jpg"
+   },
    "sources": [
     "https://en.wikipedia.org/wiki/Tokhan_Sahu",
     "https://www.opensanctions.org/entities/Q58290680/",
@@ -1937,7 +2327,12 @@
    "social": {
     "x": "BjpVarma"
    },
-   "photo": null,
+   "photo": {
+    "file": "photos/Q126364180-dc194d9b10.jpg",
+    "credit": "President's Secretariat",
+    "license": "GODL-India",
+    "page": "https://commons.wikimedia.org/wiki/File:Smt_Droupadi_Murmu_administering_the_oath_as_Minister_of_State_to_Shri_Bhupathi_Raju_Srinivasa_Varma_(cropped).jpg"
+   },
    "sources": [
     "https://en.wikipedia.org/wiki/Bhupathi_Raju_Srinivasa_Varma",
     "https://www.opensanctions.org/entities/Q126364180/",
