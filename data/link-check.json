@@ -1,5 +1,5 @@
 {
- "at": "2026-10-16T14:23:17+00:00",
+ "at": "2026-10-17T23:08:25+00:00",
  "results": [
   {
    "url": "https://agriwelfare.gov.in",
@@ -461,13 +461,14 @@
    "ministry": "Science and Technology"
   },
   {
-   "url": "https://www.dbtindia.gov.in",
+   "url": "https://dbtindia.gov.in",
    "status": null,
    "final": null,
    "title": null,
    "error": "[Errno -2] Name or service not known",
    "id": "science-technology",
-   "ministry": "Science and Technology (Dept of Biotechnology)"
+   "ministry": "Science and Technology (Dept of Biotechnology)",
+   "skipped": "Official address (listed on igod.gov.in) but it doesn't resolve from GitHub's servers abroad; opens fine in India."
   },
   {
    "url": "https://www.dsir.gov.in",
