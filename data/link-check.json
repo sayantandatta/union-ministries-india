@@ -1,5 +1,5 @@
 {
- "at": "2026-10-17T23:08:25+00:00",
+ "at": "2026-10-24T23:14:29+00:00",
  "results": [
   {
    "url": "https://agriwelfare.gov.in",
@@ -59,7 +59,7 @@
    "url": "https://www.civilaviation.gov.in",
    "status": 200,
    "final": "https://www.civilaviation.gov.in",
-   "title": "Welcome! | Ministry of Civil Aviation",
+   "title": "Home Page | Ministry of Civil Aviation",
    "error": null,
    "id": "civil-aviation",
    "ministry": "Civil Aviation"
@@ -274,7 +274,7 @@
   {
    "url": "https://www.mha.gov.in",
    "status": 200,
-   "final": "https://www.mha.gov.in/hi",
+   "final": "https://www.mha.gov.in",
    "title": "Home | Ministry of Home Affairs",
    "error": null,
    "id": "home",
@@ -365,7 +365,7 @@
    "url": "https://mnre.gov.in",
    "status": 200,
    "final": "https://mnre.gov.in",
-   "title": "Homepage | नवीन और नवीकरणीय ऊर्जा मंत्रालय | नवीन और नवीकरणीय ऊर्जा मंत्रालय | भारत",
+   "title": null,
    "error": null,
    "id": "mnre",
    "ministry": "New and Renewable Energy"
@@ -426,10 +426,10 @@
   },
   {
    "url": "https://indianrailways.gov.in",
-   "status": null,
-   "final": null,
-   "title": null,
-   "error": "timed out",
+   "status": 200,
+   "final": "https://indianrailways.gov.in",
+   "title": "Ministry of Railways",
+   "error": null,
    "id": "railways",
    "ministry": "Railways"
   },
