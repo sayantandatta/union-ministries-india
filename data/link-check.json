@@ -1,5 +1,5 @@
 {
- "at": "2026-11-01T00:08:13+00:00",
+ "at": "2026-11-08T00:35:46+00:00",
  "results": [
   {
    "url": "https://agriwelfare.gov.in",
@@ -15,7 +15,7 @@
    "status": null,
    "final": null,
    "title": null,
-   "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)",
+   "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1011)",
    "id": "agriculture",
    "ministry": "Agriculture and Farmers Welfare (Agricultural Research & Education (DARE))"
   },
@@ -114,7 +114,7 @@
    "status": null,
    "final": null,
    "title": null,
-   "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)",
+   "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1011)",
    "id": "consumer-affairs",
    "ministry": "Consumer Affairs, Food and Public Distribution"
   },
@@ -132,7 +132,7 @@
    "status": null,
    "final": null,
    "title": null,
-   "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)",
+   "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1011)",
    "id": "cooperation",
    "ministry": "Co-operation"
   },
@@ -249,7 +249,7 @@
    "status": null,
    "final": null,
    "title": null,
-   "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)",
+   "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1011)",
    "id": "food-processing",
    "ministry": "Food Processing Industries"
   },
@@ -265,8 +265,8 @@
   {
    "url": "https://heavyindustries.gov.in",
    "status": 200,
-   "final": "https://heavyindustries.gov.in/hi",
-   "title": "मुख्य पृष्ठ | भारी उद्योग मंत्रालय",
+   "final": "https://heavyindustries.gov.in/en",
+   "title": "Home | Ministry of Heavy Industries",
    "error": null,
    "id": "heavy-industries",
    "ministry": "Heavy Industries"
@@ -501,7 +501,7 @@
    "url": "https://socialjustice.gov.in",
    "status": 200,
    "final": "https://socialjustice.gov.in",
-   "title": "Home | Department of Social Justice and Empowerment - Government of India",
+   "title": "Nasha Mukt Bharat – Migration Alert",
    "error": null,
    "id": "social-justice",
    "ministry": "Social Justice and Empowerment"
@@ -556,7 +556,7 @@
    "status": null,
    "final": null,
    "title": null,
-   "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)",
+   "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1011)",
    "id": "tribal-affairs",
    "ministry": "Tribal Affairs"
   },
@@ -565,7 +565,7 @@
    "status": null,
    "final": null,
    "title": null,
-   "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)",
+   "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1011)",
    "id": "women-child",
    "ministry": "Women and Child Development"
   },
@@ -574,7 +574,7 @@
    "status": null,
    "final": null,
    "title": null,
-   "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)",
+   "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1011)",
    "id": "youth-sports",
    "ministry": "Youth Affairs and Sports"
   },
