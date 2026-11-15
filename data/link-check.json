@@ -1,5 +1,5 @@
 {
- "at": "2026-11-08T00:35:46+00:00",
+ "at": "2026-11-15T01:02:57+00:00",
  "results": [
   {
    "url": "https://agriwelfare.gov.in",
@@ -336,17 +336,17 @@
   },
   {
    "url": "https://msme.gov.in",
-   "status": 200,
-   "final": "https://www.msme.gov.in/",
+   "status": null,
+   "final": null,
    "title": null,
-   "error": null,
+   "error": "timed out",
    "id": "msme",
    "ministry": "Micro, Small and Medium Enterprises"
   },
   {
    "url": "https://mines.gov.in",
    "status": 200,
-   "final": "https://mines.gov.in/webportal/",
+   "final": "https://mines.gov.in",
    "title": "Ministry of Mines, Government of India, Home",
    "error": null,
    "id": "mines",
@@ -374,7 +374,7 @@
    "url": "https://panchayat.gov.in",
    "status": 200,
    "final": "https://panchayat.gov.in",
-   "title": "पंचायती राज मंत्रालय | सशक्त पंचायत सतत् विकास | भारत",
+   "title": "Ministry Of Panchayati Raj | सशक्त पंचायत सतत् विकास | India",
    "error": null,
    "id": "panchayati-raj",
    "ministry": "Panchayati Raj"
@@ -426,10 +426,10 @@
   },
   {
    "url": "https://indianrailways.gov.in",
-   "status": 200,
-   "final": "https://indianrailways.gov.in",
-   "title": "Ministry of Railways",
-   "error": null,
+   "status": null,
+   "final": null,
+   "title": null,
+   "error": "timed out",
    "id": "railways",
    "ministry": "Railways"
   },
