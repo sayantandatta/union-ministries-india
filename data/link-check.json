@@ -1,5 +1,5 @@
 {
- "at": "2026-11-15T01:02:57+00:00",
+ "at": "2026-11-22T01:19:01+00:00",
  "results": [
   {
    "url": "https://agriwelfare.gov.in",
@@ -102,10 +102,10 @@
   },
   {
    "url": "https://www.indiapost.gov.in",
-   "status": 200,
-   "final": "https://www.indiapost.gov.in",
-   "title": "India Post",
-   "error": null,
+   "status": null,
+   "final": null,
+   "title": null,
+   "error": "_ssl.c:994: The handshake operation timed out",
    "id": "communications",
    "ministry": "Communications (Dept of Posts)"
   },
@@ -336,10 +336,10 @@
   },
   {
    "url": "https://msme.gov.in",
-   "status": null,
-   "final": null,
+   "status": 200,
+   "final": "https://www.msme.gov.in/",
    "title": null,
-   "error": "timed out",
+   "error": null,
    "id": "msme",
    "ministry": "Micro, Small and Medium Enterprises"
   },
