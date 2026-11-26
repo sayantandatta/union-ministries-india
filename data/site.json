@@ -1,13 +1,13 @@
 {
  "schema": 1,
- "generated": "2026-11-25T04:10:59+00:00",
- "asOf": "2026-11-25",
+ "generated": "2026-11-26T03:34:13+00:00",
+ "asOf": "2026-11-26",
  "source": "https://en.wikipedia.org/wiki/Third_Modi_ministry",
  "status": {
   "ok": true,
   "messages": [],
   "review": [],
-  "wikipediaRevision": 1385398462
+  "wikipediaRevision": 1387762787
  },
  "changes": [
   {
